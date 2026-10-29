@@ -4,6 +4,13 @@ import { getPageSeoEntry } from './pageSeo';
 
 export const SITE_ORIGIN = `https://${t.site.domain}`;
 
+/** Override at build time for preview hosts (e.g. Cloudflare Workers) so canonical/hreflang are self-referencing. */
+export function getSiteOrigin(): string {
+  const fromEnv = import.meta.env.PUBLIC_SITE_ORIGIN as string | undefined;
+  if (fromEnv?.trim()) return fromEnv.trim().replace(/\/$/, '');
+  return SITE_ORIGIN;
+}
+
 /** Default social share image (1200×630). */
 export const DEFAULT_OG_IMAGE = '/images/og-default.jpg';
 
@@ -30,13 +37,13 @@ export function canonicalUrl(pathname: string): string {
   let path = pathname || '/';
   if (!path.startsWith('/')) path = `/${path}`;
   if (path !== '/' && !path.endsWith('/')) path = `${path}/`;
-  return `${SITE_ORIGIN}${path}`;
+  return `${getSiteOrigin()}${path}`;
 }
 
 export function absoluteAssetUrl(path: string): string {
   if (path.startsWith('http://') || path.startsWith('https://')) return path;
   const normalized = path.startsWith('/') ? path : `/${path}`;
-  return `${SITE_ORIGIN}${normalized}`;
+  return `${getSiteOrigin()}${normalized}`;
 }
 
 export function resolvePageSeo(pathname: string): { title: string; description: string } {

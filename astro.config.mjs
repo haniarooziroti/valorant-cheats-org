@@ -3,8 +3,10 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 import { sitemapSerialize } from './src/config/sitemap.ts';
 
+const siteOrigin = (process.env.PUBLIC_SITE_ORIGIN || 'https://mw4cheat.org').replace(/\/$/, '');
+
 export default defineConfig({
-  site: 'https://mw4cheat.org',
+  site: siteOrigin,
   trailingSlash: 'always',
   redirects: {
     '/cheats/': '/products/mw4-cheats/',

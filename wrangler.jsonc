@@ -3,5 +3,9 @@
   "compatibility_date": "2026-10-29",
   "assets": {
     "directory": "./dist"
+  },
+  "build": {
+    "command": "PUBLIC_SITE_ORIGIN=https://mw4-cheat--org.hania-rooziroti.workers.dev npm run build",
+    "cwd": "."
   }
 }
