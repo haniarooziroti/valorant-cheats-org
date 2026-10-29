@@ -77,36 +77,3 @@ const first = images[0];
     )
   }
 </div>
-
-<script>
-  const initProductGalleries = () => {
-    document.querySelectorAll('[data-product-gallery]').forEach((root) => {
-      if (root.hasAttribute('data-gallery-bound')) return;
-      root.setAttribute('data-gallery-bound', '');
-
-      const main = root.querySelector<HTMLImageElement>('.product-gallery__image');
-      const thumbs = root.querySelectorAll<HTMLButtonElement>('[data-product-gallery-thumb]');
-      if (!main || !thumbs.length) return;
-
-      thumbs.forEach((thumb) => {
-        thumb.addEventListener('click', () => {
-          const alt = thumb.getAttribute('data-alt');
-          const thumbImg = thumb.querySelector('img');
-          if (thumbImg?.src) {
-            main.src = thumbImg.src;
-            if (thumbImg.srcset) main.srcset = thumbImg.srcset;
-          }
-          if (alt) main.alt = alt;
-          thumbs.forEach((t) => {
-            const active = t === thumb;
-            t.classList.toggle('is-active', active);
-            t.setAttribute('aria-selected', active ? 'true' : 'false');
-          });
-        });
-      });
-    });
-  };
-
-  initProductGalleries();
-  document.addEventListener('astro:after-swap', initProductGalleries);
-</script>

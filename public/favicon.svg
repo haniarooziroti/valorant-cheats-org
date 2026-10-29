@@ -1,30 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="DotaCheats">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="MW4 Cheat">
   <defs>
-    <linearGradient id="bg" x1="8" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#221533"/>
-      <stop offset="1" stop-color="#0A0D10"/>
+    <linearGradient id="mw4-bg" x1="6" y1="4" x2="58" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2A1548"/>
+      <stop offset="1" stop-color="#0D0A14"/>
     </linearGradient>
-    <linearGradient id="accent" x1="16" y1="12" x2="48" y2="52" gradientUnits="userSpaceOnUse">
+    <linearGradient id="mw4-ring" x1="20" y1="18" x2="44" y2="46" gradientUnits="userSpaceOnUse">
       <stop stop-color="#9654FF"/>
       <stop offset="1" stop-color="#7F3DEE"/>
     </linearGradient>
-    <linearGradient id="blade" x1="22" y1="21" x2="40" y2="36" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#F5F7FA"/>
-      <stop offset="1" stop-color="#C8B8E8"/>
-    </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
-  <rect x="1.5" y="1.5" width="61" height="61" rx="14.5" stroke="#2A333D" stroke-width="1"/>
-  <path d="M32 8 14 16v14c0 12 7.5 20.5 18 26 10.5-5.5 18-14 18-26V16L32 8z" fill="url(#accent)" opacity="0.95"/>
-  <path d="M32 12 18 18.5v11.5c0 9.5 6 16.5 14 21 8-4.5 14-11.5 14-21V18.5L32 12z" fill="#0A0D10" opacity="0.35"/>
-  <g transform="translate(33 30.25)">
-    <path
-      d="M-8.25 -7.25V7.25M-8.25 -7.25H-2C5.25 -7.25 8.25 -3.6 8.25 0C8.25 3.6 5.25 7.25 -2 7.25H-8.25"
-      fill="none"
-      stroke="url(#blade)"
-      stroke-width="3.35"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-  </g>
+  <rect width="64" height="64" rx="14" fill="url(#mw4-bg)"/>
+  <rect x="1.25" y="1.25" width="61.5" height="61.5" rx="12.75" stroke="#7F3DEE" stroke-opacity="0.35" stroke-width="1.25"/>
+  <circle cx="32" cy="30" r="15" stroke="url(#mw4-ring)" stroke-width="2.25" fill="none"/>
+  <circle cx="32" cy="30" r="3.25" fill="#F5F7FA"/>
+  <path
+    stroke="#F5F7FA"
+    stroke-width="2.25"
+    stroke-linecap="round"
+    d="M32 11v7M32 42v7M17 30h7M40 30h7"
+  />
+  <text
+    x="32"
+    y="53"
+    text-anchor="middle"
+    fill="#E8E0F5"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="11"
+    font-weight="700"
+    letter-spacing="0.08em"
+  >MW4</text>
 </svg>

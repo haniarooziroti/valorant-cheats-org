@@ -4,7 +4,7 @@ import sharp from 'sharp';
 
 const root = process.cwd();
 const publicDir = path.join(root, 'public');
-const logoSvg = fs.readFileSync(path.join(publicDir, 'logo.svg'));
+const logoSvg = fs.readFileSync(path.join(publicDir, 'favicon.svg'));
 
 await sharp(logoSvg).resize(180, 180).png().toFile(path.join(publicDir, 'apple-touch-icon.png'));
 await sharp(logoSvg).resize(32, 32).png().toFile(path.join(publicDir, 'favicon-32.png'));
