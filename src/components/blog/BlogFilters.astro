@@ -1,0 +1,62 @@
+---
+import Icon from '../icons/Icon.astro';
+import PillFilterSelect from '../PillFilterSelect.astro';
+import { t } from '../../i18n';
+import { blogTagIcons } from '../../data/sectionIcons';
+import type { IconName } from '../icons/types';
+
+const ALL_TOPICS = ['Features', 'Guides', 'Setup', 'Troubleshooting', 'Updates'] as const;
+
+const tagIcon = (tag: string): IconName => blogTagIcons[tag] ?? 'tag';
+---
+
+<div class="blog-controls blog-controls--centered">
+  <div class="blog-controls__search">
+    <label class="blog-search" for="blog-search">
+      <span class="sr-only">{t.blog.searchLabel}</span>
+      <span class="blog-search__icon" aria-hidden="true">
+        <Icon name="search" size={18} />
+      </span>
+      <input
+        id="blog-search"
+        type="search"
+        class="blog-search__input"
+        placeholder={t.blog.searchPlaceholder}
+        data-blog-search
+        autocomplete="off"
+        enterkeyhint="search"
+      />
+    </label>
+  </div>
+
+  <div class="blog-controls__filter-row">
+    <div id="blog-sort-select" class="blog-controls__sort">
+      <PillFilterSelect
+        id="blog-sort"
+        label="Sort by"
+        dataAttr="blog-sort"
+        defaultValue="newest"
+        ariaLabel="Sort articles"
+        options={[
+          { value: 'newest', label: t.blog.sortNewest },
+          { value: 'oldest', label: t.blog.sortOldest },
+          { value: 'short', label: t.blog.sortShortRead },
+          { value: 'long', label: t.blog.sortLongRead },
+        ]}
+      />
+    </div>
+
+    <div class="blog-controls__filters" role="toolbar" aria-label="Filter articles by topic">
+    <button type="button" class="blog-controls__pill" data-blog-filter="all" aria-pressed="true">
+      <span class="blog-controls__pill-icon" aria-hidden="true"><Icon name="navBlog" size={14} /></span>
+      {t.blog.filterAll}
+    </button>
+    {ALL_TOPICS.map((tag) => (
+      <button type="button" class="blog-controls__pill" data-blog-filter={tag} aria-pressed="false">
+        <span class="blog-controls__pill-icon" aria-hidden="true"><Icon name={tagIcon(tag)} size={14} /></span>
+        {tag}
+      </button>
+    ))}
+    </div>
+  </div>
+</div>

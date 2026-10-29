@@ -1,0 +1,156 @@
+.reviews-hero {
+  text-align: center;
+}
+
+.reviews-score {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 1.25rem;
+}
+
+.reviews-score strong {
+  font-size: 2.25rem;
+  line-height: 1;
+}
+
+.reviews-stars {
+  color: #f5c542;
+  letter-spacing: 0.12em;
+}
+
+.reviews-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .reviews-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.review-card {
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: color-mix(in oklch, var(--card) 90%, var(--background));
+  padding: 1rem 1.1rem;
+}
+
+.review-card__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.review-card__meta {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+.review-card__body {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--foreground);
+}
+
+.reviews-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.reviews-toolbar--centered {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .reviews-toolbar--centered {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 36rem;
+    gap: 1.25rem 1.5rem;
+  }
+}
+
+.reviews-toolbar--centered .pill-filter-field {
+  min-width: 0;
+  width: 100%;
+}
+
+.reviews-toolbar--centered .pill-filter-field__select {
+  width: 100%;
+  min-width: 0;
+  min-height: 2.875rem;
+  padding: 0.75rem 2.5rem 0.75rem 1.15rem;
+  font-size: 0.9375rem;
+}
+
+.pill-filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 10.5rem;
+}
+
+.pill-filter-field__label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: color-mix(in oklch, var(--muted-foreground) 92%, var(--foreground));
+}
+
+.pill-filter-field__wrap {
+  position: relative;
+}
+
+.pill-filter-field__select {
+  width: 100%;
+  min-width: 10.5rem;
+  appearance: none;
+  cursor: pointer;
+  border-radius: 9999px;
+  border: 1px solid color-mix(in oklch, var(--border) 85%, var(--foreground) 8%);
+  background: color-mix(in oklch, var(--background) 75%, var(--card) 25%);
+  color: var(--foreground);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.25;
+  padding: 0.55rem 2.25rem 0.55rem 1rem;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.pill-filter-field__select:hover {
+  border-color: color-mix(in oklch, var(--primary) 45%, var(--border));
+}
+
+.pill-filter-field__select:focus-visible {
+  outline: 2px solid color-mix(in oklch, var(--primary) 55%, transparent);
+  outline-offset: 2px;
+}
+
+.pill-filter-field__wrap::after {
+  content: '';
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  width: 0;
+  height: 0;
+  margin-top: -2px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--foreground);
+  pointer-events: none;
+  opacity: 0.85;
+}

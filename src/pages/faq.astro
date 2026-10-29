@@ -1,0 +1,48 @@
+---
+import '../styles/faq-page.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getAllFaqs } from '../data/faq';
+import { resolvePageSeo } from '../config/seo';
+import { breadcrumbSchema, faqPageSchema, webPageSchema } from '../utils/schema';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import SiteFaqSection from '../components/SiteFaqSection.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+
+const seo = resolvePageSeo('/faq/');
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'FAQ', path: '/faq/' },
+];
+
+const faqs = getAllFaqs();
+---
+
+<BaseLayout
+  title={seo.title}
+  description={seo.description}
+  jsonLd={[
+    webPageSchema({
+      name: 'FAQ — MW4 Cheats & PC Setup',
+      description:
+        'Answers about Modern Warfare 4 PC modules, aim assist, ESP, checkout, and account risk on mw4cheat.org.',
+      url: '/faq/',
+    }),
+    faqPageSchema(faqs.map((f, i) => ({ num: String(i + 1).padStart(2, '0'), q: f.q, a: f.a.replace(/<[^>]+>/g, '') }))),
+    breadcrumbSchema(breadcrumbs),
+  ]}
+>
+  <section class="border-b border-border bg-muted/10 py-8 md:py-12">
+    <div class="mx-auto max-w-6xl px-5">
+      <Breadcrumbs items={breadcrumbs} />
+      <div class="mt-6">
+        <header class="text-center">
+          <h1 id="faq-page-title" class="text-3xl font-bold uppercase tracking-tight md:text-4xl">Modern Warfare 4 Cheats</h1>
+          <p class="mt-3 text-xl font-semibold text-foreground">FAQ</p>
+          <p class="mt-2 text-sm font-medium uppercase tracking-wider text-muted-foreground">All questions</p>
+        </header>
+      </div>
+    </div>
+  </section>
+
+  <SiteFaqSection items={faqs} variant="full" titleId="faq-page-list" hideSectionHeader class="faq-page-section" />
+</BaseLayout>

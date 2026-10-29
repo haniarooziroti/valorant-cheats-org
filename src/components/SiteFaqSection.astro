@@ -1,0 +1,58 @@
+---
+import type { SiteFaqItem, FaqTopic } from '../data/faq';
+import FaqSection from './FaqSection.astro';
+import {
+  SITE_FAQ_FILTER_TOPICS,
+  SITE_FAQ_SECTION_COPY,
+  CONTEXTUAL_FAQ_SECTION_COPY,
+  faqFilterTopicsForItems,
+} from '../data/faq';
+
+interface Props {
+  items: SiteFaqItem[];
+  id?: string;
+  titleId?: string;
+  class?: string;
+  /** Full /faq/ experience — all topics chip bar */
+  variant?: 'full' | 'contextual';
+  filterTopics?: FaqTopic[];
+  eyebrow?: string;
+  title?: string;
+  subtitle?: string;
+  hideSectionHeader?: boolean;
+}
+
+const {
+  items,
+  id,
+  titleId = 'faq-heading',
+  class: className,
+  variant = 'contextual',
+  filterTopics: filterTopicsProp,
+  eyebrow: eyebrowProp,
+  title: titleProp,
+  subtitle: subtitleProp,
+  hideSectionHeader = false,
+} = Astro.props;
+
+const copy = variant === 'full' ? SITE_FAQ_SECTION_COPY : CONTEXTUAL_FAQ_SECTION_COPY;
+const eyebrow = eyebrowProp ?? copy.eyebrow;
+const title = titleProp ?? copy.title;
+const subtitle = subtitleProp ?? copy.subtitle;
+const filterTopics =
+  filterTopicsProp ?? (variant === 'full' ? SITE_FAQ_FILTER_TOPICS : faqFilterTopicsForItems(items));
+const showFilters = filterTopics.length > 1;
+---
+
+<FaqSection
+  id={id}
+  items={items}
+  eyebrow={hideSectionHeader ? undefined : eyebrow}
+  title={hideSectionHeader ? undefined : title}
+  subtitle={hideSectionHeader ? undefined : subtitle}
+  titleId={titleId}
+  showFilters={showFilters}
+  filterTopics={filterTopics}
+  showHeader={!hideSectionHeader}
+  class={className}
+/>

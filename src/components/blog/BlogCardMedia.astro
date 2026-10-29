@@ -1,0 +1,56 @@
+---
+import ResponsiveImage from '../ResponsiveImage.astro';
+import { CARD_IMAGE_SIZES, CARD_IMAGE_WIDTHS } from '../../utils/responsiveImage';
+import { blogCardFallbackStyle, BLOG_INDEX_GRADIENT_ONLY } from '../../utils/blogCardFallback';
+
+interface Props {
+  src: string;
+  alt: string;
+  title: string;
+  category: string;
+  slug: string;
+  eager?: boolean;
+}
+
+const { src, alt, title, category, slug, eager = false } = Astro.props;
+const gradient = blogCardFallbackStyle(category, slug);
+const showPhoto = !BLOG_INDEX_GRADIENT_ONLY;
+---
+
+<div
+  class="blog-card__media"
+  style={`--blog-card-gradient: ${gradient}`}
+  data-blog-card-media
+>
+  <div class="blog-card__media-fallback" aria-hidden="true">
+    <span class="blog-card__media-fallback-cat">{category}</span>
+    <span class="blog-card__media-fallback-title">{title}</span>
+  </div>
+  {
+    showPhoto && (
+      <ResponsiveImage
+        src={src}
+        alt={alt}
+        width={640}
+        height={360}
+        widths={CARD_IMAGE_WIDTHS}
+        sizes={CARD_IMAGE_SIZES}
+        loading={eager ? 'eager' : 'lazy'}
+        fetchPriority={eager ? 'high' : undefined}
+        class="blog-card__media-img"
+        data-blog-card-img
+      />
+    )
+  }
+</div>
+
+<script>
+  document.querySelectorAll<HTMLImageElement>('[data-blog-card-img]').forEach((img) => {
+    const hide = () => {
+      img.classList.add('is-hidden');
+      img.closest('[data-blog-card-media]')?.classList.add('is-fallback');
+    };
+    if (img.complete && img.naturalWidth === 0) hide();
+    img.addEventListener('error', hide);
+  });
+</script>

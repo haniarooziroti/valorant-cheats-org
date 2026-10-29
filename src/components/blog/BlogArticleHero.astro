@@ -1,0 +1,41 @@
+---
+import ResponsiveImage from '../ResponsiveImage.astro';
+import { blogCardFallbackStyle } from '../../utils/blogCardFallback';
+
+interface Props {
+  src: string;
+  alt: string;
+  title: string;
+  category: string;
+  slug: string;
+}
+
+const { src, alt, title, category, slug } = Astro.props;
+const gradient = blogCardFallbackStyle(category, slug);
+---
+
+<figure class="blog-article__hero" style={`--blog-card-gradient: ${gradient}`} data-blog-article-hero>
+  <div class="blog-article__hero-fallback" aria-hidden="true">
+    <span class="blog-card__media-fallback-cat">{category}</span>
+    <span class="blog-card__media-fallback-title">{title}</span>
+  </div>
+  <ResponsiveImage
+    src={src}
+    alt={alt}
+    width={960}
+    height={540}
+    loading="eager"
+    fetchPriority="high"
+    sizes="(min-width: 768px) 720px, 100vw"
+    class="blog-article__hero-img"
+    data-blog-article-img
+  />
+</figure>
+
+<script>
+  document.querySelectorAll<HTMLImageElement>('[data-blog-article-img]').forEach((img) => {
+    const hide = () => img.closest('[data-blog-article-hero]')?.classList.add('is-fallback');
+    if (img.complete && img.naturalWidth === 0) hide();
+    img.addEventListener('error', hide);
+  });
+</script>

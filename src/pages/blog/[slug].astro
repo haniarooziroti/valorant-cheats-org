@@ -1,0 +1,181 @@
+---
+import '../../styles/blog-pages.css';
+import '../../styles/blog-page.css';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { t } from '../../i18n';
+import { render } from 'astro:content';
+import { getCollectionEntry, getRelatedBlogPosts, loadBlogPosts } from '../../data/blog/loader';
+import { pageTitle } from '../../config/seo';
+import { articleSchema, breadcrumbSchema, faqPageSchema, parseBlogDate } from '../../utils/schema';
+import { checkoutPath } from '../../config/checkout';
+import { PRODUCT_URL } from '../../config/brand';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import BlogArticleHero from '../../components/blog/BlogArticleHero.astro';
+import BlogCard from '../../components/blog/BlogCard.astro';
+import BlogSidebar from '../../components/BlogSidebar.astro';
+import BlogPostTopBar from '../../components/BlogPostTopBar.astro';
+import SiteFaqSection from '../../components/SiteFaqSection.astro';
+import Icon from '../../components/icons/Icon.astro';
+import { Badge } from '@/components/starwind/badge';
+import { Button } from '@/components/starwind/button';
+import { Prose } from '@/components/starwind/prose';
+import BlogPostCta from '../../components/BlogPostCta.astro';
+import { ROUTES } from '../../utils/path';
+
+export async function getStaticPaths() {
+  const posts = await loadBlogPosts();
+  return posts.map((post) => ({ params: { slug: post.slug } }));
+}
+
+const { slug } = Astro.params;
+const entry = await getCollectionEntry(slug!);
+if (!entry) return Astro.redirect('/blog/');
+
+const { Content, headings } = await render(entry);
+const post = {
+  slug: slug!,
+  tag: entry.data.category,
+  title: entry.data.title,
+  desc: entry.data.description,
+  image: entry.data.featuredImage,
+  date: entry.data.publishDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+  readTime: `${Math.max(5, Math.round((entry.body ?? '').split(/\s+/).filter(Boolean).length / 210))} min read`,
+  body: [],
+};
+
+const postPath = `/blog/${post.slug}/`;
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Blog', path: '/blog/' },
+  { name: post.title, path: postPath },
+];
+
+const related = await getRelatedBlogPosts(post.slug, 3);
+const allPosts = await loadBlogPosts();
+const order = allPosts.map((p) => p.slug);
+const idx = order.indexOf(post.slug);
+const prevSlug = idx > 0 ? order[idx - 1] : null;
+const nextSlug = idx >= 0 && idx < order.length - 1 ? order[idx + 1] : null;
+const prevPost = prevSlug ? allPosts.find((p) => p.slug === prevSlug) : null;
+const nextPost = nextSlug ? allPosts.find((p) => p.slug === nextSlug) : null;
+
+const published = parseBlogDate(post.date);
+const updated = entry.data.updatedDate
+  ? entry.data.updatedDate.toISOString()
+  : published;
+
+const tocItems = headings
+  .filter((h) => h.depth === 2 || h.depth === 3)
+  .map((h) => ({ level: h.depth === 2 ? 'h2' : 'h3', text: h.text, id: h.slug }));
+
+const faqItems = (entry.data.faq ?? []).map((item, i) => ({
+  id: `blog-faq-${i}`,
+  topic: 'all' as const,
+  icon: 'faqMore' as const,
+  q: item.q,
+  a: item.a,
+}));
+---
+
+<BaseLayout
+  title={pageTitle(post.title)}
+  description={post.desc}
+  ogType="article"
+  ogImage={post.image}
+  ogImageAlt={entry.data.imageAlt}
+  articlePublishedTime={published}
+  articleModifiedTime={updated}
+  jsonLd={[
+    articleSchema({ name: post.title, description: post.desc, url: postPath, image: post.image, datePublished: published }),
+    breadcrumbSchema(breadcrumbs),
+    ...(faqItems.length ? [faqPageSchema(faqItems.map((f, i) => ({ num: String(i + 1).padStart(2, '0'), q: f.q, a: f.a })))] : []),
+  ]}
+>
+  <article class="py-8 md:py-12">
+    <div class="mx-auto max-w-6xl px-5">
+      <Breadcrumbs items={breadcrumbs} />
+      <BlogPostTopBar post={post} class="mt-6" />
+
+      <div class="blog-article__layout mt-4 grid gap-6 lg:grid-cols-[minmax(14rem,16.5rem)_minmax(0,1fr)] lg:items-start lg:gap-8 xl:grid-cols-[17.5rem_minmax(0,1fr)]">
+        <BlogSidebar post={post} related={related} tocItems={tocItems} class="order-2 lg:order-1" />
+
+        <div class="order-1 min-w-0 lg:order-2">
+          <BlogArticleHero
+            src={post.image}
+            alt={entry.data.imageAlt}
+            title={post.title}
+            category={post.tag}
+            slug={post.slug}
+          />
+
+          <header class="blog-article__header">
+            <div class="flex flex-wrap gap-2">
+              <Badge variant="secondary">{post.tag}</Badge>
+              <Badge variant="outline">{post.date}</Badge>
+              <Badge variant="outline">{post.readTime}</Badge>
+            </div>
+            <h1 class="blog-article__title">{post.title}</h1>
+            <p class="blog-article__lead">{post.desc}</p>
+          </header>
+
+          <BlogPostCta
+            title="Compare MW4 modules"
+            html="See aimbot, ESP, radar, and DMZ loot on the product hub before you change configs."
+            href={PRODUCT_URL}
+          />
+
+          <Prose class="blog-article__prose prose-headings:scroll-mt-24 max-w-none text-left">
+            <Content />
+          </Prose>
+
+          <BlogPostCta
+            title="Get MW4 access"
+            html="Monthly and lifetime keys include the same module list—pick the window that fits your season."
+            href={checkoutPath('mw4')}
+          />
+
+          {related.length > 0 && (
+            <section class="blog-related" aria-labelledby="blog-related-heading">
+              <h2 id="blog-related-heading" class="blog-related__title">Related articles</h2>
+              <div class="blog-related__grid">
+                {related.map((item) => (
+                  <BlogCard post={item} />
+                ))}
+              </div>
+            </section>
+          )}
+
+          <nav class="blog-article__actions mt-10 flex flex-wrap gap-3" aria-label="Continue reading">
+            <Button as="a" href={checkoutPath('mw4')} variant="primary" aria-label={t.ui.checkoutAria}>
+              Get access
+              <Icon name="arrowRight" size={17} />
+            </Button>
+            <Button as="a" href={ROUTES.products} variant="outline">See MW4 modules</Button>
+            <Button as="a" href={ROUTES.blog} variant="outline">More articles <Icon name="arrowRight" size={17} /></Button>
+          </nav>
+
+          {(prevPost || nextPost) && (
+            <nav class="mt-10 grid gap-4 border-t border-border pt-8 sm:grid-cols-2" aria-label="Article pagination">
+              {prevPost ? (
+                <a class="rounded-xl border border-border p-4 hover:border-primary/40" href={`/blog/${prevPost.slug}/`}>
+                  <span class="text-xs text-muted-foreground">Previous</span>
+                  <span class="mt-1 block font-semibold">{prevPost.title}</span>
+                </a>
+              ) : <span />}
+              {nextPost ? (
+                <a class="rounded-xl border border-border p-4 text-right hover:border-primary/40 sm:col-start-2" href={`/blog/${nextPost.slug}/`}>
+                  <span class="text-xs text-muted-foreground">Next</span>
+                  <span class="mt-1 block font-semibold">{nextPost.title}</span>
+                </a>
+              ) : null}
+            </nav>
+          )}
+        </div>
+      </div>
+    </div>
+  </article>
+
+  {faqItems.length > 0 && (
+    <SiteFaqSection items={faqItems} titleId={`blog-faq-${post.slug}`} class="border-t border-border bg-muted/20" />
+  )}
+</BaseLayout>

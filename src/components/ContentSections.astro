@@ -1,0 +1,57 @@
+---
+import { t } from '../i18n';
+import { getFeaturedForumPosts } from '../data/forum';
+import SectionHeader from './SectionHeader.astro';
+import Icon from './icons/Icon.astro';
+import { ROUTES, forumPostPath } from '../utils/path';
+import SiteFaqSection from './SiteFaqSection.astro';
+import { getLandingFaqs } from '../data/faq';
+import { Button } from '@/components/starwind/button';
+
+const homeFaqs = getLandingFaqs();
+const featuredThreads = getFeaturedForumPosts(3);
+---
+
+<section id="forum" class="border-y border-border bg-muted/20 py-16 md:py-24" aria-labelledby="forum-home-title">
+  <div class="mx-auto max-w-6xl px-5">
+    <SectionHeader
+      eyebrow={t.forumHome.eyebrow}
+      title={t.forumHome.title}
+      desc={t.forumHome.subtitle}
+      titleId="forum-home-title"
+    />
+
+    <ul class="mt-12 space-y-4" role="list">
+      {featuredThreads.map((post) => (
+        <li>
+          <article class="rounded-2xl border border-border bg-card/60 p-5 transition hover:border-primary/30">
+            <p class="text-xs font-semibold uppercase tracking-wide text-primary">{post.category}</p>
+            <h3 class="mt-2 text-lg font-semibold text-foreground">
+              <a class="hover:text-primary" href={forumPostPath(post.slug)}>{post.title}</a>
+            </h3>
+            <p class="mt-2 text-sm text-muted-foreground">{post.excerpt}</p>
+            <div class="mt-4 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+              <span class="inline-flex items-center gap-1">
+                <Icon name="messageCircle" size={15} />
+                {post.commentsCount} replies
+              </span>
+              <span class="inline-flex items-center gap-1">
+                <Icon name="arrowUpRight" size={15} />
+                {post.upvotes} upvotes
+              </span>
+            </div>
+          </article>
+        </li>
+      ))}
+    </ul>
+
+    <div class="mt-10 flex justify-start lg:justify-center">
+      <Button as="a" href={ROUTES.forum} variant="outline">
+        {t.forumHome.viewAll}
+        <Icon name="arrowRight" size={17} />
+      </Button>
+    </div>
+  </div>
+</section>
+
+<SiteFaqSection id="faq" titleId="faq-title" items={homeFaqs} />

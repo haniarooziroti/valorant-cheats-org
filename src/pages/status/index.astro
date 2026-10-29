@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { BRAND, GAME_SHORT } from '../../config/brand';
+import { resolvePageSeo } from '../../config/seo';
+import { breadcrumbSchema, webPageSchema } from '../../utils/schema';
+import { Button } from '@/components/starwind/button';
+import { ROUTES } from '../../utils/path';
+
+const seo = resolvePageSeo('/status/');
+const breadcrumbs = [{ name: 'Home', path: '/' }, { name: 'Status', path: '/status/' }];
+---
+
+<BaseLayout
+  title={seo.title}
+  description={seo.description}
+  jsonLd={[
+    webPageSchema({
+      name: `${GAME_SHORT} module status — ${BRAND}`,
+      description: seo.description,
+      url: '/status/',
+    }),
+    breadcrumbSchema(breadcrumbs),
+  ]}
+>
+  <section class="py-10 md:py-14">
+    <div class="mx-auto max-w-2xl px-5 text-center">
+      <Breadcrumbs items={breadcrumbs} />
+      <h1 class="mt-6 text-3xl font-bold uppercase tracking-tight">{GAME_SHORT} status</h1>
+      <p class="mt-3 text-muted-foreground">Live module alignment for PC multiplayer playlists.</p>
+      <div class="mt-8 rounded-2xl border border-primary/40 bg-primary/10 px-6 py-8">
+        <p class="text-sm font-medium uppercase tracking-wider text-primary">Current</p>
+        <p class="mt-2 text-2xl font-semibold text-foreground">Active</p>
+        <p class="mt-2 text-sm text-muted-foreground">Aim, ESP, radar, and DMZ loot layers are online. Recheck after major game patches.</p>
+      </div>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <Button as="a" href={ROUTES.products} variant="primary">See {GAME_SHORT} modules</Button>
+        <Button as="a" href={ROUTES.support} variant="outline">Support</Button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

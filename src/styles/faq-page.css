@@ -1,0 +1,21 @@
+.faq-page-section {
+  padding-bottom: 3rem;
+}
+
+.faq-page-section [data-faq-section] .mx-auto {
+  max-width: 48rem;
+}
+
+.faq-page-section [data-faq-filters] {
+  justify-content: center;
+}
+
+.faq-page-section [data-faq-list] {
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .faq-page-section {
+    padding-bottom: 4rem;
+  }
+}

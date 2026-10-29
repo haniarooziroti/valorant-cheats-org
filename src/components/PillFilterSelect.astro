@@ -1,0 +1,33 @@
+---
+interface Option {
+  value: string;
+  label: string;
+}
+
+interface Props {
+  id: string;
+  label: string;
+  options: Option[];
+  defaultValue?: string;
+  dataAttr: string;
+  ariaLabel?: string;
+}
+
+const { id, label, options, defaultValue, dataAttr, ariaLabel } = Astro.props;
+---
+
+<div class="pill-filter-field">
+  <label class="pill-filter-field__label" for={id}>{label}</label>
+  <div class="pill-filter-field__wrap">
+    <select
+      id={id}
+      class="pill-filter-field__select"
+      data-pill-filter={dataAttr}
+      aria-label={ariaLabel ?? label}
+    >
+      {options.map((opt) => (
+        <option value={opt.value} selected={opt.value === defaultValue}>{opt.label}</option>
+      ))}
+    </select>
+  </div>
+</div>

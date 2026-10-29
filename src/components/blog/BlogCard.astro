@@ -1,0 +1,64 @@
+---
+import BlogCardMedia from './BlogCardMedia.astro';
+import Icon from '../icons/Icon.astro';
+import { blogPostPath } from '../../utils/path';
+import type { BlogPost } from '../../i18n/types';
+import { blogTagIcons } from '../../data/sectionIcons';
+import type { IconName } from '../icons/types';
+import { getBlogPostTimestamp, getBlogReadMinutes } from '../../data/blog';
+
+interface Props {
+  post: BlogPost;
+  eager?: boolean;
+  class?: string;
+}
+
+const { post, eager = false, class: className } = Astro.props;
+const href = blogPostPath(post.slug);
+const timestamp = post.dateIso ? new Date(post.dateIso).getTime() : getBlogPostTimestamp(post.date);
+const readMinutes = getBlogReadMinutes(post.readTime);
+const dateBadge = post.dateIso ?? post.date;
+const tagIcon: IconName = blogTagIcons[post.tag] ?? 'tag';
+const searchBlob = `${post.title} ${post.desc} ${post.tag} ${post.slug}`.toLowerCase();
+---
+
+<article
+  class:list={['blog-card', className]}
+  data-blog-card
+  data-tag={post.tag}
+  data-ts={timestamp}
+  data-read-minutes={readMinutes}
+  data-search={searchBlob}
+>
+  <a class="blog-card__link" href={href}>
+    <div class="blog-card__media-shell">
+      <BlogCardMedia
+        src={post.image}
+        alt={post.title}
+        title={post.title}
+        category={post.tag}
+        slug={post.slug}
+        eager={eager}
+      />
+      <div class="blog-card__chips" aria-hidden="true">
+        <span class="blog-card__chip blog-card__chip--tag">
+          <Icon name={tagIcon} size={14} />
+          {post.tag}
+        </span>
+        <span class="blog-card__chip blog-card__chip--date">
+          <Icon name="calendar" size={14} />
+          {dateBadge}
+        </span>
+        <span class="blog-card__chip blog-card__chip--read">
+          <Icon name="clock" size={14} />
+          {post.readTime}
+        </span>
+      </div>
+    </div>
+
+    <div class="blog-card__body">
+      <h2 class="blog-card__title">{post.title}</h2>
+      <p class="blog-card__excerpt">{post.desc}</p>
+    </div>
+  </a>
+</article>
