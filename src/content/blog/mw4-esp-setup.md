@@ -1,6 +1,6 @@
 ---
-title: "MW4 ESP and radar setup for 6v6: keep it readable"
-description: "6v6 maps are small and busy. Here's how to set up player ESP and radar so you get useful information instead of a cluttered screen."
+title: "MW4 player ESP and radar setup for readable 6v6 HUDs"
+description: "Setup: 6v6 maps are small and busy. Here's how to set up player ESP and radar so you get useful information instead of a cluttered screen."
 category: Setup
 publishDate: 2026-10-14
 updatedDate: 2026-10-14

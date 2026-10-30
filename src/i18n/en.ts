@@ -441,34 +441,35 @@ export const en: Translations = {
     about: {
       title: 'Forum: About MW4 Cheat',
       description:
-        'MW4 Cheat publishes Modern Warfare 4 PC module info, forum discussions, and support paths at mw4cheat.org.',
+        'MW4 Cheat publishes Modern Warfare 4 PC module info, community discussions, and support paths at mw4cheat.org.',
       sections: [
         {
           heading: 'What this site covers',
           paragraphs: [
-            'mw4cheat.org documents aim assist, player ESP, triggerbot, radar, and Hajin DMZ loot tools for Modern Warfare 4 on PC. We focus on module comparisons, conservative defaults, and community threads—not hype.',
-            'The forum is where players compare configs after patches. Browse threads before checkout if you want honest setup talk from people running the same modules.',
+            'mw4cheat.org documents aim assist, player ESP, triggerbot, radar, and Hajin DMZ loot tools for Modern Warfare 4 on PC. We focus on module comparisons, conservative defaults, and player-written threads—not hype.',
+            'Browse community posts before you buy if you want honest setup talk from people running the same modules.',
             'Game names and trademarks belong to their owners and are used for identification only.',
           ],
         },
         {
           heading: 'How content is updated',
           paragraphs: [
-            'Product pages and the forum reflect current module behavior after patches. Check the homepage status note before you launch following a game update.',
-            'Blog guides and forum stickies are refreshed when loader steps or default configs change so newcomers are not stuck on outdated screenshots.',
+            'Product pages and community threads reflect current module behavior after patches. Check the homepage status note before you launch following a game update.',
+            'Blog guides and pinned threads are refreshed when loader steps or default configs change so newcomers are not stuck on outdated screenshots.',
           ],
         },
         {
-          heading: 'Community forum',
+          heading: 'Community discussion',
           paragraphs: [
-            'Use the forum for feature questions that are too specific for FAQ entries—aim circle tuning, ESP colors, DMZ routing, and checkout timing.',
+            'Use the forum for feature questions that are too specific for FAQ entries—aim circle tuning, ESP colors, DMZ routing, and billing timing.',
             'Moderation is light: keep replies on-topic and avoid sharing license keys or loader downloads in public threads.',
+            'Long-form guides live on the blog; quick comparisons stay in discussion posts where players share patch-day notes.',
           ],
         },
         {
           heading: 'Support',
           paragraphs: [
-            'Loader, checkout, and license questions go through email support. Include your order email, Windows version, and any loader error text.',
+            'Loader, billing, and license questions go through email support. Include your order email, Windows version, and any loader error text.',
           ],
         },
       ],

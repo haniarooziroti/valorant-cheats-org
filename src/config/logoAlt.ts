@@ -1,5 +1,6 @@
 import { normalizeSeoPath } from './pageSeo';
 import { getForumThreadSeo } from './forumSeo';
+import { getBlogPostSeo } from './blogSeo';
 
 const LOGO_ALT_BY_PATH: Record<string, string> = {
   '/': 'Aimbot – logo',
@@ -20,6 +21,10 @@ export function resolveLogoAlt(pathname: string): string {
   if (path.startsWith('/forum/') && path !== '/forum/') {
     const slug = path.replace(/^\/forum\//, '').replace(/\/$/, '');
     return getForumThreadSeo(slug)?.logoAlt ?? 'Aimbot – logo';
+  }
+  if (path.startsWith('/blog/') && path !== '/blog/') {
+    const slug = path.replace(/^\/blog\//, '').replace(/\/$/, '');
+    return getBlogPostSeo(slug)?.logoAlt ?? 'Aimbot – logo';
   }
   return LOGO_ALT_BY_PATH[path] ?? 'Aimbot – logo';
 }

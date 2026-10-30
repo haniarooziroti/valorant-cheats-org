@@ -1,6 +1,6 @@
 ---
 title: "After a Modern Warfare 4 patch: your cheat update checklist"
-description: "A game update just landed. Here's what to check before launching your MW4 tools so you don't waste time or take unnecessary risks."
+description: "Patch: A game update just landed. Here's what to check before launching your MW4 tools so you don't waste time or take unnecessary risks."
 category: Updates
 publishDate: 2026-10-24
 updatedDate: 2026-10-24

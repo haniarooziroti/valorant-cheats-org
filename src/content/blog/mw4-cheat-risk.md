@@ -1,5 +1,5 @@
 ---
-title: "Is it safe to use MW4 cheats? An honest look at ban risk and free vs paid"
+title: "Risk and ban exposure: an honest MW4 safety guide"
 description: "No tool is risk-free. Here's what raises or lowers your chances of trouble in MW4, what we can't promise, and why free downloads are a bad bet."
 category: Guides
 publishDate: 2026-10-27

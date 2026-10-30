@@ -1,6 +1,6 @@
 ---
-title: "MW4 aimbot settings: circle size, smoothing and bone choice"
-description: "How to set up MW4 aim assist so it helps your tracking without looking like a screen-snap. Starting values for 6v6, Ground War and DMZ."
+title: "Aim circle size, smoothing and bone choice for MW4"
+description: "Circle: How to set up MW4 aim assist so it helps your tracking without looking like a screen-snap. Starting values for 6v6, Ground War and DMZ."
 category: Setup
 publishDate: 2026-10-12
 updatedDate: 2026-10-12

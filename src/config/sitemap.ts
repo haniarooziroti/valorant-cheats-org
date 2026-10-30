@@ -43,6 +43,7 @@ const STATIC_LASTMOD: Record<string, string> = {
   '/products/mw4-cheats/triggerbot/': '2026-10-12T00:00:00.000Z',
   '/products/mw4-cheats/radar/': '2026-10-12T00:00:00.000Z',
   '/products/mw4-cheats/dmz-loot/': '2026-10-12T00:00:00.000Z',
+  '/go/mw4/': '2026-10-15T00:00:00.000Z',
 };
 
 const buildDate = new Date().toISOString();
@@ -70,11 +71,18 @@ export function sitemapSerialize(item: SitemapItem): SitemapItem | undefined {
 
   if (
     path.includes('/404') ||
-    path.startsWith('/go/') ||
+    (path.startsWith('/go/') && path !== '/go/mw4/') ||
     path.includes('/rss.xml') ||
     LEGACY_REDIRECT_PREFIXES.includes(path)
   ) {
     return undefined;
+  }
+
+  if (path === '/go/mw4/') {
+    item.priority = 0.6;
+    item.changefreq = 'monthly';
+    item.lastmod = lastmodForPath(path);
+    return item;
   }
 
   item.lastmod = lastmodForPath(path);
