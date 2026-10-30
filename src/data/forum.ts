@@ -43,7 +43,7 @@ export const forumPosts: ForumPost[] = [
     slug: 'aimbot-settings-fov-and-smoothing',
     category: 'Aimbot',
     categoryTone: 'blue',
-    title: 'Aimbot settings: what FOV and smoothing should I actually run?',
+    title: 'Fov and smoothing: what should I run after the last patch?',
     excerpt:
       'Trying to dial in the aim circle without looking robotic in 6v6—what are people running after the last patch?',
     author: 'lanehold',
@@ -95,7 +95,7 @@ export const forumPosts: ForumPost[] = [
     slug: 'will-high-aim-smooth-get-me-banned',
     category: 'Aimbot',
     categoryTone: 'blue',
-    title: "Aimbot smoothing: what level and why won't I get reported instantly?",
+    title: 'Smoothing what level keeps 6v6 killcams believable?',
     excerpt:
       'Commercial question but serious—how conservative are you with smooth and FOV to avoid obvious killcams?',
     author: 'vctr_91',
@@ -373,6 +373,8 @@ export const forumPosts: ForumPost[] = [
     flair: 'Checkout',
     body: [
       'I play MW4 most nights but not sure I will stick the whole year. Did lifetime people actually break even?',
+      'Monthly billing feels safer when I might skip a season, but I keep reading that lifetime pays off after a few renewals if patches stay stable.',
+      'Anyone track how many monthly cycles they needed before lifetime would have been cheaper? Curious for DMZ-heavy players who still hop into 6v6.',
     ],
     comments: [
       {

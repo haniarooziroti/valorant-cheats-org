@@ -439,13 +439,15 @@ export const en: Translations = {
   },
   legalPages: {
     about: {
-      title: 'About MW4 Cheat',
-      description: 'MW4 Cheat publishes Modern Warfare 4 PC module info, forum discussions, and support paths at mw4cheat.org.',
+      title: 'Forum: About MW4 Cheat',
+      description:
+        'MW4 Cheat publishes Modern Warfare 4 PC module info, forum discussions, and support paths at mw4cheat.org.',
       sections: [
         {
           heading: 'What this site covers',
           paragraphs: [
             'mw4cheat.org documents aim assist, player ESP, triggerbot, radar, and Hajin DMZ loot tools for Modern Warfare 4 on PC. We focus on module comparisons, conservative defaults, and community threads—not hype.',
+            'The forum is where players compare configs after patches. Browse threads before checkout if you want honest setup talk from people running the same modules.',
             'Game names and trademarks belong to their owners and are used for identification only.',
           ],
         },
@@ -453,6 +455,14 @@ export const en: Translations = {
           heading: 'How content is updated',
           paragraphs: [
             'Product pages and the forum reflect current module behavior after patches. Check the homepage status note before you launch following a game update.',
+            'Blog guides and forum stickies are refreshed when loader steps or default configs change so newcomers are not stuck on outdated screenshots.',
+          ],
+        },
+        {
+          heading: 'Community forum',
+          paragraphs: [
+            'Use the forum for feature questions that are too specific for FAQ entries—aim circle tuning, ESP colors, DMZ routing, and checkout timing.',
+            'Moderation is light: keep replies on-topic and avoid sharing license keys or loader downloads in public threads.',
           ],
         },
         {
@@ -471,18 +481,28 @@ export const en: Translations = {
           heading: 'Information we collect',
           paragraphs: [
             'We may collect standard web analytics such as page views, device type, browser, and approximate region when analytics are enabled. Checkout happens on external pages—we do not store payment card data on mw4cheat.org.',
+            'When you email support, we retain the address and message content until the ticket is resolved. Forum posts you write are public by design.',
           ],
         },
         {
           heading: 'How we use data',
           paragraphs: [
             'Analytics help us improve product and forum pages. Support messages may retain the email address and content you send until the issue is resolved.',
+            'We do not sell personal data. Aggregated traffic patterns may inform which guides we expand after major game patches.',
           ],
         },
         {
           heading: 'Cookies',
           paragraphs: [
             'We use minimal cookies required for analytics. You can block cookies in your browser; core content remains available.',
+            'Partner checkout pages may set their own cookies when you complete payment—we do not control those settings.',
+          ],
+        },
+        {
+          heading: 'Your privacy choices',
+          paragraphs: [
+            'You can request deletion of support correspondence tied to your email where retention is not required for fraud prevention or legal compliance.',
+            'Privacy questions about analytics or cookies should include the browser and region you browse from so we can reproduce the issue.',
           ],
         },
         {
@@ -501,6 +521,7 @@ export const en: Translations = {
           heading: 'Agreement',
           paragraphs: [
             'Last updated: October 2026. By using mw4cheat.org or completing checkout for access listed here, you agree to these Terms & Conditions and our Privacy Policy.',
+            'These terms govern how you may use the site, forum, and purchased licenses. If a section conflicts with mandatory local law, the law controls only where required.',
           ],
         },
         {
@@ -531,6 +552,7 @@ export const en: Translations = {
           heading: 'Risk',
           paragraphs: [
             'Third-party tools in multiplayer can lead to account penalties. You use this software at your own risk. Check the homepage status note before each session.',
+            'We may update these terms when checkout partners, module delivery, or support processes change. Continued use after updates means you accept the revised terms.',
           ],
         },
       ],

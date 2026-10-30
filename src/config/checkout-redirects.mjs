@@ -3,11 +3,11 @@ export const CHECKOUT_URLS = {
   mw4: 'https://zadeyo.com/go/HANIA?to=%2Fproducts%2Fmw4',
 };
 
-/** Checkout paths → external product URLs (used by Node serve + Astro middleware). */
-export const CHECKOUT_PATH_REDIRECTS = new Map([
-  ['/go/mw4', CHECKOUT_URLS.mw4],
-  ['/go/mw4/', CHECKOUT_URLS.mw4],
-]);
+/**
+ * Legacy instant redirects (unused — /go/mw4/ is a full indexable landing page).
+ * Node preview uses static dist files for checkout paths.
+ */
+export const CHECKOUT_PATH_REDIRECTS = new Map([]);
 
 export function resolveCheckoutPathRedirect(pathname) {
   const direct = CHECKOUT_PATH_REDIRECTS.get(pathname);

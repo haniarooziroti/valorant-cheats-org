@@ -16,9 +16,10 @@ interface Props {
   titleId?: string;
   showTicketTips?: boolean;
   class?: string;
+  keywordHeading?: string;
 }
 
-const { titleId = 'support-title', showTicketTips = false, class: className } = Astro.props;
+const { titleId = 'support-title', showTicketTips = false, class: className, keywordHeading } = Astro.props;
 const c = t.support;
 ---
 
@@ -31,6 +32,7 @@ const c = t.support;
     <header class="section-header section-header--wide support-section__header">
       <p class="section-header__eyebrow">{c.eyebrow}</p>
       <h1 id={titleId} class="section-header__title">{c.title}</h1>
+      {keywordHeading ? <h2 class="section-header__subtitle text-lg font-semibold text-foreground">{keywordHeading}</h2> : null}
       <p class="section-header__subtitle">{c.subtitle}</p>
     </header>
 

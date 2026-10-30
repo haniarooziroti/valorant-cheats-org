@@ -19,9 +19,9 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
       'MW4 cheat modules for aim assist, ESP, triggerbot, radar, and DMZ loot layers—compare options before checkout on mw4cheat.org.',
   },
   '/products/mw4-cheats/aimbot/': {
-    title: 'MW4 Aimbot — Smooth Aim Circle & Bone Selection',
+    title: 'Mw4 Aimbot – Module | MW4 Cheat',
     description:
-      'MW4 aimbot settings explained: FOV circle, smoothing, wall checks, and team filters for 6v6 multiplayer on PC.',
+      'Mw4 Aimbot: Precision aim assist for Modern Warfare 4 PC multiplayer with circle FOV, smoothing, and visibility checks.',
   },
   '/products/mw4-cheats/esp/': {
     title: 'MW4 ESP & Wallhack — Player Boxes & Skeleton',
@@ -29,24 +29,24 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
       'Player ESP for Modern Warfare 4 with health, armor plates, distance, and skeleton overlay—readable layouts for fast playlists.',
   },
   '/products/mw4-cheats/triggerbot/': {
-    title: 'MW4 Triggerbot — Fire on Crosshair Contact',
+    title: 'Mw4 Triggerbot – Trigger module fires when your | MW4 Cheat',
     description:
-      'Triggerbot module for MW4 with delay tuning, head or chest priority, and the same visibility rules as aim assist.',
+      'Mw4 Triggerbot: Trigger module fires when your crosshair is already on an operator, with delay tuning and shared visibility checks.',
   },
   '/products/mw4-cheats/radar/': {
-    title: 'MW4 2D Radar — Operator Markers & Range',
+    title: 'Radar – and range limits for Ground War and large playlists',
     description:
       'Compact 2D radar for Modern Warfare 4 with zoom, range caps, and squad-friendly markers for Ground War rotations.',
   },
   '/products/mw4-cheats/dmz-loot/': {
     title: 'MW4 DMZ Loot ESP — Contracts & Extracts',
     description:
-      'Hajin DMZ loot layer for cash, bags, contracts, vehicles, and extract points—auto-disabled in 6v6 playlists.',
+      'Dmz Loot: Loot ESP for Hajin DMZ: cash, bags, armor, contracts, vehicles, and extract points—with the layer off in 6v6.',
   },
   '/blog/': {
     title: 'MW4 Cheat Blog — Aimbot, ESP & Wallhack Guides',
     description:
-      'Search and filter MW4 cheat guides: aimbot tuning, player ESP, wallhack setup, DMZ loot, checkout, patch-day status, and loader fixes for Modern Warfare 4 PC.',
+      'Blog: Search and filter MW4 cheat guides: aimbot tuning, player ESP, wallhack setup, DMZ loot, checkout, patch-day status, and loader fixes for Modern Warfare.',
   },
   '/reviews/': {
     title: 'MW4 Cheat Reviews — Aimbot & ESP Player Feedback',
@@ -61,30 +61,36 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
   '/forum/': {
     title: 'MW4 Cheats Forum — Setup & Feature Talk',
     description:
-      'Community threads on MW4 aimbot tuning, ESP layouts, DMZ configs, and checkout questions from PC players.',
+      'Mw4 Cheats Forum: Community threads on MW4 aimbot tuning, ESP layouts, DMZ configs, and checkout questions from PC players.',
   },
   '/faq/': {
     title: 'MW4 Cheat FAQ — PC Setup & Access',
     description:
-      'Answers on MW4 cheat compatibility, loader steps, pricing, and account risk before you buy access.',
+      'Faq: Answers on MW4 cheat compatibility, loader steps, pricing, and account risk before you buy access.',
   },
   '/terms/': {
     title: 'Terms & Conditions | MW4 Cheat',
     description: 'Purchase terms, license use, and refund policy for MW4 cheat access sold through mw4cheat.org.',
   },
   '/privacy/': {
-    title: 'Privacy Policy | MW4 Cheat',
-    description: 'How mw4cheat.org uses analytics, cookies, and contact data when you browse or request support.',
+    title: 'Privacy – How mw4cheat | MW4 Cheat',
+    description:
+      'Privacy: How mw4cheat.org uses analytics, cookies, and contact data when you browse or request support.',
   },
   '/about/': {
-    title: 'About MW4 Cheat — PC Guides, Forum & Support',
+    title: 'Forum – About MW4 Cheat | MW4 Cheat',
     description:
       'What mw4cheat.org publishes about Modern Warfare 4 PC cheat modules, community forum threads, blog guides, and support paths.',
   },
   '/support/': {
     title: 'MW4 Cheat Support — Loader & Checkout Help',
     description:
-      'Get help with MW4 loader setup, configs, and secure checkout for Modern Warfare 4 aimbot, ESP, and DMZ modules on PC.',
+      'Support: Get help with MW4 loader setup, configs, and secure checkout for Modern Warfare 4 aimbot, ESP, and DMZ modules on PC.',
+  },
+  '/go/mw4/': {
+    title: 'Checkout – Redirecting | MW4 Cheat',
+    description:
+      'Checkout: Secure MW4 license purchase on mw4cheat.org—compare aimbot, ESP, radar, and DMZ modules, then continue to partner checkout for delivery.',
   },
 };
 

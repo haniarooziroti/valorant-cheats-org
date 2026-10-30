@@ -5,7 +5,7 @@
     "directory": "./dist"
   },
   "build": {
-    "command": "PUBLIC_SITE_ORIGIN=https://mw4-cheat--org.hania-rooziroti.workers.dev npm run build",
+    "command": "npm run build",
     "cwd": "."
   }
 }

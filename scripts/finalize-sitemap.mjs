@@ -11,7 +11,12 @@ if (!fs.existsSync(source)) {
   process.exit(1);
 }
 
-const raw = fs.readFileSync(source, 'utf8');
+let raw = fs.readFileSync(source, 'utf8');
+raw = raw.replace(/https:\/\/mw4-cheat--org\.hania-rooziroti\.workers\.dev/gi, SITE_URL);
+raw = raw.replace(/<loc>(?!https:\/\/)([^<]+)<\/loc>/g, (_, path) => {
+  const normalized = path.startsWith('/') ? path : `/${path}`;
+  return `<loc>${SITE_URL}${normalized}</loc>`;
+});
 const urlCount = (raw.match(/<url>/g) ?? []).length;
 
 if (urlCount === 0) {

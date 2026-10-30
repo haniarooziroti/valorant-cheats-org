@@ -4,7 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Icon from '../../components/icons/Icon.astro';
 import { forumPosts, getForumPost } from '../../data/forum';
-import { pageTitle, truncateMetaDescription } from '../../config/seo';
+import { getForumThreadSeo } from '../../config/forumSeo';
 import { breadcrumbSchema, discussionForumPostingSchema } from '../../utils/schema';
 
 export function getStaticPaths() {
@@ -14,9 +14,11 @@ export function getStaticPaths() {
 const post = getForumPost(Astro.params.slug!);
 if (!post) return Astro.redirect('/forum/');
 const path = `/forum/${post.slug}/`;
-const forumDescription = truncateMetaDescription(
-  `${post.excerpt} MW4 cheat thread on ${post.category.toLowerCase()}, aimbot, ESP, and PC setup.`,
-);
+const threadSeo = getForumThreadSeo(post.slug);
+const pageTitle = threadSeo?.title ?? `${post.title} | MW4 Cheat`;
+const pageDescription = threadSeo?.description ?? post.excerpt;
+const sidebarHeading = threadSeo?.sidebarHeading ?? `mw4/${post.category.toLowerCase().replaceAll(' ', '')}`;
+const extraBody = threadSeo?.extraBody ?? [];
 const breadcrumbs = [{ name: 'Home', path: '/' }, { name: 'Forum', path: '/forum/' }, { name: post.category, path: '/forum/' }, { name: post.title, path }];
 const relatedPosts = [
   ...forumPosts.filter((item) => item.slug !== post.slug && item.category === post.category),
@@ -24,8 +26,8 @@ const relatedPosts = [
 ].slice(0, 3);
 ---
 
-<BaseLayout title={pageTitle(post.title)} description={forumDescription} jsonLd={[
-  discussionForumPostingSchema({ name: post.title, text: post.body.join('\n\n'), url: path, author: post.author, comments: post.commentsCount }),
+<BaseLayout title={pageTitle} description={pageDescription} jsonLd={[
+  discussionForumPostingSchema({ name: post.title, text: [...post.body, ...extraBody].join('\n\n'), url: path, author: post.author, comments: post.commentsCount }),
   breadcrumbSchema(breadcrumbs),
 ]}>
   <section class="forum-page py-8 md:py-12">
@@ -45,7 +47,10 @@ const relatedPosts = [
               </div>
               <h1>{post.title}</h1>
               {post.flair && <span class={`forum-flair tone-${post.categoryTone}`}>{post.flair}</span>}
-              <div class="forum-detail-copy">{post.body.map((paragraph) => <p>{paragraph}</p>)}</div>
+              <div class="forum-detail-copy">
+                {post.body.map((paragraph) => <p>{paragraph}</p>)}
+                {extraBody.map((paragraph) => <p>{paragraph}</p>)}
+              </div>
               <div class="forum-post-actions forum-post-actions--detail">
                 <a href="#comments"><Icon name="messageCircle" size={16} /> {post.commentsCount} replies</a>
               </div>
@@ -77,7 +82,7 @@ const relatedPosts = [
           <section class="forum-side-card forum-about">
             <div class="forum-side-card__banner"></div>
             <div class="forum-about__content">
-              <div class="forum-about__title"><span class={`forum-community-avatar tone-${post.categoryTone}`}>m</span><h2>mw4/{post.category.toLowerCase().replaceAll(' ', '')}</h2></div>
+              <div class="forum-about__title"><span class={`forum-community-avatar tone-${post.categoryTone}`}>m</span><h2>{sidebarHeading}</h2></div>
               <p>More threads on {post.category.toLowerCase()} settings and MW4 PC play.</p>
               <div class="forum-stats"><span><b>{forumPosts.length}</b> threads</span><span><b>{forumPosts.filter((item) => item.category === post.category).length}</b> in this topic</span></div>
               <a class="forum-join" href="/forum/">Back to forum</a>
