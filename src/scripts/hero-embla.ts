@@ -66,8 +66,6 @@ function bindHeroDots(wrapper: HTMLElement, api: EmblaApi, autoplay: AutoplayPlu
 }
 
 async function initHeroCarousels(root: ParentNode = document) {
-  if (!window.matchMedia(DESKTOP_MQ).matches) return;
-
   const nodes = [...root.querySelectorAll<HTMLElement>('[data-hero-embla]')].filter(
     (node) => node.dataset.heroEmblaReady !== 'true',
   );

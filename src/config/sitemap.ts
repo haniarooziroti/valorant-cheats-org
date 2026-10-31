@@ -20,16 +20,17 @@ function loadBlogLastmods(): Map<string, string> {
     const d = data.updatedDate ?? data.publishDate;
     if (d) map.set(`/blog/${slug}/`, new Date(d).toISOString());
   }
+  const dates = [...map.values()].sort();
+  if (dates.length) map.set('/blog/', dates[dates.length - 1]!);
   return map;
 }
 
 const blogLastmods = loadBlogLastmods();
 
-/** Stable lastmod for static routes (avoid rewriting entire sitemap every build). */
 const STATIC_LASTMOD: Record<string, string> = {
   '/': '2026-10-15T00:00:00.000Z',
   '/about/': '2026-09-01T00:00:00.000Z',
-  '/blog/': '2026-10-15T00:00:00.000Z',
+  '/blog/': '2026-10-30T00:00:00.000Z',
   '/reviews/': '2026-10-10T00:00:00.000Z',
   '/forum/': '2026-10-18T00:00:00.000Z',
   '/faq/': '2026-09-15T00:00:00.000Z',
@@ -37,13 +38,13 @@ const STATIC_LASTMOD: Record<string, string> = {
   '/privacy/': '2026-09-01T00:00:00.000Z',
   '/terms/': '2026-09-01T00:00:00.000Z',
   '/status/': '2026-10-20T00:00:00.000Z',
-  '/products/mw4-cheats/': '2026-10-12T00:00:00.000Z',
-  '/products/mw4-cheats/aimbot/': '2026-10-12T00:00:00.000Z',
-  '/products/mw4-cheats/esp/': '2026-10-12T00:00:00.000Z',
-  '/products/mw4-cheats/triggerbot/': '2026-10-12T00:00:00.000Z',
-  '/products/mw4-cheats/radar/': '2026-10-12T00:00:00.000Z',
-  '/products/mw4-cheats/dmz-loot/': '2026-10-12T00:00:00.000Z',
-  '/go/mw4/': '2026-10-15T00:00:00.000Z',
+  '/products/valorant-cheats/': '2026-10-12T00:00:00.000Z',
+  '/products/valorant-cheats/aimbot/': '2026-10-12T00:00:00.000Z',
+  '/products/valorant-cheats/esp/': '2026-10-12T00:00:00.000Z',
+  '/products/valorant-cheats/triggerbot/': '2026-10-12T00:00:00.000Z',
+  '/products/valorant-cheats/radar/': '2026-10-12T00:00:00.000Z',
+  '/products/valorant-cheats/no-recoil/': '2026-10-12T00:00:00.000Z',
+  '/go/valorant/': '2026-10-15T00:00:00.000Z',
 };
 
 const buildDate = new Date().toISOString();
@@ -52,33 +53,14 @@ function lastmodForPath(path: string): string {
   return blogLastmods.get(path) ?? STATIC_LASTMOD[path] ?? buildDate;
 }
 
-const LEGACY_REDIRECT_PREFIXES = [
-  '/blog/how-to-buy-mw4-cheats-2026/',
-  '/blog/mw4-cheat-features-overview/',
-  '/blog/mw4-monthly-vs-lifetime/',
-  '/blog/mw4-aimbot-settings-guide/',
-  '/blog/mw4-esp-radar-6v6-setup/',
-  '/blog/hajin-dmz-loot-guide/',
-  '/blog/mw4-triggerbot-and-no-recoil/',
-  '/blog/mw4-system-requirements-setup/',
-  '/blog/mw4-loader-not-working/',
-  '/blog/mw4-patch-day-checklist/',
-  '/blog/mw4-cheat-risk-explained/',
-];
-
 export function sitemapSerialize(item: SitemapItem): SitemapItem | undefined {
   const path = pathnameFromUrl(item.url);
 
-  if (
-    path.includes('/404') ||
-    (path.startsWith('/go/') && path !== '/go/mw4/') ||
-    path.includes('/rss.xml') ||
-    LEGACY_REDIRECT_PREFIXES.includes(path)
-  ) {
+  if (path.includes('/404') || (path.startsWith('/go/') && path !== '/go/valorant/')) {
     return undefined;
   }
 
-  if (path === '/go/mw4/') {
+  if (path === '/go/valorant/') {
     item.priority = 0.6;
     item.changefreq = 'monthly';
     item.lastmod = lastmodForPath(path);

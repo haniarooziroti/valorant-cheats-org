@@ -9,8 +9,10 @@ const blog = defineCollection({
     category: z.enum(['Features', 'Guides', 'Setup', 'Troubleshooting', 'Updates']),
     publishDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
-    featuredImage: z.string(),
-    imageAlt: z.string(),
+    readMinutes: z.number().int().min(1).optional(),
+    tags: z.array(z.string()).default([]),
+    featuredImage: z.string().optional().default(''),
+    imageAlt: z.string().optional().default(''),
     featured: z.boolean().optional().default(false),
     relatedSlugs: z.array(z.string()).default([]),
     faq: z

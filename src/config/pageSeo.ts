@@ -9,88 +9,88 @@ export interface PageSeoEntry {
 
 export const PAGE_SEO: Record<string, PageSeoEntry> = {
   '/': {
-    title: 'MW4 Cheat — Aimbot, ESP & Wallhack for PC',
+    title: 'Valorant Esp, Aimbot & Wallhack',
     description:
-      'Download-ready MW4 cheats for Modern Warfare 4 PC: aimbot tuning, player ESP, wallhack overlays, radar, and Hajin DMZ loot ESP. Guides, reviews, and checkout.',
+      'Valorant cheats with ESP, aimbot, and wallhack tools for PC ranked and unrated. Compare modules, read forums, and continue to secure checkout.',
   },
-  '/products/mw4-cheats/': {
-    title: 'Modern Warfare 4 Cheats — Full Feature List',
+  '/products/valorant-cheats/': {
+    title: 'Valorant Cheats — Aimbot, ESP & Wallhack Modules',
     description:
-      'MW4 cheat modules for aim assist, ESP, triggerbot, radar, and DMZ loot layers—compare options before checkout on mw4cheat.org.',
+      'Valorant cheat modules for aimbot, ESP wallhack, triggerbot, radar hack, and no recoil—compare features before checkout.',
   },
-  '/products/mw4-cheats/aimbot/': {
-    title: 'Mw4 Aimbot – Module | MW4 Cheat',
+  '/products/valorant-cheats/aimbot/': {
+    title: 'Valorant Aimbot — Soft Aim & FOV Tuning',
     description:
-      'Mw4 Aimbot: Precision aim assist for Modern Warfare 4 PC multiplayer with circle FOV, smoothing, and visibility checks.',
+      'Valorant aimbot with FOV circle, smoothing, and visibility checks for ranked duels—transactional module details and checkout access.',
   },
-  '/products/mw4-cheats/esp/': {
-    title: 'MW4 ESP & Wallhack — Player Boxes & Skeleton',
+  '/products/valorant-cheats/esp/': {
+    title: 'Valorant ESP & Wallhack — Agent Boxes',
     description:
-      'Player ESP for Modern Warfare 4 with health, armor plates, distance, and skeleton overlay—readable layouts for fast playlists.',
+      'Valorant ESP and wallhack overlays with health, distance, and skeleton options tuned for readable comp games.',
   },
-  '/products/mw4-cheats/triggerbot/': {
-    title: 'Mw4 Triggerbot – Trigger module fires when your | MW4 Cheat',
+  '/products/valorant-cheats/triggerbot/': {
+    title: 'Valorant Triggerbot — Delay & Hold Key',
     description:
-      'Mw4 Triggerbot: Trigger module fires when your crosshair is already on an operator, with delay tuning and shared visibility checks.',
+      'Valorant triggerbot fires when your crosshair is on target, with ms delay tuning and shared wall checks.',
   },
-  '/products/mw4-cheats/radar/': {
-    title: 'Radar – and range limits for Ground War and large playlists',
+  '/products/valorant-cheats/radar/': {
+    title: 'Valorant Radar Hack — 2D Awareness',
     description:
-      'Compact 2D radar for Modern Warfare 4 with zoom, range caps, and squad-friendly markers for Ground War rotations.',
+      'Valorant radar hack with zoom, range caps, and markers synced to ESP distance on Haven, Bind, and Ascent.',
   },
-  '/products/mw4-cheats/dmz-loot/': {
-    title: 'MW4 DMZ Loot ESP — Contracts & Extracts',
+  '/products/valorant-cheats/no-recoil/': {
+    title: 'Valorant No Recoil — Spray Control Assist',
     description:
-      'Dmz Loot: Loot ESP for Hajin DMZ: cash, bags, armor, contracts, vehicles, and extract points—with the layer off in 6v6.',
-  },
-  '/blog/': {
-    title: 'MW4 Cheat Blog — Aimbot, ESP & Wallhack Guides',
-    description:
-      'Blog: Search and filter MW4 cheat guides: aimbot tuning, player ESP, wallhack setup, DMZ loot, checkout, patch-day status, and loader fixes for Modern Warfare.',
+      'Valorant no recoil helpers for Vandal and Phantom bursts—light spray control that pairs with aimbot modules.',
   },
   '/reviews/': {
-    title: 'MW4 Cheat Reviews — Aimbot & ESP Player Feedback',
+    title: 'Valorant Cheat Reviews — 100+ Player Feedback',
     description:
-      'Read MW4 cheat reviews on aimbot, ESP, wallhack, triggerbot, loader setup, and support from verified Modern Warfare 4 PC players. Sort by date or star rating.',
+      'Valorant cheat reviews on aimbot, ESP, wallhack, triggerbot, loader setup, and support from verified PC players.',
   },
   '/status/': {
-    title: 'MW4 Module Status — Online After Patches',
+    title: 'Valorant Cheat Status — Online After Patches',
     description:
-      'Live Modern Warfare 4 cheat module status for aimbot, ESP, radar, and DMZ loot on PC. Check before you launch after a game patch or Windows update.',
+      'Live Valorant cheat module status for aimbot, ESP, and radar on PC. Check before ranked after a Riot patch.',
   },
   '/forum/': {
-    title: 'MW4 Cheats Forum — Setup & Feature Talk',
+    title: 'Valorant Cheat Forums — Setup & Feature Talk',
     description:
-      'Mw4 Cheats Forum: Community threads on MW4 aimbot tuning, ESP layouts, DMZ configs, and checkout questions from PC players.',
+      'Valorant cheat forums with aimbot settings, ESP layouts, triggerbot delay, and checkout threads from PC players.',
+  },
+  '/blog/': {
+    title: 'Valorant Cheat Blog — Aimbot, ESP & Wallhack Guides',
+    description:
+      'Search and filter Valorant cheat guides: aimbot tuning, player ESP, wallhack setup, Vanguard errors, checkout, patch-day status and loader fixes.',
   },
   '/faq/': {
-    title: 'MW4 Cheat FAQ — PC Setup & Access',
+    title: 'Valorant Cheat FAQ — PC Setup & Access',
     description:
-      'Faq: Answers on MW4 cheat compatibility, loader steps, pricing, and account risk before you buy access.',
+      'Valorant cheat FAQ covers compatibility, loader steps, pricing, and account risk before you buy access.',
   },
   '/terms/': {
-    title: 'Terms & Conditions | MW4 Cheat',
-    description: 'Purchase terms, license use, and refund policy for MW4 cheat access sold through mw4cheat.org.',
+    title: 'Terms & Conditions | Valorant Cheat',
+    description: 'Purchase terms, license use, and refund policy for Valorant cheat access sold through valorant-cheat.org.',
   },
   '/privacy/': {
-    title: 'Privacy – How mw4cheat | MW4 Cheat',
+    title: 'Privacy Policy | Valorant Cheat',
     description:
-      'Privacy: How mw4cheat.org uses analytics, cookies, and contact data when you browse or request support.',
+      'Privacy policy for valorant-cheat.org: analytics, cookies, and contact data when you browse or request support.',
   },
   '/about/': {
-    title: 'Forum – About MW4 Cheat | MW4 Cheat',
+    title: 'About Valorant Cheat | valorant-cheat.org',
     description:
-      'What mw4cheat.org publishes about Modern Warfare 4 PC cheat modules, community forum threads, blog guides, and support paths.',
+      'What valorant-cheat.org publishes about Valorant PC cheat modules, community forums, and support paths.',
   },
   '/support/': {
-    title: 'MW4 Cheat Support — Loader & Checkout Help',
+    title: 'Valorant Cheat Support — Loader & Checkout Help',
     description:
-      'Support: Get help with MW4 loader setup, configs, and secure checkout for Modern Warfare 4 aimbot, ESP, and DMZ modules on PC.',
+      'Support for Valorant loader setup, configs, and secure checkout for aimbot, ESP, and radar modules on PC.',
   },
-  '/go/mw4/': {
-    title: 'Checkout – Redirecting | MW4 Cheat',
+  '/go/valorant/': {
+    title: 'Checkout — Valorant Cheat Access',
     description:
-      'Checkout: Secure MW4 license purchase on mw4cheat.org—compare aimbot, ESP, radar, and DMZ modules, then continue to partner checkout for delivery.',
+      'Secure Valorant cheat license checkout—compare aimbot, ESP wallhack, and radar modules, then continue to partner checkout.',
   },
 };
 

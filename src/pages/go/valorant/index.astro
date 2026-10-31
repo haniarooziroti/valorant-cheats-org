@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import { Button } from '@/components/starwind/button';
+import { Prose } from '@/components/starwind/prose';
+import { CHECKOUT } from '../../../config/checkout';
+import { resolvePageSeo } from '../../../config/seo';
+import { breadcrumbSchema, organizationSchema, webPageSchema } from '../../../utils/schema';
+import { ROUTES } from '../../../utils/path';
+
+const checkoutUrl = CHECKOUT.valorant;
+const seo = resolvePageSeo('/go/valorant/');
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Products', path: '/products/valorant-cheats/' },
+  { name: 'Checkout', path: '/go/valorant/' },
+];
+---
+
+<BaseLayout
+  title={seo.title}
+  description={seo.description}
+  jsonLd={[
+    organizationSchema(),
+    webPageSchema({
+      name: 'Valorant cheat secure checkout',
+      description: seo.description,
+      url: '/go/valorant/',
+    }),
+    breadcrumbSchema(breadcrumbs),
+  ]}
+>
+  <article class="py-8 md:py-12">
+    <div class="mx-auto max-w-3xl px-5">
+      <Breadcrumbs items={breadcrumbs} />
+      <header class="mt-6 space-y-4 text-center">
+        <h1 class="text-3xl font-bold md:text-4xl">Continue to Valorant cheat checkout</h1>
+        <p class="text-lg text-muted-foreground">
+          Review what is included, then continue to the partner payment page for your license key and loader access.
+        </p>
+        <Button as="a" href={checkoutUrl} variant="primary" size="lg" rel="noopener">
+          Continue to secure checkout
+        </Button>
+      </header>
+
+      <Prose class="mt-10 max-w-none text-left">
+        <h2>What your order includes</h2>
+        <p>
+          Checkout routes you to a licensed partner page where you pick monthly or lifetime access for Valorant PC modules—aimbot,
+          ESP wallhack, triggerbot, radar hack, and no recoil helpers. Use the same email for payment and delivery so support can
+          locate your license if instructions are delayed.
+        </p>
+        <p>
+          Before you pay, compare <a href="/products/valorant-cheats/">Valorant cheat modules</a> and read{' '}
+          <a href="/forum/">forum threads</a> on conservative defaults for ranked and unrated.
+        </p>
+
+        <h2>Steps before you pay</h2>
+        <p>
+          Read the <a href="/faq/">FAQ</a> on compatibility, loader order, and account risk. Choose the tier that fits your act,
+          finish payment, then follow the delivery email to install on Windows 10 or 11.
+        </p>
+        <p>
+          If payment fails or your key does not arrive, contact <a href="/support/">support</a> with your order email and any loader
+          error text. Card numbers are not stored on valorant-cheat.org.
+        </p>
+
+        <h2>After you purchase</h2>
+        <p>
+          Import a starter config, test in the range or unrated, then tune aimbot smoothness and ESP density. Player{' '}
+          <a href="/reviews/">reviews</a> and <a href="/forum/">forums</a> share patch-day notes—check the homepage status before
+          ranked queues.
+        </p>
+        <p>
+          Ready to finish? Use the button above or return to <a href={ROUTES.home}>the homepage</a> to verify module status.
+        </p>
+
+        <h3>Before you leave</h3>
+        <ul>
+          <li>One license per customer—do not share loader files or keys.</li>
+          <li>Sales are final once payment completes unless law requires otherwise.</li>
+          <li>Third-party tools in multiplayer carry account risk; play at your own discretion.</li>
+        </ul>
+      </Prose>
+
+      <div class="mt-10 flex flex-wrap justify-center gap-3 border-t border-border pt-8">
+        <Button as="a" href={checkoutUrl} variant="primary">
+          Continue to checkout
+        </Button>
+        <Button as="a" href="/products/valorant-cheats/" variant="outline">
+          Compare modules
+        </Button>
+        <Button as="a" href="/support/" variant="outline">
+          Contact support
+        </Button>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

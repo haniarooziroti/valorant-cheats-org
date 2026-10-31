@@ -1,6 +1,7 @@
 ---
 import "@/styles/starwind.css";
 import { t } from '../i18n';
+import { SITE_MEDIA, SUPABASE_MEDIA_ORIGIN } from '../config/media';
 import {
   TWITTER_CREATOR,
   TWITTER_SITE,
@@ -25,6 +26,7 @@ interface Props {
   articlePublishedTime?: string;
   articleModifiedTime?: string;
   noindex?: boolean;
+  themeColor?: string;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
@@ -37,6 +39,7 @@ const {
   articlePublishedTime,
   articleModifiedTime,
   noindex = false,
+  themeColor = '#0D0A14',
   jsonLd,
 } = Astro.props;
 
@@ -70,18 +73,16 @@ const logoAlt = resolveLogoAlt(Astro.url.pathname);
     <meta name="author" content={t.site.name} />
     <meta name="robots" content={robotsContent} />
     <meta name="googlebot" content={robotsContent} />
-    <meta name="theme-color" content="#0D0A14" />
+    <meta name="theme-color" content={themeColor} />
     <link rel="canonical" href={canonical} />
     <link rel="alternate" hreflang="en" href={hreflangEn} />
     <link rel="alternate" hreflang="en-us" href={hreflangEn} />
     <link rel="alternate" hreflang="x-default" href={hreflangDefault} />
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/webp" href={SITE_MEDIA.favicon} />
+    <link rel="shortcut icon" href={SITE_MEDIA.favicon} />
+    <link rel="apple-touch-icon" href={SITE_MEDIA.favicon} />
 
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -116,6 +117,8 @@ const logoAlt = resolveLogoAlt(Astro.url.pathname);
     {TWITTER_SITE && <meta name="twitter:site" content={TWITTER_SITE} />}
     {TWITTER_CREATOR && <meta name="twitter:creator" content={TWITTER_CREATOR} />}
 
+    <link rel="preconnect" href={SUPABASE_MEDIA_ORIGIN} />
+    <link rel="dns-prefetch" href={SUPABASE_MEDIA_ORIGIN} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

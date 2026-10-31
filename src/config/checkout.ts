@@ -8,21 +8,21 @@ export const CHECKOUT = CHECKOUT_URLS;
 export type CheckoutProduct = keyof typeof CHECKOUT;
 
 export const CHECKOUT_SLUGS: Record<CheckoutProduct, string> = {
-  mw4: 'mw4',
+  valorant: 'valorant',
 };
 
 export const CHECKOUT_SLUG_TO_PRODUCT = Object.fromEntries(
   Object.entries(CHECKOUT_SLUGS).map(([product, slug]) => [slug, product as CheckoutProduct]),
 ) as Record<string, CheckoutProduct>;
 
-export function checkoutPath(product: CheckoutProduct = 'mw4'): string {
+export function checkoutPath(product: CheckoutProduct = 'valorant'): string {
   return `/go/${CHECKOUT_SLUGS[product]}/`;
 }
 
-export const PRIMARY_CHECKOUT_PATH = checkoutPath('mw4');
+export const PRIMARY_CHECKOUT_PATH = checkoutPath('valorant');
 
 export function checkoutForSlug(_slug: string): string {
-  return checkoutPath('mw4');
+  return checkoutPath('valorant');
 }
 
 export function resolveCheckoutHref(href: string): string {
@@ -36,8 +36,8 @@ export function resolveCheckoutHref(href: string): string {
     }
   }
 
-  if (href.includes('%2Fproducts%2Fmw4') || href.includes('/products/mw4')) {
-    return checkoutPath('mw4');
+  if (href.includes('%2Fproducts%2Fvalorant') || href.includes('/products/valorant')) {
+    return checkoutPath('valorant');
   }
 
   return href;

@@ -17,25 +17,25 @@ export const siteReviews: SiteReview[] = [
   {
     "id": "r0",
     "author": "lanehold",
-    "role": "6v6 grinder",
+    "role": "ranked grinder",
     "stars": 2,
-    "date": "2025-10-27",
+    "date": "2026-09-01",
     "body": "ESP boxes stayed readable on small maps. I keep aim on a key and only flick it for close fights."
   },
   {
     "id": "r1",
     "author": "rusty_irons",
-    "role": "Ground War",
+    "role": "Premier",
     "stars": 5,
-    "date": "2025-10-26",
+    "date": "2026-08-11",
     "body": "Support replied with my order email in the subject and fixed a loader path in one message."
   },
   {
     "id": "r2",
     "author": "mara_pdx",
-    "role": "Hajin DMZ",
+    "role": "Premier unrated",
     "stars": 5,
-    "date": "2025-10-25",
+    "date": "2026-07-21",
     "body": "Stream-proof toggle stayed off my OBS test. Recorded a clip first like the forum said."
   },
   {
@@ -43,7 +43,7 @@ export const siteReviews: SiteReview[] = [
     "author": "ghostsheet",
     "role": "Win11 PC",
     "stars": 5,
-    "date": "2025-10-24",
+    "date": "2026-06-30",
     "body": "Monthly felt right for a trial week. Lifetime after I survived two patch notes without drama."
   },
   {
@@ -51,7 +51,7 @@ export const siteReviews: SiteReview[] = [
     "author": "hex_wrench",
     "role": "stream nights",
     "stars": 5,
-    "date": "2025-10-23",
+    "date": "2026-06-09",
     "body": "Updating sat a few days after a patch. Played legit until Ready flipped. Annoying but normal."
   },
   {
@@ -59,7 +59,7 @@ export const siteReviews: SiteReview[] = [
     "author": "newpc_build",
     "role": "duo queue",
     "stars": 4,
-    "date": "2025-10-22",
+    "date": "2026-05-19",
     "body": "Menu took maybe ten minutes. Hotkeys matched what I saw in-game."
   },
   {
@@ -67,7 +67,7 @@ export const siteReviews: SiteReview[] = [
     "author": "skim_milk",
     "role": "SMG main",
     "stars": 5,
-    "date": "2025-10-21",
+    "date": "2026-04-28",
     "body": "Not magic. Wide FOV indoors looks dumb. Dialed it down and it is usable now."
   },
   {
@@ -75,7 +75,7 @@ export const siteReviews: SiteReview[] = [
     "author": "rio_shard",
     "role": "marksman",
     "stars": 3,
-    "date": "2025-10-20",
+    "date": "2026-04-07",
     "body": "Works, but I wish the first guide mentioned overlay conflicts. Lost an hour there."
   },
   {
@@ -83,7 +83,7 @@ export const siteReviews: SiteReview[] = [
     "author": "clicky_boi",
     "role": "new buyer",
     "stars": 5,
-    "date": "2025-10-19",
+    "date": "2026-03-17",
     "body": "I run aim soft and lean on player ESP for flanks. Feels closer to info than rage."
   },
   {
@@ -91,7 +91,7 @@ export const siteReviews: SiteReview[] = [
     "author": "northwind",
     "role": "lifetime key",
     "stars": 5,
-    "date": "2025-10-18",
+    "date": "2026-02-24",
     "body": "No stutter after I closed GeForce overlay. Would buy monthly again before lifetime."
   },
   {
@@ -99,7 +99,7 @@ export const siteReviews: SiteReview[] = [
     "author": "roadtrip",
     "role": "monthly test",
     "stars": 4,
-    "date": "2025-10-17",
+    "date": "2026-02-03",
     "body": "No recoil at medium strength feels normal. Max looked weird on killcam so I backed off."
   },
   {
@@ -107,47 +107,47 @@ export const siteReviews: SiteReview[] = [
     "author": "extract_plz",
     "role": "overlay nerd",
     "stars": 2,
-    "date": "2025-10-16",
-    "body": "Compared to random Discord sellers, having clear MW4 product pages is less sketchy."
+    "date": "2026-01-13",
+    "body": "Compared to random Discord sellers, having clear Valorant product pages is less sketchy."
   },
   {
     "id": "r12",
     "author": "tallgrass",
     "role": "ranked",
     "stars": 5,
-    "date": "2025-09-15",
-    "body": "DMZ loot filters tank FPS if you enable everything. Contracts + cash only for me."
+    "date": "2025-12-23",
+    "body": "unrated loot filters tank FPS if you enable everything. Contracts + cash only for me."
   },
   {
     "id": "r13",
     "author": "vector_n",
     "role": "pub player",
     "stars": 5,
-    "date": "2025-09-14",
+    "date": "2025-12-02",
     "body": "Distance cap at 80m saved my eyes on Nuketown-style lanes."
   },
   {
     "id": "r14",
     "author": "budget_sprint",
-    "role": "6v6 grinder",
+    "role": "ranked grinder",
     "stars": 3,
-    "date": "2025-09-13",
+    "date": "2025-11-11",
     "body": "Secure boot gave me one reboot loop. Disabling fast startup fixed it—not sure if coincidence."
   },
   {
     "id": "r15",
     "author": "longhaul",
-    "role": "Ground War",
+    "role": "Premier",
     "stars": 4,
-    "date": "2025-09-12",
+    "date": "2025-10-21",
     "body": "Lifetime made sense once ranked felt stable for a week on my main."
   },
   {
     "id": "r16",
     "author": "recoil_king",
-    "role": "Hajin DMZ",
+    "role": "Premier unrated",
     "stars": 5,
-    "date": "2025-09-11",
+    "date": "2025-09-30",
     "body": "Wish status notes updated faster on patch day, but support answered same night."
   },
   {
@@ -155,7 +155,7 @@ export const siteReviews: SiteReview[] = [
     "author": "steady_aim",
     "role": "Win11 PC",
     "stars": 5,
-    "date": "2025-09-10",
+    "date": "2025-09-09",
     "body": "Buddy got scammed elsewhere. Key landed here same hour at least."
   },
   {
@@ -163,7 +163,7 @@ export const siteReviews: SiteReview[] = [
     "author": "clip_farmer",
     "role": "stream nights",
     "stars": 5,
-    "date": "2025-09-09",
+    "date": "2025-08-19",
     "body": "Visibility checks on aim so I do not track through smoke the wrong way."
   },
   {
@@ -171,7 +171,7 @@ export const siteReviews: SiteReview[] = [
     "author": "obs_matt",
     "role": "duo queue",
     "stars": 5,
-    "date": "2025-09-08",
+    "date": "2025-07-29",
     "body": "Defender ate the zip twice before exclusions. Product fine after."
   },
   {
@@ -179,7 +179,7 @@ export const siteReviews: SiteReview[] = [
     "author": "dmz_rat",
     "role": "SMG main",
     "stars": 4,
-    "date": "2025-09-07",
+    "date": "2025-07-08",
     "body": "ESP boxes stayed readable on small maps. I keep aim on a key and only flick it for close fights."
   },
   {
@@ -187,7 +187,7 @@ export const siteReviews: SiteReview[] = [
     "author": "groundwar_ig",
     "role": "marksman",
     "stars": 3,
-    "date": "2025-09-06",
+    "date": "2025-06-17",
     "body": "Support replied with my order email in the subject and fixed a loader path in one message."
   },
   {
@@ -195,7 +195,7 @@ export const siteReviews: SiteReview[] = [
     "author": "smg_main",
     "role": "new buyer",
     "stars": 2,
-    "date": "2025-09-05",
+    "date": "2025-05-27",
     "body": "Stream-proof toggle stayed off my OBS test. Recorded a clip first like the forum said."
   },
   {
@@ -203,7 +203,7 @@ export const siteReviews: SiteReview[] = [
     "author": "ar_grind",
     "role": "lifetime key",
     "stars": 5,
-    "date": "2025-09-04",
+    "date": "2025-05-06",
     "body": "Monthly felt right for a trial week. Lifetime after I survived two patch notes without drama."
   },
   {
@@ -211,7 +211,7 @@ export const siteReviews: SiteReview[] = [
     "author": "win11_laptop",
     "role": "monthly test",
     "stars": 5,
-    "date": "2025-08-03",
+    "date": "2025-04-15",
     "body": "Updating sat a few days after a patch. Played legit until Ready flipped. Annoying but normal."
   },
   {
@@ -219,7 +219,7 @@ export const siteReviews: SiteReview[] = [
     "author": "desktop_rtx",
     "role": "overlay nerd",
     "stars": 4,
-    "date": "2025-08-02",
+    "date": "2025-03-25",
     "body": "Menu took maybe ten minutes. Hotkeys matched what I saw in-game."
   },
   {
@@ -227,7 +227,7 @@ export const siteReviews: SiteReview[] = [
     "author": "patch_waiter",
     "role": "ranked",
     "stars": 5,
-    "date": "2025-08-01",
+    "date": "2025-03-04",
     "body": "Not magic. Wide FOV indoors looks dumb. Dialed it down and it is usable now."
   },
   {
@@ -235,31 +235,31 @@ export const siteReviews: SiteReview[] = [
     "author": "fov_monk",
     "role": "pub player",
     "stars": 5,
-    "date": "2025-08-27",
+    "date": "2025-02-11",
     "body": "Works, but I wish the first guide mentioned overlay conflicts. Lost an hour there."
   },
   {
     "id": "r28",
     "author": "stream_guy",
-    "role": "6v6 grinder",
+    "role": "ranked grinder",
     "stars": 3,
-    "date": "2025-08-26",
+    "date": "2025-01-21",
     "body": "I run aim soft and lean on player ESP for flanks. Feels closer to info than rage."
   },
   {
     "id": "r29",
     "author": "salty_rank",
-    "role": "Ground War",
+    "role": "Premier",
     "stars": 5,
-    "date": "2025-08-25",
+    "date": "2024-12-31",
     "body": "No stutter after I closed GeForce overlay. Would buy monthly again before lifetime."
   },
   {
     "id": "r30",
     "author": "quietscope",
-    "role": "Hajin DMZ",
+    "role": "Premier unrated",
     "stars": 4,
-    "date": "2025-08-24",
+    "date": "2024-12-10",
     "body": "No recoil at medium strength feels normal. Max looked weird on killcam so I backed off."
   },
   {
@@ -267,23 +267,23 @@ export const siteReviews: SiteReview[] = [
     "author": "duffelbag_1",
     "role": "Win11 PC",
     "stars": 5,
-    "date": "2025-08-23",
-    "body": "Compared to random Discord sellers, having clear MW4 product pages is less sketchy."
+    "date": "2024-11-19",
+    "body": "Compared to random Discord sellers, having clear Valorant product pages is less sketchy."
   },
   {
     "id": "r32",
     "author": "lanehold_1",
     "role": "stream nights",
     "stars": 5,
-    "date": "2025-08-22",
-    "body": "DMZ loot filters tank FPS if you enable everything. Contracts + cash only for me."
+    "date": "2024-10-29",
+    "body": "unrated loot filters tank FPS if you enable everything. Contracts + cash only for me."
   },
   {
     "id": "r33",
     "author": "rusty_irons_1",
     "role": "duo queue",
     "stars": 2,
-    "date": "2025-08-21",
+    "date": "2024-10-08",
     "body": "Distance cap at 80m saved my eyes on Nuketown-style lanes."
   },
   {
@@ -291,7 +291,7 @@ export const siteReviews: SiteReview[] = [
     "author": "mara_pdx_1",
     "role": "SMG main",
     "stars": 5,
-    "date": "2025-08-20",
+    "date": "2024-09-17",
     "body": "Secure boot gave me one reboot loop. Disabling fast startup fixed it—not sure if coincidence."
   },
   {
@@ -299,7 +299,7 @@ export const siteReviews: SiteReview[] = [
     "author": "ghostsheet_1",
     "role": "marksman",
     "stars": 3,
-    "date": "2025-08-19",
+    "date": "2024-08-27",
     "body": "Lifetime made sense once ranked felt stable for a week on my main."
   },
   {
@@ -307,7 +307,7 @@ export const siteReviews: SiteReview[] = [
     "author": "hex_wrench_1",
     "role": "new buyer",
     "stars": 5,
-    "date": "2025-07-18",
+    "date": "2024-08-06",
     "body": "Wish status notes updated faster on patch day, but support answered same night."
   },
   {
@@ -315,7 +315,7 @@ export const siteReviews: SiteReview[] = [
     "author": "newpc_build_1",
     "role": "lifetime key",
     "stars": 5,
-    "date": "2025-07-17",
+    "date": "2024-07-16",
     "body": "Buddy got scammed elsewhere. Key landed here same hour at least."
   },
   {
@@ -323,7 +323,7 @@ export const siteReviews: SiteReview[] = [
     "author": "skim_milk_1",
     "role": "monthly test",
     "stars": 5,
-    "date": "2025-07-16",
+    "date": "2024-06-25",
     "body": "Visibility checks on aim so I do not track through smoke the wrong way."
   },
   {
@@ -331,7 +331,7 @@ export const siteReviews: SiteReview[] = [
     "author": "rio_shard_1",
     "role": "overlay nerd",
     "stars": 5,
-    "date": "2025-07-15",
+    "date": "2024-06-04",
     "body": "Defender ate the zip twice before exclusions. Product fine after."
   },
   {
@@ -339,7 +339,7 @@ export const siteReviews: SiteReview[] = [
     "author": "clicky_boi_1",
     "role": "ranked",
     "stars": 4,
-    "date": "2025-07-14",
+    "date": "2024-05-14",
     "body": "ESP boxes stayed readable on small maps. I keep aim on a key and only flick it for close fights."
   },
   {
@@ -347,31 +347,31 @@ export const siteReviews: SiteReview[] = [
     "author": "northwind_1",
     "role": "pub player",
     "stars": 5,
-    "date": "2025-07-13",
+    "date": "2024-04-23",
     "body": "Support replied with my order email in the subject and fixed a loader path in one message."
   },
   {
     "id": "r42",
     "author": "roadtrip_1",
-    "role": "6v6 grinder",
+    "role": "ranked grinder",
     "stars": 3,
-    "date": "2025-07-12",
+    "date": "2024-04-02",
     "body": "Stream-proof toggle stayed off my OBS test. Recorded a clip first like the forum said."
   },
   {
     "id": "r43",
     "author": "extract_plz_1",
-    "role": "Ground War",
+    "role": "Premier",
     "stars": 5,
-    "date": "2025-07-11",
+    "date": "2024-03-12",
     "body": "Monthly felt right for a trial week. Lifetime after I survived two patch notes without drama."
   },
   {
     "id": "r44",
     "author": "tallgrass_1",
-    "role": "Hajin DMZ",
+    "role": "Premier unrated",
     "stars": 2,
-    "date": "2025-07-10",
+    "date": "2024-02-20",
     "body": "Updating sat a few days after a patch. Played legit until Ready flipped. Annoying but normal."
   },
   {
@@ -379,7 +379,7 @@ export const siteReviews: SiteReview[] = [
     "author": "vector_n_1",
     "role": "Win11 PC",
     "stars": 4,
-    "date": "2025-07-09",
+    "date": "2024-01-30",
     "body": "Menu took maybe ten minutes. Hotkeys matched what I saw in-game."
   },
   {
@@ -387,7 +387,7 @@ export const siteReviews: SiteReview[] = [
     "author": "budget_sprint_1",
     "role": "stream nights",
     "stars": 5,
-    "date": "2025-07-08",
+    "date": "2024-01-09",
     "body": "Not magic. Wide FOV indoors looks dumb. Dialed it down and it is usable now."
   },
   {
@@ -395,7 +395,7 @@ export const siteReviews: SiteReview[] = [
     "author": "longhaul_1",
     "role": "duo queue",
     "stars": 5,
-    "date": "2025-07-07",
+    "date": "2023-12-19",
     "body": "Works, but I wish the first guide mentioned overlay conflicts. Lost an hour there."
   },
   {
@@ -403,7 +403,7 @@ export const siteReviews: SiteReview[] = [
     "author": "recoil_king_1",
     "role": "SMG main",
     "stars": 5,
-    "date": "2025-06-06",
+    "date": "2023-11-28",
     "body": "I run aim soft and lean on player ESP for flanks. Feels closer to info than rage."
   },
   {
@@ -411,7 +411,7 @@ export const siteReviews: SiteReview[] = [
     "author": "steady_aim_1",
     "role": "marksman",
     "stars": 3,
-    "date": "2025-06-05",
+    "date": "2023-11-07",
     "body": "No stutter after I closed GeForce overlay. Would buy monthly again before lifetime."
   },
   {
@@ -419,7 +419,7 @@ export const siteReviews: SiteReview[] = [
     "author": "clip_farmer_1",
     "role": "new buyer",
     "stars": 4,
-    "date": "2025-06-04",
+    "date": "2023-10-17",
     "body": "No recoil at medium strength feels normal. Max looked weird on killcam so I backed off."
   },
   {
@@ -427,23 +427,23 @@ export const siteReviews: SiteReview[] = [
     "author": "obs_matt_1",
     "role": "lifetime key",
     "stars": 5,
-    "date": "2025-06-03",
-    "body": "Compared to random Discord sellers, having clear MW4 product pages is less sketchy."
+    "date": "2023-09-26",
+    "body": "Compared to random Discord sellers, having clear Valorant product pages is less sketchy."
   },
   {
     "id": "r52",
     "author": "dmz_rat_1",
     "role": "monthly test",
     "stars": 5,
-    "date": "2025-06-02",
-    "body": "DMZ loot filters tank FPS if you enable everything. Contracts + cash only for me."
+    "date": "2023-09-05",
+    "body": "unrated loot filters tank FPS if you enable everything. Contracts + cash only for me."
   },
   {
     "id": "r53",
     "author": "groundwar_ig_1",
     "role": "overlay nerd",
     "stars": 5,
-    "date": "2025-06-01",
+    "date": "2023-08-15",
     "body": "Distance cap at 80m saved my eyes on Nuketown-style lanes."
   },
   {
@@ -451,7 +451,7 @@ export const siteReviews: SiteReview[] = [
     "author": "smg_main_1",
     "role": "ranked",
     "stars": 5,
-    "date": "2025-06-27",
+    "date": "2023-07-25",
     "body": "Secure boot gave me one reboot loop. Disabling fast startup fixed it—not sure if coincidence."
   },
   {
@@ -459,31 +459,31 @@ export const siteReviews: SiteReview[] = [
     "author": "ar_grind_1",
     "role": "pub player",
     "stars": 2,
-    "date": "2025-06-26",
+    "date": "2023-07-04",
     "body": "Lifetime made sense once ranked felt stable for a week on my main."
   },
   {
     "id": "r56",
     "author": "win11_laptop_1",
-    "role": "6v6 grinder",
+    "role": "ranked grinder",
     "stars": 3,
-    "date": "2025-06-25",
+    "date": "2023-06-13",
     "body": "Wish status notes updated faster on patch day, but support answered same night."
   },
   {
     "id": "r57",
     "author": "desktop_rtx_1",
-    "role": "Ground War",
+    "role": "Premier",
     "stars": 5,
-    "date": "2025-06-24",
+    "date": "2023-05-23",
     "body": "Buddy got scammed elsewhere. Key landed here same hour at least."
   },
   {
     "id": "r58",
     "author": "patch_waiter_1",
-    "role": "Hajin DMZ",
+    "role": "Premier unrated",
     "stars": 5,
-    "date": "2025-06-23",
+    "date": "2023-05-02",
     "body": "Visibility checks on aim so I do not track through smoke the wrong way."
   },
   {
@@ -491,7 +491,7 @@ export const siteReviews: SiteReview[] = [
     "author": "fov_monk_1",
     "role": "Win11 PC",
     "stars": 5,
-    "date": "2025-06-22",
+    "date": "2023-04-11",
     "body": "Defender ate the zip twice before exclusions. Product fine after."
   },
   {
@@ -499,7 +499,7 @@ export const siteReviews: SiteReview[] = [
     "author": "stream_guy_1",
     "role": "stream nights",
     "stars": 4,
-    "date": "2025-05-21",
+    "date": "2023-03-21",
     "body": "ESP boxes stayed readable on small maps. I keep aim on a key and only flick it for close fights."
   },
   {
@@ -507,7 +507,7 @@ export const siteReviews: SiteReview[] = [
     "author": "salty_rank_1",
     "role": "duo queue",
     "stars": 5,
-    "date": "2025-05-20",
+    "date": "2023-02-28",
     "body": "Support replied with my order email in the subject and fixed a loader path in one message."
   },
   {
@@ -515,7 +515,7 @@ export const siteReviews: SiteReview[] = [
     "author": "quietscope_2",
     "role": "SMG main",
     "stars": 5,
-    "date": "2025-05-19",
+    "date": "2023-02-07",
     "body": "Stream-proof toggle stayed off my OBS test. Recorded a clip first like the forum said."
   },
   {
@@ -523,7 +523,7 @@ export const siteReviews: SiteReview[] = [
     "author": "duffelbag_2",
     "role": "marksman",
     "stars": 3,
-    "date": "2025-05-18",
+    "date": "2023-01-17",
     "body": "Monthly felt right for a trial week. Lifetime after I survived two patch notes without drama."
   },
   {
@@ -531,7 +531,7 @@ export const siteReviews: SiteReview[] = [
     "author": "lanehold_2",
     "role": "new buyer",
     "stars": 5,
-    "date": "2025-05-17",
+    "date": "2022-12-27",
     "body": "Updating sat a few days after a patch. Played legit until Ready flipped. Annoying but normal."
   },
   {
@@ -539,7 +539,7 @@ export const siteReviews: SiteReview[] = [
     "author": "rusty_irons_2",
     "role": "lifetime key",
     "stars": 4,
-    "date": "2025-05-16",
+    "date": "2022-12-06",
     "body": "Menu took maybe ten minutes. Hotkeys matched what I saw in-game."
   },
   {
@@ -547,7 +547,7 @@ export const siteReviews: SiteReview[] = [
     "author": "mara_pdx_2",
     "role": "monthly test",
     "stars": 2,
-    "date": "2025-05-15",
+    "date": "2022-11-15",
     "body": "Not magic. Wide FOV indoors looks dumb. Dialed it down and it is usable now."
   },
   {
@@ -555,7 +555,7 @@ export const siteReviews: SiteReview[] = [
     "author": "ghostsheet_2",
     "role": "overlay nerd",
     "stars": 5,
-    "date": "2025-05-14",
+    "date": "2022-10-25",
     "body": "Works, but I wish the first guide mentioned overlay conflicts. Lost an hour there."
   },
   {
@@ -563,7 +563,7 @@ export const siteReviews: SiteReview[] = [
     "author": "hex_wrench_2",
     "role": "ranked",
     "stars": 5,
-    "date": "2025-05-13",
+    "date": "2022-10-04",
     "body": "I run aim soft and lean on player ESP for flanks. Feels closer to info than rage."
   },
   {
@@ -571,39 +571,39 @@ export const siteReviews: SiteReview[] = [
     "author": "newpc_build_2",
     "role": "pub player",
     "stars": 5,
-    "date": "2025-05-12",
+    "date": "2022-09-13",
     "body": "No stutter after I closed GeForce overlay. Would buy monthly again before lifetime."
   },
   {
     "id": "r70",
     "author": "skim_milk_2",
-    "role": "6v6 grinder",
+    "role": "ranked grinder",
     "stars": 3,
-    "date": "2025-05-11",
+    "date": "2022-08-23",
     "body": "No recoil at medium strength feels normal. Max looked weird on killcam so I backed off."
   },
   {
     "id": "r71",
     "author": "rio_shard_2",
-    "role": "Ground War",
+    "role": "Premier",
     "stars": 5,
-    "date": "2025-05-10",
-    "body": "Compared to random Discord sellers, having clear MW4 product pages is less sketchy."
+    "date": "2022-08-02",
+    "body": "Compared to random Discord sellers, having clear Valorant product pages is less sketchy."
   },
   {
     "id": "r72",
     "author": "clicky_boi_2",
-    "role": "Hajin DMZ",
+    "role": "Premier unrated",
     "stars": 5,
-    "date": "2025-04-09",
-    "body": "DMZ loot filters tank FPS if you enable everything. Contracts + cash only for me."
+    "date": "2022-07-12",
+    "body": "unrated loot filters tank FPS if you enable everything. Contracts + cash only for me."
   },
   {
     "id": "r73",
     "author": "northwind_2",
     "role": "Win11 PC",
     "stars": 5,
-    "date": "2025-04-08",
+    "date": "2022-06-21",
     "body": "Distance cap at 80m saved my eyes on Nuketown-style lanes."
   },
   {
@@ -611,7 +611,7 @@ export const siteReviews: SiteReview[] = [
     "author": "roadtrip_2",
     "role": "stream nights",
     "stars": 5,
-    "date": "2025-04-07",
+    "date": "2022-05-31",
     "body": "Secure boot gave me one reboot loop. Disabling fast startup fixed it—not sure if coincidence."
   },
   {
@@ -619,7 +619,7 @@ export const siteReviews: SiteReview[] = [
     "author": "extract_plz_2",
     "role": "duo queue",
     "stars": 4,
-    "date": "2025-04-06",
+    "date": "2022-05-10",
     "body": "Lifetime made sense once ranked felt stable for a week on my main."
   },
   {
@@ -627,7 +627,7 @@ export const siteReviews: SiteReview[] = [
     "author": "tallgrass_2",
     "role": "SMG main",
     "stars": 5,
-    "date": "2025-04-05",
+    "date": "2022-04-19",
     "body": "Wish status notes updated faster on patch day, but support answered same night."
   },
   {
@@ -635,7 +635,7 @@ export const siteReviews: SiteReview[] = [
     "author": "vector_n_2",
     "role": "marksman",
     "stars": 2,
-    "date": "2025-04-04",
+    "date": "2022-03-29",
     "body": "Buddy got scammed elsewhere. Key landed here same hour at least."
   },
   {
@@ -643,7 +643,7 @@ export const siteReviews: SiteReview[] = [
     "author": "budget_sprint_2",
     "role": "new buyer",
     "stars": 5,
-    "date": "2025-04-03",
+    "date": "2022-03-08",
     "body": "Visibility checks on aim so I do not track through smoke the wrong way."
   },
   {
@@ -651,7 +651,7 @@ export const siteReviews: SiteReview[] = [
     "author": "longhaul_2",
     "role": "lifetime key",
     "stars": 5,
-    "date": "2025-04-02",
+    "date": "2022-02-15",
     "body": "Defender ate the zip twice before exclusions. Product fine after."
   },
   {
@@ -659,7 +659,7 @@ export const siteReviews: SiteReview[] = [
     "author": "recoil_king_2",
     "role": "monthly test",
     "stars": 4,
-    "date": "2025-04-01",
+    "date": "2022-01-25",
     "body": "ESP boxes stayed readable on small maps. I keep aim on a key and only flick it for close fights."
   },
   {
@@ -667,7 +667,7 @@ export const siteReviews: SiteReview[] = [
     "author": "steady_aim_2",
     "role": "overlay nerd",
     "stars": 5,
-    "date": "2025-04-27",
+    "date": "2022-01-04",
     "body": "Support replied with my order email in the subject and fixed a loader path in one message."
   },
   {
@@ -675,7 +675,7 @@ export const siteReviews: SiteReview[] = [
     "author": "clip_farmer_2",
     "role": "ranked",
     "stars": 5,
-    "date": "2025-04-26",
+    "date": "2021-12-14",
     "body": "Stream-proof toggle stayed off my OBS test. Recorded a clip first like the forum said."
   },
   {
@@ -683,31 +683,31 @@ export const siteReviews: SiteReview[] = [
     "author": "obs_matt_2",
     "role": "pub player",
     "stars": 5,
-    "date": "2025-04-25",
+    "date": "2021-11-23",
     "body": "Monthly felt right for a trial week. Lifetime after I survived two patch notes without drama."
   },
   {
     "id": "r84",
     "author": "dmz_rat_2",
-    "role": "6v6 grinder",
+    "role": "ranked grinder",
     "stars": 3,
-    "date": "2025-03-24",
+    "date": "2021-11-02",
     "body": "Updating sat a few days after a patch. Played legit until Ready flipped. Annoying but normal."
   },
   {
     "id": "r85",
     "author": "groundwar_ig_2",
-    "role": "Ground War",
+    "role": "Premier",
     "stars": 4,
-    "date": "2025-03-23",
+    "date": "2021-10-12",
     "body": "Menu took maybe ten minutes. Hotkeys matched what I saw in-game."
   },
   {
     "id": "r86",
     "author": "smg_main_2",
-    "role": "Hajin DMZ",
+    "role": "Premier unrated",
     "stars": 5,
-    "date": "2025-03-22",
+    "date": "2021-09-21",
     "body": "Not magic. Wide FOV indoors looks dumb. Dialed it down and it is usable now."
   },
   {
@@ -715,7 +715,7 @@ export const siteReviews: SiteReview[] = [
     "author": "ar_grind_2",
     "role": "Win11 PC",
     "stars": 5,
-    "date": "2025-03-21",
+    "date": "2021-08-31",
     "body": "Works, but I wish the first guide mentioned overlay conflicts. Lost an hour there."
   },
   {
@@ -723,7 +723,7 @@ export const siteReviews: SiteReview[] = [
     "author": "win11_laptop_2",
     "role": "stream nights",
     "stars": 2,
-    "date": "2025-03-20",
+    "date": "2021-08-10",
     "body": "I run aim soft and lean on player ESP for flanks. Feels closer to info than rage."
   },
   {
@@ -731,7 +731,7 @@ export const siteReviews: SiteReview[] = [
     "author": "desktop_rtx_2",
     "role": "duo queue",
     "stars": 5,
-    "date": "2025-03-19",
+    "date": "2021-07-20",
     "body": "No stutter after I closed GeForce overlay. Would buy monthly again before lifetime."
   },
   {
@@ -739,7 +739,7 @@ export const siteReviews: SiteReview[] = [
     "author": "patch_waiter_2",
     "role": "SMG main",
     "stars": 4,
-    "date": "2025-03-18",
+    "date": "2021-06-29",
     "body": "No recoil at medium strength feels normal. Max looked weird on killcam so I backed off."
   },
   {
@@ -747,23 +747,23 @@ export const siteReviews: SiteReview[] = [
     "author": "fov_monk_2",
     "role": "marksman",
     "stars": 3,
-    "date": "2025-03-17",
-    "body": "Compared to random Discord sellers, having clear MW4 product pages is less sketchy."
+    "date": "2021-06-08",
+    "body": "Compared to random Discord sellers, having clear Valorant product pages is less sketchy."
   },
   {
     "id": "r92",
     "author": "stream_guy_2",
     "role": "new buyer",
     "stars": 5,
-    "date": "2025-03-16",
-    "body": "DMZ loot filters tank FPS if you enable everything. Contracts + cash only for me."
+    "date": "2021-05-18",
+    "body": "unrated loot filters tank FPS if you enable everything. Contracts + cash only for me."
   },
   {
     "id": "r93",
     "author": "salty_rank_3",
     "role": "lifetime key",
     "stars": 5,
-    "date": "2025-03-15",
+    "date": "2021-04-27",
     "body": "Distance cap at 80m saved my eyes on Nuketown-style lanes."
   },
   {
@@ -771,7 +771,7 @@ export const siteReviews: SiteReview[] = [
     "author": "quietscope_3",
     "role": "monthly test",
     "stars": 5,
-    "date": "2025-03-14",
+    "date": "2021-04-06",
     "body": "Secure boot gave me one reboot loop. Disabling fast startup fixed it—not sure if coincidence."
   },
   {
@@ -779,7 +779,7 @@ export const siteReviews: SiteReview[] = [
     "author": "duffelbag_3",
     "role": "overlay nerd",
     "stars": 4,
-    "date": "2025-03-13",
+    "date": "2021-03-16",
     "body": "Lifetime made sense once ranked felt stable for a week on my main."
   },
   {
@@ -787,7 +787,7 @@ export const siteReviews: SiteReview[] = [
     "author": "lanehold_3",
     "role": "ranked",
     "stars": 5,
-    "date": "2025-02-12",
+    "date": "2021-02-23",
     "body": "Wish status notes updated faster on patch day, but support answered same night."
   },
   {
@@ -795,31 +795,31 @@ export const siteReviews: SiteReview[] = [
     "author": "rusty_irons_3",
     "role": "pub player",
     "stars": 5,
-    "date": "2025-02-11",
+    "date": "2021-02-02",
     "body": "Buddy got scammed elsewhere. Key landed here same hour at least."
   },
   {
     "id": "r98",
     "author": "mara_pdx_3",
-    "role": "6v6 grinder",
+    "role": "ranked grinder",
     "stars": 3,
-    "date": "2025-02-10",
+    "date": "2021-01-12",
     "body": "Visibility checks on aim so I do not track through smoke the wrong way."
   },
   {
     "id": "r99",
     "author": "ghostsheet_3",
-    "role": "Ground War",
+    "role": "Premier",
     "stars": 2,
-    "date": "2025-02-09",
+    "date": "2020-12-22",
     "body": "Defender ate the zip twice before exclusions. Product fine after."
   },
   {
     "id": "r100",
     "author": "hex_wrench_3",
-    "role": "Hajin DMZ",
+    "role": "Premier unrated",
     "stars": 4,
-    "date": "2025-02-08",
+    "date": "2020-12-01",
     "body": "ESP boxes stayed readable on small maps. I keep aim on a key and only flick it for close fights."
   },
   {
@@ -827,7 +827,7 @@ export const siteReviews: SiteReview[] = [
     "author": "newpc_build_3",
     "role": "Win11 PC",
     "stars": 5,
-    "date": "2025-02-07",
+    "date": "2020-11-10",
     "body": "Support replied with my order email in the subject and fixed a loader path in one message."
   },
   {
@@ -835,7 +835,7 @@ export const siteReviews: SiteReview[] = [
     "author": "skim_milk_3",
     "role": "stream nights",
     "stars": 5,
-    "date": "2025-02-06",
+    "date": "2020-10-20",
     "body": "Stream-proof toggle stayed off my OBS test. Recorded a clip first like the forum said."
   },
   {
@@ -843,7 +843,7 @@ export const siteReviews: SiteReview[] = [
     "author": "rio_shard_3",
     "role": "duo queue",
     "stars": 5,
-    "date": "2025-02-05",
+    "date": "2020-09-29",
     "body": "Monthly felt right for a trial week. Lifetime after I survived two patch notes without drama."
   },
   {
@@ -851,7 +851,7 @@ export const siteReviews: SiteReview[] = [
     "author": "clicky_boi_3",
     "role": "SMG main",
     "stars": 5,
-    "date": "2025-02-04",
+    "date": "2020-09-08",
     "body": "Updating sat a few days after a patch. Played legit until Ready flipped. Annoying but normal."
   }
 ];

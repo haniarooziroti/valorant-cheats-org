@@ -1,0 +1,17 @@
+---
+import {
+  PRICE_LIFETIME,
+  PRICE_MONTHLY,
+  breakEvenMonths,
+  formatUsd,
+} from '../../config/siteConfig';
+---
+
+<aside class="blog-pricing-callout not-prose" aria-label="Current Valorant cheat pricing">
+  <p class="blog-pricing-callout__lead">
+    {formatUsd(PRICE_MONTHLY)} a month or {formatUsd(PRICE_LIFETIME)} once.
+  </p>
+  <p class="blog-pricing-callout__meta">
+    Break-even ≈ <strong>{breakEvenMonths()} months</strong> of monthly billing (lifetime ÷ monthly, rounded up).
+  </p>
+</aside>

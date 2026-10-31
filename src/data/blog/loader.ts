@@ -1,5 +1,6 @@
 import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
 import type { BlogPostFull } from './types';
+import { resolveBlogCover } from './covers';
 
 type BlogEntry = CollectionEntry<'blog'>;
 
@@ -9,27 +10,33 @@ function entrySlug(entry: BlogEntry): string {
 }
 
 function formatDate(date: Date): string {
-  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  return date.toISOString().slice(0, 10);
 }
 
-function readTimeFromBody(body: string): string {
+function readTimeFromBody(body: string, readMinutes?: number): string {
+  if (readMinutes) return `${readMinutes} min read`;
   const words = body.trim().split(/\s+/).filter(Boolean).length;
   const mins = Math.max(5, Math.round(words / 210));
   return `${mins} min read`;
 }
 
 function mapEntry(entry: BlogEntry): BlogPostFull {
+  const slug = entrySlug(entry);
+  const cover = resolveBlogCover(slug, entry.data.featuredImage);
+  const imageAlt = entry.data.imageAlt || cover.alt || entry.data.title;
   return {
-    slug: entrySlug(entry),
+    slug,
     tag: entry.data.category,
     title: entry.data.title,
     desc: entry.data.description,
-    image: entry.data.featuredImage,
-    date: formatDate(entry.data.publishDate),
-    dateIso: entry.data.publishDate.toISOString().slice(0, 10),
-    readTime: readTimeFromBody(entry.body ?? ''),
+    image: cover.src,
+    imageAlt,
+    date: entry.data.publishDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+    dateIso: formatDate(entry.data.publishDate),
+    readTime: readTimeFromBody(entry.body ?? '', entry.data.readMinutes),
     featured: entry.data.featured,
-    author: 'MW4 desk',
+    author: 'Valorant Cheats Team',
+    tags: entry.data.tags,
     body: [],
   };
 }
@@ -59,59 +66,27 @@ export async function getAllBlogSlugs() {
   return posts.map((p) => p.slug);
 }
 
-export async function getFeaturedBlogPost() {
-  const posts = await loadBlogPosts();
-  return posts.find((p) => p.featured) ?? posts[0];
-}
-
-export async function getNonFeaturedBlogPosts() {
-  const featured = await getFeaturedBlogPost();
-  const posts = await loadBlogPosts();
-  return posts.filter((p) => p.slug !== featured?.slug);
-}
-
-export async function getFeaturedBlogPosts(limit = 3) {
-  const featured = await getFeaturedBlogPost();
-  const posts = await loadBlogPosts();
-  const rest = posts.filter((p) => p.slug !== featured?.slug);
-  return featured ? [featured, ...rest].slice(0, limit) : posts.slice(0, limit);
-}
-
 export async function getRelatedBlogPosts(slug: string, limit = 3) {
   const posts = await loadBlogPosts();
   const current = posts.find((p) => p.slug === slug);
   if (!current) return [];
-  const sameTag = posts.filter((p) => p.slug !== slug && p.tag === current.tag);
-  const others = posts.filter((p) => p.slug !== slug && p.tag !== current.tag);
-  return [...sameTag, ...others].slice(0, limit);
-}
-
-export async function getBlogPostsBySlugs(slugs: string[]) {
-  const posts = await loadBlogPosts();
-  return slugs
-    .map((slug) => posts.find((p) => p.slug === slug))
-    .filter((post): post is BlogPostFull => post != null);
+  const relatedSlugs = (await getCollectionEntry(slug))?.data.relatedSlugs ?? [];
+  const curated = relatedSlugs
+    .map((s) => posts.find((p) => p.slug === s))
+    .filter((p): p is BlogPostFull => Boolean(p));
+  const used = new Set(curated.map((p) => p.slug));
+  const sameTag = posts.filter((p) => p.slug !== slug && p.tag === current.tag && !used.has(p.slug));
+  const others = posts.filter((p) => p.slug !== slug && p.tag !== current.tag && !used.has(p.slug));
+  return [...curated, ...sameTag, ...others].slice(0, limit);
 }
 
 export async function getRelatedBlogPostsForProduct(relatedSlugs: string[], limit = 6) {
-  const curated = await getBlogPostsBySlugs(relatedSlugs);
-  if (curated.length >= limit) return curated.slice(0, limit);
   const posts = await loadBlogPosts();
+  const curated = relatedSlugs
+    .map((slug) => posts.find((p) => p.slug === slug))
+    .filter((post): post is BlogPostFull => post != null);
+  if (curated.length >= limit) return curated.slice(0, limit);
   const used = new Set(curated.map((p) => p.slug));
   const fill = posts.filter((p) => !used.has(p.slug));
   return [...curated, ...fill].slice(0, limit);
-}
-
-export async function getBlogTags() {
-  const posts = await loadBlogPosts();
-  return [...new Set(posts.map((p) => p.tag))].sort((a, b) => a.localeCompare(b));
-}
-
-export function getBlogPostTimestamp(date: string) {
-  return new Date(date).getTime();
-}
-
-export function getBlogReadMinutes(readTime: string) {
-  const match = readTime.match(/(\d+)/);
-  return match ? Number(match[1]) : 0;
 }

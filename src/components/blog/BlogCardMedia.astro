@@ -1,7 +1,7 @@
 ---
 import ResponsiveImage from '../ResponsiveImage.astro';
 import { CARD_IMAGE_SIZES, CARD_IMAGE_WIDTHS } from '../../utils/responsiveImage';
-import { blogCardFallbackStyle, BLOG_INDEX_GRADIENT_ONLY } from '../../utils/blogCardFallback';
+import { blogCardFallbackStyle } from '../../utils/blogCardFallback';
 
 interface Props {
   src: string;
@@ -14,20 +14,24 @@ interface Props {
 
 const { src, alt, title, category, slug, eager = false } = Astro.props;
 const gradient = blogCardFallbackStyle(category, slug);
-const showPhoto = !BLOG_INDEX_GRADIENT_ONLY;
+const hasPhoto = Boolean(src?.trim());
 ---
 
 <div
-  class="blog-card__media"
+  class:list={['blog-card__media', !hasPhoto && 'is-fallback-only']}
   style={`--blog-card-gradient: ${gradient}`}
   data-blog-card-media
+  data-has-photo={hasPhoto ? 'true' : undefined}
 >
-  <div class="blog-card__media-fallback" aria-hidden="true">
-    <span class="blog-card__media-fallback-cat">{category}</span>
-    <span class="blog-card__media-fallback-title">{title}</span>
-  </div>
   {
-    showPhoto && (
+    !hasPhoto && (
+      <div class="blog-card__media-fallback" aria-hidden="true">
+        <span class="blog-card__media-fallback-cat">{category}</span>
+      </div>
+    )
+  }
+  {
+    hasPhoto && (
       <ResponsiveImage
         src={src}
         alt={alt}
@@ -43,14 +47,3 @@ const showPhoto = !BLOG_INDEX_GRADIENT_ONLY;
     )
   }
 </div>
-
-<script>
-  document.querySelectorAll<HTMLImageElement>('[data-blog-card-img]').forEach((img) => {
-    const hide = () => {
-      img.classList.add('is-hidden');
-      img.closest('[data-blog-card-media]')?.classList.add('is-fallback');
-    };
-    if (img.complete && img.naturalWidth === 0) hide();
-    img.addEventListener('error', hide);
-  });
-</script>

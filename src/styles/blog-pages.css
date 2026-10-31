@@ -166,6 +166,37 @@
   margin-top: 0.75rem;
 }
 
+.blog-post-cta--inline {
+  margin: 1.5rem 0;
+  padding: 0.875rem 1rem;
+}
+
+.blog-pricing-callout {
+  margin: 1.25rem 0 1.75rem;
+  border: 1px solid color-mix(in oklch, var(--primary) 35%, var(--border));
+  border-radius: var(--radius-xl);
+  background: color-mix(in oklch, var(--card) 90%, var(--primary) 10%);
+  padding: 1rem 1.25rem;
+}
+
+.blog-pricing-callout__lead {
+  margin: 0;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.blog-pricing-callout__meta {
+  margin: 0.35rem 0 0;
+  font-size: 0.9375rem;
+  color: var(--muted-foreground);
+}
+
+.blog-risk-note {
+  border-top: 1px dashed color-mix(in oklch, var(--border) 80%, var(--muted-foreground) 20%);
+  padding-top: 1.25rem;
+}
+
 .blog-article__actions {
   display: flex;
   flex-direction: column;

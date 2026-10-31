@@ -6,40 +6,40 @@ const productBase = PRODUCT_BASE;
 
 export const en: Translations = {
   site: {
-    name: 'MW4 Cheat',
-    domain: 'mw4cheat.org',
-    title: 'MW4 Cheat — Aimbot, ESP & Wallhack for PC',
+    name: 'Valorant Cheat',
+    domain: 'valorant-cheat.org',
+    title: 'Valorant Esp, Aimbot & Wallhack',
     description:
-      'MW4 cheats for Modern Warfare 4 on PC: aimbot, player ESP, wallhack, radar, and DMZ loot tools. Setup guides, forum threads, and secure checkout on mw4cheat.org.',
+      'Valorant cheats on PC with aimbot, ESP, wallhack, triggerbot, and radar tools. Browse modules, read player forums, and continue to secure checkout on valorant-cheat.org.',
     discord: PRIMARY_CHECKOUT_PATH,
   },
   nav: [
     { href: '/', label: 'Home' },
     { href: `${productBase}`, label: 'Products' },
     { href: '/blog/', label: 'Blog' },
-    { href: '/forum/', label: 'Forum' },
+    { href: '/forum/', label: 'Forums' },
     { href: '/reviews/', label: 'Reviews' },
     { href: '/faq/', label: 'FAQ' },
     { href: '/support/', label: 'Support' },
   ],
   forumHome: {
     eyebrow: 'Community',
-    title: 'Forum threads from MW4 players',
+    title: 'Forums where Valorant players compare configs',
     subtitle:
-      'Real setup questions, aim tuning, ESP layouts, and DMZ routing—browse before you change your config.',
-    viewAll: 'Open the forum',
+      'Aimbot tuning, ESP layouts, trigger timing, and checkout questions—browse before you change your config.',
+    viewAll: 'Browse forums',
   },
   hero: {
-    status: 'Modern Warfare 4 — PC modules online',
-    eyebrow: 'Built for 6v6 & DMZ',
-    titleLine1: 'Modern Warfare 4 Cheat',
+    status: 'Valorant PC — modules online',
+    eyebrow: 'Built for ranked & unrated',
+    titleLine1: 'Valorant on PC',
     titleLine2: 'Aimbot, ESP and Wallhack',
     subtitle:
-      'Clean overlays, tuned aim assist, and player ESP that stays readable in fast playlists—explore modules, compare settings in the forum, and upgrade your PC sessions without cluttering the screen.',
+      'Tactical overlays, tuned aim assist, and agent ESP that stays readable in ranked and unrated—explore modules, compare settings in the forum, and upgrade your PC sessions without cluttering the screen.',
     ctaPrimary: 'Explore modules',
     ctaDiscord: 'Get access',
     modesLabel: 'Playlists',
-    modes: ['6v6', 'Ground War', 'Gunfight', 'Hajin DMZ'],
+    modes: ['Competitive', 'Unrated', 'Swiftplay', 'Premier'],
     metrics: [
       { label: 'Player reviews', strong: '100+' },
       { label: 'Config profiles', strong: '2 saved' },
@@ -49,8 +49,8 @@ export const en: Translations = {
   },
   features: {
     eyebrow: 'Features',
-    title: 'Modules that match how MW4 plays',
-    subtitle: 'Aim assist, player ESP, radar, and DMZ loot layers tuned for PC multiplayer playlists.',
+    title: 'Modules that match Valorant gunplay',
+    subtitle: 'Valorant aimbot, ESP wallhack, radar hack, triggerbot, and no recoil helpers tuned for PC.',
     items: [
       {
         title: 'Aim assist',
@@ -62,7 +62,7 @@ export const en: Translations = {
           'Team and downed player filters',
           'Distance caps per playlist',
         ],
-        tags: ['mw4 aimbot', 'aim assist', 'fov circle'],
+        tags: ['valorant aimbot', 'aim assist', 'fov circle'],
         bento: 'sm:col-span-2 lg:col-span-12 lg:col-start-1 lg:row-start-1',
       },
       {
@@ -70,7 +70,7 @@ export const en: Translations = {
         subtitle: 'Boxes that stay readable',
         desc: 'Health, armor plates, skeleton, and weapon labels without turning the HUD into noise.',
         bullets: ['Corner or full box styles', 'Squad color coding', 'Distance slider', 'Soft-cover color option'],
-        tags: ['mw4 esp', 'wallhack', 'player esp'],
+        tags: ['valorant esp', 'wallhack', 'player esp'],
         bento: 'sm:col-span-2 lg:col-span-8 lg:col-start-1 lg:row-start-2',
       },
       {
@@ -78,7 +78,7 @@ export const en: Translations = {
         subtitle: 'Lane awareness',
         desc: 'Operator markers with zoom and range that mirror your ESP distance cap.',
         bullets: ['Compact overlay placement', 'Zoom for Ground War', 'Shared color logic with ESP'],
-        tags: ['mw4 radar', 'ground war', 'map awareness'],
+        tags: ['valorant radar hack', 'ground war', 'map awareness'],
         bento: 'sm:col-span-2 lg:col-span-6 lg:col-start-1 lg:row-start-3',
       },
       {
@@ -86,15 +86,15 @@ export const en: Translations = {
         subtitle: 'Confirm your shots',
         desc: 'Optional fire-on-target with delay tuning and the same wall checks as aim assist.',
         bullets: ['Hold key binding', 'Head or chest priority', 'Humanized delay slider'],
-        tags: ['mw4 triggerbot', 'trigger', 'gunfight'],
+        tags: ['valorant triggerbot', 'trigger', 'gunfight'],
         bento: 'sm:col-span-2 lg:col-span-6 lg:col-start-7 lg:row-start-3',
       },
       {
-        title: 'DMZ loot layer',
-        subtitle: 'Routing in Hajin',
-        desc: 'Contracts, extracts, cash, and vehicles for DMZ—automatically off when you queue 6v6.',
+        title: 'No recoil assist',
+        subtitle: 'Spray control',
+        desc: 'Light recoil control for Vandal and Phantom without killing your spray muscle memory.',
         bullets: ['Contract and extract highlights', 'Cash and bag ESP', 'Vehicle markers on roads'],
-        tags: ['mw4 dmz', 'loot esp', 'contracts'],
+        tags: ['valorant no recoil', 'spray control', 'valorant hacks'],
         bento: 'sm:col-span-2 lg:col-span-8 lg:row-span-2 lg:col-start-1 lg:row-start-4',
       },
       {
@@ -102,7 +102,7 @@ export const en: Translations = {
         subtitle: 'Recoil help & stream mode',
         desc: 'Light recoil assist, custom crosshair, dual config slots, and stream-proof overlay for recordings.',
         bullets: ['Separate 6v6 and DMZ profiles', 'Stream-proof for OBS tests', 'Saved config export'],
-        tags: ['no recoil', 'stream proof', 'mw4 config'],
+        tags: ['no recoil', 'stream proof', 'valorant cheat menu'],
         bento: 'sm:col-span-2 lg:col-span-4 lg:row-span-2 lg:col-start-9 lg:row-start-4',
       },
     ],
@@ -111,13 +111,13 @@ export const en: Translations = {
     eyebrow: 'Why players stay',
     title: 'Configs that survive patch week',
     subtitle:
-      'MW4 playlists move fast. We focus on readable ESP, conservative aim defaults, and support that answers loader questions without copy-paste scripts.',
-    usLabel: 'MW4 Cheat',
-    otherLabel: 'Typical listing',
+      'Valorant patches move fast. We focus on readable ESP, conservative aim defaults, and support that answers loader questions without copy-paste scripts.',
+    usLabel: 'Valorant Cheat',
+    otherLabel: 'Random reseller page',
     rows: [
       {
         title: 'Playlist-aware defaults',
-        desc: 'Separate starter profiles for 6v6 and Hajin DMZ so you are not dragging DMZ loot filters into small maps.',
+        desc: 'Separate starter profiles for ranked and unrated so you are not dragging ESP clutter into small maps.',
       },
       {
         title: 'Smoothing-first aim',
@@ -133,7 +133,7 @@ export const en: Translations = {
       },
       {
         title: '100+ verified reviews',
-        desc: 'Players leave detailed feedback on aim tuning, ESP density, and DMZ performance—not star spam.',
+        desc: 'Players leave detailed feedback on aim tuning, ESP density, and ESP readability—not star spam.',
       },
       {
         title: 'License transfer help',
@@ -144,7 +144,7 @@ export const en: Translations = {
       {
         value: '100+',
         title: 'Player reviews',
-        desc: 'Documented experiences with aim, ESP, and DMZ loot modules on PC.',
+        desc: 'Documented experiences with aim, ESP, and triggerbot timing on PC.',
       },
       {
         value: '24/7',
@@ -154,7 +154,7 @@ export const en: Translations = {
       {
         value: '2',
         title: 'Saved profiles',
-        desc: 'Dedicated slots for 6v6 and DMZ without overwriting sliders.',
+        desc: 'Dedicated slots for ranked and unrated without overwriting sliders.',
       },
     ],
   },
@@ -188,11 +188,11 @@ export const en: Translations = {
   },
   compatibility: {
     eyebrow: 'Platform support',
-    title: 'Built for MW4 on PC.',
+    title: 'Built for Valorant on PC.',
     subtitle: 'Confirm the homepage status note after major game updates.',
     items: [
       'Windows 10 & 11',
-      'MW4 PC build',
+      'Valorant PC client',
       'Secure Boot + TPM',
       'HVCI / Core Isolation',
       'Dual config slots',
@@ -203,8 +203,8 @@ export const en: Translations = {
   },
   cheats: {
     eyebrow: 'Full access',
-    title: 'MW4 cheat suite',
-    subtitle: 'One pass covers aim assist, ESP, trigger, radar, DMZ loot, and misc tools.',
+    title: 'Valorant cheat suite',
+    subtitle: 'One pass covers aim assist, ESP, trigger, radar, no recoil helpers, and misc tools.',
     viewAll: 'Compare modules',
     explore: 'Explore',
     items: [
@@ -212,9 +212,9 @@ export const en: Translations = {
         badge: 'Popular',
         tier: 'PC',
         name: 'Full access',
-        title: 'MW4 full module pass',
-        desc: 'Aimbot, player ESP, triggerbot, 2D radar, DMZ loot layer, no-recoil helpers, and stream-proof overlay.',
-        features: ['Aim circle + smooth', 'Player ESP suite', 'Trigger + radar', 'DMZ loot layer', 'Stream-proof', 'Two saved configs'],
+        title: 'Valorant full module pass',
+        desc: 'Aimbot, player ESP, triggerbot, 2D radar, No recoil assist, no-recoil helpers, and stream-proof overlay.',
+        features: ['Aim circle + smooth', 'Player ESP suite', 'Trigger + radar', 'No recoil assist', 'Stream-proof', 'Two saved configs'],
         more: 18,
         href: productBase,
         variant: 'popular',
@@ -223,8 +223,8 @@ export const en: Translations = {
   },
   products: {
     eyebrow: 'Modules',
-    title: 'Modern Warfare 4 cheat modules',
-    subtitle: 'MW4 aimbot, ESP wallhack, triggerbot, radar, and DMZ loot tools for PC multiplayer.',
+    title: 'Valorant cheat modules',
+    subtitle: 'Valorant aimbot, ESP wallhack, triggerbot, radar hack, and no recoil tools for PC multiplayer.',
     viewAll: 'View all modules',
     get: 'Get access',
     explore: 'Details',
@@ -232,7 +232,7 @@ export const en: Translations = {
       {
         badge: 'Core',
         category: 'Aim assist',
-        title: 'MW4 Aimbot',
+        title: 'Valorant Aimbot',
         subtitle: 'Circle FOV & smoothing',
         desc: 'Tune aim assist for 6v6 with visibility checks, team filters, and bone priority.',
         features: ['FOV ring', 'Smooth strength', 'Wall logic', 'Distance cap'],
@@ -252,24 +252,24 @@ export const en: Translations = {
       {
         badge: 'DMZ',
         category: 'Loot',
-        title: 'DMZ loot ESP',
+        title: 'No recoil module',
         subtitle: 'Contracts & extracts',
-        desc: 'Highlight cash, bags, contracts, and vehicles in Hajin DMZ—off in 6v6.',
+        desc: 'Highlight cash, bags, valorant hacks, and vehicles in Ranked stacks—off in 6v6.',
         features: ['Contracts', 'Extracts', 'Cash & bags', 'Vehicles'],
         more: 6,
-        href: `${productBase}dmz-loot/`,
+        href: `${productBase}no-recoil/`,
       },
     ],
   },
   blog: {
     eyebrow: 'Blog',
-    title: 'MW4 cheat blog',
+    title: 'Valorant cheat blog',
     subtitle:
-      'MW4 aimbot, player ESP, and wallhack guides for PC—setup, patch-day checks, and checkout walkthroughs for Modern Warfare 4.',
+      'Valorant aimbot, ESP and wallhack guides for PC — setup, patch-day checks, Vanguard troubleshooting and checkout walkthroughs, written for players who are ready to buy.',
     latestTitle: 'Latest articles',
     latestSubtitle: 'Filter by topic or sort to find setup guides, feature deep-dives, and patch-day notes.',
-    searchLabel: 'Search MW4 blog',
-    searchPlaceholder: 'Search aimbot, ESP, wallhack, setup…',
+    searchLabel: 'Search Valorant blog',
+    searchPlaceholder: 'Search guides, setup, errors…',
     filterAll: 'All blogs',
     articlesCountLabel: 'articles',
     sortLabel: 'Sort by',
@@ -291,8 +291,8 @@ export const en: Translations = {
       { num: '02', label: 'ESP', title: 'Player visuals', desc: 'Boxes, skeleton, plates, and distance caps with squad colors.' },
       { num: '03', label: 'Radar', title: '2D awareness', desc: 'Operator dots with zoom and range tied to ESP distance.' },
       { num: '04', label: 'Trigger', title: 'Shot confirm', desc: 'Delay, hold key, and hitbox choice sharing wall logic with aim.' },
-      { num: '05', label: 'DMZ', title: 'Loot routing', desc: 'Contracts, extracts, cash, and vehicles for Hajin playlists.' },
-      { num: '06', label: 'Profiles', title: '6v6 vs DMZ', desc: 'Two saved configs plus export when you rebuild your PC.' },
+      { num: '05', label: 'Recoil', title: 'Spray assist', desc: 'Light Valorant no recoil presets that pair with rifle aimbot settings.' },
+      { num: '06', label: 'Profiles', title: 'Ranked vs unrated', desc: 'Two saved configs plus export when you rebuild your PC.' },
     ],
   },
   workflow: {
@@ -300,7 +300,7 @@ export const en: Translations = {
     badge: '4 steps',
     titleBefore: 'From status check to',
     titleHighlight: 'saved profile',
-    subtitle: 'A straight path from checkout to MW4 configs you can reuse every session.',
+    subtitle: 'A straight path from checkout to Valorant configs you can reuse every session.',
     ctaLabel: 'View modules',
     ctaHref: productBase,
     ctaSecondary: 'Forum tips',
@@ -334,16 +334,16 @@ export const en: Translations = {
   },
   fieldNotes: {
     eyebrow: 'Field notes',
-    title: 'Built for MW4 playlists.',
+    title: 'Built for Valorant maps.',
     items: [
-      { num: '01', title: 'Patch-week caution', desc: 'Read the status note after major MW4 updates before launching modules.' },
+      { num: '01', title: 'Patch-week caution', desc: 'Read the status note after major Valorant patches before launching modules.' },
       { num: '02', title: 'Conservative defaults', desc: 'Start with wider aim circles and lighter ESP, then tighten—not the reverse.' },
       { num: '03', title: 'Support with context', desc: 'Send order email, Windows build, and loader error text when something blocks install.' },
     ],
   },
   support: {
     eyebrow: 'Support',
-    title: 'MW4 Cheat support',
+    title: 'Valorant Cheat support',
     subtitle: 'Loader, checkout, and config help for PC players.',
     channels: [
       {
@@ -357,8 +357,8 @@ export const en: Translations = {
         icon: 'headphones',
         title: 'Email support',
         desc: 'Loader delivery, secure boot, and license questions.',
-        linkLabel: 'support@mw4cheat.org',
-        href: 'mailto:support@mw4cheat.org',
+        linkLabel: 'support@valorant-cheat.org',
+        href: 'mailto:support@valorant-cheat.org',
       },
       {
         icon: 'navFaq',
@@ -370,15 +370,15 @@ export const en: Translations = {
       {
         icon: 'clock',
         title: 'Forum answers',
-        desc: 'Player threads on aim, ESP, and DMZ routing.',
+        desc: 'Player threads on aim, ESP, and trigger timing.',
         linkLabel: 'Open forum',
         href: '/forum/',
       },
     ],
     ticketTitle: 'Include in your ticket',
     ticketItems: [
-      { title: 'Order email', desc: 'The address used at secure checkout for your MW4 license.' },
-      { title: 'Platform', desc: 'Windows 10 or 11 build and MW4 PC version.' },
+      { title: 'Order email', desc: 'The address used at secure checkout for your Valorant license.' },
+      { title: 'Platform', desc: 'Windows 10 or 11 build and Valorant PC version.' },
       { title: 'Error detail', desc: 'Exact loader message or steps that fail before the game opens.' },
     ],
   },
@@ -389,8 +389,8 @@ export const en: Translations = {
     items: [
       {
         num: '01',
-        q: 'Where do I check if MW4 modules are online?',
-        a: 'Use the status note on the mw4cheat.org homepage before you launch after a game patch.',
+        q: 'Where do I check if Valorant modules are online?',
+        a: 'Use the status note on the valorant-cheat.org homepage before you launch after a game patch.',
       },
       {
         num: '02',
@@ -399,13 +399,13 @@ export const en: Translations = {
       },
       {
         num: '03',
-        q: 'Can I get banned using MW4 cheats?',
+        q: 'Can I get banned using Valorant cheats?',
         a: 'Yes—any third-party tool in multiplayer carries account risk. Accept that risk before you play.',
       },
       {
         num: '04',
         q: 'Which platforms are supported?',
-        a: 'Modern Warfare 4 on PC with Windows 10 or 11. Console is not supported.',
+        a: 'Valorant on PC with Windows 10 or 11. Console is not supported.',
       },
       {
         num: '05',
@@ -415,19 +415,19 @@ export const en: Translations = {
       {
         num: '06',
         q: 'Where are modules listed?',
-        a: 'Aimbot, ESP, triggerbot, radar, and DMZ loot pages live under /products/mw4-cheats/ with checkout via Get access buttons.',
+        a: 'Aimbot, ESP, triggerbot, radar, and no recoil pages live under /products/valorant-cheats/ with checkout via Get access buttons.',
       },
     ],
   },
   footer: {
-    tagline: 'Modern Warfare 4 PC modules — ESP, aim assist, and DMZ tools.',
+    tagline: 'Valorant PC modules — ESP, aim assist, radar, and utility tools.',
     explore: 'Explore',
     exploreLinks: [
       { href: '/', label: 'Feature overview', ariaLabel: 'Features', scrollTarget: 'features' },
-      { href: `${productBase}aimbot/`, label: 'MW4 aimbot module', ariaLabel: 'Aimbot' },
-      { href: productBase, label: 'All MW4 modules', ariaLabel: 'Products' },
-      { href: '/blog/', label: 'MW4 cheat blog', ariaLabel: 'Blog' },
-      { href: '/forum/', label: 'Community forum', ariaLabel: 'Forum' },
+      { href: `${productBase}aimbot/`, label: 'Valorant aimbot module', ariaLabel: 'Aimbot' },
+      { href: productBase, label: 'All modules', ariaLabel: 'Products' },
+      { href: '/blog/', label: 'Valorant cheat blog', ariaLabel: 'Blog' },
+      { href: '/forum/', label: 'Community forum', ariaLabel: 'Forums' },
       { href: '/reviews/', label: 'Player reviews', ariaLabel: 'Reviews' },
       { href: '/faq/', label: 'Pre-purchase FAQ', ariaLabel: 'FAQ' },
     ],
@@ -439,14 +439,14 @@ export const en: Translations = {
   },
   legalPages: {
     about: {
-      title: 'Forum: About MW4 Cheat',
+      title: 'Forum: About Valorant Cheat',
       description:
-        'MW4 Cheat publishes Modern Warfare 4 PC module info, community discussions, and support paths at mw4cheat.org.',
+        'Valorant Cheat publishes Valorant PC module info, community discussions, and support paths at valorant-cheat.org.',
       sections: [
         {
           heading: 'What this site covers',
           paragraphs: [
-            'mw4cheat.org documents aim assist, player ESP, triggerbot, radar, and Hajin DMZ loot tools for Modern Warfare 4 on PC. We focus on module comparisons, conservative defaults, and player-written threads—not hype.',
+            'valorant-cheat.org documents aim assist, player ESP, triggerbot, radar, and Ranked stacks loot tools for Valorant on PC. We focus on module comparisons, conservative defaults, and player-written threads—not hype.',
             'Browse community posts before you buy if you want honest setup talk from people running the same modules.',
             'Game names and trademarks belong to their owners and are used for identification only.',
           ],
@@ -461,9 +461,9 @@ export const en: Translations = {
         {
           heading: 'Community discussion',
           paragraphs: [
-            'Use the forum for feature questions that are too specific for FAQ entries—aim circle tuning, ESP colors, DMZ routing, and billing timing.',
+            'Use the forum for feature questions that are too specific for FAQ entries—aim circle tuning, ESP colors, trigger timing, and billing timing.',
             'Moderation is light: keep replies on-topic and avoid sharing license keys or loader downloads in public threads.',
-            'Long-form guides live on the blog; quick comparisons stay in discussion posts where players share patch-day notes.',
+            'Long-form setup notes live in forum threads; quick comparisons stay in discussion posts where players share patch-day notes.',
           ],
         },
         {
@@ -476,12 +476,12 @@ export const en: Translations = {
     },
     privacy: {
       title: 'Privacy Policy',
-      description: 'How mw4cheat.org handles analytics, cookies, and contact data.',
+      description: 'How valorant-cheat.org handles analytics, cookies, and contact data.',
       sections: [
         {
           heading: 'Information we collect',
           paragraphs: [
-            'We may collect standard web analytics such as page views, device type, browser, and approximate region when analytics are enabled. Checkout happens on external pages—we do not store payment card data on mw4cheat.org.',
+            'We may collect standard web analytics such as page views, device type, browser, and approximate region when analytics are enabled. Checkout happens on external pages—we do not store payment card data on valorant-cheat.org.',
             'When you email support, we retain the address and message content until the ticket is resolved. Forum posts you write are public by design.',
           ],
         },
@@ -489,7 +489,7 @@ export const en: Translations = {
           heading: 'How we use data',
           paragraphs: [
             'Analytics help us improve product and forum pages. Support messages may retain the email address and content you send until the issue is resolved.',
-            'We do not sell personal data. Aggregated traffic patterns may inform which guides we expand after major game patches.',
+            'We do not sell personal data. Aggregated traffic patterns may inform which forum topics we expand after major game patches.',
           ],
         },
         {
@@ -516,25 +516,25 @@ export const en: Translations = {
     },
     terms: {
       title: 'Terms & Conditions',
-      description: 'Purchase, license, refund, and use terms for MW4 cheat access via mw4cheat.org.',
+      description: 'Purchase, license, refund, and use terms for Valorant cheat access via valorant-cheat.org.',
       sections: [
         {
           heading: 'Agreement',
           paragraphs: [
-            'Last updated: October 2026. By using mw4cheat.org or completing checkout for access listed here, you agree to these Terms & Conditions and our Privacy Policy.',
+            'Last updated: October 2026. By using valorant-cheat.org or completing checkout for access listed here, you agree to these Terms & Conditions and our Privacy Policy.',
             'These terms govern how you may use the site, forum, and purchased licenses. If a section conflicts with mandatory local law, the law controls only where required.',
           ],
         },
         {
           heading: 'What you purchase',
           paragraphs: [
-            'We sell access to Modern Warfare 4 PC modules delivered through a loader and license key. Feature lists describe what is included at purchase time and may change after game updates.',
+            'We sell access to Valorant PC modules delivered through a loader and license key. Feature lists describe what is included at purchase time and may change after game updates.',
           ],
         },
         {
           heading: 'Checkout and delivery',
           paragraphs: [
-            'Payment and license delivery run on external checkout pages. mw4cheat.org does not process or store payment card numbers.',
+            'Payment and license delivery run on external checkout pages. valorant-cheat.org does not process or store payment card numbers.',
           ],
         },
         {
@@ -559,15 +559,15 @@ export const en: Translations = {
       ],
     },
     support: {
-      title: 'MW4 Cheat Support',
-      description: 'Loader and checkout help for Modern Warfare 4 PC access.',
+      title: 'Valorant Cheat Support',
+      description: 'Loader and checkout help for Valorant PC access.',
     },
   },
   ui: {
     skipLink: 'Skip to main content',
     browseCheats: 'Get access',
     browseCheatsMobile: 'Get access',
-    homeAria: 'MW4 Cheat home',
+    homeAria: 'Valorant Cheat home',
     checkoutAria: 'Secure checkout',
     discordAria: 'Open checkout',
     menuOpen: 'Open menu',

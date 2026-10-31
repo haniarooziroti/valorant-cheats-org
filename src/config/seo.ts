@@ -11,8 +11,10 @@ export function getSiteOrigin(): string {
   return SITE_ORIGIN;
 }
 
-/** Default social share image (1200×630). */
-export const DEFAULT_OG_IMAGE = '/images/og-default.jpg';
+import { SITE_MEDIA, SUPABASE_MEDIA_ORIGIN } from './media';
+
+/** Default social share image (remote WebP). */
+export const DEFAULT_OG_IMAGE = SITE_MEDIA.espArchway;
 
 export const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID as string | undefined;
 

@@ -1,10 +1,10 @@
 /** Checkout destinations keyed by internal product id. */
 export const CHECKOUT_URLS = {
-  mw4: 'https://zadeyo.com/go/HANIA?to=%2Fproducts%2Fmw4',
+  valorant: 'https://zadeyo.com/go/HANIA?to=%2Fproducts%2Fvalorant',
 };
 
 /**
- * Legacy instant redirects (unused — /go/mw4/ is a full indexable landing page).
+ * Legacy instant redirects (unused — /go/valorant/ is a full indexable landing page).
  * Node preview uses static dist files for checkout paths.
  */
 export const CHECKOUT_PATH_REDIRECTS = new Map([]);

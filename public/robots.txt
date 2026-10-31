@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mw4cheat.org/sitemap.xml
+Sitemap: https://valorant-cheat.org/sitemap.xml

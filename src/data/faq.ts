@@ -21,8 +21,8 @@ function link(text: string, href: string): string {
   return `<a href="${normalizeInternalPath(href)}">${text}</a>`;
 }
 
-const productsHub = link('MW4 modules', ROUTES.products);
-const aimPage = link('MW4 aimbot page', productPath('aimbot'));
+const productsHub = link('Valorant modules', ROUTES.products);
+const aimPage = link('Valorant aimbot page', productPath('aimbot'));
 const espPage = link('player ESP page', productPath('esp'));
 const faqPage = link('full FAQ', ROUTES.faq);
 const forum = link('community forum', ROUTES.forum);
@@ -32,8 +32,8 @@ export const siteFaqs: SiteFaqItem[] = [
     id: 'status',
     topic: 'setup',
     icon: 'faqStatus',
-    q: 'Where do I check if MW4 modules are online?',
-    a: a('Read the status note on the mw4cheat.org homepage before launching after a game patch.'),
+    q: 'Where do I check if Valorant modules are online?',
+    a: a('Read the status note on the valorant-cheat.org homepage before launching after a game patch.'),
   },
   {
     id: 'after-buy',
@@ -46,7 +46,7 @@ export const siteFaqs: SiteFaqItem[] = [
     id: 'ban-risk',
     topic: 'safety',
     icon: 'faqBanRisk',
-    q: 'Can I get banned using MW4 cheats?',
+    q: 'Can I get banned using Valorant cheats?',
     a: a('Yes—third-party tools in multiplayer carry account risk. Accept that risk before you play.'),
   },
   {
@@ -54,7 +54,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'setup',
     icon: 'faqPlatforms',
     q: 'Which platforms are supported?',
-    a: a('Modern Warfare 4 on PC with Windows 10 or 11. Console is not supported.'),
+    a: a('Valorant on PC with Windows 10 or 11. Console is not supported.'),
   },
   {
     id: 'license-move',
@@ -67,8 +67,8 @@ export const siteFaqs: SiteFaqItem[] = [
     id: 'products-page',
     topic: 'products',
     icon: 'faqProductsPage',
-    q: 'Where are MW4 modules listed?',
-    a: a(`Feature pages for aimbot, ESP, triggerbot, radar, and DMZ loot live under ${productsHub}.`),
+    q: 'Where are Valorant modules listed?',
+    a: a(`Feature pages for aimbot, ESP, triggerbot, radar, and no recoil live under ${productsHub}.`),
   },
   {
     id: 'monthly-lifetime',
@@ -94,12 +94,12 @@ export const siteFaqs: SiteFaqItem[] = [
     scopes: ['esp'],
   },
   {
-    id: 'dmz-layer',
+    id: 'no-recoil-module',
     topic: 'esp',
     icon: 'faqBlogSlugEsp',
-    q: 'Does DMZ loot ESP run in 6v6?',
-    a: a('The Hajin DMZ loot layer stays off in 6v6 playlists so small maps stay clean.'),
-    scopes: ['dmz-loot'],
+    q: 'Should I run full no recoil in ranked?',
+    a: a('Light recoil assist is recommended. Full spread removal looks unnatural on death replay—see the no recoil module page for defaults.'),
+    scopes: ['no-recoil'],
   },
   {
     id: 'stream-proof',
@@ -130,7 +130,7 @@ export function getAllFaqs(): SiteFaqItem[] {
 export const SITE_FAQ_SECTION_COPY = {
   eyebrow: 'All topics',
   title: 'Browse by category',
-  subtitle: 'Filter aim, ESP, plans, setup, and safety answers for MW4 PC.',
+  subtitle: 'Filter aim, ESP, plans, setup, and safety answers for Valorant PC.',
 } as const;
 
 export const SITE_FAQ_FILTER_TOPICS: FaqTopic[] = ['all', 'plans', 'esp', 'aim', 'safety', 'products', 'setup'];

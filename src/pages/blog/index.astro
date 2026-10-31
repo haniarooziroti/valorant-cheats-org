@@ -4,14 +4,18 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { loadBlogPosts } from '../../data/blog/loader';
 import { t } from '../../i18n';
 import { resolvePageSeo } from '../../config/seo';
-import { breadcrumbSchema, collectionPageSchema } from '../../utils/schema';
+import { OG_DEFAULT_IMAGE, FORUM_URL, PRODUCT_URL, CHECKOUT_URL } from '../../config/siteConfig';
+import {
+  blogSchema,
+  breadcrumbSchema,
+  collectionPageSchema,
+  itemListSchema,
+} from '../../utils/schema';
+import { blogPostPath } from '../../utils/path';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import BlogCard from '../../components/blog/BlogCard.astro';
 import BlogFilters from '../../components/blog/BlogFilters.astro';
 import { Button } from '@/components/starwind/button';
-import { PRODUCT_URL } from '../../config/brand';
-import { checkoutPath } from '../../config/checkout';
-import { ROUTES } from '../../utils/path';
 
 const seo = resolvePageSeo('/blog/');
 const breadcrumbs = [
@@ -21,14 +25,21 @@ const breadcrumbs = [
 
 const allPosts = await loadBlogPosts();
 const articleCount = allPosts.length;
+const itemList = itemListSchema(
+  allPosts.map((post) => ({ name: post.title, url: blogPostPath(post.slug) })),
+);
 ---
 
 <BaseLayout
   title={seo.title}
   description={seo.description}
+  ogImage={OG_DEFAULT_IMAGE}
+  themeColor="#0F1923"
   jsonLd={[
     collectionPageSchema({ name: t.blog.title, description: t.blog.subtitle, url: '/blog/' }),
+    blogSchema({ name: t.blog.title, description: t.blog.subtitle, url: '/blog/' }),
     breadcrumbSchema(breadcrumbs),
+    itemList,
   ]}
 >
   <div class="blog-page">
@@ -36,16 +47,18 @@ const articleCount = allPosts.length;
       <Breadcrumbs items={breadcrumbs} />
 
       <header class="blog-page__header">
+        <p class="blog-page__eyebrow text-sm font-semibold uppercase tracking-wider text-primary">{t.blog.eyebrow}: Valorant Cheats</p>
         <h1 class="blog-page__title">{t.blog.title}</h1>
-        <h2 class="blog-page__subtitle text-xl font-semibold text-foreground">Blog: MW4 Cheat</h2>
         <p class="blog-page__intro">{t.blog.subtitle}</p>
       </header>
 
-      <BlogFilters />
-
-      <p class="blog-page__count" data-blog-count aria-live="polite">
-        <span data-blog-count-value>{articleCount}</span> {t.blog.articlesCountLabel}
-      </p>
+      <div class="blog-controls-wrap">
+        <BlogFilters />
+        <p class="blog-page__count" data-blog-count aria-live="polite">
+          <span data-blog-count-value>{articleCount}</span>{' '}
+          <span data-blog-count-label>{t.blog.articlesCountLabel}</span>
+        </p>
+      </div>
 
       <div id="blog-grid" class="blog-grid" aria-live="polite">
         {allPosts.map((post, index) => (
@@ -53,17 +66,27 @@ const articleCount = allPosts.length;
         ))}
       </div>
 
-      <p id="blog-empty" class="blog-empty hidden" role="status" data-message={t.blog.emptyFilter}>{t.blog.emptyFilter}</p>
+      <div
+        id="blog-empty"
+        class="blog-empty hidden"
+        role="status"
+        data-message={t.blog.emptyFilter}
+      >
+        <p>{t.blog.emptyFilter}</p>
+        <button type="button" class="blog-empty__clear" data-blog-clear-filters>
+          Clear filters
+        </button>
+      </div>
 
       <aside class="blog-buy-strip" aria-labelledby="blog-buy-title">
-        <h2 id="blog-buy-title" class="blog-buy-strip__title">Buy MW4: aimbot, ESP &amp; wallhack</h2>
+        <h2 id="blog-buy-title" class="blog-buy-strip__title">Buy Valorant: aimbot, ESP &amp; wallhack</h2>
         <p class="blog-buy-strip__text">
-          Compare Modern Warfare 4 aim assist, player ESP, radar, and DMZ loot—then pick monthly or lifetime on the product page.
+          Compare Valorant aim assist, player ESP, radar and utility tools — then pick monthly or lifetime on the product page.
         </p>
         <div class="blog-buy-strip__actions">
-          <Button as="a" href={PRODUCT_URL} variant="primary">View MW4 products</Button>
-          <Button as="a" href={checkoutPath('mw4')} variant="outline">See pricing</Button>
-          <Button as="a" href={ROUTES.forum} variant="outline">Open forum</Button>
+          <Button as="a" href={PRODUCT_URL} variant="primary">View Valorant products</Button>
+          <Button as="a" href={CHECKOUT_URL} variant="outline">See pricing</Button>
+          <Button as="a" href={FORUM_URL} variant="outline">Open forum</Button>
         </div>
       </aside>
     </div>

@@ -9,9 +9,9 @@ interface Props {
 const { logoAlt = 'Aimbot – logo' } = Astro.props;
 
 const resourceLinks = [
-  { href: '/forum/', label: 'Community forum', ariaLabel: 'Forum' },
-  { href: '/products/mw4-cheats/aimbot/', label: 'MW4 aimbot', ariaLabel: 'Aimbot' },
-  { href: '/products/mw4-cheats/', label: 'All modules', ariaLabel: 'Products' },
+  { href: '/forum/', label: 'Forums', ariaLabel: 'Forums' },
+  { href: '/products/valorant-cheats/aimbot/', label: 'Valorant aimbot', ariaLabel: 'Aimbot' },
+  { href: '/products/valorant-cheats/', label: 'All modules', ariaLabel: 'Products' },
   { href: '/support/', label: t.footer.support },
 ];
 
@@ -27,8 +27,7 @@ const legalLinks = [
     <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
       <div class="space-y-4">
         <a href="/" class="inline-flex items-center gap-2.5 font-[family-name:var(--font-heading)] text-lg font-bold" aria-label={t.ui.homeAria}>
-          <img src="/logo.svg" alt={logoAlt} width="32" height="32" class="rounded-md" />
-          <span aria-hidden="true">MW4<span class="text-primary">Cheat</span></span>
+          <span aria-hidden="true">Valorant<span class="text-primary">Cheat</span></span>
         </a>
         <p class="text-sm text-muted-foreground">{t.footer.tagline}</p>
       </div>

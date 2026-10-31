@@ -8,10 +8,10 @@ import { t } from '../i18n';
 import { resolvePageSeo } from '../config/seo';
 import { faqPageSchema, organizationSchema, websiteSchema } from '../utils/schema';
 import { getLandingFaqs } from '../data/faq';
-import { HERO_VIDEO } from '../config/media';
+import { HERO_CAROUSEL_SLIDES } from '../config/media';
 const seo = resolvePageSeo('/');
 const homeFaqs = getLandingFaqs();
-const heroPoster = HERO_VIDEO.poster;
+const heroPoster = HERO_CAROUSEL_SLIDES[0]!.src;
 ---
 
 <BaseLayout
@@ -26,6 +26,7 @@ const heroPoster = HERO_VIDEO.poster;
     href={heroPoster}
     type="image/webp"
     fetchpriority="high"
+    crossorigin="anonymous"
   />
   <HeroSection />
   <FeaturesSection />

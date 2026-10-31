@@ -1,4 +1,5 @@
 import type { FaqItem } from '../i18n/types';
+import { SITE_MEDIA } from '../config/media';
 import { SUPPORT_EMAIL } from '../config/site';
 import { SITE_ORIGIN, absoluteAssetUrl, canonicalUrl, getOrganizationSameAs } from '../config/seo';
 
@@ -24,11 +25,11 @@ export function websiteSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'MW4 Cheat',
+    name: 'Valorant Cheat',
     url: `${SITE_ORIGIN}/`,
     inLanguage: 'en-US',
     description:
-      'Modern Warfare 4 PC cheats with ESP, aimbot, wallhack tools, radar, and DMZ loot modules.',
+      'Valorant PC cheats with ESP, aimbot, wallhack tools, radar, and no recoil modules.',
   };
 }
 
@@ -38,9 +39,9 @@ export function organizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'MW4 Cheat',
+    name: 'Valorant Cheat',
     url: `${SITE_ORIGIN}/`,
-    logo: `${SITE_ORIGIN}/logo.svg`,
+    logo: SITE_MEDIA.favicon,
     email: SUPPORT_EMAIL,
     ...(sameAs.length > 0 ? { sameAs } : {}),
     contactPoint: [
@@ -66,7 +67,7 @@ export function collectionPageSchema(input: { name: string; description: string;
     inLanguage: 'en-US',
     isPartOf: {
       '@type': 'WebSite',
-      name: 'MW4 Cheat',
+      name: 'Valorant Cheat',
       url: `${SITE_ORIGIN}/`,
     },
   };
@@ -82,7 +83,7 @@ export function webPageSchema(input: { name: string; description: string; url: s
     inLanguage: 'en-US',
     isPartOf: {
       '@type': 'WebSite',
-      name: 'MW4 Cheat',
+      name: 'Valorant Cheat',
       url: `${SITE_ORIGIN}/`,
     },
   };
@@ -116,6 +117,22 @@ export function itemListSchema(items: { name: string; url: string }[]) {
   };
 }
 
+export function blogSchema(input: { name: string; description: string; url: string }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    name: input.name,
+    description: input.description,
+    url: canonicalUrl(input.url),
+    inLanguage: 'en-US',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Valorant Cheats',
+      url: `${SITE_ORIGIN}/`,
+    },
+  };
+}
+
 export function discussionForumPostingSchema(input: {
   name: string;
   text: string;
@@ -131,7 +148,7 @@ export function discussionForumPostingSchema(input: {
     url: canonicalUrl(input.url),
     author: { '@type': 'Person', name: input.author },
     commentCount: input.comments,
-    isPartOf: { '@type': 'CollectionPage', name: 'MW4 Cheat Community Forum', url: canonicalUrl('/forum/') },
+    isPartOf: { '@type': 'CollectionPage', name: 'Valorant Cheat Community Forum', url: canonicalUrl('/forum/') },
   };
 }
 
@@ -156,7 +173,7 @@ export function productSchema(input: {
     sku: input.sku ?? input.url.replace(/\//g, '-'),
     brand: {
       '@type': 'Brand',
-      name: 'MW4 Cheat',
+      name: 'Valorant Cheat',
     },
     ...(input.image ? { image: absoluteAssetUrl(input.image) } : {}),
     offers: {
@@ -166,7 +183,7 @@ export function productSchema(input: {
       availability: 'https://schema.org/InStock',
       seller: {
         '@type': 'Organization',
-        name: 'MW4 Cheat',
+        name: 'Valorant Cheat',
       },
     },
   };
@@ -193,30 +210,31 @@ export function articleSchema(input: {
   name: string;
   description: string;
   url: string;
-  image: string;
+  image?: string;
   datePublished: string;
   dateModified?: string;
 }) {
+  const imageUrl = input.image ? absoluteAssetUrl(input.image) : absoluteAssetUrl('/images/og-default.jpg');
   return {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: input.name,
     description: input.description,
     url: canonicalUrl(input.url),
-    image: absoluteAssetUrl(input.image),
+    image: imageUrl,
     datePublished: input.datePublished,
     dateModified: input.dateModified ?? input.datePublished,
     inLanguage: 'en-US',
     author: {
       '@type': 'Organization',
-      name: 'MW4 Cheat',
+      name: 'Valorant Cheats Team',
     },
     publisher: {
       '@type': 'Organization',
-      name: 'MW4 Cheat',
+      name: 'Valorant Cheats',
       logo: {
         '@type': 'ImageObject',
-        url: `${SITE_ORIGIN}/logo.svg`,
+        url: SITE_MEDIA.favicon,
       },
     },
     mainEntityOfPage: {

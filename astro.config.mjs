@@ -3,25 +3,14 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 import { sitemapSerialize } from './src/config/sitemap.ts';
 
-const siteOrigin = (process.env.PUBLIC_SITE_ORIGIN || 'https://mw4cheat.org').replace(/\/$/, '');
+const siteOrigin = (process.env.PUBLIC_SITE_ORIGIN || 'https://valorant-cheat.org').replace(/\/$/, '');
 
 export default defineConfig({
   site: siteOrigin,
   trailingSlash: 'always',
   redirects: {
-    '/cheats/': '/products/mw4-cheats/',
+    '/cheats/': '/products/valorant-cheats/',
     '/contact/': '/support/',
-    '/blog/how-to-buy-mw4-cheats-2026/': '/blog/buy-mw4-cheats/',
-    '/blog/mw4-cheat-features-overview/': '/blog/mw4-features/',
-    '/blog/mw4-monthly-vs-lifetime/': '/blog/mw4-plans/',
-    '/blog/mw4-aimbot-settings-guide/': '/blog/mw4-aimbot-setup/',
-    '/blog/mw4-esp-radar-6v6-setup/': '/blog/mw4-esp-setup/',
-    '/blog/hajin-dmz-loot-guide/': '/blog/mw4-dmz-guide/',
-    '/blog/mw4-triggerbot-and-no-recoil/': '/blog/mw4-triggerbot/',
-    '/blog/mw4-system-requirements-setup/': '/blog/mw4-requirements/',
-    '/blog/mw4-loader-not-working/': '/blog/mw4-loader-fix/',
-    '/blog/mw4-patch-day-checklist/': '/blog/mw4-patch-day/',
-    '/blog/mw4-cheat-risk-explained/': '/blog/mw4-cheat-risk/',
   },
   compressHTML: true,
   prefetch: {
@@ -34,7 +23,7 @@ export default defineConfig({
   integrations: [
     sitemap({
       filter: (page) =>
-        !page.includes('/404') && (!page.includes('/go/') || page.includes('/go/mw4')),
+        !page.includes('/404') && (!page.includes('/go/') || page.includes('/go/valorant')),
       serialize: sitemapSerialize,
     }),
   ],

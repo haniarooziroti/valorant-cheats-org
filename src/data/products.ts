@@ -53,26 +53,26 @@ export interface ProductPage {
   systemRequirements: SystemRequirement[];
   about?: { type: 'h2' | 'p'; text: string }[];
   body: { type: 'h2' | 'p'; text: string }[];
-  relatedBlogSlugs: string[];
+  relatedForumSlugs: string[];
 }
 
-export const productRelatedBlogSlugs: Record<string, string[]> = {
-  aimbot: ['mw4-aimbot-setup', 'mw4-cheat-risk', 'mw4-features'],
-  esp: ['mw4-esp-setup', 'mw4-features', 'mw4-dmz-guide'],
-  triggerbot: ['mw4-triggerbot', 'mw4-aimbot-setup', 'mw4-features'],
-  radar: ['mw4-esp-setup', 'mw4-patch-day', 'mw4-features'],
-  'dmz-loot': ['mw4-dmz-guide', 'mw4-plans', 'mw4-features'],
+export const productRelatedForumSlugs: Record<string, string[]> = {
+  aimbot: ['aimbot-settings-smooth-level-killcam', 'soft-aim-vs-visible-aimbot', 'aimbot-fov-ranked-unrated'],
+  esp: ['esp-box-style-unrated', 'wallhack-spike-colors', 'radar-haven-split'],
+  triggerbot: ['triggerbot-delay-valorant', 'aimbot-settings-smooth-level-killcam', 'cheat-menu-hotkeys-ranked'],
+  radar: ['radar-haven-split', 'esp-box-style-unrated', 'patch-day-module-status'],
+  'no-recoil': ['no-recoil-spray-valorant', 'cheat-menu-hotkeys-ranked', 'external-vs-internal-valorant'],
 };
 
-import { GAMEPLAY_FRAMES } from '../config/media';
+import { GAMEPLAY_FRAMES, HERO_CAROUSEL_SLIDES } from '../config/media';
 
-const productBase = '/products/mw4-cheats/';
+const productBase = '/products/valorant-cheats/';
 
 const sharedAcquisition: AcquisitionStep[] = [
   {
     num: '01',
     title: 'Pick your access window',
-    desc: 'Monthly or lifetime keys cover the same MW4 module list—choose what fits your season on PC.',
+    desc: 'Monthly or lifetime keys cover the same Valorant module list—choose what fits your season on PC.',
   },
   {
     num: '02',
@@ -96,88 +96,88 @@ function acquisitionFor(productName: string): ProductAcquisition {
 }
 
 const sharedGoodToKnow =
-  'Modern Warfare 4 receives frequent updates. Confirm the status note on the homepage before you launch. Stream-proof overlay mode is available when you record gameplay.';
+  'Valorant receives frequent updates. Confirm the status note on the homepage before you launch. Stream-proof overlay mode is available when you record gameplay.';
 
 const sharedLimitations =
   'Third-party software in online multiplayer can violate publisher terms and lead to account penalties. You accept that risk. Features and compatibility can change after game or Windows updates without notice.';
 
-const mw4SystemRequirements: SystemRequirement[] = [
+const valorantSystemRequirements: SystemRequirement[] = [
   { icon: 'reqWindows', text: 'Windows 10 or Windows 11 (64-bit).' },
-  { icon: 'reqCpu', text: 'Intel or AMD CPU that meets MW4 PC requirements.' },
+  { icon: 'reqCpu', text: 'Intel or AMD CPU that meets Valorant PC requirements.' },
   { icon: 'reqSettings', text: 'Secure Boot, TPM, HVCI, and Core Isolation enabled where required.' },
   { icon: 'reqWifi', text: 'Stable internet for loader access and module updates.' },
 ];
 
 const slides = {
   aimbot: {
-    src: GAMEPLAY_FRAMES.f01,
-    alt: 'MW4 aimbot menu showing FOV circle and smoothing sliders',
+    src: GAMEPLAY_FRAMES.aimbot,
+    alt: 'Valorant aimbot menu showing FOV circle and smoothing sliders',
     caption: 'Aim assist tuning',
-    captionDesc: 'FOV ring, smooth strength, and bone priority for 6v6 engagements.',
+    captionDesc: 'FOV ring, smooth strength, and bone priority for ranked engagements.',
   },
   esp: {
-    src: GAMEPLAY_FRAMES.f03,
-    alt: 'MW4 player ESP with boxes, health bars, and skeleton overlay',
+    src: GAMEPLAY_FRAMES.esp,
+    alt: 'Valorant player ESP with boxes, health bars, and skeleton overlay',
     caption: 'Player ESP layout',
-    captionDesc: 'Corner boxes, armor readout, and distance caps for readable 6v6 fights.',
+    captionDesc: 'Corner boxes, armor readout, and distance caps for readable ranked fights.',
   },
   trigger: {
-    src: GAMEPLAY_FRAMES.f05,
-    alt: 'MW4 triggerbot settings with delay and hitbox options',
+    src: GAMEPLAY_FRAMES.trigger,
+    alt: 'Valorant triggerbot settings with delay and hitbox options',
     caption: 'Trigger module',
     captionDesc: 'Delay, hold key, and shared wall checks with aim assist.',
   },
   radar: {
-    src: GAMEPLAY_FRAMES.f07,
-    alt: 'MW4 2D radar with operator markers and zoom controls',
+    src: GAMEPLAY_FRAMES.radar,
+    alt: 'Valorant 2D radar with operator markers and zoom controls',
     caption: '2D radar',
-    captionDesc: 'Operator dots with range and zoom for Ground War rotations.',
+    captionDesc: 'Operator dots with range and zoom for Premier rotations.',
   },
-  dmz: {
-    src: GAMEPLAY_FRAMES.f09,
-    alt: 'MW4 DMZ loot ESP highlighting contracts and extract points',
-    caption: 'DMZ loot layer',
-    captionDesc: 'Cash, bags, contracts, and vehicles for Hajin DMZ—off in core 6v6.',
+  noRecoil: {
+    src: GAMEPLAY_FRAMES.noRecoil,
+    alt: 'Valorant no recoil spray control settings on cheat menu',
+    caption: 'No recoil assist',
+    captionDesc: 'Light spray control for Vandal and Phantom without zero-recoil meme configs.',
   },
   menu: {
-    src: GAMEPLAY_FRAMES.f11,
-    alt: 'Modern Warfare 4 cheat menu with config profiles for 6v6 and DMZ',
+    src: GAMEPLAY_FRAMES.menu,
+    alt: 'Valorant cheat menu with ranked and unrated config profiles',
     caption: 'Config profiles',
-    captionDesc: 'Separate saved setups for 6v6 playlists and Hajin DMZ.',
+    captionDesc: 'Separate saved setups for ranked and unrated playlists.',
   },
   aimbotB: {
-    src: GAMEPLAY_FRAMES.f02,
-    alt: 'MW4 aim assist circle overlay during a gunfight',
+    src: GAMEPLAY_FRAMES.aimbotAlt,
+    alt: 'Valorant aim assist circle overlay during a gunfight',
     caption: 'Aim circle',
     captionDesc: 'On-screen FOV ring for believable tracking help.',
   },
   espB: {
-    src: GAMEPLAY_FRAMES.f04,
-    alt: 'MW4 wallhack style player boxes in a multiplayer match',
+    src: GAMEPLAY_FRAMES.espAlt,
+    alt: 'Valorant wallhack style player boxes in a multiplayer match',
     caption: 'Readable ESP',
     captionDesc: 'Soft colors for cover vs line-of-sight targets.',
   },
   triggerB: {
-    src: GAMEPLAY_FRAMES.f06,
-    alt: 'MW4 triggerbot hold key binding in the menu',
+    src: GAMEPLAY_FRAMES.triggerAlt,
+    alt: 'Valorant triggerbot hold key binding in the menu',
     caption: 'Trigger hold key',
     captionDesc: 'Fire only when you mean to.',
   },
   radarB: {
-    src: GAMEPLAY_FRAMES.f08,
-    alt: 'MW4 radar overlay beside the minimap',
+    src: GAMEPLAY_FRAMES.radarAlt,
+    alt: 'Valorant radar overlay beside the minimap',
     caption: 'Radar zoom',
-    captionDesc: 'Pull zoom in for Ground War lanes.',
+    captionDesc: 'Pull zoom in for Premier lanes.',
   },
-  dmzB: {
-    src: GAMEPLAY_FRAMES.f10,
-    alt: 'MW4 DMZ extract and contract markers',
-    caption: 'Extract routing',
-    captionDesc: 'Plan exits before you push a contract.',
+  noRecoilB: {
+    src: GAMEPLAY_FRAMES.noRecoilAlt,
+    alt: 'Valorant Phantom spray pattern with light recoil assist enabled',
+    caption: 'Spray tuning',
+    captionDesc: 'Pair light recoil with your existing crosshair placement.',
   },
   menuB: {
-    src: GAMEPLAY_FRAMES.f12,
-    alt: 'MW4 misc tab with stream-proof toggle',
+    src: GAMEPLAY_FRAMES.menu,
+    alt: 'Valorant misc tab with stream-proof toggle',
     caption: 'Stream-proof mode',
     captionDesc: 'Keep overlays off capture when you record.',
   },
@@ -204,9 +204,9 @@ const modules: ModuleDef[] = [
   {
     slug: 'aimbot',
     name: 'Aimbot',
-    title: 'MW4 Aimbot Module',
+    title: 'Valorant Aimbot Module',
     subtitle: 'Smooth aim inside your FOV ring',
-    desc: 'Precision aim assist for Modern Warfare 4 PC multiplayer with circle FOV, smoothing, and visibility checks.',
+    desc: 'Precision aim assist for Valorant PC multiplayer with circle FOV, smoothing, and visibility checks.',
     features: ['Adjustable aim circle', 'Head or chest priority', 'Team and downed filters', 'Shared wall logic'],
     more: 8,
     badge: 'Core module',
@@ -230,16 +230,16 @@ const modules: ModuleDef[] = [
       { type: 'h2', text: 'Who this fits' },
       {
         type: 'p',
-        text: 'Players who want steadier gunfights in 6v6 and Ground War without jerky camera movement. Pair with player ESP if you need extra context on flanks.',
+        text: 'Players who want steadier gunfights in ranked and Premier without jerky camera movement. Pair with player ESP if you need extra context on flanks.',
       },
     ],
   },
   {
     slug: 'esp',
     name: 'Player ESP',
-    title: 'MW4 ESP & Wallhack',
+    title: 'Valorant ESP & Wallhack',
     subtitle: 'Readable boxes, health, and skeleton',
-    desc: 'Player ESP for MW4 with armor plates, distance, weapon readouts, and squad colors tuned for fast TTK playlists.',
+    desc: 'Player ESP for Valorant with armor plates, distance, weapon readouts, and squad colors tuned for fast TTK playlists.',
     features: ['Box or corner style', 'Health and plates', 'Skeleton option', 'Squad color coding'],
     more: 10,
     badge: 'Core module',
@@ -262,17 +262,17 @@ const modules: ModuleDef[] = [
       'Names stay off by default so the screen stays clean—toggle them when you are reviewing demos or coaching friends.',
     ],
     body: [
-      { type: 'h2', text: '6v6 vs DMZ' },
+      { type: 'h2', text: 'Ranked vs unrated' },
       {
         type: 'p',
-        text: 'For Hajin DMZ you will usually run the loot layer separately. In 6v6, a tight box plus health is often enough—see the DMZ loot page when you rotate modes.',
+        text: 'For long ranked nights, keep boxes tight and distance capped. In unrated, you can widen ESP slightly—see the radar module when you want map-wide awareness.',
       },
     ],
   },
   {
     slug: 'triggerbot',
     name: 'Triggerbot',
-    title: 'MW4 Triggerbot',
+    title: 'Valorant Triggerbot',
     subtitle: 'Shots only when you are on target',
     desc: 'Trigger module fires when your crosshair is already on an operator, with delay tuning and shared visibility checks.',
     features: ['Hold key', 'Shot delay', 'Head or chest', 'Wall check parity'],
@@ -300,9 +300,9 @@ const modules: ModuleDef[] = [
   {
     slug: 'radar',
     name: '2D Radar',
-    title: 'MW4 2D Radar',
+    title: 'Valorant 2D Radar',
     subtitle: 'Minimap-style operator feed',
-    desc: 'Compact radar with operator markers, zoom, and range limits for Ground War and large playlists.',
+    desc: 'Compact radar with operator markers, zoom, and range limits for Premier and large playlists.',
     features: ['Operator dots', 'Zoom slider', 'Range cap', 'Matches ESP colors'],
     more: 3,
     badge: 'Awareness',
@@ -315,28 +315,34 @@ const modules: ModuleDef[] = [
     body: [],
   },
   {
-    slug: 'dmz-loot',
-    name: 'DMZ Loot ESP',
-    title: 'Hajin DMZ Loot Layer',
-    subtitle: 'Contracts, cash, and extracts',
-    desc: 'Loot ESP for Hajin DMZ: cash, bags, armor, contracts, vehicles, and extract points—with the layer off in 6v6.',
-    features: ['Contracts', 'Extracts', 'Cash and bags', 'Vehicles on roads'],
+    slug: 'no-recoil',
+    name: 'No Recoil Assist',
+    title: 'Valorant No Recoil Module',
+    subtitle: 'Light spray control for rifles',
+    desc: 'Valorant no recoil helpers for Vandal and Phantom—subtle spray control that pairs with aimbot without looking robotic.',
+    features: ['Light recoil slider', 'Per-weapon profiles', 'Works with aimbot', 'Ranked-safe defaults'],
     more: 6,
-    badge: 'DMZ',
-    category: 'Loot',
-    imageKey: 'dmz',
+    badge: 'Combat',
+    category: 'Recoil',
+    imageKey: 'noRecoil',
     fullFeatures: [
-      'Cash and bag highlights',
-      'Armor and ammo pickups',
-      'Contract objectives',
-      'Extract locations',
-      'Vehicles on farmland routes',
-      'Auto-disabled in 6v6 playlists',
+      'Adjustable recoil compensation strength',
+      'Separate profiles per rifle',
+      'Optional SMG preset',
+      'Does not remove spread entirely',
+      'Toggle with hold key',
+      'Syncs with aimbot smooth settings',
     ],
     overview: [
-      'DMZ sessions reward routing knowledge. The loot layer keeps contracts and extracts visible without spamming markers in small maps.',
+      'Full zero-recoil looks wrong on spectate. This module keeps a light pull so your spray still has human variance.',
+      'Test in the range before you enable it in ranked—pair with conservative aimbot FOV for believable clips.',
     ],
-    body: [],
+    body: [
+      {
+        type: 'p',
+        text: 'Use this when you want Valorant no recoil assistance without turning every fight into a laser beam.',
+      },
+    ],
   },
 ];
 
@@ -347,7 +353,7 @@ const moduleSecondSlide: Record<string, SlideKey> = {
   esp: 'espB',
   triggerbot: 'triggerB',
   radar: 'radarB',
-  'dmz-loot': 'dmzB',
+  'no-recoil': 'noRecoilB',
 };
 
 function buildPages(): ProductPage[] {
@@ -365,15 +371,18 @@ function buildPages(): ProductPage[] {
     more: mod.more,
     variant: mod.variant,
     buyUrl: checkoutForSlug(mod.slug),
-    images: [slides[mod.imageKey], slides[moduleSecondSlide[mod.slug] ?? 'menuB']],
+    images:
+      mod.slug === 'aimbot' || mod.slug === 'esp'
+        ? [slides[mod.imageKey], slides[moduleSecondSlide[mod.slug] ?? 'menuB']]
+        : [slides[mod.imageKey]],
     overview: { title: `${mod.name} overview`, paragraphs: mod.overview },
     acquisition: acquisitionFor(mod.title),
     goodToKnow: sharedGoodToKnow,
     limitations: sharedLimitations,
     fullFeatures: mod.fullFeatures,
-    systemRequirements: mw4SystemRequirements,
+    systemRequirements: valorantSystemRequirements,
     body: mod.body,
-    relatedBlogSlugs: productRelatedBlogSlugs[mod.slug] ?? [],
+    relatedForumSlugs: productRelatedForumSlugs[mod.slug] ?? [],
   }));
 }
 
@@ -397,13 +406,13 @@ export function getAllCheatSlugs() {
   return productPages.map((p) => p.slug);
 }
 
-export const heroSlides = [slides.esp, slides.aimbot, slides.radar, slides.dmz];
+export const heroSlides = HERO_CAROUSEL_SLIDES;
 
 export const productHub = {
   path: productBase,
   title: t.products.title,
   subtitle: t.products.subtitle,
   description:
-    'Modern Warfare 4 PC modules—aim assist, player ESP, triggerbot, radar, and Hajin DMZ loot tools in one access pass.',
-  buyUrl: checkoutPath('mw4'),
+    'Valorant PC modules—aim assist, player ESP, triggerbot, radar hack, and no recoil tools in one access pass.',
+  buyUrl: checkoutPath('valorant'),
 };

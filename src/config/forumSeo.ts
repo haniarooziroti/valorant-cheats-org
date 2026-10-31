@@ -9,39 +9,107 @@ export interface ForumThreadSeo {
 }
 
 const FORUM_THREAD_SEO: Record<string, ForumThreadSeo> = {
-  'will-high-aim-smooth-get-me-banned': {
-    title: 'Smoothing What Level — MW4 6v6 Settings | MW4 Cheat',
+  'aimbot-settings-smooth-level-killcam': {
+    title: 'Aimbot Settings: Smooth Level & Killcams | Valorant Cheat',
     description:
-      'Smoothing What Level: Commercial question but serious—how conservative are you with smooth and FOV to avoid obvious killcams?',
-    logoAlt: 'Smoothing What Level – Aimbot – logo',
-    sidebarHeading: 'Smoothing What Level: MW4 Cheat',
+      'Valorant aimbot smooth level for ranked: how conservative players tune FOV and smoothing so killcams still look like PC aim, not snap bots.',
+    logoAlt: 'Valorant aimbot smooth settings menu screenshot',
+    sidebarHeading: 'valorant/aimbot',
     extraBody: [
-      'When you ask smoothing what level fits ranked 6v6, think about killcam optics first—not leaderboard pace. Mid-high smooth with a modest FOV circle keeps corrections readable on PC.',
-      'If you still worry about reports, pair smoothing what level tuning with normal pre-aim habits and avoid tracking through hard cover.',
+      'When you shop Valorant aimbot settings, start mid-high smooth with a modest FOV and test one unrated match before you touch bone priority.',
+      'Pair aim assist with normal crosshair placement—ESP helps info, but pre-aim still sells the clip when someone reports you.',
     ],
   },
-  'aimbot-settings-fov-and-smoothing': {
-    title: 'Fov And Smoothing — Aim Circle Tuning | MW4 Cheat',
+  'aimbot-fov-ranked-unrated': {
+    title: 'Aimbot FOV: Ranked vs Unrated Defaults | Valorant Cheat',
     description:
-      'Fov And Smoothing: Trying to dial in the aim circle without looking robotic in 6v6—what are people running after the last patch?',
-    logoAlt: 'Fov And Smoothing – Aimbot – logo',
-    sidebarHeading: 'Fov And Smoothing: MW4 Cheat',
-    extraBody: [
-      'Fov and smoothing work together: widen the circle for Ground War, then add one notch of smooth before you touch bone priority.',
-      'After a patch, reset fov and smoothing by ten percent, test one playlist, then compare forum replies before you chase instant snap settings.',
-    ],
+      'Valorant cheats aimbot FOV circle sizes for Ascent duels vs Swiftplay—players compare defaults after the latest agent patch.',
+    logoAlt: 'Valorant aimbot FOV ring overlay screenshot',
+    sidebarHeading: 'valorant/aimbot',
   },
-  'monthly-vs-lifetime-worth-it': {
-    title: 'Monthly vs Lifetime MW4 Access | MW4 Cheat',
+  'first-time-loader-valorant': {
+    title: 'Install Valorant Cheat Loader — First Session | Valorant Cheat',
     description:
-      'Monthly plan vs lifetime key for MW4 modules—what players buy for a single season versus year-round DMZ and 6v6.',
-    logoAlt: 'Monthly – Aimbot – logo',
-    sidebarHeading: 'Monthly: MW4 Cheat',
-    extraBody: [
-      'A monthly key fits if you only play one season or want to pause between major patches. You renew when status pages show all modules online.',
-      'Lifetime makes sense when you split time between Hajin DMZ and core multiplayer and expect several major updates. Compare checkout tiers on the product hub before you pick monthly billing.',
-      'Either way, keep the same email for checkout delivery and support tickets so license swaps stay fast.',
-    ],
+      'Valorant cheat loader order on Windows 11: secure boot, HVCI, and when to launch Vanguard-safe steps before your first comp queue.',
+    logoAlt: 'Valorant cheat loader setup on Windows PC',
+    sidebarHeading: 'valorant/setup',
+  },
+  'esp-box-style-unrated': {
+    title: 'Valorant ESP Box Style for Unrated | Valorant Cheat',
+    description:
+      'Valorant ESP corner boxes vs skeleton for unrated—minimal wallhack layout that stays readable on Bind and Haven.',
+    logoAlt: 'Valorant ESP player boxes and health bars screenshot',
+    sidebarHeading: 'valorant/esp',
+  },
+  'wallhack-spike-colors': {
+    title: 'Valorant Wallhack Colors for Spike Holds | Valorant Cheat',
+    description:
+      'Valorant wallhack muted colors behind cover—when a second ESP tone helps site holds without cluttering the reticle.',
+    logoAlt: 'Valorant wallhack ESP color settings screenshot',
+    sidebarHeading: 'valorant/esp',
+  },
+  'triggerbot-delay-valorant': {
+    title: 'Valorant Triggerbot Delay in Ms | Valorant Cheat',
+    description:
+      'Valorant triggerbot delay ranges for Vandal taps vs Spectre—hold key binding and human-feeling shot timing.',
+    logoAlt: 'Valorant triggerbot delay settings screenshot',
+    sidebarHeading: 'valorant/triggerbot',
+  },
+  'no-recoil-spray-valorant': {
+    title: 'Valorant No Recoil vs Spray Control | Valorant Cheat',
+    description:
+      'Valorant no recoil sliders with aimbot—light recoil assist for Phantom bursts without killing your muscle memory.',
+    logoAlt: 'Valorant no recoil spray control menu screenshot',
+    sidebarHeading: 'valorant/features',
+  },
+  'radar-haven-split': {
+    title: 'Valorant Radar Hack Range on Haven | Valorant Cheat',
+    description:
+      'Valorant radar hack zoom synced to ESP distance on Haven splits—lane awareness without a noisy minimap.',
+    logoAlt: 'Valorant radar hack overlay screenshot',
+    sidebarHeading: 'valorant/esp',
+  },
+  'monthly-vs-lifetime-valorant': {
+    title: 'Monthly vs Lifetime Valorant Cheat Access | Valorant Cheat',
+    description:
+      'Valorant cheat monthly key vs lifetime license—what players buy for one act versus year-round ranked and premier.',
+    logoAlt: 'Valorant cheat checkout plans comparison',
+    sidebarHeading: 'valorant/setup',
+  },
+  'soft-aim-vs-visible-aimbot': {
+    title: 'Soft Aim vs Full Aimbot in Valorant | Valorant Cheat',
+    description:
+      'Valorant soft aim and silent aim discussions—when closet cheating configs beat rage FOV in ranked.',
+    logoAlt: 'Valorant soft aim tuning screenshot',
+    sidebarHeading: 'valorant/aimbot',
+  },
+  'external-vs-internal-valorant': {
+    title: 'External vs Internal Valorant Cheat | Valorant Cheat',
+    description:
+      'Valorant external cheat overlay vs internal mod menu tradeoffs for ESP, aimbot, and stream capture.',
+    logoAlt: 'Valorant external cheat overlay screenshot',
+    sidebarHeading: 'valorant/features',
+  },
+  'cheat-menu-hotkeys-ranked': {
+    title: 'Valorant Cheat Menu Hotkeys for Ranked | Valorant Cheat',
+    description:
+      'Valorant cheat menu hold keys for aimbot, ESP, and triggerbot—ranked panic binds that will not fat-finger mid-round.',
+    logoAlt: 'Valorant cheat mod menu hotkey bindings screenshot',
+    sidebarHeading: 'valorant/features',
+  },
+  'checkout-license-delivery': {
+    title: 'Valorant Cheat Checkout & License Email | Valorant Cheat',
+    description:
+      'Valorant hacks checkout timing, license delivery, and what to send support if the key email lands in spam.',
+    logoAlt: 'Valorant cheat license delivery email help',
+    sidebarHeading: 'valorant/setup',
+  },
+  'patch-day-module-status': {
+    title: 'Valorant Patch Day — Module Status | Valorant Cheat',
+    description:
+      'Valorant cheat status after a Riot patch—when to pause ranked until aimbot and ESP modules show online again.',
+    logoAlt: 'Valorant cheat status after game patch',
+    sidebarHeading: 'valorant/setup',
   },
 };
 

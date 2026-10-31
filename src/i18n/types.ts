@@ -57,6 +57,8 @@ export interface BlogPost {
   /** ISO date YYYY-MM-DD for card badges */
   dateIso?: string;
   readTime: string;
+  tags?: string[];
+  imageAlt?: string;
 }
 
 export interface FaqItem {

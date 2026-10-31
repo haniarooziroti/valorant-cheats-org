@@ -1,43 +1,47 @@
 ---
-import Icon from './icons/Icon.astro';
 import { HERO_VIDEO } from '../config/media';
 
-const { webm, mp4, poster } = HERO_VIDEO;
+const { poster, posterOnly } = HERO_VIDEO;
 ---
 
-<div
-  class="hero-video w-full"
-  data-hero-video
-  data-hero-duration={HERO_VIDEO.durationSec}
->
+<div class="hero-video w-full">
   <div class="hero-video__frame rounded-xl border border-border bg-card p-2 shadow-sm">
-    <video
-      class="hero-video__el aspect-[16/10] w-full rounded-lg object-cover"
-      data-hero-video-el
-      poster={poster}
-      playsinline
-      muted
-      loop
-      preload="metadata"
-      disablepictureinpicture
-      disableremoteplayback
-      controlslist="nodownload noplaybackrate noremoteplayback"
-    >
-      <source src={mp4} type="video/mp4" />
-      <source src={webm} type="video/webm" />
-    </video>
-    <div class="hero-video__controls" aria-label="Video skip controls">
-      <button type="button" class="hero-video__btn" data-hero-video-back aria-label="Skip backward five seconds">
-        <Icon name="chevronLeft" size={20} />
-      </button>
-      <button type="button" class="hero-video__btn" data-hero-video-forward aria-label="Skip forward five seconds">
-        <Icon name="chevronRight" size={20} />
-      </button>
-    </div>
+    {posterOnly ? (
+      <img
+        class="hero-video__el aspect-[16/10] w-full rounded-lg object-cover"
+        src={poster}
+        alt="Valorant PC gameplay with tactical overlay preview on valorant-cheat.org"
+        width={640}
+        height={400}
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
+      />
+    ) : (
+      <>
+        <video
+          class="hero-video__el aspect-[16/10] w-full rounded-lg object-cover"
+          data-hero-video-el
+          poster={poster}
+          playsinline
+          muted
+          loop
+          preload="metadata"
+          disablepictureinpicture
+          disableremoteplayback
+          controlslist="nodownload noplaybackrate noremoteplayback"
+        >
+          <source src={HERO_VIDEO.mp4} type="video/mp4" />
+          <source src={HERO_VIDEO.webm} type="video/webm" />
+        </video>
+      </>
+    )}
   </div>
 </div>
 
-<script>
-  import { initHeroVideo } from '../scripts/hero-video.ts';
-  initHeroVideo();
-</script>
+{!posterOnly && (
+  <script>
+    import { initHeroVideo } from '../scripts/hero-video.ts';
+    initHeroVideo();
+  </script>
+)}

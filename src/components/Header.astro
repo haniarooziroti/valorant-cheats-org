@@ -1,6 +1,7 @@
 ---
 import { t } from '../i18n';
 import { checkoutPath } from '../config/checkout';
+import { SITE_MEDIA } from '../config/media';
 import { Button } from '@/components/starwind/button';
 import AnimatedThemeSwitch from './AnimatedThemeSwitch.astro';
 import {
@@ -18,14 +19,14 @@ import type { IconName } from './icons/types';
 const navIcons: Record<string, IconName> = {
   Home: 'layers',
   Products: 'navProducts',
+  Forums: 'messageCircle',
   Blog: 'navBlog',
-  Forum: 'messageCircle',
   Reviews: 'users',
   FAQ: 'navFaq',
   Support: 'navSupport',
 };
 
-const purchaseUrl = checkoutPath('mw4');
+const purchaseUrl = checkoutPath('valorant');
 
 interface Props {
   logoAlt?: string;
@@ -40,8 +41,8 @@ const { logoAlt = 'Aimbot – logo' } = Astro.props;
       class="pointer-events-auto relative flex h-14 w-full max-w-6xl items-center justify-between gap-3 rounded-2xl border border-border/40 bg-background/35 px-4 text-foreground shadow-md shadow-black/5 backdrop-blur-2xl supports-[backdrop-filter]:bg-background/25 dark:border-white/10 dark:bg-background/20 dark:shadow-black/25 sm:px-5 lg:h-[3.75rem]"
     >
     <a href="/" class="inline-flex min-w-0 items-center gap-2 font-[family-name:var(--font-heading)] text-lg font-bold tracking-wide" aria-label={t.ui.homeAria}>
-      <img src="/logo.svg" alt={logoAlt} width="32" height="32" class="shrink-0 rounded-md" />
-      <span class="truncate" aria-hidden="true">MW4<span class="text-primary">Cheat</span></span>
+      <img src={SITE_MEDIA.favicon} alt={logoAlt} width="32" height="32" class="shrink-0 rounded-md" loading="eager" decoding="async" />
+      <span class="truncate" aria-hidden="true">Valorant<span class="text-primary">Cheat</span></span>
     </a>
 
     <nav class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-6 lg:flex" aria-label="Primary">

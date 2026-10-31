@@ -19,7 +19,7 @@ const timestamp = post.dateIso ? new Date(post.dateIso).getTime() : getBlogPostT
 const readMinutes = getBlogReadMinutes(post.readTime);
 const dateBadge = post.dateIso ?? post.date;
 const tagIcon: IconName = blogTagIcons[post.tag] ?? 'tag';
-const searchBlob = `${post.title} ${post.desc} ${post.tag} ${post.slug}`.toLowerCase();
+const searchBlob = `${post.title} ${post.desc} ${post.tag} ${post.slug} ${(post.tags ?? []).join(' ')}`.toLowerCase();
 ---
 
 <article
@@ -34,7 +34,7 @@ const searchBlob = `${post.title} ${post.desc} ${post.tag} ${post.slug}`.toLower
     <div class="blog-card__media-shell">
       <BlogCardMedia
         src={post.image}
-        alt={post.title}
+        alt={post.imageAlt ?? post.title}
         title={post.title}
         category={post.tag}
         slug={post.slug}

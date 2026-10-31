@@ -2,7 +2,7 @@
 import '../styles/blog-sidebar.css';
 import Icon from './icons/Icon.astro';
 import { blogPostPath, productPath, ROUTES } from '../utils/path';
-import { checkoutPath } from '../config/checkout';
+import { CHECKOUT_URL } from '../config/siteConfig';
 import { t } from '../i18n';
 import type { BlogPostFull } from '../data/blog';
 import type { IconName } from './icons/types';
@@ -44,10 +44,10 @@ const toc =
     }));
 
 const productLinks: { label: string; href: string; icon: IconName }[] = [
-  { label: 'MW4 module hub', href: ROUTES.products, icon: 'sidebarHub' },
-  { label: 'MW4 aimbot', href: productPath('aimbot'), icon: 'crosshair' },
+  { label: 'Valorant module hub', href: ROUTES.products, icon: 'sidebarHub' },
+  { label: 'Valorant aimbot', href: productPath('aimbot'), icon: 'crosshair' },
   { label: 'Player ESP', href: productPath('esp'), icon: 'eye' },
-  { label: 'DMZ loot ESP', href: productPath('dmz-loot'), icon: 'mapHack' },
+  { label: 'Radar hack', href: productPath('radar'), icon: 'mapHack' },
 ];
 ---
 
@@ -128,13 +128,13 @@ const productLinks: { label: string; href: string; icon: IconName }[] = [
     </ul>
     <Button
       as="a"
-      href={checkoutPath('mw4')}
+      href={CHECKOUT_URL}
       variant="primary"
       size="sm"
       class="blog-sidebar__cta mt-2.5 w-full min-w-0 justify-start"
       aria-label={t.ui.checkoutAria}
     >
-      <span class="truncate">Get MW4 access</span>
+      <span class="truncate">Get Valorant access</span>
       <Icon name="arrowRight" size={16} class="shrink-0" />
     </Button>
   </section>
