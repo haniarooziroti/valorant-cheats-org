@@ -5,6 +5,7 @@ import {
   formatPlanPrice,
   getProductPlans,
 } from '../../data/productPricing';
+import { productPanelCheckoutLabel } from '../../utils/linkLabels';
 import Icon from '../icons/Icon.astro';
 import ProductIconWell from './ProductIconWell.astro';
 import { Button } from '@/components/starwind/button';
@@ -78,7 +79,7 @@ const isSinglePlan = plans.length === 1;
         class="w-full rounded-xl"
         data-checkout-buy
       >
-        Buy now
+        {productPanelCheckoutLabel(product.title)}
         <Icon name="arrowRight" size={17} />
       </Button>
     </div>

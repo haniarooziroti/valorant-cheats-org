@@ -14,6 +14,7 @@ import Icon from './icons/Icon.astro';
 import SlideRevealButton from './SlideRevealButton.astro';
 
 import type { IconName } from './icons/types';
+import { DESKTOP_NAV_LABEL, MOBILE_NAV_LABEL } from '../utils/linkLabels';
 
 const navIcons: Record<string, IconName> = {
   Home: 'layers',
@@ -53,7 +54,7 @@ const { logoAlt = 'Aimbot – logo' } = Astro.props;
           {...(link.scrollTarget ? { 'data-scroll-target': link.scrollTarget } : {})}
         >
           <Icon name={navIcons[link.label] ?? 'navFeatures'} size={16} />
-          {link.label}
+          {DESKTOP_NAV_LABEL[link.label] ?? link.label}
         </a>
       ))}
     </nav>
@@ -89,7 +90,7 @@ const { logoAlt = 'Aimbot – logo' } = Astro.props;
                 {...(link.scrollTarget ? { 'data-scroll-target': link.scrollTarget } : {})}
               >
                 <Icon name={navIcons[link.label] ?? 'navFeatures'} size={16} />
-                {link.label}
+                {MOBILE_NAV_LABEL[link.label] ?? link.label}
               </a>
             ))}
           </nav>

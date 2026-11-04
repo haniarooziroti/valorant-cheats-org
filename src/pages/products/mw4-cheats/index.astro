@@ -9,6 +9,7 @@ import { breadcrumbSchema, collectionPageSchema, itemListSchema } from '../../..
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import CatalogCard from '../../../components/CatalogCard.astro';
 import { productPath } from '../../../utils/path';
+import { catalogCheckoutLabel, catalogDetailsLabel } from '../../../utils/linkLabels';
 
 const seo = resolvePageSeo('/products/mw4-cheats/');
 const breadcrumbs = [
@@ -70,8 +71,8 @@ function cardLabel(product: (typeof productPages)[number]) {
             icon={cardIcon(product)}
             badge={product.badge}
             variant={product.variant}
-            buyLabel="Get access"
-            viewLabel="View module"
+            buyLabel={catalogCheckoutLabel(product.title)}
+            viewLabel={catalogDetailsLabel(product.title)}
           />
         ))}
       </div>

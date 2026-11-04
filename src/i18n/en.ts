@@ -27,7 +27,7 @@ export const en: Translations = {
     title: 'Forum threads from MW4 players',
     subtitle:
       'Real setup questions, aim tuning, ESP layouts, and DMZ routing—browse before you change your config.',
-    viewAll: 'Open the forum',
+    viewAll: 'Browse featured forum threads',
   },
   hero: {
     status: 'Modern Warfare 4 — PC modules online',
@@ -37,7 +37,7 @@ export const en: Translations = {
     subtitle:
       'Clean overlays, tuned aim assist, and player ESP that stays readable in fast playlists—explore modules, compare settings in the forum, and upgrade your PC sessions without cluttering the screen.',
     ctaPrimary: 'Explore modules',
-    ctaDiscord: 'Get access',
+    ctaDiscord: 'Purchase MW4 license',
     modesLabel: 'Playlists',
     modes: ['6v6', 'Ground War', 'Gunfight', 'Hajin DMZ'],
     metrics: [
@@ -301,9 +301,9 @@ export const en: Translations = {
     titleBefore: 'From status check to',
     titleHighlight: 'saved profile',
     subtitle: 'A straight path from checkout to MW4 configs you can reuse every session.',
-    ctaLabel: 'View modules',
+    ctaLabel: 'See MW4 module lineup',
     ctaHref: productBase,
-    ctaSecondary: 'Forum tips',
+    ctaSecondary: 'Read player forum tips',
     ctaSecondaryHref: '/forum/',
     items: [
       {
@@ -350,7 +350,7 @@ export const en: Translations = {
         icon: 'users',
         title: 'Before checkout',
         desc: 'Compare modules and pricing on the products hub.',
-        linkLabel: 'Get access',
+        linkLabel: 'Open secure MW4 checkout',
         href: PRIMARY_CHECKOUT_PATH,
       },
       {
@@ -364,14 +364,14 @@ export const en: Translations = {
         icon: 'navFaq',
         title: 'Read the FAQ',
         desc: 'Compatibility, risk, and setup—before you buy.',
-        linkLabel: 'View all FAQ',
+        linkLabel: 'Read the full FAQ index',
         href: '/faq/',
       },
       {
         icon: 'clock',
         title: 'Forum answers',
         desc: 'Player threads on aim, ESP, and DMZ routing.',
-        linkLabel: 'Open forum',
+        linkLabel: 'Browse MW4 player forum',
         href: '/forum/',
       },
     ],
@@ -423,13 +423,13 @@ export const en: Translations = {
     tagline: 'Modern Warfare 4 PC modules — ESP, aim assist, and DMZ tools.',
     explore: 'Explore',
     exploreLinks: [
-      { href: '/', label: 'Feature overview', ariaLabel: 'Features', scrollTarget: 'features' },
-      { href: `${productBase}aimbot/`, label: 'MW4 aimbot module', ariaLabel: 'Aimbot' },
-      { href: productBase, label: 'All MW4 modules', ariaLabel: 'Products' },
-      { href: '/blog/', label: 'MW4 cheat blog', ariaLabel: 'Blog' },
-      { href: '/forum/', label: 'Community forum', ariaLabel: 'Forum' },
-      { href: '/reviews/', label: 'Player reviews', ariaLabel: 'Reviews' },
-      { href: '/faq/', label: 'Pre-purchase FAQ', ariaLabel: 'FAQ' },
+      { href: '/', label: 'Homepage feature overview', ariaLabel: 'Features', scrollTarget: 'features' },
+      { href: `${productBase}aimbot/`, label: 'MW4 aimbot module specs', ariaLabel: 'Aimbot' },
+      { href: productBase, label: 'Browse all MW4 cheats', ariaLabel: 'Products' },
+      { href: '/blog/', label: 'MW4 setup guide library', ariaLabel: 'Blog' },
+      { href: '/forum/', label: 'MW4 player discussion forum', ariaLabel: 'Forum' },
+      { href: '/reviews/', label: 'Verified MW4 player reviews', ariaLabel: 'Reviews' },
+      { href: '/faq/', label: 'Pre-purchase FAQ answers', ariaLabel: 'FAQ' },
     ],
     support: 'Support',
     legal: 'Legal',
@@ -565,8 +565,8 @@ export const en: Translations = {
   },
   ui: {
     skipLink: 'Skip to main content',
-    browseCheats: 'Get access',
-    browseCheatsMobile: 'Get access',
+    browseCheats: 'MW4 checkout',
+    browseCheatsMobile: 'Checkout — mobile menu',
     homeAria: 'MW4 Cheat home',
     checkoutAria: 'Secure checkout',
     discordAria: 'Open checkout',

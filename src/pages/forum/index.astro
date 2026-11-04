@@ -26,7 +26,7 @@ const categoryKey = (name: string) => name.toLowerCase().replace(/[^a-z0-9]/g, '
           <p class="forum-hero__copy">Aim tuning, ESP layouts, DMZ routing, checkout questions, and honest player experiences. This mw4 cheats forum is indexed for search—bookmark threads you want to revisit after patches.</p>
           <p class="forum-hero__copy mt-2">New here? Read setup threads before you change defaults, then compare modules on the product hub.</p>
         </div>
-        <a class="forum-create" href="/products/mw4-cheats/"><Icon name="package" size={17} /> Compare modules</a>
+        <a class="forum-create" href="/products/mw4-cheats/"><Icon name="package" size={17} /> Open MW4 module comparison hub</a>
       </header>
 
       <div class="forum-layout">
@@ -69,9 +69,8 @@ const categoryKey = (name: string) => name.toLowerCase().replace(/[^a-z0-9]/g, '
                   <p class="forum-post-excerpt">{post.excerpt}</p>
                   <div class="forum-post-actions">
                     {post.flair && <span class={`forum-flair tone-${post.categoryTone}`}>{post.flair}</span>}
-                    <a href={`/forum/${post.slug}/`}><Icon name="messageCircle" size={15} /> {post.commentsCount} replies</a>
-                    <a href={`/forum/${post.slug}/`} aria-label={`Open discussion: ${post.title}`}>
-                      <Icon name="arrowRight" size={15} /> Open full thread
+                    <a href={`/forum/${post.slug}/`}>
+                      <Icon name="messageCircle" size={15} /> {post.commentsCount} replies — {post.title}
                     </a>
                   </div>
                 </div>
@@ -88,7 +87,7 @@ const categoryKey = (name: string) => name.toLowerCase().replace(/[^a-z0-9]/g, '
               <div class="forum-about__title"><span class="forum-community-avatar forum-community-avatar--brand"><img src="/logo.svg" alt="Mw4 Cheats Forum – Aimbot – logo" width="34" height="34" /></span><h2>Mw4 Cheats Forum: MW4 Cheat</h2></div>
               <p>Swap configs, compare aim settings, and read mixed experiences before you buy access.</p>
               <div class="forum-stats"><span><b>{forumPosts.length}</b> threads</span><span><b>{forumCategories.length}</b> topics</span></div>
-              <a class="forum-join" href="/products/mw4-cheats/">View MW4 modules</a>
+              <a class="forum-join" href="/products/mw4-cheats/">Forum sidebar — MW4 modules</a>
             </div>
           </section>
         </aside>

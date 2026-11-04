@@ -6,6 +6,7 @@ import { cheatTierIcons, productCategoryIcons } from '../data/sectionIcons';
 import SectionHeader from './SectionHeader.astro';
 import CatalogCard from './CatalogCard.astro';
 import { productPath } from '../utils/path';
+import { catalogCheckoutLabel, catalogDetailsLabel } from '../utils/linkLabels';
 import {
   Carousel,
   CarouselContent,
@@ -60,8 +61,8 @@ function cardLabel(product: (typeof productPages)[number]) {
                       icon={cardIcon(product)}
                       badge={product.badge}
                       variant={product.variant}
-                      buyLabel="Buy now"
-                      viewLabel="View details"
+                      buyLabel={catalogCheckoutLabel(product.title)}
+                      viewLabel={catalogDetailsLabel(product.title)}
                       maxFeatures={5}
                     />
                   </CarouselItem>

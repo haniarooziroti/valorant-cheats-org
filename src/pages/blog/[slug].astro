@@ -132,6 +132,7 @@ const faqItems = (entry.data.faq ?? []).map((item, i) => ({
             title="Compare MW4 modules"
             html="See aimbot, ESP, radar, and DMZ loot on the product hub before you change configs."
             href={PRODUCT_URL}
+            buttonLabel="Open MW4 product hub from article"
           />
 
           <Prose class="blog-article__prose prose-headings:scroll-mt-24 max-w-none text-left">
@@ -142,6 +143,7 @@ const faqItems = (entry.data.faq ?? []).map((item, i) => ({
             title="Get MW4 access"
             html="Monthly and lifetime keys include the same module list—pick the window that fits your season."
             href={checkoutPath('mw4')}
+            buttonLabel="Start MW4 license checkout from article"
           />
 
           {related.length > 0 && (
@@ -157,7 +159,7 @@ const faqItems = (entry.data.faq ?? []).map((item, i) => ({
 
           <nav class="blog-article__actions mt-10 flex flex-wrap gap-3" aria-label="Continue reading">
             <Button as="a" href={checkoutPath('mw4')} variant="primary" aria-label={t.ui.checkoutAria}>
-              Get access
+              Finish article — go to MW4 checkout
               <Icon name="arrowRight" size={17} />
             </Button>
             <Button as="a" href={ROUTES.products} variant="outline">See MW4 modules</Button>
