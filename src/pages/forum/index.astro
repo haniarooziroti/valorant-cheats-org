@@ -70,7 +70,9 @@ const categoryKey = (name: string) => name.toLowerCase().replace(/[^a-z0-9]/g, '
                   <div class="forum-post-actions">
                     {post.flair && <span class={`forum-flair tone-${post.categoryTone}`}>{post.flair}</span>}
                     <a href={`/forum/${post.slug}/`}><Icon name="messageCircle" size={15} /> {post.commentsCount} replies</a>
-                    <a href={`/forum/${post.slug}/`}><Icon name="arrowRight" size={15} /> Read thread</a>
+                    <a href={`/forum/${post.slug}/`} aria-label={`Open discussion: ${post.title}`}>
+                      <Icon name="arrowRight" size={15} /> Open full thread
+                    </a>
                   </div>
                 </div>
               </article>

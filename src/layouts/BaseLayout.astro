@@ -10,6 +10,7 @@ import {
   DEFAULT_OG_IMAGE_WIDTH,
   GA_MEASUREMENT_ID,
   absoluteAssetUrl,
+  truncateMetaDescription,
 } from '../config/seo';
 import { resolveLogoAlt } from '../config/logoAlt';
 import Header from '../components/Header.astro';
@@ -40,9 +41,9 @@ const {
   jsonLd,
 } = Astro.props;
 
+const metaDescription = truncateMetaDescription(description, 152);
 const canonical = canonicalUrl(Astro.url.pathname);
-const hreflangEn = canonical;
-const hreflangDefault = canonical;
+const hreflangSelf = canonical;
 const ogImageUrl = absoluteAssetUrl(ogImage);
 const robotsContent = noindex
   ? 'noindex, nofollow'
@@ -66,15 +67,14 @@ const logoAlt = resolveLogoAlt(Astro.url.pathname);
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
-    <meta name="description" content={description} />
+    <meta name="description" content={metaDescription} />
     <meta name="author" content={t.site.name} />
     <meta name="robots" content={robotsContent} />
     <meta name="googlebot" content={robotsContent} />
     <meta name="theme-color" content="#0D0A14" />
     <link rel="canonical" href={canonical} />
-    <link rel="alternate" hreflang="en" href={hreflangEn} />
-    <link rel="alternate" hreflang="en-us" href={hreflangEn} />
-    <link rel="alternate" hreflang="x-default" href={hreflangDefault} />
+    <link rel="alternate" hreflang="en" href={hreflangSelf} />
+    <link rel="alternate" hreflang="x-default" href={hreflangSelf} />
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -84,7 +84,7 @@ const logoAlt = resolveLogoAlt(Astro.url.pathname);
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    <meta property="og:description" content={metaDescription} />
     <meta property="og:image" content={ogImageUrl} />
     <meta property="og:image:secure_url" content={ogImageUrl} />
     <meta property="og:image:alt" content={ogImageAlt} />
@@ -110,7 +110,7 @@ const logoAlt = resolveLogoAlt(Astro.url.pathname);
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
+    <meta name="twitter:description" content={metaDescription} />
     <meta name="twitter:image" content={ogImageUrl} />
     <meta name="twitter:image:alt" content={ogImageAlt} />
     {TWITTER_SITE && <meta name="twitter:site" content={TWITTER_SITE} />}
@@ -141,7 +141,7 @@ const logoAlt = resolveLogoAlt(Astro.url.pathname);
     <main id="main-content">
       <slot />
     </main>
-    <Footer logoAlt={logoAlt} />
+    <Footer logoAlt={logoAlt} shareUrl={canonical} shareTitle={title} />
     <script>
       import '../scripts/site.ts';
     </script>

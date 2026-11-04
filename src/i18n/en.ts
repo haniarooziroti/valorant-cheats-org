@@ -10,7 +10,7 @@ export const en: Translations = {
     domain: 'mw4cheat.org',
     title: 'MW4 Cheat — Aimbot, ESP & Wallhack for PC',
     description:
-      'MW4 cheats for Modern Warfare 4 on PC: aimbot, player ESP, wallhack, radar, and DMZ loot tools. Setup guides, forum threads, and secure checkout on mw4cheat.org.',
+      'MW4 cheats for Modern Warfare 4 PC: aimbot tuning, player ESP, wallhack, radar and Hajin DMZ loot ESP. Guides, reviews and checkout.',
     discord: PRIMARY_CHECKOUT_PATH,
   },
   nav: [
