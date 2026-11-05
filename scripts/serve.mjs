@@ -4,9 +4,10 @@ import path from 'node:path';
 import zlib from 'node:zlib';
 import { resolvePathRedirect } from './redirects.mjs';
 import { resolveCheckoutPathRedirect } from '../src/config/checkout-redirects.mjs';
+import { getSiteOriginFromEnv } from './site-origin.mjs';
 
-const CANONICAL_HOST = 'mw4cheat.org';
-const SITE_ORIGIN = 'https://mw4cheat.org';
+const SITE_ORIGIN = getSiteOriginFromEnv();
+const CANONICAL_HOST = new URL(SITE_ORIGIN).hostname;
 const distDir = path.resolve('dist');
 const port = Number(process.env.PORT) || 3000;
 

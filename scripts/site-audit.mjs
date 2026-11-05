@@ -4,10 +4,12 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import { getSiteOriginFromEnv } from './site-origin.mjs';
 
 const root = process.cwd();
 const dist = path.join(root, 'dist');
-const SITE = 'https://mw4cheat.org';
+
+const SITE = getSiteOriginFromEnv();
 
 const issues = [];
 const warn = (code, msg, ctx = '') => issues.push({ level: 'warn', code, msg, ctx });
@@ -123,7 +125,7 @@ const sitemap0 = path.join(dist, 'sitemap-0.xml');
 if (fs.existsSync(sitemapIndex)) {
   const idx = fs.readFileSync(sitemapIndex, 'utf8');
   if (idx.includes('dotacheats.com')) err('SITEMAP_DOMAIN', 'sitemap-index references wrong domain');
-  if (!idx.includes('mw4cheat.org')) err('SITEMAP_DOMAIN', 'sitemap-index missing mw4cheat.org');
+  if (!idx.includes('valorant-cheat.org')) err('SITEMAP_DOMAIN', 'sitemap-index missing valorant-cheat.org');
 }
 if (fs.existsSync(sitemap0)) {
   const sm = fs.readFileSync(sitemap0, 'utf8');

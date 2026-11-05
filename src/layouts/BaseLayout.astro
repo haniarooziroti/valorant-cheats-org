@@ -80,6 +80,8 @@ const logoAlt = resolveLogoAlt(Astro.url.pathname);
     <meta name="googlebot" content={robotsContent} />
     <meta name="theme-color" content={themeColor} />
     <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="en" href={canonical} />
+    <link rel="alternate" hreflang="x-default" href={canonical} />
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="icon" type="image/webp" href={SITE_MEDIA.favicon} />
@@ -149,7 +151,7 @@ const logoAlt = resolveLogoAlt(Astro.url.pathname);
         <ShareLinks title={title} />
       </div>
     </main>
-    <Footer logoAlt={logoAlt} shareUrl={canonical} shareTitle={title} />
+    <Footer logoAlt={logoAlt} />
     <script>
       import '../scripts/site.ts';
     </script>

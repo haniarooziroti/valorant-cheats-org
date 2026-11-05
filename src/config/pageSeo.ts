@@ -9,14 +9,14 @@ export interface PageSeoEntry {
 
 export const PAGE_SEO: Record<string, PageSeoEntry> = {
   '/': {
-    title: 'Valorant – ESP, Aimbot & Wallhack Tools for PC Ranked',
+    title: 'Valorant Cheats — Aimbot, ESP & Wallhack | Valorant Cheat',
     description:
       'Valorant cheats with ESP, aimbot, and wallhack tools for PC ranked and unrated. Compare modules, read forums, and continue to secure checkout.',
   },
   '/products/valorant-cheats/': {
-    title: 'Valorant Cheats – Compare Aimbot, ESP Before Checkout',
+    title: 'Valorant Cheats — Compare Aimbot, ESP & Hacks',
     description:
-      'Valorant cheat modules for aimbot, ESP wallhack, triggerbot, radar hack, and no recoil—compare features before checkout.',
+      'Valorant hacks and cheat modules for aimbot, ESP wallhack, triggerbot, radar, and no recoil—compare features before checkout.',
   },
   '/products/valorant-cheats/aimbot/': {
     title: 'Aimbot – Soft Aim, FOV Tuning & Module Checkout Access',
@@ -44,7 +44,7 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
       'Valorant no recoil helpers for Vandal and Phantom bursts—light spray control that pairs with aimbot modules.',
   },
   '/reviews/': {
-    title: 'Reviews – I keep aim on a key and only flick it for close',
+    title: 'Valorant Cheat Reviews — Aimbot, ESP & Loader',
     description:
       'Valorant cheat reviews on aimbot, ESP, wallhack, triggerbot, loader setup, and support from verified PC players on Windows 10 and 11.',
   },

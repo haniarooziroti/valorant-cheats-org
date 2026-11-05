@@ -176,7 +176,7 @@ export const siteReviews: SiteReview[] = [
   },
   {
     "id": "r20",
-    "author": "dmz_rat",
+    "author": "valorant_rat",
     "role": "SMG main",
     "stars": 4,
     "date": "2025-07-08",
@@ -432,7 +432,7 @@ export const siteReviews: SiteReview[] = [
   },
   {
     "id": "r52",
-    "author": "dmz_rat_1",
+    "author": "valorant_rat_1",
     "role": "monthly test",
     "stars": 5,
     "date": "2023-09-05",
@@ -688,7 +688,7 @@ export const siteReviews: SiteReview[] = [
   },
   {
     "id": "r84",
-    "author": "dmz_rat_2",
+    "author": "valorant_rat_2",
     "role": "ranked grinder",
     "stars": 3,
     "date": "2021-11-02",

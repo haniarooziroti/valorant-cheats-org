@@ -50,4 +50,4 @@ Read our [Terms & Conditions](/terms/) for refund rules. <!-- TODO: add refund p
 - Using a main account for testing
 
 ## Next step
-Ready? [Get access](/go/valorant/). Questions first? Ask on the [forum](/forum/) or read the [FAQ](/faq/).
+Ready? [Try now](/go/valorant/). Questions first? Ask on the [forum](/forum/) or read the [FAQ](/faq/).

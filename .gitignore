@@ -6,6 +6,7 @@ temp/
 
 # legacy / local-only
 NOT-OPTIMISED/
+mw4-cheat-.org/
 
 # dependencies
 node_modules/

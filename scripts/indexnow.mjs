@@ -1,10 +1,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { getSiteOriginFromEnv } from './site-origin.mjs';
 
 const root = process.cwd();
 const dist = path.join(root, 'dist');
 const key = process.env.INDEXNOW_KEY?.trim();
-const host = process.env.INDEXNOW_HOST?.trim() || 'mw4cheat.org';
+const defaultHost = new URL(getSiteOriginFromEnv()).hostname;
+const host = process.env.INDEXNOW_HOST?.trim() || defaultHost;
 
 if (!key) {
   console.log('IndexNow: skipped (INDEXNOW_KEY not set).');

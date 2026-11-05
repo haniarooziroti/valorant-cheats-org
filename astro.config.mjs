@@ -15,6 +15,8 @@ export default defineConfig({
     '/products/': '/products/valorant-cheats/',
     '/blogs/': '/blog/',
     '/forums/': '/forum/',
+    '/products/mw4-cheats/': '/products/valorant-cheats/',
+    '/go/mw4/': '/go/valorant/',
   },
   compressHTML: true,
   prefetch: {

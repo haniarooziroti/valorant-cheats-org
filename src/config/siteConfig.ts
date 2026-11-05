@@ -1,12 +1,13 @@
 /**
- * Site-wide marketing URLs and pricing — single source of truth for blog CTAs and copy.
- * TODO: Confirm domain matches production DNS (valorant-cheats.org vs valorant-cheat.org).
+ * Marketing URLs, pricing, and checkout paths.
+ * Hostname comes from src/config/site.ts (canonical: valorant-cheat.org).
  */
-export const SITE_NAME = 'Valorant Cheats';
-export const SITE_URL = 'https://valorant-cheats.org';
-export const SITE_DOMAIN = 'valorant-cheats.org';
+import { PRODUCT_BASE, SITE_DOMAIN, SITE_URL, TITLE_PREFIX } from './site';
 
-export const PRODUCT_URL = '/products/valorant-cheats/';
+export { SITE_DOMAIN, SITE_URL };
+
+export const SITE_NAME = TITLE_PREFIX;
+export const PRODUCT_URL = PRODUCT_BASE;
 export const CHECKOUT_URL = 'https://zadeyo.com/go/HANIA?to=%2Fproducts%2Fvalorant';
 export const DISCORD_INVITE_URL = 'https://discord.com/invite/Vu85F8auQS';
 export const FORUM_URL = '/forum/';
