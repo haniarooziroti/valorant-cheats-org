@@ -21,13 +21,13 @@ const categoryKey = (name: string) => name.toLowerCase().replace(/[^a-z0-9]/g, '
     <div class="mx-auto max-w-6xl px-5">
       <Breadcrumbs items={breadcrumbs} />
       <header class="forum-hero">
-        <div>
+        <div class="forum-hero__content">
           <p class="section-header__eyebrow">Valorant PC community</p>
           <h1>Forums – Browse threads before you change defaults</h1>
           <p class="forum-hero__copy">Aim tuning, ESP layouts, trigger timing, checkout questions, and honest player experiences. Browse forums before you change defaults or buy access.</p>
           <p class="forum-hero__copy mt-2">New here? Read setup threads before you change defaults, then compare modules on the product hub.</p>
+          <a class="forum-create" href="/products/valorant-cheats/"><Icon name="package" size={17} /> Compare Valorant modules</a>
         </div>
-        <a class="forum-create" href="/products/valorant-cheats/"><Icon name="package" size={17} /> Compare Valorant modules</a>
       </header>
 
       <div class="forum-layout">
