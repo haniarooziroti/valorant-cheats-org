@@ -4,11 +4,20 @@ import { resolvePageSeo } from '../../config/seo';
 import { breadcrumbSchema, webPageSchema } from '../../utils/schema';
 import { CRUMB } from '../../config/breadcrumbs';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import { productHub } from '../../data/products';
+import { productHub, productPages } from '../../data/products';
+import { productPath } from '../../utils/path';
 import { Button } from '@/components/starwind/button';
 
 const seo = resolvePageSeo('/products/');
 const breadcrumbs = [CRUMB.home, { name: 'Products', path: '/products/' }];
+
+const moduleLinkLabel: Record<string, string> = {
+  aimbot: 'Soft aim and FOV aimbot module page',
+  esp: 'Player ESP and wallhack module page',
+  triggerbot: 'Triggerbot delay module page',
+  radar: '2D radar awareness module page',
+  'no-recoil': 'No recoil spray assist module page',
+};
 ---
 
 <BaseLayout
@@ -27,19 +36,44 @@ const breadcrumbs = [CRUMB.home, { name: 'Products', path: '/products/' }];
     <div class="mx-auto max-w-3xl px-5">
       <Breadcrumbs items={breadcrumbs} />
       <header class="mt-6 space-y-4">
-        <h1>Products</h1>
+        <h1>Valorant cheat products: modules to review before checkout</h1>
         <p class="text-lg text-muted-foreground">
-          This products hub lists Valorant PC cheat modules sold through valorant-cheat.org. Open the module catalog to
-          compare aimbot, ESP wallhack, triggerbot, radar, and no recoil tools before you continue to secure checkout.
+          This hub points to Valorant PC cheat modules published on valorant-cheat.org. Each module page lists features,
+          preset ideas, and Try now checkout links—the same paths described on the homepage feature grid and in the FAQ
+          under /products/valorant-cheats/.
         </p>
         <p class="text-muted-foreground">
-          Need setup context first? Read the <a href="/blog/">setup guides</a>, the <a href="/faq/">FAQ</a>, or
-          <a href="/support/">support</a> for loader and billing help.
+          Before you pay, read how loader install, secure checkout, and license email delivery work on the support
+          page. Patch-day status notes on the status page and setup write-ups on the blog explain when to reload defaults
+          after Riot updates. Windows 10 and 11 builds are what support tickets reference when loader steps fail.
+        </p>
+        <p class="text-muted-foreground">
+          Open individual module pages to compare aim assist, player ESP, trigger timing, radar zoom, and light no recoil
+          helpers without mixing ranked and unrated presets. When you are ready, continue from the catalog to partner
+          checkout—valorant-cheat.org does not store card numbers; access arrives after the provider confirms payment.
+        </p>
+        <p class="text-muted-foreground">
+          Need setup context first? Read
+          <a href="/blog/">Valorant PC setup guides on the blog</a>, the
+          <a href="/faq/">pre-purchase FAQ on loader steps and pricing</a>, or
+          <a href="/support/">loader and checkout support desk</a> for billing help.
         </p>
       </header>
+
+      <div class="mt-8 space-y-3 text-muted-foreground">
+        <p class="font-medium text-foreground">Module pages on this site</p>
+        <ul class="list-disc space-y-2 pl-5">
+          {productPages.map((product) => (
+            <li>
+              <a href={productPath(product.slug)}>{moduleLinkLabel[product.slug] ?? product.title}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
       <div class="mt-8">
         <Button as="a" href={productHub.path} variant="primary">
-          Open Valorant module catalog
+          Valorant PC module comparison catalog
         </Button>
       </div>
     </div>

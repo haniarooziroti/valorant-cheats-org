@@ -19,7 +19,7 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
       'Products: compare Valorant PC cheat modules—aimbot, ESP, wallhack, radar, triggerbot, and no recoil tools on valorant-cheat.org.',
   },
   '/products/valorant-cheats/': {
-    title: 'Aimbot Esp – Valorant hacks and cheat modules for aimbot',
+    title: 'Aimbot Esp – Valorant hacks and cheat modules overview',
     description:
       'Aimbot ESP for Valorant PC—compare hacks, wallhack overlays, triggerbot, radar, and no recoil modules before secure checkout.',
   },
