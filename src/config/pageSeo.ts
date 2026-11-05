@@ -83,7 +83,7 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
       'Privacy policy for valorant-cheat.org: analytics, cookies, and contact data when you browse or request support.',
   },
   '/about/': {
-    title: 'Cheat Org – About Modules, Support & Loader Paths',
+    title: 'Cheat Org – About Modules, Support and Loader Paths',
     description:
       'Cheat org overview: what valorant-cheat.org publishes about PC cheat modules, community forums, and support paths for loaders and checkout help.',
   },
