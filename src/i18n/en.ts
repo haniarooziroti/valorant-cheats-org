@@ -24,9 +24,9 @@ export const en: Translations = {
     viewAll: 'Browse forums',
   },
   hero: {
-    status: 'Valorant PC — modules online',
+    status: 'PC modules online',
     eyebrow: 'Built for ranked & unrated',
-    titleLine1: 'Valorant on PC',
+    titleLine1: 'Valorant Cheats on PC',
     titleLine2: 'Aimbot, ESP and Wallhack',
     subtitle:
       'Tactical overlays, tuned aim assist, and agent ESP that stays readable in ranked and unrated—explore modules, compare settings in the forum, and upgrade your PC sessions without cluttering the screen.',
@@ -43,8 +43,8 @@ export const en: Translations = {
   },
   features: {
     eyebrow: 'Features',
-    title: 'Modules that match Valorant gunplay',
-    subtitle: 'Valorant aimbot, ESP wallhack, radar hack, triggerbot, and no recoil helpers tuned for PC.',
+    title: 'Modules that match ranked gunplay',
+    subtitle: 'Aimbot, ESP wallhack, radar hack, triggerbot, and no recoil helpers tuned for PC.',
     items: [
       {
         title: 'Aim assist',
@@ -56,7 +56,7 @@ export const en: Translations = {
           'Team and downed player filters',
           'Distance caps per playlist',
         ],
-        tags: ['valorant aimbot', 'aim assist', 'fov circle'],
+        tags: ['aimbot', 'aim assist', 'fov circle'],
         bento: 'sm:col-span-2 lg:col-span-12 lg:col-start-1 lg:row-start-1',
       },
       {
@@ -64,7 +64,7 @@ export const en: Translations = {
         subtitle: 'Boxes that stay readable',
         desc: 'Health, shields, skeleton, and weapon labels without turning the HUD into noise.',
         bullets: ['Corner or full box styles', 'Squad color coding', 'Distance slider', 'Soft-cover color option'],
-        tags: ['valorant esp', 'wallhack', 'player esp'],
+        tags: ['esp', 'wallhack', 'player esp'],
         bento: 'sm:col-span-2 lg:col-span-8 lg:col-start-1 lg:row-start-2',
       },
       {
@@ -72,7 +72,7 @@ export const en: Translations = {
         subtitle: 'Lane awareness',
         desc: 'Operator markers with zoom and range that mirror your ESP distance cap.',
         bullets: ['Compact overlay placement', 'Zoom for Ground War', 'Shared color logic with ESP'],
-        tags: ['valorant radar hack', 'ground war', 'map awareness'],
+        tags: ['radar hack', 'map awareness', 'rotations'],
         bento: 'sm:col-span-2 lg:col-span-6 lg:col-start-1 lg:row-start-3',
       },
       {
@@ -80,7 +80,7 @@ export const en: Translations = {
         subtitle: 'Confirm your shots',
         desc: 'Optional fire-on-target with delay tuning and the same wall checks as aim assist.',
         bullets: ['Hold key binding', 'Head or chest priority', 'Humanized delay slider'],
-        tags: ['valorant triggerbot', 'trigger', 'gunfight'],
+        tags: ['triggerbot', 'trigger', 'gunfight'],
         bento: 'sm:col-span-2 lg:col-span-6 lg:col-start-7 lg:row-start-3',
       },
       {
@@ -88,7 +88,7 @@ export const en: Translations = {
         subtitle: 'Spray control',
         desc: 'Light recoil control for Vandal and Phantom without killing your spray muscle memory.',
         bullets: ['Vandal & Phantom spray', 'Ranked-friendly strength', 'Per-weapon toggles'],
-        tags: ['valorant no recoil', 'spray control', 'valorant hacks'],
+        tags: ['no recoil', 'spray control', 'hacks'],
         bento: 'sm:col-span-2 lg:col-span-8 lg:row-span-2 lg:col-start-1 lg:row-start-4',
       },
       {
@@ -96,7 +96,7 @@ export const en: Translations = {
         subtitle: 'Recoil help & stream mode',
         desc: 'Light recoil assist, custom crosshair, dual config slots, and stream-proof overlay for recordings.',
         bullets: ['Ranked and unrated profiles', 'Stream-proof for OBS tests', 'Saved config export'],
-        tags: ['no recoil', 'stream proof', 'valorant cheat menu'],
+        tags: ['no recoil', 'stream proof', 'cheat menu'],
         bento: 'sm:col-span-2 lg:col-span-4 lg:row-span-2 lg:col-start-9 lg:row-start-4',
       },
     ],
@@ -105,7 +105,7 @@ export const en: Translations = {
     eyebrow: 'Why players stay',
     title: 'Configs that survive patch week',
     subtitle:
-      'Valorant patches move fast. We focus on readable ESP, conservative aim defaults, and support that answers loader questions without copy-paste scripts.',
+      'Patches move fast. We focus on readable ESP, conservative aim defaults, and support that answers loader questions without copy-paste scripts.',
     usLabel: 'Valorant Cheat',
     otherLabel: 'Random reseller page',
     rows: [
@@ -182,7 +182,7 @@ export const en: Translations = {
   },
   compatibility: {
     eyebrow: 'Platform support',
-    title: 'Built for Valorant on PC.',
+    title: 'Built for PC clients.',
     subtitle: 'Confirm the homepage status note after major game updates.',
     items: [
       'Windows 10 & 11',
@@ -197,7 +197,7 @@ export const en: Translations = {
   },
   cheats: {
     eyebrow: 'Full access',
-    title: 'Valorant cheat suite',
+    title: 'Full cheat suite',
     subtitle: 'One pass covers aim assist, ESP, trigger, radar, no recoil helpers, and misc tools.',
     viewAll: 'Compare modules',
     explore: 'Explore',
@@ -206,7 +206,7 @@ export const en: Translations = {
         badge: 'Popular',
         tier: 'PC',
         name: 'Full access',
-        title: 'Valorant full module pass',
+        title: 'Full module pass',
         desc: 'Aimbot, player ESP, triggerbot, 2D radar, No recoil assist, no-recoil helpers, and stream-proof overlay.',
         features: ['Aim circle + smooth', 'Player ESP suite', 'Trigger + radar', 'No recoil assist', 'Stream-proof', 'Two saved configs'],
         more: 18,
@@ -217,8 +217,8 @@ export const en: Translations = {
   },
   products: {
     eyebrow: 'Modules',
-    title: 'Valorant cheat modules',
-    subtitle: 'Valorant aimbot, ESP wallhack, triggerbot, radar hack, and no recoil tools for PC multiplayer.',
+    title: 'Cheat modules for PC',
+    subtitle: 'Aimbot, ESP wallhack, triggerbot, radar hack, and no recoil tools for PC multiplayer.',
     viewAll: 'View all modules',
     get: 'Try now',
     explore: 'Details',
@@ -226,7 +226,7 @@ export const en: Translations = {
       {
         badge: 'Core',
         category: 'Aim assist',
-        title: 'Valorant Aimbot',
+        title: 'Aimbot module',
         subtitle: 'Circle FOV & smoothing',
         desc: 'Tune aim assist for ranked with visibility checks, team filters, and bone priority on Haven and Ascent.',
         features: ['FOV ring', 'Smooth strength', 'Wall logic', 'Distance cap'],
@@ -285,7 +285,7 @@ export const en: Translations = {
       { num: '02', label: 'ESP', title: 'Player visuals', desc: 'Boxes, skeleton, health, and distance caps with squad colors.' },
       { num: '03', label: 'Radar', title: '2D awareness', desc: 'Operator dots with zoom and range tied to ESP distance.' },
       { num: '04', label: 'Trigger', title: 'Shot confirm', desc: 'Delay, hold key, and hitbox choice sharing wall logic with aim.' },
-      { num: '05', label: 'Recoil', title: 'Spray assist', desc: 'Light Valorant no recoil presets that pair with rifle aimbot settings.' },
+      { num: '05', label: 'Recoil', title: 'Spray assist', desc: 'Light no recoil presets that pair with rifle aimbot settings.' },
       { num: '06', label: 'Profiles', title: 'Ranked vs unrated', desc: 'Two saved configs plus export when you rebuild your PC.' },
     ],
   },
@@ -294,7 +294,7 @@ export const en: Translations = {
     badge: '4 steps',
     titleBefore: 'From status check to',
     titleHighlight: 'saved profile',
-    subtitle: 'A straight path from checkout to Valorant configs you can reuse every session.',
+    subtitle: 'A straight path from checkout to configs you can reuse every session.',
     ctaLabel: 'View modules',
     ctaHref: productBase,
     ctaSecondary: 'Forum tips',
@@ -328,9 +328,9 @@ export const en: Translations = {
   },
   fieldNotes: {
     eyebrow: 'Field notes',
-    title: 'Built for Valorant maps.',
+    title: 'Built for ranked maps.',
     items: [
-      { num: '01', title: 'Patch-week caution', desc: 'Read the status note after major Valorant patches before launching modules.' },
+      { num: '01', title: 'Patch-week caution', desc: 'Read the status note after major patches before launching modules.' },
       { num: '02', title: 'Conservative defaults', desc: 'Start with wider aim circles and lighter ESP, then tighten—not the reverse.' },
       { num: '03', title: 'Support with context', desc: 'Send order email, Windows build, and loader error text when something blocks install.' },
     ],

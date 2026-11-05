@@ -1,8 +1,8 @@
 ---
-title: 'How to buy Valorant cheats in 2026: checkout to first launch'
+title: 'Valorant cheats: checkout to first launch in 2026'
 description: >-
-  Buying Valorant cheats for the first time? Here's how checkout, delivery and
-  first launch work, plus what to check on your PC before you pay.
+  Buying access for the first time? Here's how checkout, delivery and first
+  launch work, plus what to check on your PC before you pay.
 category: Guides
 publishDate: '2024-06-12'
 readMinutes: 6
@@ -17,7 +17,7 @@ relatedSlugs:
   - valorant-features
 featuredImage: >-
   https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/valorant/02ab714e-de37-423b-81f2-afd7f7fd8d28/1793455063253-xwjslf-1-2-webp-309350f53434ceeb48bfb1837f8647ba.webp
-imageAlt: 'Valorant cheat checkout preview — buy aimbot, ESP, and wallhack access on PC'
+imageAlt: 'Checkout preview — buy aimbot, ESP, and wallhack access on PC'
 ---
 ## Before you pay
 1. Verify TPM 2.0 and Secure Boot ([requirements guide](/blog/valorant-requirements/)).

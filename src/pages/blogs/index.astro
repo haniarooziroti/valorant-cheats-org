@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { resolvePageSeo } from '../../config/seo';
+import { breadcrumbSchema, webPageSchema } from '../../utils/schema';
+import { CRUMB } from '../../config/breadcrumbs';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const seo = resolvePageSeo('/blogs/');
+const breadcrumbs = [CRUMB.home, { name: 'Blogs', path: '/blogs/' }];
+---
+
+<BaseLayout
+  title={seo.title}
+  description={seo.description}
+  jsonLd={[
+    webPageSchema({
+      name: seo.title,
+      description: seo.description,
+      url: '/blogs/',
+    }),
+    breadcrumbSchema(breadcrumbs),
+  ]}
+>
+  <section class="py-10 md:py-14">
+    <div class="mx-auto max-w-2xl px-5">
+      <Breadcrumbs items={breadcrumbs} />
+      <h1 class="mt-6 text-3xl font-bold uppercase tracking-tight">Redirecting</h1>
+      <p class="mt-4 text-muted-foreground">
+        This blogs path is redirecting readers to the main guide index. Open the full blog for aimbot, ESP,
+        loader, and checkout articles.
+      </p>
+      <p class="mt-6">
+        <a class="text-primary underline-offset-4 hover:underline" href="/blog/">Continue to the Valorant Cheat blog</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

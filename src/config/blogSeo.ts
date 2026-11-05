@@ -34,9 +34,9 @@ export const BLOG_POST_SEO: Record<string, BlogPostSeo> = {
       'How a Valorant triggerbot decides when to fire, how light recoil control works on rifles, and when to use each one.',
   },
   'valorant-agent-utility-guide': {
-    title: 'Valorant ESP for Utility, Spike & Economy | Valorant Cheats',
+    title: 'Valorant ESP for Utility, Spike & Economy | Cheats',
     description:
-      'Beyond player outlines: how information overlays for spike status, utility and rounds can change decisions.',
+      'Beyond player outlines: how information overlays for spike status, utility and rounds can change decisions before you plant or rotate.',
     keywordHeading: 'Features: Valorant Cheats',
   },
   'valorant-esp-setup': {
@@ -46,9 +46,9 @@ export const BLOG_POST_SEO: Record<string, BlogPostSeo> = {
     keywordHeading: 'Setup: Valorant Cheats',
   },
   'valorant-aimbot-setup': {
-    title: 'Valorant Aim Circle, Smoothing & Bone Choice | Valorant Cheats',
+    title: 'Bone Choice – How to set up Valorant aim assist so it helps',
     description:
-      'How to set up Valorant aim assist so it helps your tracking without looking like a screen-snap.',
+      'Bone choice for aim assist: set FOV and smoothing so tracking helps without looking like a screen-snap on PC ranked and unrated.',
     keywordHeading: 'Setup: Valorant Cheats',
   },
   'valorant-plans': {
@@ -63,9 +63,9 @@ export const BLOG_POST_SEO: Record<string, BlogPostSeo> = {
     keywordHeading: 'Features: Valorant Cheats',
   },
   'buy-valorant-cheats': {
-    title: 'How to Buy Valorant Cheats in 2026 — Checkout to First Launch | Valorant Cheats',
+    title: 'Valorant Cheats – Checkout to First Launch Guide',
     description:
-      'Buying Valorant cheats for the first time? Checkout, delivery, first launch, and what to check on your PC before you pay.',
+      'Buying access for the first time? Checkout, delivery, first launch, and what to check on your PC before you pay in 2026.',
   },
 };
 

@@ -9,9 +9,14 @@ export interface PageSeoEntry {
 
 export const PAGE_SEO: Record<string, PageSeoEntry> = {
   '/': {
-    title: 'Valorant Cheats — Aimbot, ESP & Wallhack | Valorant Cheat',
+    title: 'Valorant Cheats — Aimbot, ESP & Wallhack | Cheat',
     description:
       'Valorant cheats with ESP, aimbot, and wallhack tools for PC ranked and unrated. Compare modules, read forums, and continue to secure checkout.',
+  },
+  '/blogs/': {
+    title: 'Redirecting — Blogs Path to the Guide Index',
+    description:
+      'Redirecting: this path sends readers to the main guide index for aimbot, ESP, loader, and checkout articles.',
   },
   '/products/valorant-cheats/': {
     title: 'Valorant Cheats — Compare Aimbot, ESP & Hacks',
@@ -78,9 +83,9 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
       'Privacy policy for valorant-cheat.org: analytics, cookies, and contact data when you browse or request support.',
   },
   '/about/': {
-    title: 'About Valorant Cheat | valorant-cheat.org',
+    title: 'Cheat Org – About Valorant PC Modules & Support',
     description:
-      'What valorant-cheat.org publishes about Valorant PC cheat modules, community forums, and support paths.',
+      'Cheat org overview: what valorant-cheat.org publishes about PC cheat modules, community forums, and support paths for loaders and checkout help.',
   },
   '/support/': {
     title: 'Support – Loader, Checkout & Config Help for Valorant',

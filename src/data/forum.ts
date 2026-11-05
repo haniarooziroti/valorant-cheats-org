@@ -44,7 +44,7 @@ export const forumPosts: ForumPost[] = [
     slug: 'aimbot-settings-smooth-level-killcam',
     category: 'Aimbot',
     categoryTone: 'blue',
-    title: 'Aimbot settings: what smooth level keeps killcams believable?',
+    title: 'Valorant Cheat aimbot settings: what smooth level keeps killcams believable?',
     excerpt:
       'Buying Valorant aimbot access this week—what FOV and smooth combo are you actually running in ranked without looking like a highlight reel?',
     author: 'neon_ridge',

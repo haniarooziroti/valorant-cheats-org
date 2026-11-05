@@ -12,12 +12,15 @@ const FORUM_THREAD_SEO: Record<string, ForumThreadSeo> = {
   'aimbot-settings-smooth-level-killcam': {
     title: 'Aimbot Settings: Smooth Level & Killcams | Valorant Cheat',
     description:
-      'Valorant aimbot smooth level for ranked: how conservative players tune FOV and smoothing so killcams still look like PC aim, not snap bots.',
+      'Aimbot settings for ranked smooth level: how conservative players tune FOV and smoothing so killcams still look like PC aim, not snap bots.',
     logoAlt: 'Valorant aimbot smooth settings menu screenshot',
     sidebarHeading: 'valorant/aimbot',
     extraBody: [
       'When you shop Valorant aimbot settings, start mid-high smooth with a modest FOV and test one unrated match before you touch bone priority.',
       'Pair aim assist with normal crosshair placement—ESP helps info, but pre-aim still sells the clip when someone reports you.',
+      'If killcams still look robotic, lower strength one notch and keep hold-to-aim only. Soft assist with chest priority at mid-range usually reads cleaner than full head lock.',
+      'Save a ranked profile and an unrated profile so you are not re-tuning aimbot settings every time you change playlist.',
+      'After agent patches, re-test one deathmatch before competitive: FOV that worked last week can over-pull on new movement kits.',
     ],
   },
   'aimbot-fov-ranked-unrated': {

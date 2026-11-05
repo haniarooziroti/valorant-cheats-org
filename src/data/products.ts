@@ -204,9 +204,9 @@ const modules: ModuleDef[] = [
   {
     slug: 'aimbot',
     name: 'Aimbot',
-    title: 'Valorant Aimbot — Soft Aim & FOV Tuning Module',
+    title: 'Aimbot — Soft Aim & FOV Tuning Module',
     subtitle: 'Smooth aim inside your FOV ring',
-    desc: 'Precision aim assist for Valorant PC multiplayer with circle FOV, smoothing, and visibility checks.',
+    desc: 'Precision aim assist for PC multiplayer with circle FOV, smoothing, and visibility checks.',
     features: ['Adjustable aim circle', 'Head or chest priority', 'Team and downed filters', 'Shared wall logic'],
     more: 8,
     badge: 'Core module',
@@ -237,9 +237,9 @@ const modules: ModuleDef[] = [
   {
     slug: 'esp',
     name: 'Player ESP',
-    title: 'Valorant ESP & Wallhack — Agent Boxes & Health',
+    title: 'ESP & Wallhack — Agent Boxes & Health',
     subtitle: 'Readable boxes, health, and skeleton',
-    desc: 'Player ESP for Valorant with armor plates, distance, weapon readouts, and squad colors tuned for fast TTK playlists.',
+    desc: 'Player ESP with health, distance, weapon readouts, and squad colors tuned for fast TTK playlists.',
     features: ['Box or corner style', 'Health and plates', 'Skeleton option', 'Squad color coding'],
     more: 10,
     badge: 'Core module',
@@ -272,7 +272,7 @@ const modules: ModuleDef[] = [
   {
     slug: 'triggerbot',
     name: 'Triggerbot',
-    title: 'Valorant Triggerbot',
+    title: 'Triggerbot',
     subtitle: 'Shots only when you are on target',
     desc: 'Trigger module fires when your crosshair is already on an operator, with delay tuning and shared visibility checks.',
     features: ['Hold key', 'Shot delay', 'Head or chest', 'Wall check parity'],
@@ -300,7 +300,7 @@ const modules: ModuleDef[] = [
   {
     slug: 'radar',
     name: '2D Radar',
-    title: 'Valorant 2D Radar',
+    title: '2D Radar',
     subtitle: 'Minimap-style operator feed',
     desc: 'Compact radar with operator markers, zoom, and range limits for Premier and large playlists.',
     features: ['Operator dots', 'Zoom slider', 'Range cap', 'Matches ESP colors'],
@@ -317,9 +317,9 @@ const modules: ModuleDef[] = [
   {
     slug: 'no-recoil',
     name: 'No Recoil Assist',
-    title: 'Valorant No Recoil Module',
+    title: 'No Recoil Module',
     subtitle: 'Light spray control for rifles',
-    desc: 'Valorant no recoil helpers for Vandal and Phantom—subtle spray control that pairs with aimbot without looking robotic.',
+    desc: 'No recoil helpers for Vandal and Phantom—subtle spray control that pairs with aimbot without looking robotic.',
     features: ['Light recoil slider', 'Per-weapon profiles', 'Works with aimbot', 'Ranked-safe defaults'],
     more: 6,
     badge: 'Combat',

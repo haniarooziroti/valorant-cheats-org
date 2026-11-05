@@ -1,10 +1,10 @@
 ---
 title: >-
-  Valorant ESP for agent utility, spike and economy: what extra information
+  Valorant ESP for agent utility, spike and economy: cheats information that
   helps
 description: >-
   Beyond player outlines: how information overlays for spike status, utility and
-  rounds can change decisions, and why you should show less, not more.
+  rounds can change decisions before you plant or rotate, and why you should show less.
 category: Features
 publishDate: '2025-08-06'
 readMinutes: 5
