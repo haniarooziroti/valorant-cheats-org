@@ -53,11 +53,6 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
     description:
       'Live Valorant cheat module status for aimbot, ESP, and radar on PC. Check before ranked after a Riot patch.',
   },
-  '/forum/': {
-    title: 'Forums – Browse threads before you change defaults or buy',
-    description:
-      'Valorant cheat forums with aimbot settings, ESP layouts, triggerbot delay, and checkout threads from PC players—read threads before you buy access.',
-  },
   '/blog/': {
     title: 'Valorant Cheat Blog — Aimbot, ESP & Wallhack Guides',
     description:

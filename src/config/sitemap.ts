@@ -32,7 +32,6 @@ const STATIC_LASTMOD: Record<string, string> = {
   '/about/': '2026-09-01T00:00:00.000Z',
   '/blog/': '2026-10-30T00:00:00.000Z',
   '/reviews/': '2026-10-10T00:00:00.000Z',
-  '/forum/': '2026-10-18T00:00:00.000Z',
   '/faq/': '2026-09-15T00:00:00.000Z',
   '/support/': '2026-09-01T00:00:00.000Z',
   '/privacy/': '2026-09-01T00:00:00.000Z',
@@ -91,20 +90,12 @@ export function sitemapSerialize(item: SitemapItem): SitemapItem | undefined {
     return item;
   }
 
+  if (path.startsWith('/forum/')) {
+    return undefined;
+  }
+
   if (path === '/reviews/') {
     item.priority = 0.85;
-    item.changefreq = 'weekly';
-    return item;
-  }
-
-  if (path === '/forum/') {
-    item.priority = 0.9;
-    item.changefreq = 'daily';
-    return item;
-  }
-
-  if (path.startsWith('/forum/')) {
-    item.priority = 0.7;
     item.changefreq = 'weekly';
     return item;
   }

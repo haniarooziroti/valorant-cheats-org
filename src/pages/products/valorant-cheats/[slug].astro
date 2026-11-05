@@ -6,8 +6,6 @@ import { getPageSeoEntry } from '../../../config/pageSeo';
 import { pageTitle } from '../../../config/seo';
 import { breadcrumbSchema, productSchema } from '../../../utils/schema';
 import ProductDetail from '../../../components/ProductDetail.astro';
-import ProductRelatedForumsSection from '../../../components/product/ProductRelatedForumsSection.astro';
-import { getRelatedForumPostsForProduct } from '../../../data/forumRelated';
 
 export function getStaticPaths() {
   return getAllProductSlugs().map((slug) => ({ params: { slug } }));
@@ -24,7 +22,6 @@ const pagePath = `${productHub.path}${product.slug}/`;
 const seoEntry = getPageSeoEntry(pagePath);
 const metaTitle = seoEntry?.title ?? pageTitle(product.title);
 const metaDescription = seoEntry?.description ?? product.desc;
-const relatedForums = getRelatedForumPostsForProduct(product.relatedForumSlugs, 3);
 const breadcrumbs = [
   CRUMB.home,
   CRUMB.products,
@@ -48,5 +45,4 @@ const breadcrumbs = [
   ]}
 >
   <ProductDetail product={product} breadcrumbs={breadcrumbs} />
-  <ProductRelatedForumsSection posts={relatedForums} productName={product.name} />
 </BaseLayout>

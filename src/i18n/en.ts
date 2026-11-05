@@ -297,8 +297,8 @@ export const en: Translations = {
     subtitle: 'A straight path from checkout to configs you can reuse every session.',
     ctaLabel: 'View modules',
     ctaHref: productBase,
-    ctaSecondary: 'Forum tips',
-    ctaSecondaryHref: '/forum/',
+    ctaSecondary: 'Setup guides',
+    ctaSecondaryHref: '/blog/',
     items: [
       {
         num: '01',
@@ -356,10 +356,10 @@ export const en: Translations = {
       },
       {
         icon: 'clock',
-        title: 'Forum answers',
-        desc: 'Player threads on aim, ESP, and trigger timing.',
-        linkLabel: 'Open forum',
-        href: '/forum/',
+        title: 'Read setup guides',
+        desc: 'Filter blog posts for aim, ESP, loader steps, and patch-day notes.',
+        linkLabel: 'Open blog',
+        href: '/blog/',
       },
     ],
     ticketTitle: 'Include in your ticket',
@@ -414,7 +414,6 @@ export const en: Translations = {
       { href: `${productBase}aimbot/`, label: 'Valorant aimbot module', ariaLabel: 'Aimbot' },
       { href: productBase, label: 'Full module catalog', ariaLabel: 'Products' },
       { href: '/blog/', label: 'Valorant cheat blog', ariaLabel: 'Blog' },
-      { href: '/forum/', label: 'Community forum', ariaLabel: 'Forums' },
       { href: '/reviews/', label: 'Player reviews', ariaLabel: 'Reviews' },
       { href: '/faq/', label: 'Pre-purchase FAQ', ariaLabel: 'FAQ' },
       { href: '/about/', label: 'About this site', ariaLabel: 'About' },
@@ -451,7 +450,7 @@ export const en: Translations = {
         {
           heading: 'Community discussion',
           paragraphs: [
-            'Use the <a href="/forum/">Valorant cheat discussion forum</a> for feature questions that are too specific for FAQ entries—aim circle tuning, ESP colors, trigger timing, and billing timing.',
+            'Use the <a href="/blog/">Valorant cheat setup blog</a> for feature questions that are too specific for FAQ entries—aim circle tuning, ESP colors, trigger timing, and billing timing.',
             'Moderation is light: keep replies on-topic and avoid sharing license keys or loader downloads in public threads.',
             'Long-form setup notes live in forum threads; quick comparisons stay in discussion posts where players share patch-day notes. If you are comparing monthly versus lifetime access windows, search existing threads before opening a duplicate topic—the FAQ summarizes the plan difference, but players often explain how they use each window in practice.',
           ],

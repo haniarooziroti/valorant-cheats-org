@@ -14,7 +14,8 @@ export default defineConfig({
     '/cheats/': '/products/valorant-cheats/',
     '/contact/': '/support/',
     '/products/': '/products/valorant-cheats/',
-    '/forums/': '/forum/',
+    '/forums/': '/blog/',
+    '/forum/': '/blog/',
     '/products/mw4-cheats/': '/products/valorant-cheats/',
     '/go/mw4/': '/go/valorant/',
   },
@@ -31,6 +32,7 @@ export default defineConfig({
       filter: (page) =>
         !page.includes('/404') &&
         !page.includes('/blogs') &&
+        !page.includes('/forum') &&
         (!page.includes('/go/') || page.includes('/go/valorant')),
       serialize: sitemapSerialize,
     }),
