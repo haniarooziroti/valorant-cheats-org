@@ -122,8 +122,6 @@ const riskNote =
       <BlogPostTopBar post={post} class="mt-6" />
 
       <div class="blog-article__layout mt-4 grid gap-6 lg:grid-cols-[minmax(14rem,16.5rem)_minmax(0,1fr)] lg:items-start lg:gap-8 xl:grid-cols-[17.5rem_minmax(0,1fr)]">
-        <BlogSidebar post={post} related={related} tocItems={tocItems} class="order-2 lg:order-1" />
-
         <div class="order-1 min-w-0 lg:order-2">
           <BlogArticleHero
             src={post.image}
@@ -208,6 +206,8 @@ const riskNote =
             {riskNote}
           </p>
         </div>
+
+        <BlogSidebar post={post} related={related} tocItems={tocItems} class="order-2 lg:order-1" />
       </div>
     </div>
   </article>

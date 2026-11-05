@@ -49,4 +49,4 @@ Head-only is the riskiest. Chest or a mixed bone selection looks more natural an
 Use the range or Deathmatch to check how settings feel, then save separate profiles.
 
 ## Next step
-See the [aimbot module](/products/valorant-cheats/aimbot/) or continue with [Triggerbot and no recoil](/blog/valorant-triggerbot/).
+See the [aim assist module page](/products/valorant-cheats/aimbot/) or continue with [Triggerbot and no recoil](/blog/valorant-triggerbot/).
