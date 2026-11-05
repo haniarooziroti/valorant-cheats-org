@@ -5,7 +5,7 @@ export function catalogCheckoutLabel(productTitle: string): string {
 }
 
 export function catalogDetailsLabel(productName: string): string {
-  return `Open ${productName} module page`;
+  return `${productName} module →`;
 }
 
 export function productPanelCheckoutLabel(productTitle: string): string {

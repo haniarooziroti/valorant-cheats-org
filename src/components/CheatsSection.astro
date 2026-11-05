@@ -26,8 +26,8 @@ const s = t.cheats;
           icon={cheatTierIcons[cheat.name] ?? 'crosshair'}
           badge={cheat.badge}
           variant={cheat.variant}
-          buyLabel={catalogCheckoutLabel(cheat.title)}
-          viewLabel={catalogDetailsLabel(cheat.title)}
+          buyLabel={catalogCheckoutLabel(cheat.name)}
+          viewLabel={catalogDetailsLabel(cheat.name)}
         />
       ))}
     </div>

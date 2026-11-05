@@ -8,6 +8,20 @@
   line-height: 1.25;
 }
 
+.catalog-card__footer {
+  align-items: stretch;
+}
+
+.catalog-card__action {
+  min-width: 0;
+  height: auto;
+  min-height: 2.25rem;
+  padding-block: 0.5rem;
+  line-height: 1.25;
+  text-align: center;
+  white-space: normal;
+}
+
 /* Landing products header stays left-aligned with the cards */
 #products .section-header,
 #products .section-header__subtitle {

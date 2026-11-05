@@ -17,9 +17,16 @@ interface Props {
   showTicketTips?: boolean;
   class?: string;
   keywordHeading?: string;
+  headerAlign?: 'left' | 'center';
 }
 
-const { titleId = 'support-title', showTicketTips = false, class: className, keywordHeading } = Astro.props;
+const {
+  titleId = 'support-title',
+  showTicketTips = false,
+  class: className,
+  keywordHeading,
+  headerAlign = 'left',
+} = Astro.props;
 const c = t.support;
 ---
 
@@ -29,7 +36,12 @@ const c = t.support;
   aria-labelledby={titleId}
 >
   <div class="support-section__inner mx-auto max-w-6xl px-5">
-    <header class="section-header section-header--wide support-section__header">
+    <header
+      class:list={[
+        'section-header section-header--wide support-section__header',
+        headerAlign === 'center' && 'support-section__header--center',
+      ]}
+    >
       <p class="section-header__eyebrow">{c.eyebrow}</p>
       <h1 id={titleId} class="section-header__title">{c.title}</h1>
       {keywordHeading ? <h2 class="section-header__subtitle text-lg font-semibold text-foreground">{keywordHeading}</h2> : null}

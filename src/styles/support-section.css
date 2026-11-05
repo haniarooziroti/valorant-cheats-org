@@ -7,12 +7,14 @@
   margin: 0;
 }
 
+.support-section__header--center,
 .support-section--centered .support-section__header {
   max-width: 48rem;
   margin-inline: auto;
   text-align: center;
 }
 
+.support-section__header--center .section-header__subtitle,
 .support-section--centered .section-header__subtitle {
   margin-inline: auto;
 }
@@ -34,8 +36,13 @@
 
 @media (min-width: 1024px) {
   .support-section__cards {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.5rem;
+  }
+
+  .support-section--centered .support-section__cards {
+    max-width: 56rem;
+    margin-inline: auto;
   }
 }
 

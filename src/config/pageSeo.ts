@@ -64,7 +64,7 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
       'Blog: Search and filter Valorant cheat guides: aimbot tuning, player ESP, wallhack setup, Vanguard errors, checkout, patch-day status and loader fixes.',
   },
   '/faq/': {
-    title: 'FAQ – Scan answers here first, then read module pages',
+    title: 'FAQ – Valorant cheat answers on loader, pricing & risk',
     description:
       'Valorant cheat FAQ covers compatibility, loader steps, pricing, account risk, setup paths, and secure access before you open checkout on PC.',
   },

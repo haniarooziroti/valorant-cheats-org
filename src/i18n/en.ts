@@ -337,7 +337,7 @@ export const en: Translations = {
   },
   support: {
     eyebrow: 'Support',
-    title: 'Valorant support — loader, checkout help & configs',
+    title: 'Valorant help desk — loader, checkout & configs',
     subtitle: 'Loader, checkout, and config help for PC players.',
     channels: [
       {
