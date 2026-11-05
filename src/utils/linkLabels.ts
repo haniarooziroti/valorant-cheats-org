@@ -16,6 +16,9 @@ export function productHighlightsCheckoutLabel(productName: string): string {
   return `Get ${productName} access`;
 }
 
+/** Mobile drawer nav — distinct visible anchors from desktop PRIMARY_NAV (labels unchanged in nav config). */
+export const MOBILE_HEADER_CTA_LABEL = 'Try now — menu';
+
 /** Primary nav (desktop) — distinct from footer explore links on the same page. */
 export const DESKTOP_NAV_LABEL: Record<string, string> = {
   Home: 'Valorant Cheat home',
@@ -30,8 +33,8 @@ export const DESKTOP_NAV_LABEL: Record<string, string> = {
 export const MOBILE_NAV_LABEL: Record<string, string> = {
   Home: 'Home — menu',
   Products: 'Valorant products — menu',
-  Blog: 'Setup guides — menu',
-  Forum: 'Player forum — menu',
+  Blogs: 'Setup guides — menu',
+  Forums: 'Player forum — menu',
   Reviews: 'Player reviews — menu',
   FAQ: 'FAQ list — menu',
   Support: 'Support desk — menu',

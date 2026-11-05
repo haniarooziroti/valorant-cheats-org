@@ -13,11 +13,12 @@ import {
   Sheet,
   SheetContent,
   SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from '@/components/starwind/sheet';
 import Icon from '../icons/Icon.astro';
 import SlideRevealButton from '../SlideRevealButton.astro';
+import { MOBILE_NAV_LABEL, MOBILE_HEADER_CTA_LABEL } from '../../utils/linkLabels';
+import { sheetTitle } from '@/components/starwind/sheet/variants';
 
 interface Props {
   logoAlt?: string;
@@ -92,7 +93,7 @@ const headerCheckoutAria = `${HEADER_CTA_LABEL} from ${checkoutContext}`;
           </SheetTrigger>
           <SheetContent side="right" class="flex w-[min(100vw-2rem,20rem)] flex-col gap-4">
             <SheetHeader>
-              <SheetTitle>{t.site.name}</SheetTitle>
+              <p class={sheetTitle()} data-slot="sheet-title">{t.site.name}</p>
             </SheetHeader>
             <nav class="flex flex-col gap-1" aria-label="Mobile">
               {
@@ -104,14 +105,14 @@ const headerCheckoutAria = `${HEADER_CTA_LABEL} from ${checkoutContext}`;
                     {...(link.scrollTarget ? { 'data-scroll-target': link.scrollTarget } : {})}
                   >
                     <Icon name={PRIMARY_NAV_ICONS[link.href] ?? 'navFeatures'} size={16} />
-                    {link.label}
+                    {MOBILE_NAV_LABEL[link.label] ?? link.label}
                   </a>
                 ))
               }
             </nav>
             <Button as="a" href={CHECKOUT_URL} variant="primary" class="w-full justify-center" aria-label={headerCheckoutAria}>
               <Icon name="arrowRight" size={18} />
-              {HEADER_CTA_LABEL}
+              {MOBILE_HEADER_CTA_LABEL}
             </Button>
             <div class="flex justify-center pt-1">
               <AnimatedThemeSwitch size="sm" ariaLabel={t.ui.themeLight} />
