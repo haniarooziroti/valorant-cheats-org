@@ -5,6 +5,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Icon from '../../components/icons/Icon.astro';
 import { forumPosts, getForumPost } from '../../data/forum';
 import { getForumThreadSeo } from '../../config/forumSeo';
+import { CRUMB } from '../../config/breadcrumbs';
 import { breadcrumbSchema, discussionForumPostingSchema } from '../../utils/schema';
 
 export function getStaticPaths() {
@@ -19,7 +20,12 @@ const pageTitle = threadSeo?.title ?? `${post.title} | Valorant Cheat`;
 const pageDescription = threadSeo?.description ?? post.excerpt;
 const sidebarHeading = threadSeo?.sidebarHeading ?? `valorant/${post.category.toLowerCase().replaceAll(' ', '')}`;
 const extraBody = threadSeo?.extraBody ?? [];
-const breadcrumbs = [{ name: 'Home', path: '/' }, { name: 'Forums', path: '/forum/' }, { name: post.category, path: '/forum/' }, { name: post.title, path }];
+const breadcrumbs = [
+  CRUMB.home,
+  CRUMB.forum,
+  { name: post.category, path: '/forum/' },
+  { name: post.title, path },
+];
 const relatedPosts = [
   ...forumPosts.filter((item) => item.slug !== post.slug && item.category === post.category),
   ...forumPosts.filter((item) => item.slug !== post.slug && item.category !== post.category),

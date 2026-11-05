@@ -10,6 +10,7 @@ import { pageTitle } from '../../config/seo';
 import { getBlogPostSeo } from '../../config/blogSeo';
 import { CHECKOUT_URL, OG_DEFAULT_IMAGE, PRODUCT_URL } from '../../config/siteConfig';
 import { articleSchema, breadcrumbSchema, faqPageSchema, parseBlogDate } from '../../utils/schema';
+import { CRUMB } from '../../config/breadcrumbs';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import BlogArticleHero from '../../components/blog/BlogArticleHero.astro';
 import BlogCard from '../../components/blog/BlogCard.astro';
@@ -51,8 +52,8 @@ const post = {
 
 const postPath = `/blog/${post.slug}/`;
 const breadcrumbs = [
-  { name: 'Home', path: '/' },
-  { name: 'Blog', path: '/blog/' },
+  CRUMB.home,
+  CRUMB.blog,
   { name: post.title, path: postPath },
 ];
 

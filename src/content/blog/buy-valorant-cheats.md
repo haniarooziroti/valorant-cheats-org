@@ -42,7 +42,7 @@ imageAlt: 'Checkout preview — buy aimbot, ESP, and wallhack access on PC'
 4. Save a conservative profile.
 
 ## Refunds, support and updates
-Read our [Terms & Conditions](/terms/) for refund rules. <!-- TODO: add refund policy -->
+Read our [refund rules on the terms page](/terms/) for refund rules. <!-- TODO: add refund policy -->
 
 ## Common first-time mistakes
 - Buying before checking requirements
@@ -50,4 +50,4 @@ Read our [Terms & Conditions](/terms/) for refund rules. <!-- TODO: add refund p
 - Using a main account for testing
 
 ## Next step
-Ready? [Continue to checkout](/go/valorant/). Questions first? Ask on the [community forum](/forum/) or read the [pre-purchase FAQ](/faq/).
+Ready? [Continue to checkout](/go/valorant/). Questions first? Ask on the [player discussion board](/forum/) or read the [pre-purchase FAQ hub](/faq/).

@@ -228,7 +228,10 @@ export const forumPosts: ForumPost[] = [
     age: 'Aug 14, 2025',
     upvotes: 205,
     flair: 'Checkout',
-    body: ['Did lifetime people break even or regret not going monthly first?'],
+    body: [
+      'Did lifetime people break even or regret not going monthly first?',
+      'Most replies here compare how often they queue, not which modules they run—monthly and lifetime keys on the product hub include the same aimbot, ESP, triggerbot, radar, and no recoil list.',
+    ],
     comments: [
       { author: 'long_act', age: '4 days ago', score: 36, body: 'Lifetime after third monthly. same module list either way.' },
       { author: 'budget_act', age: '4 days ago', score: 8, body: 'Starting monthly then upgrade if still here.' },

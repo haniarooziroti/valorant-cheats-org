@@ -85,6 +85,8 @@ const FORUM_THREAD_SEO: Record<string, ForumThreadSeo> = {
       'Loader access works on Windows 10 and 11 PCs; your license email is what ties checkout to the machine you activate on, so keep that inbox handy whether you pick a short term or a lifetime key.',
       'After a Riot patch, check the status note on the homepage before ranked—monthly subscribers and lifetime holders get the same module updates when the loader is marked online again.',
       'If you are unsure after one month, renew once more before upgrading; support can help with delivery or activation questions without changing which modules are included.',
+      'Premier and ranked players who queue most nights often treat lifetime as fewer renewals to track; casual players who dip in for one act usually stay on monthly until they know they will return next season.',
+      'Either way, read the setup threads on this board before checkout so you know how loader delivery and first launch work on your PC.',
     ],
   },
   'soft-aim-vs-visible-aimbot': {

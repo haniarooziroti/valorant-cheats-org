@@ -4,6 +4,7 @@ import Icon from './icons/Icon.astro';
 import { Button } from '@/components/starwind/button';
 import { Prose } from '@/components/starwind/prose';
 import { ROUTES } from '../utils/path';
+import { CRUMB } from '../config/breadcrumbs';
 
 interface Props {
   title: string;
@@ -21,7 +22,7 @@ const { title, description, breadcrumbLabel, sections, keywordHeading } = Astro.
     <div class="text-left">
     <Breadcrumbs
       items={[
-        { name: 'Home', path: '/' },
+        CRUMB.home,
         { name: breadcrumbLabel, path: Astro.url.pathname },
       ]}
     />
