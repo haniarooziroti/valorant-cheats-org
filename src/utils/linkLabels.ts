@@ -39,7 +39,7 @@ export const MOBILE_NAV_LABEL: Record<string, string> = {
 
 const BREADCRUMB_PATH_LABEL: Record<string, string> = {
   '/': 'Breadcrumb: site home',
-  '/products/valorant-cheats/': 'Breadcrumb: all Valorant modules',
+  '/products/valorant-cheats/': 'Breadcrumb: all PC modules',
   '/blog/': 'Breadcrumb: setup guides',
   '/forum/': 'Breadcrumb: community forum',
   '/faq/': 'Breadcrumb: FAQ hub',
@@ -52,7 +52,45 @@ const BREADCRUMB_PATH_LABEL: Record<string, string> = {
   '/terms/': 'Breadcrumb: terms of use',
 };
 
-export function breadcrumbAnchorLabel(name: string, path: string): string {
-  const normalized = path.endsWith('/') || path === '/' ? path : `${path}/`;
-  return BREADCRUMB_PATH_LABEL[normalized] ?? BREADCRUMB_PATH_LABEL[path] ?? `Breadcrumb: ${name}`;
+const BREADCRUMB_PAGE_CONTEXT: Record<string, string> = {
+  '/': 'homepage',
+  '/about/': 'about',
+  '/blog/': 'guide index',
+  '/faq/': 'FAQ hub',
+  '/forum/': 'forum hub',
+  '/support/': 'support',
+  '/reviews/': 'reviews',
+  '/status/': 'status',
+  '/go/valorant/': 'checkout overview',
+  '/products/valorant-cheats/': 'module catalog',
+};
+
+function normalizePath(path: string): string {
+  if (!path.startsWith('/')) return `/${path}`;
+  if (path !== '/' && !path.endsWith('/')) return `${path}/`;
+  return path;
+}
+
+function breadcrumbPageContext(currentPath: string): string {
+  const norm = normalizePath(currentPath);
+  if (BREADCRUMB_PAGE_CONTEXT[norm]) return BREADCRUMB_PAGE_CONTEXT[norm]!;
+  if (norm.startsWith('/blog/') && norm !== '/blog/') {
+    const slug = norm.replace(/^\/blog\//, '').replace(/\/$/, '');
+    return `guide: ${slug}`;
+  }
+  if (norm.startsWith('/forum/') && norm !== '/forum/') {
+    const slug = norm.replace(/^\/forum\//, '').replace(/\/$/, '');
+    return `thread: ${slug}`;
+  }
+  if (norm.startsWith('/products/')) {
+    return norm.replace(/^\/products\//, 'product: ').replace(/\/$/, '');
+  }
+  return norm.replace(/^\/|\/$/g, '').replace(/\//g, ' ') || 'page';
+}
+
+export function breadcrumbAnchorLabel(name: string, path: string, currentPath: string): string {
+  const normalized = normalizePath(path);
+  const dest =
+    BREADCRUMB_PATH_LABEL[normalized] ?? BREADCRUMB_PATH_LABEL[path] ?? `Breadcrumb: ${name}`;
+  return `${dest} (from ${breadcrumbPageContext(currentPath)})`;
 }

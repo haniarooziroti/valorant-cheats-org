@@ -24,6 +24,9 @@ interface Props {
 }
 
 const { logoAlt = 'Aimbot – logo' } = Astro.props;
+
+const checkoutContext = Astro.url.pathname.replace(/^\/|\/$/g, '').replace(/\//g, ' ') || 'homepage';
+const headerCheckoutAria = `${HEADER_CTA_LABEL} from ${checkoutContext}`;
 ---
 
 <header class="pointer-events-none fixed inset-x-0 top-0 z-50" data-site-header>
@@ -69,7 +72,7 @@ const { logoAlt = 'Aimbot – logo' } = Astro.props;
           <SlideRevealButton
             href={CHECKOUT_URL}
             class="hidden shrink-0 lg:inline-flex"
-            ariaLabel={t.ui.checkoutAria}
+            ariaLabel={headerCheckoutAria}
             icon="arrowRight"
           >
             {HEADER_CTA_LABEL}
@@ -106,7 +109,7 @@ const { logoAlt = 'Aimbot – logo' } = Astro.props;
                 ))
               }
             </nav>
-            <Button as="a" href={CHECKOUT_URL} variant="primary" class="w-full justify-center" aria-label={t.ui.checkoutAria}>
+            <Button as="a" href={CHECKOUT_URL} variant="primary" class="w-full justify-center" aria-label={headerCheckoutAria}>
               <Icon name="arrowRight" size={18} />
               {HEADER_CTA_LABEL}
             </Button>

@@ -3,7 +3,6 @@ import '../styles/blog-sidebar.css';
 import Icon from './icons/Icon.astro';
 import { blogPostPath, productPath, ROUTES } from '../utils/path';
 import { CHECKOUT_URL } from '../config/siteConfig';
-import { t } from '../i18n';
 import type { BlogPostFull } from '../data/blog';
 import type { IconName } from './icons/types';
 import { Badge } from '@/components/starwind/badge';
@@ -44,8 +43,8 @@ const toc =
     }));
 
 const productLinks: { label: string; href: string; icon: IconName }[] = [
-  { label: 'Valorant module hub', href: ROUTES.products, icon: 'sidebarHub' },
-  { label: 'Valorant aimbot', href: productPath('aimbot'), icon: 'crosshair' },
+  { label: 'Module hub', href: ROUTES.products, icon: 'sidebarHub' },
+  { label: 'Aimbot module', href: productPath('aimbot'), icon: 'crosshair' },
   { label: 'Player ESP', href: productPath('esp'), icon: 'eye' },
   { label: 'Radar hack', href: productPath('radar'), icon: 'mapHack' },
 ];
@@ -132,7 +131,7 @@ const productLinks: { label: string; href: string; icon: IconName }[] = [
       variant="primary"
       size="sm"
       class="blog-sidebar__cta mt-2.5 w-full min-w-0 justify-start"
-      aria-label={t.ui.checkoutAria}
+      aria-label={`Get Valorant access from ${post.slug} sidebar`}
     >
       <span class="truncate">Get Valorant access</span>
       <Icon name="arrowRight" size={16} class="shrink-0" />

@@ -10,6 +10,7 @@ export default defineConfig({
   site: siteOrigin,
   trailingSlash: 'always',
   redirects: {
+    '/blogs/': '/blog/',
     '/cheats/': '/products/valorant-cheats/',
     '/contact/': '/support/',
     '/products/': '/products/valorant-cheats/',
@@ -28,7 +29,9 @@ export default defineConfig({
   integrations: [
     sitemap({
       filter: (page) =>
-        !page.includes('/404') && (!page.includes('/go/') || page.includes('/go/valorant')),
+        !page.includes('/404') &&
+        !page.includes('/blogs') &&
+        (!page.includes('/go/') || page.includes('/go/valorant')),
       serialize: sitemapSerialize,
     }),
   ],

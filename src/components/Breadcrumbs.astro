@@ -16,6 +16,7 @@ interface Props {
 }
 
 const { items, class: className } = Astro.props;
+const currentPath = Astro.url.pathname;
 ---
 
 <Breadcrumb class:list={['mb-4', className]}>
@@ -28,7 +29,9 @@ const { items, class: className } = Astro.props;
             {isLast ? (
               <BreadcrumbPage>{item.name}</BreadcrumbPage>
             ) : (
-              <BreadcrumbLink href={item.path}>{breadcrumbAnchorLabel(item.name, item.path)}</BreadcrumbLink>
+              <BreadcrumbLink href={item.path} aria-label={breadcrumbAnchorLabel(item.name, item.path, currentPath)}>
+                {item.name}
+              </BreadcrumbLink>
             )}
           </CrumbItem>
           {!isLast && <BreadcrumbSeparator />}

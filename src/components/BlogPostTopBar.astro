@@ -16,7 +16,11 @@ const tagIcon: IconName = blogTagIcons[post.tag] ?? 'tag';
 ---
 
 <div class:list={['blog-article__toolbar', className]}>
-  <a href={ROUTES.blog} class="blog-article__toolbar-back shrink-0">
+  <a
+    href={ROUTES.blog}
+    class="blog-article__toolbar-back shrink-0"
+    aria-label={`Guide index from ${post.slug} article`}
+  >
     <Icon name="chevronLeft" size={15} aria-hidden="true" />
     All articles
   </a>

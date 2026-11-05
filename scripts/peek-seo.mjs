@@ -1,7 +1,6 @@
 import fs from 'node:fs';
 
 const checks = [
-  ['blogs', 'dist/blogs/index.html'],
   ['home', 'dist/index.html'],
   ['about', 'dist/about/index.html'],
   ['buy', 'dist/blog/buy-valorant-cheats/index.html'],

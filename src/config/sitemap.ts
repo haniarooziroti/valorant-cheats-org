@@ -31,7 +31,6 @@ const STATIC_LASTMOD: Record<string, string> = {
   '/': '2026-10-15T00:00:00.000Z',
   '/about/': '2026-09-01T00:00:00.000Z',
   '/blog/': '2026-10-30T00:00:00.000Z',
-  '/blogs/': '2026-11-05T00:00:00.000Z',
   '/reviews/': '2026-10-10T00:00:00.000Z',
   '/forum/': '2026-10-18T00:00:00.000Z',
   '/faq/': '2026-09-15T00:00:00.000Z',
@@ -56,6 +55,10 @@ function lastmodForPath(path: string): string {
 
 export function sitemapSerialize(item: SitemapItem): SitemapItem | undefined {
   const path = pathnameFromUrl(item.url);
+
+  if (path === '/blogs/' || path.startsWith('/blogs')) {
+    return undefined;
+  }
 
   if (path.includes('/404') || (path.startsWith('/go/') && path !== '/go/valorant/')) {
     return undefined;

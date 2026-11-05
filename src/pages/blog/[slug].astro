@@ -77,6 +77,8 @@ const layoutTitle = postSeo?.title ?? pageTitle(post.title, 'Valorant Cheats');
 const layoutDescription = postSeo?.description ?? post.desc;
 const keywordHeading = postSeo?.keywordHeading;
 const ogImage = post.image || OG_DEFAULT_IMAGE;
+const productCtaLabel = `Open module hub (${post.slug})`;
+const pricingCtaLabel = `See checkout pricing (${post.slug})`;
 
 const faqItems = (entry.data.faq ?? []).map((item, i) => ({
   id: `blog-faq-${i}`,
@@ -131,13 +133,13 @@ const riskNote =
           />
 
           <header class="blog-article__header">
-            {keywordHeading ? <h2 class="text-lg font-semibold text-foreground">{keywordHeading}</h2> : null}
             <div class="flex flex-wrap gap-2">
               <Badge variant="secondary">{post.tag}</Badge>
               <Badge variant="outline">{dateIso}</Badge>
               <Badge variant="outline">{post.readTime}</Badge>
             </div>
             <h1 class="blog-article__title">{post.title}</h1>
+            {keywordHeading ? <h2 class="text-lg font-semibold text-foreground">{keywordHeading}</h2> : null}
             <p class="blog-article__byline text-sm text-muted-foreground">Valorant Cheats Team</p>
             <p class="blog-article__lead">{post.desc}</p>
           </header>
@@ -159,10 +161,10 @@ const riskNote =
               </p>
               <div class="mt-3 flex flex-wrap gap-2">
                 <Button as="a" href={PRODUCT_URL} variant="primary" size="sm">
-                  View Valorant products
+                  {productCtaLabel}
                 </Button>
                 <Button as="a" href={CHECKOUT_URL} variant="outline" size="sm">
-                  See pricing
+                  {pricingCtaLabel}
                 </Button>
               </div>
             </div>

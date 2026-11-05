@@ -5,7 +5,7 @@ import type { NavLink } from '../i18n/types';
 export const PRIMARY_NAV: NavLink[] = [
   { href: '/', label: 'Home' },
   { href: '/products/', label: 'Products' },
-  { href: '/blogs/', label: 'Blogs' },
+  { href: '/blog/', label: 'Blogs' },
   { href: '/forums/', label: 'Forums' },
   { href: '/reviews/', label: 'Reviews' },
   { href: '/faq/', label: 'FAQ' },
@@ -23,7 +23,7 @@ export const PRIMARY_NAV_LABELS = PRIMARY_NAV.map((item) => item.label);
 export const PRIMARY_NAV_ICONS: Record<string, IconName> = {
   '/': 'layers',
   '/products/': 'navProducts',
-  '/blogs/': 'navBlog',
+  '/blog/': 'navBlog',
   '/forums/': 'messageCircle',
   '/reviews/': 'users',
   '/faq/': 'navFaq',

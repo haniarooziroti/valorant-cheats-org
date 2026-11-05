@@ -48,8 +48,8 @@ export const BLOG_POST_SEO: Record<string, BlogPostSeo> = {
   'valorant-aimbot-setup': {
     title: 'Bone Choice – How to set up Valorant aim assist so it helps',
     description:
-      'Bone choice for aim assist: set FOV and smoothing so tracking helps without looking like a screen-snap on PC ranked and unrated.',
-    keywordHeading: 'Setup: Valorant Cheats',
+      'Valorant: Bone choice for aim assist: set FOV and smoothing so tracking helps without looking like a screen-snap on PC ranked and unrated.',
+    keywordHeading: 'Setup: aim assist',
   },
   'valorant-plans': {
     title: 'Valorant Cheats Monthly vs Lifetime — Which Is Cheaper? | Valorant Cheats',
@@ -63,9 +63,9 @@ export const BLOG_POST_SEO: Record<string, BlogPostSeo> = {
     keywordHeading: 'Features: Valorant Cheats',
   },
   'buy-valorant-cheats': {
-    title: 'Valorant Cheats – Buying Access for the First Time',
+    title: 'Valorant Cheats – Buying access for the first time',
     description:
-      'Valorant cheats: buying access for the first time? Checkout, delivery, first launch, and what to check on your PC before you pay in 2026.',
+      'Valorant Cheats: Buying access for the first time? Checkout, delivery, first launch, and what to check on your PC before you pay in 2026.',
   },
 };
 
