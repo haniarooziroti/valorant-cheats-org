@@ -15,23 +15,27 @@ const shareLinks = [
   {
     href: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
     label: 'Share on X',
+    unique: `Share on X: ${title}`,
   },
   {
     href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
     label: 'Share on Facebook',
+    unique: `Share on Facebook: ${title}`,
   },
 ];
 ---
 
-<nav class:list={['flex flex-wrap items-center gap-2', className]} aria-label="Share this page">
+<nav class:list={['flex flex-wrap items-center gap-2', className]} aria-label={`Share: ${title}`}>
   {shareLinks.map((link) => (
     <a
       href={link.href}
       class="inline-flex items-center gap-1.5 rounded-lg border border-border px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary"
       rel="noopener noreferrer"
       target="_blank"
+      aria-label={link.unique}
     >
       <Icon name="arrowUpRight" size={14} aria-hidden="true" />
+      <span class="sr-only">{title} — </span>
       {link.label}
     </a>
   ))}

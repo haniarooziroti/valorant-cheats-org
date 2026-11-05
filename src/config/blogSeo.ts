@@ -63,9 +63,9 @@ export const BLOG_POST_SEO: Record<string, BlogPostSeo> = {
     keywordHeading: 'Features: Valorant Cheats',
   },
   'buy-valorant-cheats': {
-    title: 'Valorant Cheats – Checkout to First Launch Guide',
+    title: 'Valorant Cheats – Buying Access for the First Time',
     description:
-      'Buying access for the first time? Checkout, delivery, first launch, and what to check on your PC before you pay in 2026.',
+      'Valorant cheats: buying access for the first time? Checkout, delivery, first launch, and what to check on your PC before you pay in 2026.',
   },
 };
 

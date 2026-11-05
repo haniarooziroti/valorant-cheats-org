@@ -1,5 +1,5 @@
 ---
-title: 'Valorant cheats: checkout to first launch in 2026'
+title: 'Valorant cheats checkout guide: first launch in 2026'
 description: >-
   Buying access for the first time? Here's how checkout, delivery and first
   launch work, plus what to check on your PC before you pay.

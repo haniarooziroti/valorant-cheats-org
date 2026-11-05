@@ -1,5 +1,5 @@
 ---
-title: 'Bone choice for Valorant aim assist — cheats setup guide'
+title: 'Bone choice for Valorant aim assist that helps — cheats setup guide'
 description: >-
   How to set up Valorant aim assist so it helps your tracking without looking
   like a screen-snap. Starting values for Competitive, Unrated and Deathmatch.
