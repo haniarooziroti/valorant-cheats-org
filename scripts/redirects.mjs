@@ -1,7 +1,5 @@
 /** Static path redirects (301) for production Node server. Keys: pathname without query/hash. */
 export const PATH_REDIRECTS = new Map([
-  ['/products', '/products/valorant-cheats/'],
-  ['/products/', '/products/valorant-cheats/'],
   ['/products/mw4-cheats', '/products/valorant-cheats/'],
   ['/products/mw4-cheats/', '/products/valorant-cheats/'],
   ['/go/mw4', '/go/valorant/'],

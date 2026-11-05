@@ -38,6 +38,7 @@ const STATIC_LASTMOD: Record<string, string> = {
   '/terms/': '2026-09-01T00:00:00.000Z',
   '/status/': '2026-10-20T00:00:00.000Z',
   '/products/valorant-cheats/': '2026-10-12T00:00:00.000Z',
+  '/products/': '2026-10-12T00:00:00.000Z',
   '/products/valorant-cheats/aimbot/': '2026-10-12T00:00:00.000Z',
   '/products/valorant-cheats/esp/': '2026-10-12T00:00:00.000Z',
   '/products/valorant-cheats/triggerbot/': '2026-10-12T00:00:00.000Z',
@@ -101,7 +102,7 @@ export function sitemapSerialize(item: SitemapItem): SitemapItem | undefined {
   }
 
   if (path.startsWith('/products/')) {
-    item.priority = 0.85;
+    item.priority = path === '/products/' ? 0.88 : 0.85;
     item.changefreq = 'weekly';
     return item;
   }

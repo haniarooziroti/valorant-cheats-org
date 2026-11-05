@@ -13,7 +13,6 @@ export default defineConfig({
     '/blogs/': '/blog/',
     '/cheats/': '/products/valorant-cheats/',
     '/contact/': '/support/',
-    '/products/': '/products/valorant-cheats/',
     '/forums/': '/blog/',
     '/forum/': '/blog/',
     '/products/mw4-cheats/': '/products/valorant-cheats/',

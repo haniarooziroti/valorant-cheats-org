@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { resolvePageSeo } from '../../config/seo';
+import { breadcrumbSchema, webPageSchema } from '../../utils/schema';
+import { CRUMB } from '../../config/breadcrumbs';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { productHub } from '../../data/products';
+import { Button } from '@/components/starwind/button';
+
+const seo = resolvePageSeo('/products/');
+const breadcrumbs = [CRUMB.home, { name: 'Products', path: '/products/' }];
+---
+
+<BaseLayout
+  title={seo.title}
+  description={seo.description}
+  jsonLd={[
+    webPageSchema({
+      name: seo.title,
+      description: seo.description,
+      url: '/products/',
+    }),
+    breadcrumbSchema(breadcrumbs),
+  ]}
+>
+  <section class="py-8 md:py-12">
+    <div class="mx-auto max-w-3xl px-5">
+      <Breadcrumbs items={breadcrumbs} />
+      <header class="mt-6 space-y-4">
+        <h1>Products</h1>
+        <p class="text-lg text-muted-foreground">
+          This products hub lists Valorant PC cheat modules sold through valorant-cheat.org. Open the module catalog to
+          compare aimbot, ESP wallhack, triggerbot, radar, and no recoil tools before you continue to secure checkout.
+        </p>
+        <p class="text-muted-foreground">
+          Need setup context first? Read the <a href="/blog/">setup guides</a>, the <a href="/faq/">FAQ</a>, or
+          <a href="/support/">support</a> for loader and billing help.
+        </p>
+      </header>
+      <div class="mt-8">
+        <Button as="a" href={productHub.path} variant="primary">
+          Open Valorant module catalog
+        </Button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
