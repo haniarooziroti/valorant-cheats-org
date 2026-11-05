@@ -82,6 +82,9 @@ const FORUM_THREAD_SEO: Record<string, ForumThreadSeo> = {
       'Monthly and lifetime keys on this site cover the same Valorant module list—aimbot, ESP, triggerbot, radar, and no recoil—so the choice is duration, not features.',
       'Players who skip an act often start monthly; others switch to lifetime after a few renewals once they know they will keep playing.',
       'Compare current plan options on the product hub before you pay, then use checkout for the term that matches how often you queue.',
+      'Loader access works on Windows 10 and 11 PCs; your license email is what ties checkout to the machine you activate on, so keep that inbox handy whether you pick a short term or a lifetime key.',
+      'After a Riot patch, check the status note on the homepage before ranked—monthly subscribers and lifetime holders get the same module updates when the loader is marked online again.',
+      'If you are unsure after one month, renew once more before upgrading; support can help with delivery or activation questions without changing which modules are included.',
     ],
   },
   'soft-aim-vs-visible-aimbot': {

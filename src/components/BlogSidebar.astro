@@ -101,7 +101,7 @@ const productLinks: { label: string; href: string; icon: IconName }[] = [
             <li>
               <a href={blogPostPath(item.slug)} class="blog-sidebar__link" title={item.title}>
                 <Icon name="arrowUpRight" size={13} class="shrink-0 opacity-70" aria-hidden="true" />
-                <span class="blog-sidebar__truncate">{item.title}</span>
+                <span class="blog-sidebar__truncate">{item.desc}</span>
               </a>
             </li>
           ))}
@@ -131,9 +131,9 @@ const productLinks: { label: string; href: string; icon: IconName }[] = [
       variant="primary"
       size="sm"
       class="blog-sidebar__cta mt-2.5 w-full min-w-0 justify-start"
-      aria-label="Open secure checkout"
+      aria-label="Open secure checkout for this guide"
     >
-      <span class="truncate">Open secure checkout</span>
+      <span class="truncate">See pricing and plans</span>
       <Icon name="arrowRight" size={16} class="shrink-0" />
     </Button>
   </section>

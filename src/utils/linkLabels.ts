@@ -1,19 +1,19 @@
 /** Unique, descriptive internal link labels for SEO (avoid repeated generic CTAs). */
 
-export function catalogCheckoutLabel(_productName: string): string {
-  return 'Try now';
+export function catalogCheckoutLabel(productTitle: string): string {
+  return `Checkout — ${productTitle}`;
 }
 
 export function catalogDetailsLabel(productName: string): string {
   return `Open ${productName} module page`;
 }
 
-export function productPanelCheckoutLabel(_productTitle: string): string {
-  return 'Try now';
+export function productPanelCheckoutLabel(productTitle: string): string {
+  return `Checkout — ${productTitle}`;
 }
 
-export function productHighlightsCheckoutLabel(_productName: string): string {
-  return 'Try now';
+export function productHighlightsCheckoutLabel(productName: string): string {
+  return `Get ${productName} access`;
 }
 
 /** Primary nav (desktop) — distinct from footer explore links on the same page. */

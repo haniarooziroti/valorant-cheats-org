@@ -12,9 +12,12 @@ interface Props {
   eager?: boolean;
   imageAlt?: string;
   class?: string;
+  /** Use h3 when cards sit under a section h2 (article related grid). */
+  titleTag?: 'h2' | 'h3';
 }
 
-const { post, eager = false, imageAlt, class: className } = Astro.props;
+const { post, eager = false, imageAlt, class: className, titleTag = 'h2' } = Astro.props;
+const TitleTag = titleTag;
 const href = blogPostPath(post.slug);
 const timestamp = post.dateIso ? new Date(post.dateIso).getTime() : getBlogPostTimestamp(post.date);
 const readMinutes = getBlogReadMinutes(post.readTime);
@@ -58,7 +61,7 @@ const searchBlob = `${post.title} ${post.desc} ${post.tag} ${post.slug} ${(post.
     </div>
 
     <div class="blog-card__body">
-      <h2 class="blog-card__title">{post.title}</h2>
+      <TitleTag class="blog-card__title">{post.title}</TitleTag>
       <p class="blog-card__excerpt">{post.desc}</p>
     </div>
   </a>
