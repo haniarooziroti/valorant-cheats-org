@@ -1,5 +1,6 @@
 ---
 import type { ProductPage } from '../../data/products';
+import { productHighlightsCheckoutLabel } from '../../utils/linkLabels';
 import SectionHeader from '../SectionHeader.astro';
 import Icon from '../icons/Icon.astro';
 import { Button } from '@/components/starwind/button';
@@ -48,7 +49,7 @@ const { product } = Astro.props;
         <Icon name="chevronDown" size={16} />
       </Button>
       <Button as="a" href={product.buyUrl} variant="primary" size="sm" class="rounded-full">
-        Buy now
+        {productHighlightsCheckoutLabel(product.name)}
         <Icon name="arrowRight" size={16} />
       </Button>
     </div>

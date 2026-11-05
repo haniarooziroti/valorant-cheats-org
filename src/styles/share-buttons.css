@@ -1,0 +1,53 @@
+.share-buttons {
+  margin-top: 1rem;
+}
+
+.share-buttons__label {
+  margin: 0 0 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+.share-buttons__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.share-buttons__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  padding: 0.25rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--foreground);
+  background: color-mix(in oklch, var(--card) 80%, transparent);
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.share-buttons__link:hover {
+  border-color: color-mix(in oklch, var(--primary) 45%, var(--border));
+  color: var(--primary);
+}
+
+.share-buttons__copy {
+  font: inherit;
+}
+
+.share-buttons--compact .share-buttons__link {
+  min-height: 1.75rem;
+  padding-inline: 0.5rem;
+  font-size: 0.6875rem;
+}

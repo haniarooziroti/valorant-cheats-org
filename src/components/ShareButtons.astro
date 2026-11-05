@@ -1,0 +1,103 @@
+---
+import '../styles/share-buttons.css';
+
+interface Props {
+  url: string;
+  title: string;
+  class?: string;
+}
+
+const { url, title, class: className } = Astro.props;
+
+const encodedUrl = encodeURIComponent(url);
+const encodedTitle = encodeURIComponent(title);
+
+const links = [
+  {
+    name: 'X',
+    href: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
+    label: 'Share on X',
+  },
+  {
+    name: 'Facebook',
+    href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+    label: 'Share on Facebook',
+  },
+  {
+    name: 'Reddit',
+    href: `https://www.reddit.com/submit?url=${encodedUrl}&title=${encodedTitle}`,
+    label: 'Share on Reddit',
+  },
+  {
+    name: 'WhatsApp',
+    href: `https://wa.me/?text=${encodedTitle}%20${encodedUrl}`,
+    label: 'Share on WhatsApp',
+  },
+  {
+    name: 'Telegram',
+    href: `https://t.me/share/url?url=${encodedUrl}&text=${encodedTitle}`,
+    label: 'Share on Telegram',
+  },
+];
+---
+
+<div class:list={['share-buttons', className]} data-share-root>
+  <p class="share-buttons__label">Share</p>
+  <ul class="share-buttons__list">
+    {links.map((item) => (
+      <li>
+        <a
+          href={item.href}
+          class="share-buttons__link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={item.label}
+        >
+          {item.name}
+        </a>
+      </li>
+    ))}
+    <li>
+      <button type="button" class="share-buttons__link share-buttons__copy" data-share-copy aria-label="Copy page link">
+        Copy link
+      </button>
+    </li>
+    <li>
+      <a
+        href={`https://discord.com/channels/@me`}
+        class="share-buttons__link"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Open Discord to paste this link"
+        title="Copy the link, then paste in Discord"
+      >
+        Discord
+      </a>
+    </li>
+  </ul>
+</div>
+
+<script>
+  function initShareCopy() {
+    document.querySelectorAll<HTMLElement>('[data-share-root]').forEach((root) => {
+      const btn = root.querySelector<HTMLButtonElement>('[data-share-copy]');
+      if (!btn || btn.dataset.ready === 'true') return;
+      btn.dataset.ready = 'true';
+      btn.addEventListener('click', async () => {
+        const url = window.location.href;
+        try {
+          await navigator.clipboard.writeText(url);
+          const prev = btn.textContent;
+          btn.textContent = 'Copied';
+          window.setTimeout(() => {
+            btn.textContent = prev;
+          }, 2000);
+        } catch {
+          window.prompt('Copy this link:', url);
+        }
+      });
+    });
+  }
+  initShareCopy();
+  document.addEventListener('astro:page-load', initShareCopy);
+</script>

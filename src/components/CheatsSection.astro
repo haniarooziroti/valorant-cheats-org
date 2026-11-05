@@ -5,6 +5,7 @@ import { cheatTierIcons } from '../data/sectionIcons';
 import SectionHeader from './SectionHeader.astro';
 import CatalogCard from './CatalogCard.astro';
 import { cheatPath } from '../utils/path';
+import { catalogCheckoutLabel, catalogDetailsLabel } from '../utils/linkLabels';
 
 const s = t.cheats;
 ---
@@ -25,8 +26,8 @@ const s = t.cheats;
           icon={cheatTierIcons[cheat.name] ?? 'crosshair'}
           badge={cheat.badge}
           variant={cheat.variant}
-          buyLabel="Buy now"
-          viewLabel="View details"
+          buyLabel={catalogCheckoutLabel(cheat.title)}
+          viewLabel={catalogDetailsLabel(cheat.title)}
         />
       ))}
     </div>
