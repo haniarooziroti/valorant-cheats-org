@@ -135,7 +135,10 @@ function bootSite() {
   }
 
   if (document.querySelector('[data-product-gallery]')) {
-    import('./product-gallery.ts').then(({ initProductGalleries }) => initProductGalleries());
+    import('./product-gallery.ts').then(({ initProductGalleries }) => {
+      initProductGalleries();
+      document.addEventListener('astro:after-swap', initProductGalleries);
+    });
   }
 }
 

@@ -1,11 +1,11 @@
 {
-  "name": "mw4-cheat--org",
+  "name": "valorant-cheats--org",
   "compatibility_date": "2026-10-29",
   "assets": {
     "directory": "./dist"
   },
   "build": {
-    "command": "npm run build",
+    "command": "npm run build:workers",
     "cwd": "."
   }
 }

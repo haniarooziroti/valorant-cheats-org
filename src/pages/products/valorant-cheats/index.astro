@@ -6,15 +6,13 @@ import { productHub, productPages } from '../../../data/products';
 import { cheatTierIcons, productCategoryIcons } from '../../../data/sectionIcons';
 import { resolvePageSeo } from '../../../config/seo';
 import { breadcrumbSchema, collectionPageSchema, itemListSchema } from '../../../utils/schema';
+import { CRUMB } from '../../../config/breadcrumbs';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import CatalogCard from '../../../components/CatalogCard.astro';
 import { productPath } from '../../../utils/path';
 
 const seo = resolvePageSeo('/products/valorant-cheats/');
-const breadcrumbs = [
-  { name: 'Home', path: '/' },
-  { name: 'Products', path: productHub.path },
-];
+const breadcrumbs = [CRUMB.home, CRUMB.products];
 
 function cardIcon(product: (typeof productPages)[number]) {
   if (product.kind === 'tier') {
@@ -54,7 +52,7 @@ function cardLabel(product: (typeof productPages)[number]) {
       <Breadcrumbs items={breadcrumbs} />
 
       <div class="mt-6 max-w-3xl space-y-3">
-        <h1 class="text-3xl font-bold uppercase md:text-4xl">Valorant Cheats – Full Feature List</h1>
+        <h1 class="text-3xl font-bold uppercase md:text-4xl">Valorant Cheats – aimbot, wallhack modules</h1>
         <p class="mt-2 text-lg text-muted-foreground">{t.products.subtitle}</p>
       </div>
 

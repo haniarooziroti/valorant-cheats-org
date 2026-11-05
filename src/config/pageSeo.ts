@@ -9,24 +9,24 @@ export interface PageSeoEntry {
 
 export const PAGE_SEO: Record<string, PageSeoEntry> = {
   '/': {
-    title: 'Valorant Esp, Aimbot & Wallhack',
+    title: 'Valorant – ESP, Aimbot & Wallhack Tools for PC Ranked',
     description:
       'Valorant cheats with ESP, aimbot, and wallhack tools for PC ranked and unrated. Compare modules, read forums, and continue to secure checkout.',
   },
   '/products/valorant-cheats/': {
-    title: 'Valorant Cheats — Aimbot, ESP & Wallhack Modules',
+    title: 'Valorant Cheats – Compare Aimbot, ESP Before Checkout',
     description:
       'Valorant cheat modules for aimbot, ESP wallhack, triggerbot, radar hack, and no recoil—compare features before checkout.',
   },
   '/products/valorant-cheats/aimbot/': {
-    title: 'Valorant Aimbot — Soft Aim & FOV Tuning',
+    title: 'Aimbot – Soft Aim, FOV Tuning & Module Checkout Access',
     description:
       'Valorant aimbot with FOV circle, smoothing, and visibility checks for ranked duels—transactional module details and checkout access.',
   },
   '/products/valorant-cheats/esp/': {
-    title: 'Valorant ESP & Wallhack — Agent Boxes',
+    title: 'ESP – Agent Boxes, Health & Skeleton for Valorant PC',
     description:
-      'Valorant ESP and wallhack overlays with health, distance, and skeleton options tuned for readable comp games.',
+      'Valorant ESP and wallhack overlays with health, distance, and skeleton options tuned for readable comp games on PC ranked queues.',
   },
   '/products/valorant-cheats/triggerbot/': {
     title: 'Valorant Triggerbot — Delay & Hold Key',
@@ -44,9 +44,9 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
       'Valorant no recoil helpers for Vandal and Phantom bursts—light spray control that pairs with aimbot modules.',
   },
   '/reviews/': {
-    title: 'Valorant Cheat Reviews — 100+ Player Feedback',
+    title: 'Reviews – I keep aim on a key and only flick it for close',
     description:
-      'Valorant cheat reviews on aimbot, ESP, wallhack, triggerbot, loader setup, and support from verified PC players.',
+      'Valorant cheat reviews on aimbot, ESP, wallhack, triggerbot, loader setup, and support from verified PC players on Windows 10 and 11.',
   },
   '/status/': {
     title: 'Valorant Cheat Status — Online After Patches',
@@ -54,19 +54,19 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
       'Live Valorant cheat module status for aimbot, ESP, and radar on PC. Check before ranked after a Riot patch.',
   },
   '/forum/': {
-    title: 'Valorant Cheat Forums — Setup & Feature Talk',
+    title: 'Forums – Browse threads before you change defaults or buy',
     description:
-      'Valorant cheat forums with aimbot settings, ESP layouts, triggerbot delay, and checkout threads from PC players.',
+      'Valorant cheat forums with aimbot settings, ESP layouts, triggerbot delay, and checkout threads from PC players—read threads before you buy access.',
   },
   '/blog/': {
     title: 'Valorant Cheat Blog — Aimbot, ESP & Wallhack Guides',
     description:
-      'Search and filter Valorant cheat guides: aimbot tuning, player ESP, wallhack setup, Vanguard errors, checkout, patch-day status and loader fixes.',
+      'Blog: Search and filter Valorant cheat guides: aimbot tuning, player ESP, wallhack setup, Vanguard errors, checkout, patch-day status and loader fixes.',
   },
   '/faq/': {
-    title: 'Valorant Cheat FAQ — PC Setup & Access',
+    title: 'FAQ – Scan answers here first, then read module pages',
     description:
-      'Valorant cheat FAQ covers compatibility, loader steps, pricing, and account risk before you buy access.',
+      'Valorant cheat FAQ covers compatibility, loader steps, pricing, account risk, setup paths, and secure access before you open checkout on PC.',
   },
   '/terms/': {
     title: 'Terms & Conditions | Valorant Cheat',
@@ -83,12 +83,12 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
       'What valorant-cheat.org publishes about Valorant PC cheat modules, community forums, and support paths.',
   },
   '/support/': {
-    title: 'Valorant Cheat Support — Loader & Checkout Help',
+    title: 'Support – Loader, Checkout & Config Help for Valorant',
     description:
-      'Support for Valorant loader setup, configs, and secure checkout for aimbot, ESP, and radar modules on PC.',
+      'Support for Valorant loader setup, configs, and secure checkout for aimbot, ESP, and radar modules on PC—include your order email when you write in.',
   },
   '/go/valorant/': {
-    title: 'Checkout — Valorant Cheat Access',
+    title: 'Checkout – Secure Valorant Cheat Access & Partner Pay',
     description:
       'Secure Valorant cheat license checkout—compare aimbot, ESP wallhack, and radar modules, then continue to partner checkout.',
   },

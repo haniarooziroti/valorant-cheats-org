@@ -10,10 +10,11 @@ import { getBlogPostTimestamp, getBlogReadMinutes } from '../../data/blog';
 interface Props {
   post: BlogPost;
   eager?: boolean;
+  imageAlt?: string;
   class?: string;
 }
 
-const { post, eager = false, class: className } = Astro.props;
+const { post, eager = false, imageAlt, class: className } = Astro.props;
 const href = blogPostPath(post.slug);
 const timestamp = post.dateIso ? new Date(post.dateIso).getTime() : getBlogPostTimestamp(post.date);
 const readMinutes = getBlogReadMinutes(post.readTime);
@@ -34,7 +35,7 @@ const searchBlob = `${post.title} ${post.desc} ${post.tag} ${post.slug} ${(post.
     <div class="blog-card__media-shell">
       <BlogCardMedia
         src={post.image}
-        alt={post.imageAlt ?? post.title}
+        alt={imageAlt ?? post.imageAlt ?? post.title}
         title={post.title}
         category={post.tag}
         slug={post.slug}

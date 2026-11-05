@@ -2,8 +2,9 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 import { sitemapSerialize } from './src/config/sitemap.ts';
+import { getSiteOriginFromEnv } from './scripts/site-origin.mjs';
 
-const siteOrigin = (process.env.PUBLIC_SITE_ORIGIN || 'https://valorant-cheat.org').replace(/\/$/, '');
+const siteOrigin = getSiteOriginFromEnv();
 
 export default defineConfig({
   site: siteOrigin,
@@ -11,6 +12,9 @@ export default defineConfig({
   redirects: {
     '/cheats/': '/products/valorant-cheats/',
     '/contact/': '/support/',
+    '/products/': '/products/valorant-cheats/',
+    '/blogs/': '/blog/',
+    '/forums/': '/forum/',
   },
   compressHTML: true,
   prefetch: {

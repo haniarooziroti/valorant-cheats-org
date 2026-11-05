@@ -8,6 +8,12 @@
   "scripts": {
     "dev": "astro dev",
     "build": "node scripts/optimize-images.mjs && astro build && node scripts/prune-dist-images.mjs && node scripts/finalize-sitemap.mjs && node scripts/indexnow.mjs",
+    "build:core": "node scripts/optimize-images.mjs && astro build && node scripts/prune-dist-images.mjs && node scripts/finalize-sitemap.mjs && node scripts/indexnow.mjs && node scripts/verify-nav-build.mjs",
+    "verify:nav": "node scripts/verify-nav-build.mjs",
+    "proof:nav": "node scripts/proof-header.mjs",
+    "proof:nav:live": "node scripts/proof-header-live.mjs http://127.0.0.1:3000",
+    "proof:nav:pages": "node scripts/proof-nav-pages.mjs http://127.0.0.1:3000",
+    "build:workers": "node scripts/build-workers.mjs",
     "preview": "astro preview --host 0.0.0.0",
     "start": "node scripts/serve.mjs",
     "astro": "astro",

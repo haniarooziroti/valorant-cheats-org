@@ -4,15 +4,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { getAllFaqs } from '../data/faq';
 import { resolvePageSeo } from '../config/seo';
 import { breadcrumbSchema, faqPageSchema, webPageSchema } from '../utils/schema';
+import { CRUMB } from '../config/breadcrumbs';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import SiteFaqSection from '../components/SiteFaqSection.astro';
 import SectionHeader from '../components/SectionHeader.astro';
 
 const seo = resolvePageSeo('/faq/');
-const breadcrumbs = [
-  { name: 'Home', path: '/' },
-  { name: 'FAQ', path: '/faq/' },
-];
+const breadcrumbs = [CRUMB.home, CRUMB.faq];
 
 const faqs = getAllFaqs();
 ---
@@ -36,8 +34,7 @@ const faqs = getAllFaqs();
       <Breadcrumbs items={breadcrumbs} />
       <div class="mt-6">
         <header class="text-center">
-          <h1 id="faq-page-title" class="text-3xl font-bold uppercase tracking-tight md:text-4xl">Faq: Valorant Cheats</h1>
-          <p class="mt-3 text-xl font-semibold text-foreground">FAQ</p>
+          <h1 id="faq-page-title" class="text-3xl font-bold uppercase tracking-tight md:text-4xl">FAQ: Valorant setup, access &amp; modules</h1>
           <p class="mt-4 max-w-2xl mx-auto text-muted-foreground">
             This faq covers loader steps, pricing, and account risk before you open checkout. Scan answers here first, then read module pages or forum threads for deeper tuning.
           </p>
@@ -45,10 +42,6 @@ const faqs = getAllFaqs();
         </header>
       </div>
     </div>
-  </section>
-
-  <section class="mx-auto max-w-6xl px-5 pb-4">
-    <h2 class="text-center text-xl font-bold">Faq: Valorant Cheat</h2>
   </section>
 
   <SiteFaqSection items={faqs} variant="full" titleId="faq-page-list" hideSectionHeader class="faq-page-section" />

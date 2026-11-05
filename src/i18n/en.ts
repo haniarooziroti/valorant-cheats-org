@@ -1,5 +1,7 @@
 import type { Translations } from './types';
 import { PRIMARY_CHECKOUT_PATH } from '../config/checkout';
+import { DISCORD_INVITE_URL } from '../config/siteConfig';
+import { PRIMARY_NAV, HEADER_CTA_LABEL } from '../config/nav';
 import { PRODUCT_BASE } from '../config/site';
 
 const productBase = PRODUCT_BASE;
@@ -13,15 +15,7 @@ export const en: Translations = {
       'Valorant cheats on PC with aimbot, ESP, wallhack, triggerbot, and radar tools. Browse modules, read player forums, and continue to secure checkout on valorant-cheat.org.',
     discord: PRIMARY_CHECKOUT_PATH,
   },
-  nav: [
-    { href: '/', label: 'Home' },
-    { href: `${productBase}`, label: 'Products' },
-    { href: '/blog/', label: 'Blog' },
-    { href: '/forum/', label: 'Forums' },
-    { href: '/reviews/', label: 'Reviews' },
-    { href: '/faq/', label: 'FAQ' },
-    { href: '/support/', label: 'Support' },
-  ],
+  nav: PRIMARY_NAV,
   forumHome: {
     eyebrow: 'Community',
     title: 'Forums where Valorant players compare configs',
@@ -37,7 +31,7 @@ export const en: Translations = {
     subtitle:
       'Tactical overlays, tuned aim assist, and agent ESP that stays readable in ranked and unrated—explore modules, compare settings in the forum, and upgrade your PC sessions without cluttering the screen.',
     ctaPrimary: 'Explore modules',
-    ctaDiscord: 'Get access',
+    ctaDiscord: 'Join Discord',
     modesLabel: 'Playlists',
     modes: ['Competitive', 'Unrated', 'Swiftplay', 'Premier'],
     metrics: [
@@ -263,7 +257,7 @@ export const en: Translations = {
   },
   blog: {
     eyebrow: 'Blog',
-    title: 'Valorant cheat blog',
+    title: 'Valorant cheat blog — aimbot, wallhack guides',
     subtitle:
       'Valorant aimbot, ESP and wallhack guides for PC — setup, patch-day checks, Vanguard troubleshooting and checkout walkthroughs, written for players who are ready to buy.',
     latestTitle: 'Latest articles',
@@ -343,22 +337,15 @@ export const en: Translations = {
   },
   support: {
     eyebrow: 'Support',
-    title: 'Valorant Cheat support',
+    title: 'Valorant support — loader, checkout help & configs',
     subtitle: 'Loader, checkout, and config help for PC players.',
     channels: [
       {
         icon: 'users',
         title: 'Before checkout',
         desc: 'Compare modules and pricing on the products hub.',
-        linkLabel: 'Get access',
-        href: PRIMARY_CHECKOUT_PATH,
-      },
-      {
-        icon: 'headphones',
-        title: 'Email support',
-        desc: 'Loader delivery, secure boot, and license questions.',
-        linkLabel: 'support@valorant-cheat.org',
-        href: 'mailto:support@valorant-cheat.org',
+        linkLabel: 'Join Discord',
+        href: DISCORD_INVITE_URL,
       },
       {
         icon: 'navFaq',
@@ -425,11 +412,12 @@ export const en: Translations = {
     exploreLinks: [
       { href: '/', label: 'Feature overview', ariaLabel: 'Features', scrollTarget: 'features' },
       { href: `${productBase}aimbot/`, label: 'Valorant aimbot module', ariaLabel: 'Aimbot' },
-      { href: productBase, label: 'All modules', ariaLabel: 'Products' },
+      { href: productBase, label: 'Full module catalog', ariaLabel: 'Products' },
       { href: '/blog/', label: 'Valorant cheat blog', ariaLabel: 'Blog' },
       { href: '/forum/', label: 'Community forum', ariaLabel: 'Forums' },
       { href: '/reviews/', label: 'Player reviews', ariaLabel: 'Reviews' },
       { href: '/faq/', label: 'Pre-purchase FAQ', ariaLabel: 'FAQ' },
+      { href: '/about/', label: 'About this site', ariaLabel: 'About' },
     ],
     support: 'Support',
     legal: 'Legal',
@@ -565,11 +553,11 @@ export const en: Translations = {
   },
   ui: {
     skipLink: 'Skip to main content',
-    browseCheats: 'Get access',
-    browseCheatsMobile: 'Get access',
+    browseCheats: HEADER_CTA_LABEL,
+    browseCheatsMobile: HEADER_CTA_LABEL,
     homeAria: 'Valorant Cheat home',
     checkoutAria: 'Secure checkout',
-    discordAria: 'Open checkout',
+    discordAria: 'Join Discord server',
     menuOpen: 'Open menu',
     menuClose: 'Close menu',
     themeLight: 'Switch to light mode',

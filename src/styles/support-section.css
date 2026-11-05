@@ -7,6 +7,16 @@
   margin: 0;
 }
 
+.support-section--centered .support-section__header {
+  max-width: 48rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.support-section--centered .section-header__subtitle {
+  margin-inline: auto;
+}
+
 .support-section__cards {
   display: grid;
   gap: 1.25rem;

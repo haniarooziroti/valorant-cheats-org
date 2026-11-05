@@ -12,16 +12,14 @@ import {
   itemListSchema,
 } from '../../utils/schema';
 import { blogPostPath } from '../../utils/path';
+import { CRUMB } from '../../config/breadcrumbs';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import BlogCard from '../../components/blog/BlogCard.astro';
 import BlogFilters from '../../components/blog/BlogFilters.astro';
 import { Button } from '@/components/starwind/button';
 
 const seo = resolvePageSeo('/blog/');
-const breadcrumbs = [
-  { name: 'Home', path: '/' },
-  { name: 'Blog', path: '/blog/' },
-];
+const breadcrumbs = [CRUMB.home, CRUMB.blog];
 
 const allPosts = await loadBlogPosts();
 const articleCount = allPosts.length;
@@ -49,6 +47,7 @@ const itemList = itemListSchema(
       <header class="blog-page__header">
         <p class="blog-page__eyebrow text-sm font-semibold uppercase tracking-wider text-primary">{t.blog.eyebrow}: Valorant Cheats</p>
         <h1 class="blog-page__title">{t.blog.title}</h1>
+        <h2 class="mt-3 text-xl font-semibold text-foreground">Blog: Valorant Cheats</h2>
         <p class="blog-page__intro">{t.blog.subtitle}</p>
       </header>
 
@@ -62,7 +61,11 @@ const itemList = itemListSchema(
 
       <div id="blog-grid" class="blog-grid" aria-live="polite">
         {allPosts.map((post, index) => (
-          <BlogCard post={post} eager={index === 0} />
+          <BlogCard
+            post={post}
+            eager={index === 0}
+            imageAlt={index === 0 ? 'Blog – Valorant Cheat guide cover' : undefined}
+          />
         ))}
       </div>
 

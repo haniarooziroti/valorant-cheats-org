@@ -1,0 +1,38 @@
+---
+import { canonicalUrl } from '../config/seo';
+import Icon from './icons/Icon.astro';
+
+interface Props {
+  title: string;
+  class?: string;
+}
+
+const { title, class: className } = Astro.props;
+const pageUrl = canonicalUrl(Astro.url.pathname);
+const encodedUrl = encodeURIComponent(pageUrl);
+const encodedTitle = encodeURIComponent(title);
+const shareLinks = [
+  {
+    href: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
+    label: 'Share on X',
+  },
+  {
+    href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+    label: 'Share on Facebook',
+  },
+];
+---
+
+<nav class:list={['flex flex-wrap items-center gap-2', className]} aria-label="Share this page">
+  {shareLinks.map((link) => (
+    <a
+      href={link.href}
+      class="inline-flex items-center gap-1.5 rounded-lg border border-border px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <Icon name="arrowUpRight" size={14} aria-hidden="true" />
+      {link.label}
+    </a>
+  ))}
+</nav>

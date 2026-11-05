@@ -204,7 +204,7 @@ const modules: ModuleDef[] = [
   {
     slug: 'aimbot',
     name: 'Aimbot',
-    title: 'Valorant Aimbot Module',
+    title: 'Valorant Aimbot — Soft Aim & FOV Tuning Module',
     subtitle: 'Smooth aim inside your FOV ring',
     desc: 'Precision aim assist for Valorant PC multiplayer with circle FOV, smoothing, and visibility checks.',
     features: ['Adjustable aim circle', 'Head or chest priority', 'Team and downed filters', 'Shared wall logic'],
@@ -237,7 +237,7 @@ const modules: ModuleDef[] = [
   {
     slug: 'esp',
     name: 'Player ESP',
-    title: 'Valorant ESP & Wallhack',
+    title: 'Valorant ESP & Wallhack — Agent Boxes & Health',
     subtitle: 'Readable boxes, health, and skeleton',
     desc: 'Player ESP for Valorant with armor plates, distance, weapon readouts, and squad colors tuned for fast TTK playlists.',
     features: ['Box or corner style', 'Health and plates', 'Skeleton option', 'Squad color coding'],

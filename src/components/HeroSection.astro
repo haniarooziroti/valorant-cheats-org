@@ -1,5 +1,6 @@
 ---
 import { t } from '../i18n';
+import { DISCORD_INVITE_URL } from '../config/siteConfig';
 import { ROUTES } from '../utils/path';
 import { compatibilityIcons, heroStatIcons, heroStatusPills } from '../data/sectionIcons';
 import ImageSlider from './ImageSlider.astro';
@@ -57,7 +58,7 @@ const heroMarqueePills = [
           </Button>
           <Button
             as="a"
-            href={t.site.discord}
+            href={DISCORD_INVITE_URL}
             variant="secondary"
             size="lg"
             class="rounded-xl"

@@ -25,7 +25,7 @@ const productsHub = link('Valorant modules', ROUTES.products);
 const aimPage = link('Valorant aimbot page', productPath('aimbot'));
 const espPage = link('player ESP page', productPath('esp'));
 const faqPage = link('full FAQ', ROUTES.faq);
-const forum = link('community forum', ROUTES.forum);
+const forum = link('player discussion board', ROUTES.forum);
 
 export const siteFaqs: SiteFaqItem[] = [
   {

@@ -1,5 +1,18 @@
 import { DEFAULT_IMAGE_WIDTHS, defaultWebpSrc, responsiveSrcSet } from '../utils/responsiveImage';
 
+function setGalleryMainImage(main: HTMLImageElement, baseSrc: string, alt: string) {
+  const src = defaultWebpSrc(baseSrc, DEFAULT_IMAGE_WIDTHS);
+  const srcset = responsiveSrcSet(baseSrc, DEFAULT_IMAGE_WIDTHS);
+  main.src = src;
+  main.srcset = srcset;
+  main.alt = alt;
+
+  const source = main.closest('picture')?.querySelector('source');
+  if (source) {
+    source.srcset = srcset;
+  }
+}
+
 export function initProductGalleries() {
   document.querySelectorAll<HTMLElement>('[data-product-gallery]').forEach((root) => {
     if (root.dataset.galleryBound === 'true') return;
@@ -13,10 +26,8 @@ export function initProductGalleries() {
       const baseSrc = thumb.getAttribute('data-src');
       const alt = thumb.getAttribute('data-alt') ?? '';
       if (baseSrc) {
-        main.src = defaultWebpSrc(baseSrc, DEFAULT_IMAGE_WIDTHS);
-        main.srcset = responsiveSrcSet(baseSrc, DEFAULT_IMAGE_WIDTHS);
+        setGalleryMainImage(main, baseSrc, alt);
       }
-      main.alt = alt;
       thumbs.forEach((t) => {
         const active = t === thumb;
         t.classList.toggle('is-active', active);

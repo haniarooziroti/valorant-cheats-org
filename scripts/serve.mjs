@@ -102,7 +102,8 @@ function getCacheControl(filePath) {
   }
 
   if (ext === '.html') {
-    return 'public, max-age=3600, must-revalidate';
+    // Local preview: avoid browsers keeping stale nav/HTML after rebuilds.
+    return 'no-cache, no-store, must-revalidate';
   }
 
   if (ext === '.webmanifest' || ext === '.xml') {
@@ -196,5 +197,6 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, '0.0.0.0', () => {
-  console.log(`Serving ${distDir} on http://0.0.0.0:${port} (gzip/br enabled)`);
+  console.log(`Serving ${distDir} on http://127.0.0.1:${port} (gzip/br enabled)`);
+  console.log(`Dist absolute path: ${distDir}`);
 });

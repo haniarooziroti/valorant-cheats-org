@@ -11,13 +11,14 @@ import {
 
 interface Props {
   items: BreadcrumbItem[];
+  class?: string;
 }
 
-const { items } = Astro.props;
+const { items, class: className } = Astro.props;
 ---
 
-<Breadcrumb class="mb-4">
-  <BreadcrumbList>
+<Breadcrumb class:list={['mb-4', className]}>
+  <BreadcrumbList class={className?.includes('justify-center') ? 'justify-center' : undefined}>
     {items.map((item, index) => {
       const isLast = index === items.length - 1;
       return (

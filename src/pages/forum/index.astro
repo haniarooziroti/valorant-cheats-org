@@ -4,11 +4,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Icon from '../../components/icons/Icon.astro';
 import { forumCategories, forumPosts } from '../../data/forum';
+import { CRUMB } from '../../config/breadcrumbs';
 import { resolvePageSeo } from '../../config/seo';
 import { breadcrumbSchema, collectionPageSchema } from '../../utils/schema';
 
 const seo = resolvePageSeo('/forum/');
-const breadcrumbs = [{ name: 'Home', path: '/' }, { name: 'Forums', path: '/forum/' }];
+const breadcrumbs = [CRUMB.home, CRUMB.forum];
 const categoryKey = (name: string) => name.toLowerCase().replace(/[^a-z0-9]/g, '');
 ---
 
@@ -22,8 +23,8 @@ const categoryKey = (name: string) => name.toLowerCase().replace(/[^a-z0-9]/g, '
       <header class="forum-hero">
         <div>
           <p class="section-header__eyebrow">Valorant PC community</p>
-          <h1>Valorant cheat forums — setup, aimbot &amp; ESP talk</h1>
-          <p class="forum-hero__copy">Aim tuning, ESP layouts, trigger timing, checkout questions, and honest player experiences. Browse threads before you change defaults or buy access.</p>
+          <h1>Valorant cheat forums — setup, feature, aimbot &amp; ESP talk</h1>
+          <p class="forum-hero__copy">Aim tuning, ESP layouts, trigger timing, checkout questions, and honest player experiences. Browse forums before you change defaults or buy access.</p>
           <p class="forum-hero__copy mt-2">New here? Read setup threads before you change defaults, then compare modules on the product hub.</p>
         </div>
         <a class="forum-create" href="/products/valorant-cheats/"><Icon name="package" size={17} /> Compare modules</a>
@@ -69,8 +70,9 @@ const categoryKey = (name: string) => name.toLowerCase().replace(/[^a-z0-9]/g, '
                   <p class="forum-post-excerpt">{post.excerpt}</p>
                   <div class="forum-post-actions">
                     {post.flair && <span class={`forum-flair tone-${post.categoryTone}`}>{post.flair}</span>}
-                    <a href={`/forum/${post.slug}/`}><Icon name="messageCircle" size={15} /> {post.commentsCount} replies</a>
-                    <a href={`/forum/${post.slug}/`}><Icon name="arrowRight" size={15} /> Read thread</a>
+                    <a href={`/forum/${post.slug}/`} aria-label={`Open thread: ${post.title}`}>
+                      <Icon name="messageCircle" size={15} /> {post.commentsCount} replies on this thread
+                    </a>
                   </div>
                 </div>
               </article>

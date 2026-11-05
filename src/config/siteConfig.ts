@@ -7,7 +7,8 @@ export const SITE_URL = 'https://valorant-cheats.org';
 export const SITE_DOMAIN = 'valorant-cheats.org';
 
 export const PRODUCT_URL = '/products/valorant-cheats/';
-export const CHECKOUT_URL = '/go/valorant/';
+export const CHECKOUT_URL = 'https://zadeyo.com/go/HANIA?to=%2Fproducts%2Fvalorant';
+export const DISCORD_INVITE_URL = 'https://discord.com/invite/Vu85F8auQS';
 export const FORUM_URL = '/forum/';
 export const FAQ_URL = '/faq/';
 export const SUPPORT_URL = '/support/';

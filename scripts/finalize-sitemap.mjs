@@ -1,7 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { getSiteOriginFromEnv } from './site-origin.mjs';
 
-const SITE_URL = 'https://mw4cheat.org';
+const SITE_URL = getSiteOriginFromEnv();
 const root = process.cwd();
 const dist = path.join(root, 'dist');
 const source = path.join(dist, 'sitemap-0.xml');
@@ -12,11 +13,19 @@ if (!fs.existsSync(source)) {
 }
 
 let raw = fs.readFileSync(source, 'utf8');
-raw = raw.replace(/https:\/\/mw4-cheat--org\.hania-rooziroti\.workers\.dev/gi, SITE_URL);
-raw = raw.replace(/<loc>(?!https:\/\/)([^<]+)<\/loc>/g, (_, path) => {
-  const normalized = path.startsWith('/') ? path : `/${path}`;
-  return `<loc>${SITE_URL}${normalized}</loc>`;
+
+raw = raw.replace(/<loc>([^<]+)<\/loc>/g, (_, loc) => {
+  let pathname = '/';
+  try {
+    const parsed = new URL(loc.trim(), SITE_URL);
+    pathname = parsed.pathname || '/';
+  } catch {
+    pathname = loc.trim().startsWith('/') ? loc.trim() : `/${loc.trim()}`;
+  }
+  if (pathname !== '/' && !pathname.endsWith('/')) pathname = `${pathname}/`;
+  return `<loc>${SITE_URL}${pathname === '/' ? '/' : pathname}</loc>`;
 });
+
 const urlCount = (raw.match(/<url>/g) ?? []).length;
 
 if (urlCount === 0) {
@@ -43,6 +52,7 @@ function formatUrlset(xml) {
 
 const formatted = formatUrlset(raw);
 fs.writeFileSync(path.join(dist, 'sitemap.xml'), formatted, 'utf8');
+fs.writeFileSync(path.join(dist, 'sitemap-0.xml'), formatted, 'utf8');
 
 const indexXml = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -53,6 +63,13 @@ const indexXml = `<?xml version="1.0" encoding="UTF-8"?>
 </sitemapindex>
 `;
 fs.writeFileSync(path.join(dist, 'sitemap-index.xml'), indexXml, 'utf8');
-fs.writeFileSync(path.join(dist, 'sitemap-0.xml'), formatted, 'utf8');
 
-console.log(`Sitemap finalized: ${urlCount} URLs → dist/sitemap.xml`);
+const robots = `User-agent: *
+Allow: /
+
+Sitemap: ${SITE_URL}/sitemap.xml
+`;
+fs.writeFileSync(path.join(dist, 'robots.txt'), robots, 'utf8');
+fs.writeFileSync(path.join(root, 'public', 'robots.txt'), robots, 'utf8');
+
+console.log(`Sitemap finalized: ${urlCount} URLs at ${SITE_URL}/sitemap.xml`);

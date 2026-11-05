@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { CRUMB } from '../../../config/breadcrumbs';
 import { getAllProductSlugs, getProductPage, productHub } from '../../../data/products';
 import { getPageSeoEntry } from '../../../config/pageSeo';
 import { pageTitle } from '../../../config/seo';
@@ -25,8 +26,8 @@ const metaTitle = seoEntry?.title ?? pageTitle(product.title);
 const metaDescription = seoEntry?.description ?? product.desc;
 const relatedForums = getRelatedForumPostsForProduct(product.relatedForumSlugs, 3);
 const breadcrumbs = [
-  { name: 'Home', path: '/' },
-  { name: 'Products', path: productHub.path },
+  CRUMB.home,
+  CRUMB.products,
   { name: product.title, path: pagePath },
 ];
 ---

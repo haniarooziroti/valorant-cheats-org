@@ -4,6 +4,7 @@ import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import { Button } from '@/components/starwind/button';
 import { Prose } from '@/components/starwind/prose';
 import { CHECKOUT } from '../../../config/checkout';
+import { CRUMB } from '../../../config/breadcrumbs';
 import { resolvePageSeo } from '../../../config/seo';
 import { breadcrumbSchema, organizationSchema, webPageSchema } from '../../../utils/schema';
 import { ROUTES } from '../../../utils/path';
@@ -11,9 +12,9 @@ import { ROUTES } from '../../../utils/path';
 const checkoutUrl = CHECKOUT.valorant;
 const seo = resolvePageSeo('/go/valorant/');
 const breadcrumbs = [
-  { name: 'Home', path: '/' },
-  { name: 'Products', path: '/products/valorant-cheats/' },
-  { name: 'Checkout', path: '/go/valorant/' },
+  CRUMB.home,
+  CRUMB.products,
+  CRUMB.checkout,
 ];
 ---
 
@@ -34,7 +35,7 @@ const breadcrumbs = [
     <div class="mx-auto max-w-3xl px-5">
       <Breadcrumbs items={breadcrumbs} />
       <header class="mt-6 space-y-4 text-center">
-        <h1 class="text-3xl font-bold md:text-4xl">Continue to Valorant cheat checkout</h1>
+        <h1 class="text-3xl font-bold md:text-4xl">Valorant cheat checkout — secure access</h1>
         <p class="text-lg text-muted-foreground">
           Review what is included, then continue to the partner payment page for your license key and loader access.
         </p>
@@ -44,7 +45,8 @@ const breadcrumbs = [
       </header>
 
       <Prose class="mt-10 max-w-none text-left">
-        <h2>What your order includes</h2>
+        <h2>Checkout: Valorant Cheat</h2>
+        <h3>What your order includes</h3>
         <p>
           Checkout routes you to a licensed partner page where you pick monthly or lifetime access for Valorant PC modules—aimbot,
           ESP wallhack, triggerbot, radar hack, and no recoil helpers. Use the same email for payment and delivery so support can
@@ -52,27 +54,27 @@ const breadcrumbs = [
         </p>
         <p>
           Before you pay, compare <a href="/products/valorant-cheats/">Valorant cheat modules</a> and read{' '}
-          <a href="/forum/">forum threads</a> on conservative defaults for ranked and unrated.
+          <a href="/forum/">PC player discussion threads</a> on conservative defaults for ranked and unrated.
         </p>
 
-        <h2>Steps before you pay</h2>
+        <h3>Steps before you pay</h3>
         <p>
           Read the <a href="/faq/">FAQ</a> on compatibility, loader order, and account risk. Choose the tier that fits your act,
           finish payment, then follow the delivery email to install on Windows 10 or 11.
         </p>
         <p>
-          If payment fails or your key does not arrive, contact <a href="/support/">support</a> with your order email and any loader
+          If payment fails or your key does not arrive, contact <a href="/support/">loader help desk</a> with your order email and any loader
           error text. Card numbers are not stored on valorant-cheat.org.
         </p>
 
-        <h2>After you purchase</h2>
+        <h3>After you purchase</h3>
         <p>
           Import a starter config, test in the range or unrated, then tune aimbot smoothness and ESP density. Player{' '}
-          <a href="/reviews/">reviews</a> and <a href="/forum/">forums</a> share patch-day notes—check the homepage status before
+          <a href="/reviews/">verified player write-ups</a> and <a href="/forum/">community threads</a> share patch-day notes—check the homepage status before
           ranked queues.
         </p>
         <p>
-          Ready to finish? Use the button above or return to <a href={ROUTES.home}>the homepage</a> to verify module status.
+          Ready to finish? Use the button above or return to <a href={ROUTES.home}>the Valorant homepage</a> to verify module status.
         </p>
 
         <h3>Before you leave</h3>

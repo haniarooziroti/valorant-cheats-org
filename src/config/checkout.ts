@@ -16,14 +16,18 @@ export const CHECKOUT_SLUG_TO_PRODUCT = Object.fromEntries(
 ) as Record<string, CheckoutProduct>;
 
 export function checkoutPath(product: CheckoutProduct = 'valorant'): string {
-  return `/go/${CHECKOUT_SLUGS[product]}/`;
+  return CHECKOUT[product];
 }
 
-export const PRIMARY_CHECKOUT_PATH = checkoutPath('valorant');
+/** Visible buy / get-access buttons use the partner checkout URL directly. */
+export const PRIMARY_CHECKOUT_PATH = CHECKOUT.valorant;
 
 export function checkoutForSlug(_slug: string): string {
-  return checkoutPath('valorant');
+  return CHECKOUT.valorant;
 }
+
+/** SEO landing page path (not used as primary button href). */
+export const CHECKOUT_LANDING_PATH = '/go/valorant/';
 
 export function resolveCheckoutHref(href: string): string {
   if (!href.startsWith('http')) {
