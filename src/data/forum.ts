@@ -222,7 +222,7 @@ export const forumPosts: ForumPost[] = [
     slug: 'monthly-vs-lifetime-valorant',
     category: 'Setup',
     categoryTone: 'purple',
-    title: 'Monthly vs lifetime Valorant cheat key—which did you pick?',
+    title: 'Monthly vs lifetime Valorant cheat access—which did you pick?',
     excerpt: 'Price gap hurts. play most nights but might skip an act.',
     author: 'budget_act',
     age: 'Aug 14, 2025',

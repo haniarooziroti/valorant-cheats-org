@@ -98,7 +98,7 @@ const relatedPosts = [
               <div class="forum-about__title"><span class={`forum-community-avatar tone-${post.categoryTone}`}>m</span><h2>{sidebarHeading}</h2></div>
               <p>More threads on {post.category.toLowerCase()} settings and Valorant PC play.</p>
               <div class="forum-stats"><span><b>{forumPosts.length}</b> threads</span><span><b>{forumPosts.filter((item) => item.category === post.category).length}</b> in this topic</span></div>
-              <a class="forum-join" href="/forum/">Return to forum index</a>
+              <a class="forum-join" href="/forum/">Back to the forum</a>
             </div>
           </section>
           <section class="forum-side-card forum-related-card" aria-labelledby="forum-related-title">
@@ -114,7 +114,7 @@ const relatedPosts = [
                 </li>
               ))}
             </ul>
-            <a class="forum-related-card__all" href="/forum/">Browse every forum thread <Icon name="arrowRight" size={14} /></a>
+            <a class="forum-related-card__all" href="/products/valorant-cheats/">Compare Valorant modules <Icon name="arrowRight" size={14} /></a>
           </section>
         </aside>
       </div>

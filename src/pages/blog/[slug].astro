@@ -77,8 +77,8 @@ const layoutTitle = postSeo?.title ?? pageTitle(post.title, 'Valorant Cheats');
 const layoutDescription = postSeo?.description ?? post.desc;
 const keywordHeading = postSeo?.keywordHeading;
 const ogImage = post.image || OG_DEFAULT_IMAGE;
-const productCtaLabel = `Open module hub (${post.slug})`;
-const pricingCtaLabel = `See checkout pricing (${post.slug})`;
+const productCtaLabel = 'Compare Valorant modules';
+const pricingCtaLabel = 'Continue to secure checkout';
 
 const faqItems = (entry.data.faq ?? []).map((item, i) => ({
   id: `blog-faq-${i}`,
@@ -155,7 +155,7 @@ const riskNote =
               <Icon name="package" size={20} />
             </div>
             <div class="blog-post-cta__body">
-              <h3 class="blog-post-cta__title">Get Valorant access</h3>
+              <h2 class="blog-post-cta__title">Get Valorant access</h2>
               <p class="blog-post-cta__text">
                 Compare modules on the product hub, then continue to checkout for monthly or lifetime keys.
               </p>

@@ -5,6 +5,7 @@ const checks = [
   ['about', 'dist/about/index.html'],
   ['buy', 'dist/blog/buy-valorant-cheats/index.html'],
   ['aimbot', 'dist/blog/valorant-aimbot-setup/index.html'],
+  ['monthly', 'dist/forum/monthly-vs-lifetime-valorant/index.html'],
 ];
 
 for (const [name, path] of checks) {

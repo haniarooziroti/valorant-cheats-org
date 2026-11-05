@@ -1,5 +1,5 @@
 ---
-title: 'Valorant cheats: checkout to first launch guide in 2026'
+title: 'Valorant cheats: buying access for the first time — checkout to first launch guide in 2026'
 description: >-
   Buying access for the first time? Here's how checkout, delivery and first
   launch work, plus what to check on your PC before you pay.
@@ -50,4 +50,4 @@ Read our [Terms & Conditions](/terms/) for refund rules. <!-- TODO: add refund p
 - Using a main account for testing
 
 ## Next step
-Ready? [Try checkout from buy guide](/go/valorant/). Questions first? Ask on the [forum](/forum/) or read the [FAQ](/faq/).
+Ready? [Continue to checkout](/go/valorant/). Questions first? Ask on the [community forum](/forum/) or read the [pre-purchase FAQ](/faq/).
