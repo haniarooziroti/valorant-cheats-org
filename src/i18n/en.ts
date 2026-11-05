@@ -435,29 +435,41 @@ export const en: Translations = {
           heading: 'What this site covers',
           paragraphs: [
             'valorant-cheat.org documents aim assist, player ESP, triggerbot, radar, and no recoil tools for Valorant on PC. We focus on module comparisons, conservative defaults, and player-written threads—not hype.',
-            'Browse community posts before you buy if you want honest setup talk from people running the same modules.',
+            'The <a href="/products/valorant-cheats/">PC module comparison hub</a> breaks out aimbot, ESP, triggerbot, radar, and no recoil pages with feature lists, preset ideas, and Try now checkout links. The homepage feature grid describes the same modules in plain language—FOV rings, box styles, radar zoom, trigger delay, and recoil presets you can verify before you pay.',
+            'Browse community posts before you buy if you want honest setup talk from people running the same modules. Player review pages collect short write-ups when members want to share how a module felt in ranked—not marketing copy.',
             'Game names and trademarks belong to their owners and are used for identification only.',
           ],
         },
         {
           heading: 'How content is updated',
           paragraphs: [
-            'Product pages and community threads reflect current module behavior after patches. Check the homepage status note before you launch following a game update.',
-            'Blog guides and pinned threads are refreshed when loader steps or default configs change so newcomers are not stuck on outdated screenshots.',
+            'Product pages and community threads reflect current module behavior after patches. Check the <a href="/">patch-day status on the homepage</a> before you launch following a game update.',
+            'Blog guides and pinned threads are refreshed when loader steps or default configs change so newcomers are not stuck on outdated screenshots. When a loader flow changes, we update the relevant <a href="/blog/">setup blog articles</a> and cross-link from module pages so the first-run path stays consistent.',
+            'Forum threads often carry the fastest patch-day notes—players flag when a default preset stops matching live recoil or when ESP colors need tweaking after a UI change.',
           ],
         },
         {
           heading: 'Community discussion',
           paragraphs: [
-            'Use the forum for feature questions that are too specific for FAQ entries—aim circle tuning, ESP colors, trigger timing, and billing timing.',
+            'Use the <a href="/forum/">Valorant cheat discussion forum</a> for feature questions that are too specific for FAQ entries—aim circle tuning, ESP colors, trigger timing, and billing timing.',
             'Moderation is light: keep replies on-topic and avoid sharing license keys or loader downloads in public threads.',
-            'Long-form setup notes live in forum threads; quick comparisons stay in discussion posts where players share patch-day notes.',
+            'Long-form setup notes live in forum threads; quick comparisons stay in discussion posts where players share patch-day notes. If you are comparing monthly versus lifetime access windows, search existing threads before opening a duplicate topic—the FAQ summarizes the plan difference, but players often explain how they use each window in practice.',
           ],
         },
         {
-          heading: 'Support',
+          heading: 'Before you purchase',
           paragraphs: [
-            'Loader, billing, and license questions go through email support. Include your order email, Windows version, and any loader error text.',
+            'Read <a href="/faq/">questions answered before checkout</a> for loader steps, pricing windows, supported platforms, and account risk. Valorant on PC with Windows 10 or 11 is what the site documents; console play is not covered here.',
+            'Checkout and license delivery run on external pages—valorant-cheat.org does not store payment card numbers. After purchase, the license email is what unlocks loader access; test privately before you queue ranked.',
+            'Third-party tools in multiplayer carry ban risk. The FAQ states that plainly so you can decide before you pay. Sales are final once checkout completes except where law requires otherwise; replacement access may be offered when a fault is confirmed on a supported setup—see <a href="/terms/">license and refund terms</a> for the full rules.',
+          ],
+        },
+        {
+          heading: 'Support and loader help',
+          paragraphs: [
+            'Loader, billing, and license questions go through email on the <a href="/support/">Support contact page</a>. Include your order email, Windows version, and any loader error text so support can reproduce the issue without back-and-forth.',
+            'Hardware swaps are handled case by case when you contact support with the same order email—do not share keys in forum posts.',
+            'Privacy questions about analytics or cookies are separate from loader tickets; use the Support page and reference the Privacy Policy when the issue is data-related, not license-related.',
           ],
         },
       ],
