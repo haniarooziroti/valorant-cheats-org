@@ -58,6 +58,8 @@ export const forumPosts: ForumPost[] = [
     body: [
       'I am not trying to meme configs. I just want Valorant aimbot settings that still look like I am tracking with my hand when someone watches the replay.',
       'Are you running soft aim low FOV on Vandal or widening the circle for Spectre fights? Curious what people settled on after the last agent patch.',
+      'For context: checkout here covers the same module list as lifetime keys—aim assist, ESP, triggerbot, radar, and no recoil—delivered through the loader after your license email lands. I am only tuning after that delivery step worked.',
+      'I read the bone and smoothing starting table on the aim assist setup guide before touching ranked. Deathmatch first, then one unrated match, then comp—same order support suggests when someone opens a ticket about “feels too strong.”',
     ],
     comments: [
       {
@@ -231,6 +233,8 @@ export const forumPosts: ForumPost[] = [
     body: [
       'Did lifetime people break even or regret not going monthly first?',
       'Most replies here compare how often they queue, not which modules they run—monthly and lifetime keys on the product hub include the same aimbot, ESP, triggerbot, radar, and no recoil list.',
+      'Before I paid I skimmed the buy guide for checkout email typos and the FAQ entry on what happens after purchase. License delivery is external checkout plus inbox—this thread is about which term fits play habits, not how to charge a card.',
+      'If you skip an act, monthly is the obvious trial. If you queue most nights, lifetime is fewer renewals to track—as long as you still check the homepage status note after patches before ranked.',
     ],
     comments: [
       { author: 'long_act', age: '4 days ago', score: 36, body: 'Lifetime after third monthly. same module list either way.' },

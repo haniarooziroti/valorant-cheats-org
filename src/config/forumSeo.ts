@@ -21,6 +21,8 @@ const FORUM_THREAD_SEO: Record<string, ForumThreadSeo> = {
       'If killcams still look robotic, lower strength one notch and keep hold-to-aim only. Soft assist with chest priority at mid-range usually reads cleaner than full head lock.',
       'Save a ranked profile and an unrated profile so you are not re-tuning aimbot settings every time you change playlist.',
       'After agent patches, re-test one deathmatch before competitive: FOV that worked last week can over-pull on new movement kits.',
+      'Product copy lists FOV ring, smoothing, and bone priority on the aim assist module page—those labels match what I tweak in menu. If your clip still looks robotic, compare against the setup guide table before you ask for a refund.',
+      'Delivery problems belong on the Support contact path with order email attached. This thread is for smooth level and killcam believability after the loader already runs.',
     ],
   },
   'aimbot-fov-ranked-unrated': {
