@@ -24,7 +24,6 @@ export const DESKTOP_NAV_LABEL: Record<string, string> = {
   Home: 'Valorant Cheat home',
   Products: 'Cheats catalog',
   Blog: 'Setup guides',
-  Forum: 'Player forum',
   Reviews: 'Verified reviews',
   FAQ: 'Questions & answers',
   Support: 'Help desk',
@@ -34,7 +33,6 @@ export const MOBILE_NAV_LABEL: Record<string, string> = {
   Home: 'Home — menu',
   Products: 'Valorant products — menu',
   Blogs: 'Setup guides — menu',
-  Forums: 'Player forum — menu',
   Reviews: 'Player reviews — menu',
   FAQ: 'FAQ list — menu',
   Support: 'Support desk — menu',
@@ -44,7 +42,6 @@ const BREADCRUMB_PATH_LABEL: Record<string, string> = {
   '/': 'Breadcrumb: site home',
   '/products/valorant-cheats/': 'Breadcrumb: all PC modules',
   '/blog/': 'Breadcrumb: setup guides',
-  '/forum/': 'Breadcrumb: community forum',
   '/faq/': 'Breadcrumb: FAQ hub',
   '/support/': 'Breadcrumb: support center',
   '/status/': 'Breadcrumb: live status',
@@ -60,7 +57,6 @@ const BREADCRUMB_PAGE_CONTEXT: Record<string, string> = {
   '/about/': 'about',
   '/blog/': 'guide index',
   '/faq/': 'FAQ hub',
-  '/forum/': 'forum hub',
   '/support/': 'support',
   '/reviews/': 'reviews',
   '/status/': 'status',
@@ -80,10 +76,6 @@ function breadcrumbPageContext(currentPath: string): string {
   if (norm.startsWith('/blog/') && norm !== '/blog/') {
     const slug = norm.replace(/^\/blog\//, '').replace(/\/$/, '');
     return `guide: ${slug}`;
-  }
-  if (norm.startsWith('/forum/') && norm !== '/forum/') {
-    const slug = norm.replace(/^\/forum\//, '').replace(/\/$/, '');
-    return `thread: ${slug}`;
   }
   if (norm.startsWith('/products/')) {
     return norm.replace(/^\/products\//, 'product: ').replace(/\/$/, '');

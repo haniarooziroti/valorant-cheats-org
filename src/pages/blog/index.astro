@@ -4,7 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { loadBlogPosts } from '../../data/blog/loader';
 import { t } from '../../i18n';
 import { resolvePageSeo } from '../../config/seo';
-import { OG_DEFAULT_IMAGE, FORUM_URL, PRODUCT_URL, CHECKOUT_URL } from '../../config/siteConfig';
+import { OG_DEFAULT_IMAGE, PRODUCT_URL, CHECKOUT_URL } from '../../config/siteConfig';
 import {
   blogSchema,
   breadcrumbSchema,
@@ -89,7 +89,6 @@ const itemList = itemListSchema(
         <div class="blog-buy-strip__actions">
           <Button as="a" href={PRODUCT_URL} variant="primary">Browse the module catalog</Button>
           <Button as="a" href={CHECKOUT_URL} variant="outline">See pricing and plans</Button>
-          <Button as="a" href={FORUM_URL} variant="outline">Read player forum threads</Button>
         </div>
       </aside>
 

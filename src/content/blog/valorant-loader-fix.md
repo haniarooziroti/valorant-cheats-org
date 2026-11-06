@@ -42,7 +42,7 @@ Most loader problems come from a short list of causes: outdated game build, secu
 If you see a Vanguard error such as VAN9003 or VAN9001, it's usually a Windows security setting (Secure Boot/TPM). See [Valorant cheat system requirements](/blog/valorant-requirements/).
 
 ## Still stuck?
-Collect: your Windows version, the exact error text, a screenshot and the time it happened. Then open a ticket through [support](/support/) or post on the [forum](/forum/).
+Collect: your Windows version, the exact error text, a screenshot and the time it happened. Then open a ticket through [support](/support/).
 
 ## Next step
 Once the loader runs, continue with [How to buy Valorant cheats in 2026](/blog/buy-valorant-cheats/).

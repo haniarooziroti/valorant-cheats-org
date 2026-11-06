@@ -39,4 +39,4 @@ Don't launch. Don't reinstall random files. Check the forum thread for the updat
 Close the game, don't retry repeatedly, and read [Valorant cheat loader not working? Fixes for the usual problems](/blog/valorant-loader-fix/).
 
 ## Next step
-Subscribers get status notices first on the [forum](/forum/). Not a member yet? See [Valorant cheats monthly vs lifetime](/blog/valorant-plans/).
+Subscribers get status notices first on the blog. Not a member yet? See [Valorant cheats monthly vs lifetime](/blog/valorant-plans/).

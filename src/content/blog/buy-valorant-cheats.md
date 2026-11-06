@@ -72,4 +72,4 @@ Refund and replacement rules live on the [billing and license terms](/terms/) pa
 For loader or delivery issues, use the [loader help desk](/support/) with your order email attached. For “what happens after I buy?” style answers, scan the [checkout questions on the FAQ](/faq/) before you post in the forum.
 
 ## Next step
-Ready? [Continue to checkout](/go/valorant/). Questions first? Ask on the [player discussion board](/forum/) or read the [pre-purchase FAQ hub](/faq/).
+Ready? [Continue to checkout](/go/valorant/). Questions first? Read the [pre-purchase FAQ hub](/faq/).

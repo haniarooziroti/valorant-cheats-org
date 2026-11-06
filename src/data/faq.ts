@@ -25,8 +25,7 @@ const productsHub = link('Valorant modules', ROUTES.products);
 const aimPage = link('Valorant aimbot page', productPath('aimbot'));
 const espPage = link('player ESP page', productPath('esp'));
 const faqPage = link('full FAQ', ROUTES.faq);
-const forumSetupExamples = link('forum aim tuning threads', ROUTES.forum);
-const forumCommunity = link('community forum threads', ROUTES.forum);
+const blogGuides = link('setup blog guides', ROUTES.blog);
 
 export const siteFaqs: SiteFaqItem[] = [
   {
@@ -83,7 +82,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'aim',
     icon: 'faqBlogSlugScripts',
     q: 'How should I tune aim smoothing?',
-    a: a(`Start with a wider FOV circle and medium smoothing in a private match. See ${aimPage} and ${forumSetupExamples} for player examples.`),
+    a: a(`Start with a wider FOV circle and medium smoothing in a private match. See ${aimPage} and ${blogGuides} for player examples.`),
     scopes: ['aimbot'],
   },
   {
@@ -114,7 +113,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: 'all',
     icon: 'faqMore',
     q: 'Where can I read more player experiences?',
-    a: `Visit the ${forumCommunity} for mixed reviews and config tips, or the ${faqPage} for every topic.`,
+    a: `Visit the ${blogGuides} for mixed reviews and config tips, or the ${faqPage} for every topic.`,
   },
 ];
 

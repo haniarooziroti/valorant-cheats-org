@@ -1,2 +1,7 @@
 /blogs    /blog/    301
 /blogs/   /blog/    301
+/forum    /blog/    301
+/forum/   /blog/    301
+/forums   /blog/    301
+/forums/  /blog/    301
+/forum/*  /blog/    301

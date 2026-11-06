@@ -63,7 +63,7 @@ Use team and downed-player filters from the aim assist feature list so you are n
 ## After a patch
 Agent updates change movement hitboxes and ability clutter. When Riot ships a note, read the homepage status line before you load ranked, then run one Deathmatch with your ranked profile unchanged. If tracking feels off, adjust smoothing before you touch FOV.
 
-Players in the [killcam tuning thread](/forum/aimbot-settings-smooth-level-killcam/) often drop FOV ten percent after patches instead of raising strength. That thread is discussion, not official defaults—use it to compare notes, not to copy exact numbers without testing.
+Players in killcam tuning discussions often drop FOV ten percent after patches instead of raising strength. That kind of thread is discussion, not official defaults—use it to compare notes, not to copy exact numbers without testing.
 
 ## Loader vs settings issues
 If the menu never opens, that is a loader or license path—email Support with Windows version and error text. If the menu works but aim feels wrong, stay in this guide or the [loader troubleshooting walkthrough](/blog/valorant-loader-fix/) for import order and preset steps.

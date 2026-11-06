@@ -22,7 +22,6 @@ const pagePath = `${productHub.path}${product.slug}/`;
 const seoEntry = getPageSeoEntry(pagePath);
 const metaTitle = seoEntry?.title ?? pageTitle(product.title);
 const metaDescription = seoEntry?.description ?? product.desc;
-const relatedForums = getRelatedForumPostsForProduct(product.relatedForumSlugs, 3);
 const breadcrumbs = [
   CRUMB.home,
   CRUMB.products,
@@ -46,5 +45,4 @@ const breadcrumbs = [
   ]}
 >
   <ProductDetail product={product} breadcrumbs={breadcrumbs} />
-  <ProductRelatedForumsSection posts={relatedForums} productName={product.name} />
 </BaseLayout>
