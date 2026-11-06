@@ -2,6 +2,7 @@
 import '../styles/faq-page.css';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getAllFaqs } from '../data/faq';
+import { t } from '../i18n';
 import { resolvePageSeo } from '../config/seo';
 import { breadcrumbSchema, faqPageSchema, webPageSchema } from '../utils/schema';
 import { CRUMB } from '../config/breadcrumbs';
@@ -11,6 +12,7 @@ import SectionHeader from '../components/SectionHeader.astro';
 
 const seo = resolvePageSeo('/faq/');
 const breadcrumbs = [CRUMB.home, CRUMB.faq];
+const faqCopy = t.faq;
 
 const faqs = getAllFaqs();
 ---
@@ -20,9 +22,8 @@ const faqs = getAllFaqs();
   description={seo.description}
   jsonLd={[
     webPageSchema({
-      name: 'Valorant cheat FAQ — loader, pricing, ban risk',
-      description:
-        'Answers about Valorant PC modules, aim assist, ESP, checkout, and account risk on valorant-cheat.org.',
+      name: faqCopy.title,
+      description: faqCopy.subtitle,
       url: '/faq/',
     }),
     faqPageSchema(faqs.map((f, i) => ({ num: String(i + 1).padStart(2, '0'), q: f.q, a: f.a.replace(/<[^>]+>/g, '') }))),
@@ -33,14 +34,14 @@ const faqs = getAllFaqs();
     <div class="mx-auto max-w-6xl px-5">
       <Breadcrumbs items={breadcrumbs} class="justify-center" />
       <div class="mt-6 section-intro">
-        <header>
-          <p class="section-header__eyebrow">Questions &amp; answers</p>
-          <h1 id="faq-page-title" class="section-header__title">Valorant cheat FAQ answers — loader, pricing, ban risk</h1>
-          <p class="section-header__subtitle">
-            Compatibility, checkout, and setup in plain language. Use search and topic filters below, then open module pages or forum threads for deeper tuning.
-          </p>
-          <h2 class="mt-4 text-sm font-medium uppercase tracking-wider text-muted-foreground">All questions</h2>
-        </header>
+        <SectionHeader
+          eyebrow={faqCopy.eyebrow}
+          title={faqCopy.title}
+          desc="Compatibility, checkout, and setup in plain language. Use search and topic filters below, then open module pages or blog guides for deeper tuning."
+          titleId="faq-page-title"
+          centered
+          headingLevel="h1"
+        />
       </div>
     </div>
   </section>

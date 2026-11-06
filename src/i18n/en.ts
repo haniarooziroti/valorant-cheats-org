@@ -419,7 +419,7 @@ export const en: Translations = {
   },
   legalPages: {
     about: {
-      title: 'Forum: About Valorant Cheat',
+      title: 'About Valorant Cheat',
       description:
         'Valorant Cheat publishes Valorant PC module info, community discussions, and support paths at valorant-cheat.org.',
       sections: [

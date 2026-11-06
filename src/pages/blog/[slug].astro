@@ -76,7 +76,6 @@ const tocItems = headings
 const postSeo = getBlogPostSeo(post.slug);
 const layoutTitle = postSeo?.title ?? pageTitle(post.title, 'Valorant Cheats');
 const layoutDescription = postSeo?.description ?? post.desc;
-const keywordHeading = postSeo?.keywordHeading;
 const ogImage = post.image || OG_DEFAULT_IMAGE;
 const productCtaLabel = 'Compare Valorant modules';
 const pricingCtaLabel = 'Continue to secure checkout';
@@ -138,7 +137,6 @@ const riskNote =
               <Badge variant="outline">{post.readTime}</Badge>
             </div>
             <h1 class="blog-article__title">{post.title}</h1>
-            {keywordHeading ? <h2 class="text-lg font-semibold text-foreground">{keywordHeading}</h2> : null}
             <p class="blog-article__byline text-sm text-muted-foreground">Valorant Cheats Team</p>
             <p class="blog-article__lead">{post.desc}</p>
           </header>

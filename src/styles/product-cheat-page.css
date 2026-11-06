@@ -207,8 +207,75 @@
   margin-inline: auto;
 }
 
+.product-detail .product-detail__breadcrumbs,
+.product-detail [data-slot='breadcrumb'] {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  justify-content: center;
+  min-width: 0;
+}
+
+.product-detail [data-slot='breadcrumb-list'] {
+  justify-content: center;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.product-detail [data-slot='breadcrumb-item'],
+.product-detail [data-slot='breadcrumb-link'],
+.product-detail [data-slot='breadcrumb-page'] {
+  max-width: 100%;
+  min-width: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+
 .product-detail .product-detail-header {
   text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.product-detail .product-detail-header__badges {
+  row-gap: 0.5rem;
+}
+
+.product-detail .product-detail-header__badges [data-slot='badge'] {
+  max-width: 100%;
+  height: auto;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+
+.product-detail .product-detail__inline-row {
+  justify-content: center;
+  max-width: 100%;
+  min-width: 0;
+  align-items: flex-start;
+}
+
+.product-detail .product-detail__feature-pill,
+.product-detail .product-detail__inline-row [data-slot='badge'] {
+  max-width: 100%;
+  height: auto;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+
+.product-detail .product-checkout [data-slot='button'],
+.product-detail .product-checkout__buy {
+  box-sizing: border-box;
+  min-width: 0;
+  height: auto;
+  min-height: 2.75rem;
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+  text-align: center;
+  line-height: 1.25;
 }
 
 .product-detail .product-detail-header > div:first-child {
@@ -220,21 +287,12 @@
 .product-detail .product-detail-header h1,
 .product-detail .product-detail-header p {
   margin-inline: auto;
+  overflow-wrap: anywhere;
 }
 
 .product-detail .product-detail__breadcrumbs,
 .product-detail [data-slot='breadcrumb'] {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-
-.product-detail [data-slot='breadcrumb-list'] {
-  justify-content: center;
-}
-
-.product-detail .product-detail__inline-row {
-  justify-content: center;
+  margin-bottom: 0.25rem;
 }
 
 .product-detail .product-detail__text-center {
@@ -247,9 +305,15 @@
 }
 
 .product-detail .product-detail__features > li {
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  min-width: 0;
+}
+
+.product-detail .product-detail__features > li span {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .product-detail .product-checkout {

@@ -76,10 +76,10 @@ const isSinglePlan = plans.length === 1;
         href={checkoutUrlWithPlan(product.buyUrl, defaultPlan.id)}
         variant="primary"
         size="lg"
-        class="w-full rounded-xl"
+        class="product-checkout__buy w-full max-w-full rounded-xl"
         data-checkout-buy
       >
-        {productPanelCheckoutLabel(product.title)}
+        {productPanelCheckoutLabel(product.name)}
         <Icon name="arrowRight" size={17} />
       </Button>
     </div>
