@@ -16,20 +16,13 @@ export const en: Translations = {
     discord: PRIMARY_CHECKOUT_PATH,
   },
   nav: PRIMARY_NAV,
-  forumHome: {
-    eyebrow: 'Community',
-    title: 'Forums where Valorant players compare configs',
-    subtitle:
-      'Aimbot tuning, ESP layouts, trigger timing, and checkout questions—browse before you change your config.',
-    viewAll: 'Browse forums',
-  },
   hero: {
     status: 'PC modules online',
     eyebrow: 'Built for ranked & unrated',
     titleLine1: 'Valorant Cheats on PC',
     titleLine2: 'Aimbot, ESP and Wallhack',
     subtitle:
-      'Tactical overlays, tuned aim assist, and agent ESP that stays readable in ranked and unrated—explore modules, compare settings in the forum, and upgrade your PC sessions without cluttering the screen.',
+      'Tactical overlays, tuned aim assist, and agent ESP that stays readable in ranked and unrated—explore modules, read setup guides on the blog, and upgrade your PC sessions without cluttering the screen.',
     ctaPrimary: 'Explore modules',
     ctaDiscord: 'Join Discord',
     modesLabel: 'Playlists',
@@ -303,8 +296,8 @@ export const en: Translations = {
       {
         num: '01',
         phase: 'Before purchase',
-        title: 'Read status & forum',
-        desc: 'Check the homepage note and skim forum threads for current aim and ESP defaults.',
+        title: 'Read status & guides',
+        desc: 'Check the homepage status note and the patch-day posts on the blog for current aim and ESP defaults.',
       },
       {
         num: '02',
@@ -414,6 +407,7 @@ export const en: Translations = {
       { href: '/', label: 'Feature overview', ariaLabel: 'Features', scrollTarget: 'features' },
       { href: `${productBase}aimbot/`, label: 'Valorant aimbot module', ariaLabel: 'Aimbot' },
       { href: productBase, label: 'Full module catalog', ariaLabel: 'Products' },
+      { href: '/status/', label: 'Module status', ariaLabel: 'Status' },
       { href: '/blog/', label: 'Valorant cheat blog', ariaLabel: 'Blog' },
       { href: '/reviews/', label: 'Player reviews', ariaLabel: 'Reviews' },
       { href: '/faq/', label: 'Pre-purchase FAQ', ariaLabel: 'FAQ' },
@@ -429,31 +423,31 @@ export const en: Translations = {
     about: {
       title: 'About Valorant Cheat',
       description:
-        'Valorant Cheat publishes Valorant PC module info, community discussions, and support paths at valorant-cheat.org.',
+        'Valorant Cheat publishes Valorant PC module info, setup guides, and support paths at valorant-cheat.org.',
       sections: [
         {
           heading: 'What this site covers',
           paragraphs: [
-            'valorant-cheat.org documents aim assist, player ESP, triggerbot, radar, and no recoil tools for Valorant on PC. We focus on module comparisons, conservative defaults, and player-written threads—not hype.',
+            'valorant-cheat.org documents aim assist, player ESP, triggerbot, radar, and no recoil tools for Valorant on PC. We focus on module comparisons, conservative defaults, and practical setup notes—not hype.',
             'The <a href="/products/valorant-cheats/">PC module comparison hub</a> breaks out aimbot, ESP, triggerbot, radar, and no recoil pages with feature lists, preset ideas, and Try now checkout links. The homepage feature grid describes the same modules in plain language—FOV rings, box styles, radar zoom, trigger delay, and recoil presets you can verify before you pay.',
-            'Browse community posts before you buy if you want honest setup talk from people running the same modules. Player review pages collect short write-ups when members want to share how a module felt in ranked—not marketing copy.',
+            'Read the <a href="/blog/">setup blog</a> and <a href="/reviews/">player reviews</a> when you want honest tuning talk from people running the same modules—not marketing copy.',
             'Game names and trademarks belong to their owners and are used for identification only.',
           ],
         },
         {
           heading: 'How content is updated',
           paragraphs: [
-            'Product pages and community threads reflect current module behavior after patches. Check the <a href="/">patch-day status on the homepage</a> before you launch following a game update.',
-            'Blog guides and pinned threads are refreshed when loader steps or default configs change so newcomers are not stuck on outdated screenshots. When a loader flow changes, we update the relevant <a href="/blog/">setup blog articles</a> and cross-link from module pages so the first-run path stays consistent.',
-            'Forum threads often carry the fastest patch-day notes—players flag when a default preset stops matching live recoil or when ESP colors need tweaking after a UI change.',
+            'Product pages and blog guides reflect current module behavior after patches. Check the <a href="/status/">module status page</a> and the patch-day note on the homepage before you launch following a game update.',
+            'Blog guides are refreshed when loader steps or default configs change so newcomers are not stuck on outdated screenshots. When a loader flow changes, we update the relevant <a href="/blog/">setup blog articles</a> and cross-link from module pages so the first-run path stays consistent.',
+            'Patch-day blog posts and the status page carry the fastest update notes—when a default preset stops matching live recoil or ESP colors need tweaking after a UI change.',
           ],
         },
         {
-          heading: 'Community discussion',
+          heading: 'Guides and support',
           paragraphs: [
-            'Use the blog and FAQ for feature questions that are too specific for short answers—aim circle tuning, ESP colors, trigger timing, and billing timing.',
-            'Moderation is light: keep replies on-topic and avoid sharing license keys or loader downloads in public threads.',
-            'Long-form setup notes live in forum threads; quick comparisons stay in discussion posts where players share patch-day notes. If you are comparing monthly versus lifetime access windows, search existing threads before opening a duplicate topic—the FAQ summarizes the plan difference, but players often explain how they use each window in practice.',
+            'Use the <a href="/blog/">blog</a> and <a href="/faq/">FAQ</a> for feature questions that are too specific for short answers—aim circle tuning, ESP colors, trigger timing, and billing timing.',
+            'Join <a href="/support/">Support</a> or Discord when you need loader help; do not share license keys in public channels.',
+            'Long-form setup notes live in blog articles; quick answers stay in the FAQ. If you are comparing monthly versus lifetime access, start with the FAQ plan section, then read <a href="/blog/valorant-plans/">the plans guide</a> for how players use each window in practice.',
           ],
         },
         {
@@ -468,7 +462,7 @@ export const en: Translations = {
           heading: 'Support and loader help',
           paragraphs: [
             'Loader, billing, and license questions go through email on the <a href="/support/">Support contact page</a>. Include your order email, Windows version, and any loader error text so support can reproduce the issue without back-and-forth.',
-            'Hardware swaps are handled case by case when you contact support with the same order email—do not share keys in forum posts.',
+            'Hardware swaps are handled case by case when you contact support with the same order email—do not share keys in email threads with anyone except support.',
             'Privacy questions about analytics or cookies are separate from loader tickets; use the Support page and reference the Privacy Policy when the issue is data-related, not license-related.',
           ],
         },
@@ -482,14 +476,14 @@ export const en: Translations = {
           heading: 'Information we collect',
           paragraphs: [
             'We may collect standard web analytics such as page views, device type, browser, and approximate region when analytics are enabled. Checkout happens on external pages—we do not store payment card data on valorant-cheat.org.',
-            'When you email support, we retain the address and message content until the ticket is resolved. Forum posts you write are public by design.',
+            'When you email support, we retain the address and message content until the ticket is resolved.',
           ],
         },
         {
           heading: 'How we use data',
           paragraphs: [
-            'Analytics help us improve product and forum pages. Support messages may retain the email address and content you send until the issue is resolved.',
-            'We do not sell personal data. Aggregated traffic patterns may inform which forum topics we expand after major game patches.',
+            'Analytics help us improve product and blog pages. Support messages may retain the email address and content you send until the issue is resolved.',
+            'We do not sell personal data. Aggregated traffic patterns may inform which guides we expand after major game patches.',
           ],
         },
         {
@@ -522,7 +516,7 @@ export const en: Translations = {
           heading: 'Agreement',
           paragraphs: [
             'Last updated: October 2026. By using valorant-cheat.org or completing checkout for access listed here, you agree to these Terms & Conditions and our Privacy Policy.',
-            'These terms govern how you may use the site, forum, and purchased licenses. If a section conflicts with mandatory local law, the law controls only where required.',
+            'These terms govern how you may use the site, blog, and purchased licenses. If a section conflicts with mandatory local law, the law controls only where required.',
           ],
         },
         {

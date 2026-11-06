@@ -1,4 +1,5 @@
 import type { FaqItem } from '../i18n/types';
+import { MONTHLY_PRICE } from '../config/brand';
 import { SITE_MEDIA } from '../config/media';
 import { SUPPORT_EMAIL } from '../config/site';
 import { SITE_ORIGIN, absoluteAssetUrl, canonicalUrl, getOrganizationSameAs } from '../config/seo';
@@ -127,29 +128,15 @@ export function blogSchema(input: { name: string; description: string; url: stri
     inLanguage: 'en-US',
     publisher: {
       '@type': 'Organization',
-      name: 'Valorant Cheats',
+      name: 'Valorant Cheat',
       url: `${SITE_ORIGIN}/`,
     },
   };
 }
 
-export function discussionForumPostingSchema(input: {
-  name: string;
-  text: string;
-  url: string;
-  author: string;
-  comments: number;
-}) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'DiscussionForumPosting',
-    headline: input.name,
-    articleBody: input.text,
-    url: canonicalUrl(input.url),
-    author: { '@type': 'Person', name: input.author },
-    commentCount: input.comments,
-    isPartOf: { '@type': 'CollectionPage', name: 'Valorant Cheat Community Forum', url: canonicalUrl('/forum/') },
-  };
+function parseOfferPrice(priceLabel: string): string {
+  const numeric = priceLabel.replace(/[^0-9.]/g, '');
+  return numeric || '35';
 }
 
 function offerUrl(path: string): string {
@@ -180,6 +167,7 @@ export function productSchema(input: {
       '@type': 'Offer',
       url: offerUrl(input.offerUrl),
       priceCurrency: 'USD',
+      price: parseOfferPrice(MONTHLY_PRICE),
       availability: 'https://schema.org/InStock',
       seller: {
         '@type': 'Organization',
@@ -227,11 +215,11 @@ export function articleSchema(input: {
     inLanguage: 'en-US',
     author: {
       '@type': 'Organization',
-      name: 'Valorant Cheats Team',
+      name: 'Valorant Cheat',
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Valorant Cheats',
+      name: 'Valorant Cheat',
       logo: {
         '@type': 'ImageObject',
         url: SITE_MEDIA.favicon,

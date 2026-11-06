@@ -20,7 +20,7 @@ faq:
   - q: Can I use one profile for every mode?
     a: Competitive, Unrated, and Deathmatch benefit from separate saved configs. Defaults in the table above are starting points—not one global preset.
   - q: Where do I report loader issues vs aim tuning?
-    a: Loader and license problems go to Support with your order email. Aim circle and smooth strength debates belong in forum threads or this guide—not public key sharing.
+    a: Loader and license problems go to Support with your order email. Aim circle and smooth strength debates belong in blog comments or this guide—not public key sharing.
 featuredImage: >-
   https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/valorant/02ab714e-de37-423b-81f2-afd7f7fd8d28/1793455027852-e37fgr-5-webp-464f6deb34dc1b8af2bf890f1fbf8367.webp
 imageAlt: Aimbot FOV circle and smoothing settings during a gunfight

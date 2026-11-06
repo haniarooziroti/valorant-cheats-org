@@ -162,12 +162,6 @@ export interface Translations {
     explore: string;
     items: ProductCard[];
   };
-  forumHome: {
-    eyebrow: string;
-    title: string;
-    subtitle: string;
-    viewAll: string;
-  };
   blog: {
     eyebrow: string;
     title: string;

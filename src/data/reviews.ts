@@ -36,7 +36,7 @@ export const siteReviews: SiteReview[] = [
     "role": "Premier unrated",
     "stars": 5,
     "date": "2026-07-21",
-    "body": "Stream-proof toggle stayed off my OBS test. Recorded a clip first like the forum said."
+    "body": "Stream-proof toggle stayed off my OBS test. Recorded a clip first like the blog guides suggest."
   },
   {
     "id": "r3",
@@ -196,7 +196,7 @@ export const siteReviews: SiteReview[] = [
     "role": "new buyer",
     "stars": 2,
     "date": "2025-05-27",
-    "body": "Stream-proof toggle stayed off my OBS test. Recorded a clip first like the forum said."
+    "body": "Stream-proof toggle stayed off my OBS test. Recorded a clip first like the blog guides suggest."
   },
   {
     "id": "r23",
@@ -356,7 +356,7 @@ export const siteReviews: SiteReview[] = [
     "role": "ranked grinder",
     "stars": 3,
     "date": "2024-04-02",
-    "body": "Stream-proof toggle stayed off my OBS test. Recorded a clip first like the forum said."
+    "body": "Stream-proof toggle stayed off my OBS test. Recorded a clip first like the blog guides suggest."
   },
   {
     "id": "r43",
@@ -516,7 +516,7 @@ export const siteReviews: SiteReview[] = [
     "role": "SMG main",
     "stars": 5,
     "date": "2023-02-07",
-    "body": "Stream-proof toggle stayed off my OBS test. Recorded a clip first like the forum said."
+    "body": "Stream-proof toggle stayed off my OBS test. Recorded a clip first like the blog guides suggest."
   },
   {
     "id": "r63",
@@ -676,7 +676,7 @@ export const siteReviews: SiteReview[] = [
     "role": "ranked",
     "stars": 5,
     "date": "2021-12-14",
-    "body": "Stream-proof toggle stayed off my OBS test. Recorded a clip first like the forum said."
+    "body": "Stream-proof toggle stayed off my OBS test. Recorded a clip first like the blog guides suggest."
   },
   {
     "id": "r83",
@@ -836,7 +836,7 @@ export const siteReviews: SiteReview[] = [
     "role": "stream nights",
     "stars": 5,
     "date": "2020-10-20",
-    "body": "Stream-proof toggle stayed off my OBS test. Recorded a clip first like the forum said."
+    "body": "Stream-proof toggle stayed off my OBS test. Recorded a clip first like the blog guides suggest."
   },
   {
     "id": "r103",

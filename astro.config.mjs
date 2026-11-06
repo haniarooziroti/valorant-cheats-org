@@ -33,7 +33,7 @@ export default defineConfig({
         !page.includes('/404') &&
         !page.includes('/blogs') &&
         !page.includes('/forum') &&
-        (!page.includes('/go/') || page.includes('/go/valorant')),
+        !page.includes('/go/'),
       serialize: sitemapSerialize,
     }),
   ],

@@ -35,7 +35,7 @@ Valorant is protected by Riot's Vanguard anti-cheat, one of the most aggressive 
 - Wait for status confirmation after every Valorant patch before launching.
 - Follow the setup steps exactly, including Windows security requirements.
 - Keep your play believable: miss a few shots, don't pre-aim every corner.
-- Buy only from a seller with a support channel, a forum and a clear refund/terms page.
+- Buy only from a seller with a support channel, setup guides, and a clear refund/terms page.
 
 ## Why free downloads are a bad bet
 Free "Valorant hacks" are the most common way people lose accounts, passwords and money. They are widely circulated, so they are quickly flagged, and many bundle info-stealers or loaders that you can't inspect. A paid product with active updates and a support team is a very different risk profile than a file from a random video description.

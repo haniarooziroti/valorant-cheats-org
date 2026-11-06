@@ -6,66 +6,66 @@ export interface BlogPostSeo {
 
 export const BLOG_POST_SEO: Record<string, BlogPostSeo> = {
   'valorant-cheat-risk': {
-    title: 'Valorant Cheat Risk Guide — Ban Exposure & Vanguard | Valorant Cheat',
+    title: 'Valorant Cheat Risk — Bans & Vanguard | Valorant Cheat',
     description:
       "No tool is risk-free. Here's what raises or lowers your chances of trouble in Valorant, what we can't promise, and why free downloads are a bad bet.",
   },
   'valorant-patch-day': {
-    title: 'After a Valorant Patch — Cheat Update Checklist | Valorant Cheat',
+    title: 'After a Valorant Patch — Cheat Checklist | Valorant Cheat',
     description:
       "A Valorant update just landed. Here's what to check before launching your tools so you don't waste time or take unnecessary risks.",
-    keywordHeading: 'Updates: Valorant Cheats',
+    keywordHeading: 'Updates: Valorant Cheat',
   },
   'valorant-loader-fix': {
     title: 'Valorant Cheat Loader Not Working — Fixes | Valorant Cheat',
     description:
       "Loader won't open, menu won't show, or the game crashes? Work through these fixes before opening a ticket.",
-    keywordHeading: 'Troubleshooting: Valorant Cheats',
+    keywordHeading: 'Troubleshooting: Valorant Cheat',
   },
   'valorant-requirements': {
-    title: 'Valorant Cheat System Requirements — TPM & Secure Boot | Valorant Cheat',
+    title: 'System Requirements — TPM & Secure Boot | Valorant Cheat',
     description:
       'Before you buy, check these Windows settings. Verify TPM 2.0, Secure Boot and your Windows version for Valorant on Windows 10 and 11.',
-    keywordHeading: 'Setup: Valorant Cheats',
+    keywordHeading: 'Setup: Valorant Cheat',
   },
   'valorant-triggerbot': {
-    title: 'Valorant Triggerbot & No Recoil — Believable Settings | Valorant Cheat',
+    title: 'Triggerbot & No Recoil Settings | Valorant Cheat',
     description:
       'How a Valorant triggerbot decides when to fire, how light recoil control works on rifles, and when to use each one.',
   },
   'valorant-agent-utility-guide': {
-    title: 'Valorant ESP for Utility, Spike & Economy | Cheats',
+    title: 'Valorant ESP for Utility, Spike & Economy | Valorant Cheat',
     description:
       'Beyond player outlines: how information overlays for spike status, utility and rounds can change decisions before you plant or rotate.',
-    keywordHeading: 'Features: Valorant Cheats',
+    keywordHeading: 'Features: Valorant Cheat',
   },
   'valorant-esp-setup': {
     title: 'Valorant Player ESP & Radar Setup | Valorant Cheat',
     description:
       "Valorant maps are tight and busy. Here's how to set up player ESP and radar so you get useful information instead of clutter.",
-    keywordHeading: 'Setup: Valorant Cheats',
+    keywordHeading: 'Setup: Valorant Cheat',
   },
   'valorant-aimbot-setup': {
-    title: 'Bone Choice – How to set up Valorant aim assist so it helps',
+    title: 'Valorant Aimbot Setup — FOV & Smoothing | Valorant Cheat',
     description:
-      'Valorant: Bone choice for aim assist: set FOV and smoothing so tracking helps without looking like a screen-snap on PC ranked and unrated.',
+      'Set FOV and smoothing so aim assist helps without looking like a screen-snap on PC ranked and unrated.',
     keywordHeading: 'Setup: aim assist',
   },
   'valorant-plans': {
-    title: 'Valorant Cheats Monthly vs Lifetime — Which Is Cheaper? | Valorant Cheat',
+    title: 'Monthly vs Lifetime Plans | Valorant Cheat',
     description:
       "Monthly or lifetime? Here's the break-even math, and the situations where each option makes sense.",
   },
   'valorant-features': {
-    title: 'Valorant Cheat Features Explained — Aimbot, ESP & Radar | Valorant Cheat',
+    title: 'Cheat Features — Aimbot, ESP & Radar | Valorant Cheat',
     description:
       "A plain-English walkthrough of the features you'll find in a Valorant cheat menu and who actually needs each one.",
-    keywordHeading: 'Features: Valorant Cheats',
+    keywordHeading: 'Features: Valorant Cheat',
   },
   'buy-valorant-cheats': {
-    title: 'Valorant Cheats – Buying access for the first time',
+    title: 'Buying Valorant Cheat Access — First-Time Guide | Valorant Cheat',
     description:
-      'Valorant Cheats: Buying access for the first time? Checkout, delivery, first launch, and what to check on your PC before you pay in 2026.',
+      'First-time checkout, delivery, first launch, and what to check on your PC before you pay in 2026.',
   },
 };
 

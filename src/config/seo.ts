@@ -11,10 +11,10 @@ export function getSiteOrigin(): string {
   return SITE_ORIGIN;
 }
 
-import { SITE_MEDIA, SUPABASE_MEDIA_ORIGIN } from './media';
+import { SUPABASE_MEDIA_ORIGIN } from './media';
 
-/** Default social share image (remote WebP). */
-export const DEFAULT_OG_IMAGE = SITE_MEDIA.espArchway;
+/** Default social share image (same-origin for stable OG previews). */
+export const DEFAULT_OG_IMAGE = '/images/og-default.webp';
 
 export const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID as string | undefined;
 

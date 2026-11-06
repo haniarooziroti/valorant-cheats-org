@@ -43,7 +43,6 @@ const STATIC_LASTMOD: Record<string, string> = {
   '/products/valorant-cheats/triggerbot/': '2026-10-12T00:00:00.000Z',
   '/products/valorant-cheats/radar/': '2026-10-12T00:00:00.000Z',
   '/products/valorant-cheats/no-recoil/': '2026-10-12T00:00:00.000Z',
-  '/go/valorant/': '2026-10-15T00:00:00.000Z',
 };
 
 const buildDate = new Date().toISOString();
@@ -59,19 +58,12 @@ export function sitemapSerialize(item: SitemapItem): SitemapItem | undefined {
     return undefined;
   }
 
-  if (path.includes('/404') || (path.startsWith('/go/') && path !== '/go/valorant/')) {
+  if (path.includes('/404') || path.startsWith('/go/')) {
     return undefined;
   }
 
   if (path.startsWith('/forum/')) {
     return undefined;
-  }
-
-  if (path === '/go/valorant/') {
-    item.priority = 0.6;
-    item.changefreq = 'monthly';
-    item.lastmod = lastmodForPath(path);
-    return item;
   }
 
   item.lastmod = lastmodForPath(path);

@@ -35,7 +35,7 @@ function mapEntry(entry: BlogEntry): BlogPostFull {
     dateIso: formatDate(entry.data.publishDate),
     readTime: readTimeFromBody(entry.body ?? '', entry.data.readMinutes),
     featured: entry.data.featured,
-    author: 'Valorant Cheats Team',
+    author: 'Valorant Cheat',
     tags: entry.data.tags,
     body: [],
   };

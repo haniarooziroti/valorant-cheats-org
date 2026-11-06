@@ -74,7 +74,7 @@ const tocItems = headings
   .map((h) => ({ level: h.depth === 2 ? 'h2' : 'h3', text: h.text, id: h.slug }));
 
 const postSeo = getBlogPostSeo(post.slug);
-const layoutTitle = postSeo?.title ?? pageTitle(post.title, 'Valorant Cheats');
+const layoutTitle = postSeo?.title ?? pageTitle(post.title, t.site.name);
 const layoutDescription = postSeo?.description ?? post.desc;
 const ogImage = post.image || OG_DEFAULT_IMAGE;
 const productCtaLabel = 'Compare Valorant modules';

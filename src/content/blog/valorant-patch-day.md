@@ -33,7 +33,7 @@ Every Valorant patch can change game files, and Vanguard updates often ship alon
 Minor patches are often handled quickly; large updates or Vanguard changes can take longer. We recommend waiting for an explicit status confirmation instead of guessing.
 
 ## What to do if status says "updating"
-Don't launch. Don't reinstall random files. Check the forum thread for the update and wait for the all-clear announcement.
+Don't launch. Don't reinstall random files. Check the [status page](/status/) and [patch-day guide](/blog/valorant-patch-day/) for the update and wait for the all-clear announcement.
 
 ## If you've already launched and something looks wrong
 Close the game, don't retry repeatedly, and read [Valorant cheat loader not working? Fixes for the usual problems](/blog/valorant-loader-fix/).

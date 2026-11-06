@@ -21,7 +21,7 @@ faq:
   - q: What should I verify before I pay?
     a: Confirm Windows 10 or 11, TPM 2.0, and Secure Boot on the requirements guide, pick monthly or lifetime on the plans article, and read ban-risk notes on the FAQ before you use a main account.
   - q: Who helps if the loader fails on first launch?
-    a: Email the Support page with your order email, Windows version, and any error text. Forum threads are for tuning talk, not license keys in public replies.
+    a: Email the Support page with your order email, Windows version, and any error text. Use the blog and FAQ for tuning questions—not license keys in public replies.
 featuredImage: >-
   https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/valorant/02ab714e-de37-423b-81f2-afd7f7fd8d28/1793455063253-xwjslf-1-2-webp-309350f53434ceeb48bfb1837f8647ba.webp
 imageAlt: 'Checkout preview — buy aimbot, ESP, and wallhack access on PC'
@@ -69,7 +69,7 @@ After delivery, import a conservative preset, test in Deathmatch or a custom lob
 ## Billing questions
 Refund and replacement rules live on the [billing and license terms](/terms/) page. Sales are final once checkout completes except where law requires otherwise; support may offer replacement access when a fault is confirmed on a supported setup.
 
-For loader or delivery issues, use the [loader help desk](/support/) with your order email attached. For “what happens after I buy?” style answers, scan the [checkout questions on the FAQ](/faq/) before you post in the forum.
+For loader or delivery issues, use the [loader help desk](/support/) with your order email attached. For “what happens after I buy?” style answers, scan the [checkout questions on the FAQ](/faq/) before you email support.
 
 ## Next step
 Ready? [Continue to checkout](/go/valorant/). Questions first? Read the [pre-purchase FAQ hub](/faq/).

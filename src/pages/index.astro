@@ -6,18 +6,16 @@ import ProductsSection from '../components/ProductsSection.astro';
 import ContentSections from '../components/ContentSections.astro';
 import { t } from '../i18n';
 import { resolvePageSeo } from '../config/seo';
-import { faqPageSchema, organizationSchema, websiteSchema } from '../utils/schema';
-import { getLandingFaqs } from '../data/faq';
+import { organizationSchema, websiteSchema } from '../utils/schema';
 import { HERO_CAROUSEL_SLIDES } from '../config/media';
 const seo = resolvePageSeo('/');
-const homeFaqs = getLandingFaqs();
 const heroPoster = HERO_CAROUSEL_SLIDES[0]!.src;
 ---
 
 <BaseLayout
   title={seo.title}
   description={seo.description}
-  jsonLd={[websiteSchema(), organizationSchema(), faqPageSchema(homeFaqs.map((f, i) => ({ num: String(i + 1).padStart(2, '0'), q: f.q, a: f.a.replace(/<[^>]+>/g, '') })))]}
+  jsonLd={[websiteSchema(), organizationSchema()]}
 >
   <link
     slot="head"

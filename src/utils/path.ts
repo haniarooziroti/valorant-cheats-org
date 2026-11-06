@@ -35,7 +35,6 @@ export function normalizeInternalPath(href: string): string {
 export const ROUTES = {
   home: '/',
   blog: '/blog/',
-  forum: '/forum/',
   reviews: '/reviews/',
   products: PRODUCT_BASE,
   faq: '/faq/',
@@ -43,11 +42,8 @@ export const ROUTES = {
   about: '/about/',
   support: '/support/',
   privacy: '/privacy/',
+  status: '/status/',
 } as const;
-
-export function forumPostPath(slug: string): string {
-  return `/forum/${slug}/`;
-}
 
 export function productPath(slug: string): string {
   return `${PRODUCT_BASE}${slug}/`;

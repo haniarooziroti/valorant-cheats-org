@@ -5,7 +5,7 @@ import type { NavLink } from '../i18n/types';
 export const PRIMARY_NAV: NavLink[] = [
   { href: '/', label: 'Home' },
   { href: '/products/', label: 'Products' },
-  { href: '/blog/', label: 'Blogs' },
+  { href: '/blog/', label: 'Blog' },
   { href: '/reviews/', label: 'Reviews' },
   { href: '/faq/', label: 'FAQ' },
   { href: '/support/', label: 'Support' },

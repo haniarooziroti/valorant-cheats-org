@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /forum/
 
 Sitemap: https://valorant-cheat.org/sitemap.xml
