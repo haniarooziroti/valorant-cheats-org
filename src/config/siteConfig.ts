@@ -10,7 +10,7 @@ export const SITE_NAME = TITLE_PREFIX;
 export const PRODUCT_URL = PRODUCT_BASE;
 export const CHECKOUT_URL = 'https://zadeyo.com/go/HANIA?to=%2Fproducts%2Fvalorant';
 export const DISCORD_INVITE_URL = 'https://discord.com/invite/Vu85F8auQS';
-export const BLOG_URL = '/blog/';
+export const FORUM_URL = '/forum/';
 export const FAQ_URL = '/faq/';
 export const SUPPORT_URL = '/support/';
 export const REVIEWS_URL = '/reviews/';

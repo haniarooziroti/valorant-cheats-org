@@ -1,5 +1,7 @@
 /** Static path redirects (301) for production Node server. Keys: pathname without query/hash. */
 export const PATH_REDIRECTS = new Map([
+  ['/products', '/products/valorant-cheats/'],
+  ['/products/', '/products/valorant-cheats/'],
   ['/products/mw4-cheats', '/products/valorant-cheats/'],
   ['/products/mw4-cheats/', '/products/valorant-cheats/'],
   ['/go/mw4', '/go/valorant/'],
@@ -54,6 +56,10 @@ export const TRAILING_SLASH_SKIP = /\.[a-z0-9]+$/i;
 export function resolvePathRedirect(pathname) {
   const direct = PATH_REDIRECTS.get(pathname);
   if (direct) return direct;
+
+  if (pathname.startsWith('/forum/') && pathname !== '/forum/') {
+    return '/blog/';
+  }
 
   if (pathname !== '/' && !pathname.endsWith('/') && !TRAILING_SLASH_SKIP.test(pathname)) {
     return `${pathname}/`;

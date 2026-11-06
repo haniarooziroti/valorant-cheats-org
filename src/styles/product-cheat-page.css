@@ -6,6 +6,13 @@
   max-width: 100%;
   overflow: hidden;
   isolation: isolate;
+  box-shadow: none;
+  --tw-ring-shadow: 0 0 #0000;
+  border: 1px solid var(--border);
+}
+
+.catalog-card:hover {
+  box-shadow: none;
 }
 
 .catalog-card__badge {

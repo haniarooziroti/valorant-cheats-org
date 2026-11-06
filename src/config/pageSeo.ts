@@ -13,15 +13,10 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
     description:
       'Valorant cheats with ESP, aimbot, and wallhack tools for PC ranked and unrated. Compare modules, read forums, and continue to secure checkout.',
   },
-  '/products/': {
-    title: 'Products – Valorant PC cheat modules before checkout',
-    description:
-      'Products: compare Valorant PC cheat modules—aimbot, ESP, wallhack, radar, triggerbot, and no recoil tools on valorant-cheat.org.',
-  },
   '/products/valorant-cheats/': {
-    title: 'Aimbot Esp – Valorant hacks and cheat modules overview',
+    title: 'Valorant Cheats — Compare Aimbot, ESP & Hacks',
     description:
-      'Aimbot ESP for Valorant PC—compare hacks, wallhack overlays, triggerbot, radar, and no recoil modules before secure checkout.',
+      'Valorant hacks and cheat modules for aimbot, ESP wallhack, triggerbot, radar, and no recoil—compare features before checkout.',
   },
   '/products/valorant-cheats/aimbot/': {
     title: 'Aimbot – Soft Aim, FOV Tuning & Module Checkout Access',
@@ -58,6 +53,11 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
     description:
       'Live Valorant cheat module status for aimbot, ESP, and radar on PC. Check before ranked after a Riot patch.',
   },
+  '/forum/': {
+    title: 'Forums – Browse threads before you change defaults or buy',
+    description:
+      'Valorant cheat forums with aimbot settings, ESP layouts, triggerbot delay, and checkout threads from PC players—read threads before you buy access.',
+  },
   '/blog/': {
     title: 'Valorant Cheat Blog — Aimbot, ESP & Wallhack Guides',
     description:
@@ -73,9 +73,9 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
     description: 'Purchase terms, license use, and refund policy for Valorant cheat access sold through valorant-cheat.org.',
   },
   '/privacy/': {
-    title: 'Privacy – and contact data when you browse or request',
+    title: 'Privacy Policy | Valorant Cheat',
     description:
-      'Privacy policy for valorant-cheat.org: analytics, cookies, and contact data when you browse or request support. Privacy Policy How valorant-cheat.',
+      'Privacy policy for valorant-cheat.org: analytics, cookies, and contact data when you browse or request support.',
   },
   '/about/': {
     title: 'Cheat Org – About Valorant PC Modules, Loaders & Support',

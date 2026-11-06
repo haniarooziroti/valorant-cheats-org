@@ -23,6 +23,7 @@ export const PRIMARY_NAV_ICONS: Record<string, IconName> = {
   '/': 'layers',
   '/products/': 'navProducts',
   '/blog/': 'navBlog',
+  '/forums/': 'messageCircle',
   '/reviews/': 'users',
   '/faq/': 'navFaq',
   '/support/': 'navSupport',

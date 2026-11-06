@@ -1,6 +1,6 @@
 /** Unique breadcrumb labels (avoid repeating main nav anchor text). */
 export const CRUMB = {
-  home: { name: 'Site root', path: '/' },
+  home: { name: 'Home', path: '/' },
   products: { name: 'Module catalog', path: '/products/valorant-cheats/' },
   blog: { name: 'Guides archive', path: '/blog/' },
   forum: { name: 'Discussion board', path: '/forum/' },

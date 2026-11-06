@@ -53,15 +53,13 @@ function cardLabel(product: (typeof productPages)[number]) {
       <Breadcrumbs items={breadcrumbs} />
 
       <div class="mt-6 max-w-3xl space-y-3">
-        <h1 class="text-3xl font-bold uppercase md:text-4xl">Compare aimbot ESP hacks — Valorant cheat modules</h1>
+        <h1 class="text-3xl font-bold uppercase md:text-4xl">Valorant cheat catalog — aimbot, ESP, radar modules</h1>
         <p class="mt-2 text-lg text-muted-foreground">
           {t.products.subtitle} Compare Valorant hacks and modules before checkout.
         </p>
       </div>
 
-      <h2 class="mt-10 text-xl font-semibold tracking-tight">Compare aimbot, ESP, and utility modules</h2>
-
-      <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 [&>*]:min-w-0">
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 [&>*]:min-w-0">
         {productPages.map((product) => (
           <CatalogCard
             label={cardLabel(product)}
