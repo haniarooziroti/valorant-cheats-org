@@ -69,6 +69,8 @@ const c = t.support;
                   variant="outline"
                   size="sm"
                   class="w-full"
+                  target={channel.external ? '_blank' : undefined}
+                  rel={channel.external ? 'noopener noreferrer' : undefined}
                 >
                   {channel.linkLabel}
                   <Icon name="arrowRight" size={17} />

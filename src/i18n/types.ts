@@ -222,6 +222,7 @@ export interface Translations {
       desc: string;
       linkLabel: string;
       href: string;
+      external?: boolean;
     }[];
     ticketTitle: string;
     ticketItems: { title: string; desc: string }[];

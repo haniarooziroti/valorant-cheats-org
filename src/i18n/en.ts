@@ -341,11 +341,19 @@ export const en: Translations = {
     subtitle: 'Loader, checkout, and config help for PC players.',
     channels: [
       {
-        icon: 'users',
-        title: 'Before checkout',
-        desc: 'Compare modules and pricing on the products hub.',
+        icon: 'messageCircle',
+        title: 'Join Discord',
+        desc: 'Talk to support in the Zadeyo Discord—loader help, checkout questions, and patch-day updates.',
         linkLabel: 'Join Discord',
         href: DISCORD_INVITE_URL,
+        external: true,
+      },
+      {
+        icon: 'navProducts',
+        title: 'Before checkout',
+        desc: 'Compare modules and pricing on the products hub.',
+        linkLabel: 'View modules',
+        href: productBase,
       },
       {
         icon: 'navFaq',
