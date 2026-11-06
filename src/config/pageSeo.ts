@@ -9,83 +9,84 @@ export interface PageSeoEntry {
 
 export const PAGE_SEO: Record<string, PageSeoEntry> = {
   '/': {
-    title: 'Valorant Cheats – Aimbot, ESP & Wallhack for PC Ranked',
+    title: 'Valorant Cheats – Aimbot, ESP & Wallhack | Valorant Cheat',
     description:
-      'Valorant cheats with ESP, aimbot, and wallhack tools for PC ranked and unrated. Compare modules, read forums, and continue to secure checkout.',
+      'PC Valorant cheats with aimbot, ESP, wallhack, triggerbot, and radar. Compare modules, read the blog and FAQ, check status, then continue to secure checkout.',
   },
   '/products/valorant-cheats/': {
-    title: 'Valorant Cheats — Compare Aimbot, ESP & Hacks',
+    title: 'Valorant Cheats — Compare Modules | Valorant Cheat',
     description:
-      'Valorant hacks and cheat modules for aimbot, ESP wallhack, triggerbot, radar, and no recoil—compare features before checkout.',
+      'Browse Valorant cheat modules: aimbot, ESP wallhack, triggerbot, radar, and no recoil. Compare features and pricing before you open checkout.',
   },
   '/products/valorant-cheats/aimbot/': {
-    title: 'Aimbot – Soft Aim, FOV Tuning & Module Checkout Access',
+    title: 'Valorant Aimbot — FOV & Smoothing | Valorant Cheat',
     description:
-      'Valorant aimbot with FOV circle, smoothing, and visibility checks for ranked duels—transactional module details and checkout access.',
+      'Valorant aimbot with FOV circle, smoothing, and visibility checks for ranked PC play. Module overview, settings, and secure checkout on valorant-cheat.org.',
   },
   '/products/valorant-cheats/esp/': {
-    title: 'ESP – Agent Boxes, Health & Skeleton for Valorant PC',
+    title: 'Valorant ESP & Wallhack for PC | Valorant Cheat',
     description:
-      'Valorant ESP and wallhack overlays with health, distance, and skeleton options tuned for readable comp games on PC ranked queues.',
+      'Player ESP and wallhack overlays with health, distance, and skeleton options tuned for readable comp games on Windows 10 and 11.',
   },
   '/products/valorant-cheats/triggerbot/': {
-    title: 'Valorant Triggerbot — Delay & Hold Key',
+    title: 'Valorant Triggerbot — Delay & Hold Key | Valorant Cheat',
     description:
-      'Valorant triggerbot fires when your crosshair is on target, with ms delay tuning and shared wall checks.',
+      'Valorant triggerbot fires when your crosshair is on target, with millisecond delay tuning and shared visibility checks with aim modules.',
   },
   '/products/valorant-cheats/radar/': {
-    title: 'Valorant Radar Hack — 2D Awareness',
+    title: 'Valorant Radar Hack — 2D Map Awareness | Valorant Cheat',
     description:
-      'Valorant radar hack with zoom, range caps, and markers synced to ESP distance on Haven, Bind, and Ascent.',
+      '2D radar with zoom, range caps, and markers that stay in sync with ESP distance—useful on Haven, Bind, Ascent, and other maps.',
   },
   '/products/valorant-cheats/no-recoil/': {
-    title: 'Valorant No Recoil — Spray Control Assist',
+    title: 'Valorant No Recoil — Spray Control | Valorant Cheat',
     description:
-      'Valorant no recoil helpers for Vandal and Phantom bursts—light spray control that pairs with aimbot modules.',
+      'Light recoil control for Vandal and Phantom sprays on PC. Pairs with aimbot modules; compare options on the module page before checkout.',
   },
   '/reviews/': {
-    title: 'Valorant Cheat Reviews — Aimbot, ESP & Loader',
+    title: 'Valorant Cheat Reviews — Loader & Modules | Valorant Cheat',
     description:
-      'Valorant cheat reviews on aimbot, ESP, wallhack, triggerbot, loader setup, and support from verified PC players on Windows 10 and 11.',
+      'Player reviews on aimbot, ESP, wallhack, triggerbot, loader setup, and support from verified Windows 10 and 11 users.',
   },
   '/status/': {
-    title: 'Valorant Cheat Status — Online After Patches',
+    title: 'Valorant Cheat Status — Live Module Updates | Valorant Cheat',
     description:
-      'Live Valorant cheat module status for aimbot, ESP, and radar on PC. Check before ranked after a Riot patch.',
+      'Check live status for aimbot, ESP, radar, and other modules after Riot patches. Confirm everything is online before ranked.',
   },
   '/blog/': {
-    title: 'Valorant Cheat Blog — Aimbot, ESP & Wallhack Guides',
+    title: 'Valorant Cheat Blog — Setup & Patch Guides | Valorant Cheat',
     description:
-      'Blog: Search and filter Valorant cheat guides: aimbot tuning, player ESP, wallhack setup, Vanguard errors, checkout, patch-day status and loader fixes.',
+      'Guides on aimbot tuning, ESP setup, loader fixes, Vanguard requirements, checkout, and patch-day checks for PC players.',
   },
   '/faq/': {
-    title: 'FAQ – Valorant cheat answers on loader, pricing & risk',
+    title: 'Valorant Cheat FAQ — Loader, Pricing & Risk | Valorant Cheat',
     description:
-      'Valorant cheat FAQ covers compatibility, loader steps, pricing, account risk, setup paths, and secure access before you open checkout on PC.',
+      'Answers on PC compatibility, loader steps, monthly vs lifetime pricing, account risk, and secure checkout on valorant-cheat.org.',
   },
   '/terms/': {
     title: 'Terms & Conditions | Valorant Cheat',
-    description: 'Purchase terms, license use, and refund policy for Valorant cheat access sold through valorant-cheat.org.',
+    description:
+      'Purchase terms, license use, and refund policy for Valorant cheat access sold through valorant-cheat.org.',
   },
   '/privacy/': {
     title: 'Privacy Policy | Valorant Cheat',
     description:
-      'Privacy policy for valorant-cheat.org: analytics, cookies, and contact data when you browse or request support.',
+      'How valorant-cheat.org handles analytics, cookies, and contact data when you browse the site or email support.',
   },
   '/about/': {
-    title: 'Cheat Org – About Valorant PC Modules, Loaders & Support',
+    title: 'About Valorant Cheat — Modules & Support | Valorant Cheat',
     description:
-      'Cheat org overview: what valorant-cheat.org publishes about PC cheat modules, community forums, and support paths for loaders and checkout help.',
+      'What valorant-cheat.org publishes: PC cheat modules, loader help, status updates, blog guides, FAQ, Discord, and checkout support.',
   },
   '/support/': {
-    title: 'Support – Loader, Checkout & Config Help for Valorant',
+    title: 'Valorant Cheat Support — Loader & Checkout | Valorant Cheat',
     description:
-      'Support for Valorant loader setup, configs, and secure checkout for aimbot, ESP, and radar modules on PC—include your order email when you write in.',
+      'Help with loader setup, configs, and checkout for aimbot, ESP, and radar modules. Email support with your order address; join Discord for quick tips.',
   },
   '/go/valorant/': {
-    title: 'Checkout – Secure Valorant Cheat Access & Partner Pay',
+    title: 'Secure Valorant Cheat Checkout | Valorant Cheat',
     description:
-      'Secure Valorant cheat license checkout—compare aimbot, ESP wallhack, and radar modules, then continue to partner checkout.',
+      'Continue to partner checkout for Valorant cheat licenses. Compare aimbot, ESP, wallhack, and radar modules before you pay.',
   },
 };
 

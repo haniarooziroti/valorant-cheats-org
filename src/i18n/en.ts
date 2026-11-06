@@ -10,9 +10,9 @@ export const en: Translations = {
   site: {
     name: 'Valorant Cheat',
     domain: 'valorant-cheat.org',
-    title: 'Valorant Esp, Aimbot & Wallhack',
+    title: 'Valorant Cheats – Aimbot, ESP & Wallhack | Valorant Cheat',
     description:
-      'Valorant cheats on PC with aimbot, ESP, wallhack, triggerbot, and radar tools. Browse modules, read player forums, and continue to secure checkout on valorant-cheat.org.',
+      'PC Valorant cheats with aimbot, ESP, wallhack, triggerbot, and radar. Browse modules, read the blog and FAQ, check status, then continue to secure checkout on valorant-cheat.org.',
     discord: PRIMARY_CHECKOUT_PATH,
   },
   nav: PRIMARY_NAV,
