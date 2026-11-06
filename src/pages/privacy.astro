@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { t } from '../i18n';
 import { resolvePageSeo } from '../config/seo';
+import { CRUMB } from '../config/breadcrumbs';
 import LegalPage from '../components/LegalPage.astro';
 import { breadcrumbSchema, webPageSchema } from '../utils/schema';
 
@@ -19,8 +20,8 @@ const seo = resolvePageSeo('/privacy/');
       url: '/privacy/',
     }),
     breadcrumbSchema([
-      { name: 'Home', path: '/' },
-      { name: 'Privacy Policy', path: '/privacy/' },
+      CRUMB.home,
+      CRUMB.privacy,
     ]),
   ]}
 >

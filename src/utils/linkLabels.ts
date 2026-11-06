@@ -21,7 +21,7 @@ export const MOBILE_HEADER_CTA_LABEL = 'Try now — menu';
 
 /** Primary nav (desktop) — distinct from footer explore links on the same page. */
 export const DESKTOP_NAV_LABEL: Record<string, string> = {
-  Home: 'Valorant Cheat home',
+  Home: 'Home',
   Products: 'Cheats catalog',
   Blog: 'Setup guides',
   Reviews: 'Verified reviews',
@@ -39,29 +39,31 @@ export const MOBILE_NAV_LABEL: Record<string, string> = {
 };
 
 const BREADCRUMB_PATH_LABEL: Record<string, string> = {
-  '/': 'Breadcrumb: site home',
-  '/products/valorant-cheats/': 'Breadcrumb: all PC modules',
-  '/blog/': 'Breadcrumb: setup guides',
-  '/faq/': 'Breadcrumb: FAQ hub',
-  '/support/': 'Breadcrumb: support center',
-  '/status/': 'Breadcrumb: live status',
-  '/go/valorant/': 'Breadcrumb: checkout overview',
-  '/reviews/': 'Breadcrumb: player reviews',
-  '/about/': 'Breadcrumb: about page',
-  '/privacy/': 'Breadcrumb: privacy policy',
-  '/terms/': 'Breadcrumb: terms of use',
+  '/': 'Home',
+  '/products/valorant-cheats/': 'Products',
+  '/blog/': 'Blogs',
+  '/faq/': 'FAQ',
+  '/support/': 'Support',
+  '/status/': 'Status',
+  '/go/valorant/': 'Checkout',
+  '/reviews/': 'Reviews',
+  '/about/': 'About',
+  '/privacy/': 'Privacy Policy',
+  '/terms/': 'Terms & Conditions',
 };
 
 const BREADCRUMB_PAGE_CONTEXT: Record<string, string> = {
-  '/': 'homepage',
-  '/about/': 'about',
-  '/blog/': 'guide index',
-  '/faq/': 'FAQ hub',
-  '/support/': 'support',
-  '/reviews/': 'reviews',
-  '/status/': 'status',
-  '/go/valorant/': 'checkout overview',
-  '/products/valorant-cheats/': 'module catalog',
+  '/': 'Home',
+  '/about/': 'About',
+  '/blog/': 'Blogs',
+  '/faq/': 'FAQ',
+  '/support/': 'Support',
+  '/reviews/': 'Reviews',
+  '/status/': 'Status',
+  '/go/valorant/': 'Checkout',
+  '/products/valorant-cheats/': 'Products',
+  '/privacy/': 'Privacy Policy',
+  '/terms/': 'Terms & Conditions',
 };
 
 function normalizePath(path: string): string {
@@ -85,7 +87,6 @@ function breadcrumbPageContext(currentPath: string): string {
 
 export function breadcrumbAnchorLabel(name: string, path: string, currentPath: string): string {
   const normalized = normalizePath(path);
-  const dest =
-    BREADCRUMB_PATH_LABEL[normalized] ?? BREADCRUMB_PATH_LABEL[path] ?? `Breadcrumb: ${name}`;
+  const dest = BREADCRUMB_PATH_LABEL[normalized] ?? BREADCRUMB_PATH_LABEL[path] ?? name;
   return `${dest} (from ${breadcrumbPageContext(currentPath)})`;
 }

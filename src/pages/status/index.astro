@@ -2,13 +2,14 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { BRAND, GAME_SHORT } from '../../config/brand';
+import { CRUMB } from '../../config/breadcrumbs';
 import { resolvePageSeo } from '../../config/seo';
 import { breadcrumbSchema, webPageSchema } from '../../utils/schema';
 import { Button } from '@/components/starwind/button';
 import { ROUTES } from '../../utils/path';
 
 const seo = resolvePageSeo('/status/');
-const breadcrumbs = [{ name: 'Home', path: '/' }, { name: 'Status', path: '/status/' }];
+const breadcrumbs = [CRUMB.home, CRUMB.status];
 ---
 
 <BaseLayout
